@@ -1,0 +1,1683 @@
+TSimpleGeo
+v3
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Info.plist SimpleGeo-Info.plist
+cCpHeader ../ext/asi-http-request/ASICacheDelegate.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASICacheDelegate.h
+cCpHeader ../ext/asi-http-request/ASIDataCompressor.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataCompressor.h
+cCpHeader ../ext/asi-http-request/ASIDataDecompressor.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataDecompressor.h
+cCpHeader ../ext/asi-http-request/ASIDownloadCache.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDownloadCache.h
+cCpHeader ../ext/asi-http-request/ASIFormDataRequest.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIFormDataRequest.h
+cCpHeader ../ext/asi-http-request/ASIHTTPRequest.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest.h
+cCpHeader ../ext/asi-http-request/ASIHTTPRequestConfig.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestConfig.h
+cCpHeader ../ext/asi-http-request/ASIHTTPRequestDelegate.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestDelegate.h
+cCpHeader ../ext/asi-http-request/ASIInputStream.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIInputStream.h
+cCpHeader ../ext/asi-http-request/ASINetworkQueue.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASINetworkQueue.h
+cCpHeader ../ext/asi-http-request/ASIProgressDelegate.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIProgressDelegate.h
+cCpHeader ../src/SimpleGeo+Context.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Context.h
+cCpHeader ../src/SimpleGeo+Places.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Places.h
+cCpHeader ../src/SGFeature.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeature.h
+cCpHeader ../src/SGFeatureCollection.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeatureCollection.h
+cCpHeader ../src/SGGeometry.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGGeometry.h
+cCpHeader ../src/SGPoint.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPoint.h
+cCpHeader ../src/SGPolygon.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPolygon.h
+cCpHeader ../src/SimpleGeo+Internal.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Internal.h
+cCpHeader ../src/SimpleGeo.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo.h
+cCpHeader ../ext/Reachability/Reachability.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/Reachability.h
+cCpHeader ../ext/asi-http-request/ASIAuthenticationDialog.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIAuthenticationDialog.h
+cCpHeader ../ext/asi-http-request/ASIHTTPRequest+OAuth.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest+OAuth.h
+cCpHeader ../src/SimpleGeo+Storage.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Storage.h
+cCpHeader ../src/SGStoredRecord.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGStoredRecord.h
+cProcessPCH /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-gkknbtdtmerxkqhbaeswjrezondi/SimpleGeo_Prefix.pch.gch SimpleGeo_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch.gch SimpleGeo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIBase64Transcoder.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/TouchFoundation/ASIBase64Transcoder.c normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGGeometry.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGGeometry.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDownloadCache.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGMultiPolygon.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGMultiPolygon.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataCompressor.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataDecompressor.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIFormDataRequest.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIInputStream.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIInputStream.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASINetworkQueue.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGFeature.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGFeature.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeature.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeature.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeatureCollection.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeatureCollection.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometry.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometry.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPoint.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPolygon.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPolygon.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Context.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Context.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Internal.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Internal.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Places.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Places.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/Reachability.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest+OAuth.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest+OAuth.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometryCollection.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometryCollection.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Storage.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Storage.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGStoredRecord.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGStoredRecord.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/SimpleGeo normal i386
+cTouch /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004D5C9B4E0000000000000110
+t1297914702
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
+c000000004D54CF5900000000000004CF
+t1297403737
+s1231
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004D54CEB40000000000000AB3
+t1297403572
+s2739
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D54CFB80000000000001466
+t1297403832
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers/MobileCoreServices.h
+c000000004D54D0BA00000000000000EB
+t1297404090
+s235
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004D54D2DD00000000000000C4
+t1297404637
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers/SystemConfiguration.h
+c000000004D54CEF80000000000001A58
+t1297403640
+s6744
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D5615B40000000000000AA1
+t1297487284
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/CommonCrypto/CommonHMAC.h
+c000000004A11E8210000000000000DE2
+t1242687521
+s3554
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/arpa/inet.h
+c000000004D54C5040000000000001533
+t1297401092
+s5427
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/ifaddrs.h
+c000000004D54C50400000000000008F5
+t1297401092
+s2293
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/math.h
+c000000004A5C14A000000000000004F1
+t1247548576
+s1265
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netdb.h
+c000000004D54C504000000000000307F
+t1297401092
+s12415
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet/in.h
+c000000004D54D0E60000000000006BAC
+t1297404134
+s27564
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet6/in6.h
+c000000004D54D0E6000000000000638F
+t1297404134
+s25487
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdio.h
+c000000004D4F6E9A0000000000004763
+t1297051290
+s18275
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdlib.h
+c000000004D4F6E9A00000000000030A7
+t1297051290
+s12455
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/string.h
+c000000004D4F6E9A0000000000001A3A
+t1297051290
+s6714
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sys/socket.h
+c000000004D54D0EB0000000000005ACF
+t1297404139
+s23247
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/zlib.h
+c000000004D54CB4600000000000102A5
+t1297402694
+s66213
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdbool.h
+c000000004A1198340000000000000644
+t1242667060
+s1604
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/Reachability/Reachability.h
+c000000004D92A7BD0000000000001D0E
+t1301456829
+s7438
+i<Foundation/Foundation.h>
+i<SystemConfiguration/SystemConfiguration.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/TouchFoundation/ASIBase64Transcoder.h
+c000000004D92A7BD000000000000075A
+t1301456829
+s1882
+i<stdlib.h>
+i<stdbool.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/YAJL.framework/Headers/NSBundle+YAJL.h
+c000000004D92A7BD000000000000090E
+t1301456829
+s2318
+i"YAJLParser.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/YAJL.framework/Headers/NSObject+YAJL.h
+c000000004D92A7BD0000000000001525
+t1301456829
+s5413
+i"YAJLGen.h"
+i"YAJLParser.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/YAJL.framework/Headers/YAJL.h
+c000000004D92A7BD00000000000016EB
+t1301456829
+s5867
+i"YAJLParser.h"
+i"YAJLDocument.h"
+i"YAJLGen.h"
+i"NSObject+YAJL.h"
+i"NSBundle+YAJL.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/YAJL.framework/Headers/YAJLDocument.h
+c000000004D92A7BD00000000000016FE
+t1301456829
+s5886
+i"YAJLParser.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/YAJL.framework/Headers/YAJLGen.h
+c000000004D92A7BD000000000000102E
+t1301456829
+s4142
+i"yajl_gen.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/YAJL.framework/Headers/YAJLParser.h
+c000000004D92A7BD00000000000015E8
+t1301456829
+s5608
+i"yajl_parse.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/YAJL.framework/Headers/yajl_common.h
+c000000004D92A7BD0000000000000C3B
+t1301456829
+s3131
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/YAJL.framework/Headers/yajl_gen.h
+c000000004D92A7BD0000000000001C2D
+t1301456829
+s7213
+i<yajl/yajl_common.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/YAJL.framework/Headers/yajl_parse.h
+c000000004D92A7BD0000000000002137
+t1301456829
+s8503
+i<yajl/yajl_common.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIAuthenticationDialog.h
+c000000004D92A7BD0000000000000453
+t1301456829
+s1107
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASICacheDelegate.h
+c000000004D92A7BD00000000000011CE
+t1301456829
+s4558
+i<Foundation/Foundation.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIDataCompressor.h
+c000000004D92A7BD0000000000000691
+t1301456829
+s1681
+i<Foundation/Foundation.h>
+i<zlib.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIDataDecompressor.h
+c000000004D92A7BD00000000000006A3
+t1301456829
+s1699
+i<Foundation/Foundation.h>
+i<zlib.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIDownloadCache.h
+c000000004D92A7BD0000000000000804
+t1301456829
+s2052
+i<Foundation/Foundation.h>
+i"ASICacheDelegate.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIFormDataRequest.h
+c000000004D92A7BD0000000000000A6D
+t1301456829
+s2669
+i<Foundation/Foundation.h>
+i"ASIHTTPRequest.h"
+i"ASIHTTPRequestConfig.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIHTTPRequest+OAuth.h
+c000000004D92A7BD00000000000009A7
+t1301456829
+s2471
+i"ASIHTTPRequest.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIHTTPRequest.h
+c000000004D92A7BD000000000000A94C
+t1301456829
+s43340
+i<Foundation/Foundation.h>
+i<CFNetwork/CFNetwork.h>
+i<stdio.h>
+i"ASIHTTPRequestConfig.h"
+i"ASIHTTPRequestDelegate.h"
+i"ASIProgressDelegate.h"
+i"ASICacheDelegate.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIHTTPRequestConfig.h
+c000000004D92A7BD00000000000003B0
+t1301456829
+s944
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIHTTPRequestDelegate.h
+c000000004D92A7BD000000000000063E
+t1301456829
+s1598
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIInputStream.h
+c000000004D92A7BD00000000000003C9
+t1301456829
+s969
+i<Foundation/Foundation.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASINetworkQueue.h
+c000000004D92A7BD000000000000120D
+t1301456829
+s4621
+i<Foundation/Foundation.h>
+i"ASIHTTPRequestDelegate.h"
+i"ASIProgressDelegate.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/ext/asi-http-request/ASIProgressDelegate.h
+c000000004D92A7BD0000000000000678
+t1301456829
+s1656
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/Reachability/Reachability.h
+c000000004D92A7BD0000000000001D0E
+t1301456829
+s7438
+i<Foundation/Foundation.h>
+i<SystemConfiguration/SystemConfiguration.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/Reachability/Reachability.m
+c000000004D92A7BD0000000000005DFD
+t1301456829
+s24061
+i<sys/socket.h>
+i<netinet/in.h>
+i<netinet6/in6.h>
+i<arpa/inet.h>
+i<ifaddrs.h>
+i<netdb.h>
+i<CoreFoundation/CoreFoundation.h>
+i"Reachability.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/TouchFoundation/ASIBase64Transcoder.c
+c000000004D92A7BD00000000000025FE
+t1301456829
+s9726
+i"ASIBase64Transcoder.h"
+i<math.h>
+i<string.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/TouchFoundation/ASIBase64Transcoder.h
+c000000004D92A7BD000000000000075A
+t1301456829
+s1882
+i<stdlib.h>
+i<stdbool.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIAuthenticationDialog.h
+c000000004D92A7BD0000000000000453
+t1301456829
+s1107
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIAuthenticationDialog.m
+c000000004D92A7BD0000000000003CB7
+t1301456829
+s15543
+i"ASIAuthenticationDialog.h"
+i"ASIHTTPRequest.h"
+i<QuartzCore/QuartzCore.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASICacheDelegate.h
+c000000004D92A7BD00000000000011CE
+t1301456829
+s4558
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataCompressor.h
+c000000004D92A7BD0000000000000691
+t1301456829
+s1681
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataCompressor.m
+c000000004D92A7BD000000000000196B
+t1301456829
+s6507
+i"ASIDataCompressor.h"
+i"ASIHTTPRequest.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataDecompressor.h
+c000000004D92A7BD00000000000006A3
+t1301456829
+s1699
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataDecompressor.m
+c000000004D92A7BD00000000000018B6
+t1301456829
+s6326
+i"ASIDataDecompressor.h"
+i"ASIHTTPRequest.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDownloadCache.h
+c000000004D92A7BD0000000000000804
+t1301456829
+s2052
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDownloadCache.m
+c000000004D92A7BD000000000000403F
+t1301456829
+s16447
+i"ASIDownloadCache.h"
+i"ASIHTTPRequest.h"
+i<CommonCrypto/CommonHMAC.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIFormDataRequest.h
+c000000004D92A7BD0000000000000A6D
+t1301456829
+s2669
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIFormDataRequest.m
+c000000004D92A7BD0000000000002B52
+t1301456829
+s11090
+i"ASIFormDataRequest.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest+OAuth.h
+c000000004D92A7BD00000000000009A7
+t1301456829
+s2471
+i"ASIHTTPRequest.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest+OAuth.m
+c000000004D92A7BD00000000000029D5
+t1301456829
+s10709
+i<CommonCrypto/CommonHMAC.h>
+i"ASIHTTPRequest+OAuth.h"
+i"ASIBase64Transcoder.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest.h
+c000000004D92A7BD000000000000A94C
+t1301456829
+s43340
+i<Foundation/Foundation.h>
+i<CFNetwork/CFNetwork.h>
+i<stdio.h>
+i"ASIHTTPRequestConfig.h"
+i"ASIHTTPRequestDelegate.h"
+i"ASIProgressDelegate.h"
+i"ASICacheDelegate.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest.m
+c000000004D92A7BD0000000000028463
+t1301456829
+s164963
+i"ASIHTTPRequest.h"
+i"ASIHTTPRequest+OAuth.h"
+i"Reachability.h"
+i"ASIAuthenticationDialog.h"
+i<MobileCoreServices/MobileCoreServices.h>
+i<SystemConfiguration/SystemConfiguration.h>
+i"ASIInputStream.h"
+i"ASIDataDecompressor.h"
+i"ASIDataCompressor.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequestConfig.h
+c000000004D92A7BD00000000000003B0
+t1301456829
+s944
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequestDelegate.h
+c000000004D92A7BD000000000000063E
+t1301456829
+s1598
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIInputStream.h
+c000000004D92A7BD00000000000003C9
+t1301456829
+s969
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIInputStream.m
+c000000004D92A7BD0000000000000BF0
+t1301456829
+s3056
+i"ASIInputStream.h"
+i"ASIHTTPRequest.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASINetworkQueue.h
+c000000004D92A7BD000000000000120D
+t1301456829
+s4621
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASINetworkQueue.m
+c000000004D92A7BD0000000000002C8D
+t1301456829
+s11405
+i"ASINetworkQueue.h"
+i"ASIHTTPRequest.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIProgressDelegate.h
+c000000004D92A7BD0000000000000678
+t1301456829
+s1656
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGFeature.m
+c000000004D92A7BD0000000000000868
+t1301456829
+s2152
+i"NSArray+SGFeature.h"
+i"SGFeature.h"
+i"SGFeature+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGGeometry.m
+c000000004D92A7BD00000000000007EB
+t1301456829
+s2027
+i"NSArray+SGGeometry.h"
+i"SGGeometry+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeature.h
+c000000004D92A7BD0000000000001109
+t1301456829
+s4361
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeature.m
+c000000004D92A7BD0000000000001AC1
+t1301456829
+s6849
+i"SGFeature.h"
+i"SGFeature+Private.h"
+i"SGGeometry+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeatureCollection.h
+c000000004D92A7BD00000000000009FB
+t1301456829
+s2555
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeatureCollection.m
+c000000004D92A7BD0000000000000EF4
+t1301456829
+s3828
+i"SGFeatureCollection.h"
+i"SGFeatureCollection+Private.h"
+i"NSArray+SGFeature.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometry.h
+c000000004D92A7BD00000000000006AC
+t1301456829
+s1708
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometry.m
+c000000004D92A7BD00000000000009A4
+t1301456829
+s2468
+i"SGGeometry.h"
+i"SGPoint+Private.h"
+i"SGPolygon+Private.h"
+i"SGMultiPolygon+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometryCollection.m
+c000000004D92A7BD0000000000000BE4
+t1301456829
+s3044
+i"SGGeometryCollection.h"
+i"SGGeometryCollection+Private.h"
+i"NSArray+SGGeometry.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGMultiPolygon.m
+c000000004D92A7BD0000000000000C46
+t1301456829
+s3142
+i"SGMultiPolygon.h"
+i"SGPolygon+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPoint.h
+c000000004D92A7BD0000000000000916
+t1301456829
+s2326
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPoint.m
+c000000004D92A7BD0000000000000EB7
+t1301456829
+s3767
+i"SGPoint.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPolygon.h
+c000000004D92A7BD000000000000085D
+t1301456829
+s2141
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPolygon.m
+c000000004D92A7BD0000000000000CD2
+t1301456829
+s3282
+i"SGPolygon.h"
+i"SGPoint+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGStoredRecord.h
+c000000004D92A7BD00000000000012BF
+t1301456829
+s4799
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGStoredRecord.m
+c000000004D92A7BD000000000000159E
+t1301456829
+s5534
+i"SGStoredRecord.h"
+i"SGStoredRecord+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Context.h
+c000000004D92A7BD000000000000098B
+t1301456829
+s2443
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Context.m
+c000000004D92A7BD0000000000000E0A
+t1301456829
+s3594
+i<YAJL/YAJL.h>
+i"SimpleGeo+Context.h"
+i"SimpleGeo+Internal.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Internal.h
+c000000004D92A7BD00000000000007C6
+t1301456829
+s1990
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Internal.m
+c000000004D92A7BD00000000000012C7
+t1301456829
+s4807
+i"ASIHTTPRequest+OAuth.h"
+i"SimpleGeo+Internal.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Places.h
+c000000004D92A7BD0000000000001C82
+t1301456829
+s7298
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Places.m
+c000000004D92A7BD0000000000003274
+t1301456829
+s12916
+i<YAJL/YAJL.h>
+i"SimpleGeo+Places.h"
+i"SimpleGeo+Internal.h"
+i"SGFeatureCollection+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Storage.h
+c000000004D92A7BD0000000000003A3C
+t1301456829
+s14908
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Storage.m
+c000000004D92A7BD0000000000006654
+t1301456829
+s26196
+i"SimpleGeo+Storage.h"
+i<YAJL/YAJL.h>
+i"SimpleGeo+Internal.h"
+i"SGFeatureCollection+Private.h"
+i"SGGeometryCollection+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo.h
+c000000004D92A7BD00000000000013E3
+t1301456829
+s5091
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo.m
+c000000004D92A7BD0000000000001EF5
+t1301456829
+s7925
+i<YAJL/YAJL.h>
+i"NSArray+SGFeature.h"
+i"SimpleGeo.h"
+i"SimpleGeo+Internal.h"
+i"SGFeature+Private.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/SimpleGeo_Prefix.pch
+c000000004D92A7BD0000000000000033
+t1301456829
+s51
+i<UIKit/UIKit.h>
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIAuthenticationDialog.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASICacheDelegate.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataCompressor.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataDecompressor.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDownloadCache.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIFormDataRequest.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest+OAuth.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestConfig.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestDelegate.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIInputStream.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASINetworkQueue.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIProgressDelegate.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/Reachability.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeature.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeatureCollection.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGGeometry.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPoint.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPolygon.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGStoredRecord.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Context.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Internal.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Places.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Storage.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo.h
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Info.plist
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/SimpleGeo
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIAuthenticationDialog.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIBase64Transcoder.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataCompressor.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataDecompressor.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDownloadCache.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIFormDataRequest.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest+OAuth.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIInputStream.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASINetworkQueue.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGFeature.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGGeometry.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/Reachability.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeature.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeatureCollection.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometry.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometryCollection.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGMultiPolygon.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPoint.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPolygon.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGStoredRecord.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Context.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Internal.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Places.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Storage.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo.LinkFileList
+c000000004D92A7D70000000000000F61
+t1301456855
+s3937
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo.o
+t2
+s0
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/NSArray+SGFeature.h
+c000000004D92A7BD00000000000006BA
+t1301456829
+s1722
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/NSArray+SGGeometry.h
+c000000004D92A7BD00000000000006BF
+t1301456829
+s1727
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGFeature+Private.h
+c000000004D92A7BD000000000000077E
+t1301456829
+s1918
+i"SGFeature.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGFeature.h
+c000000004D92A7BD0000000000001109
+t1301456829
+s4361
+i"SGGeometry.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGFeatureCollection+Private.h
+c000000004D92A7BD0000000000000741
+t1301456829
+s1857
+i"SGFeatureCollection.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGFeatureCollection.h
+c000000004D92A7BD00000000000009FB
+t1301456829
+s2555
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGGeometry+Private.h
+c000000004D92A7BD0000000000000787
+t1301456829
+s1927
+i"SGGeometry.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGGeometry.h
+c000000004D92A7BD00000000000006AC
+t1301456829
+s1708
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGGeometryCollection+Private.h
+c000000004D92A7BD000000000000074A
+t1301456829
+s1866
+i"SGGeometryCollection.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGGeometryCollection.h
+c000000004D92A7BD00000000000008EC
+t1301456829
+s2284
+i"SGGeometry.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGMultiPolygon+Private.h
+c000000004D92A7BD0000000000000733
+t1301456829
+s1843
+i"SGMultiPolygon.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGMultiPolygon.h
+c000000004D92A7BD0000000000000889
+t1301456829
+s2185
+i"SGGeometry.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGPoint+Private.h
+c000000004D92A7BD0000000000000702
+t1301456829
+s1794
+i"SGPoint.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGPoint.h
+c000000004D92A7BD0000000000000916
+t1301456829
+s2326
+i"SGGeometry.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGPolygon+Private.h
+c000000004D92A7BD0000000000000710
+t1301456829
+s1808
+i"SGPolygon.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGPolygon.h
+c000000004D92A7BD000000000000085D
+t1301456829
+s2141
+i"SGGeometry.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGStoredRecord+Private.h
+c000000004D92A7BD0000000000000732
+t1301456829
+s1842
+i"SGStoredRecord.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SGStoredRecord.h
+c000000004D92A7BD00000000000012BF
+t1301456829
+s4799
+i"SGFeature.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SimpleGeo+Context.h
+c000000004D92A7BD000000000000098B
+t1301456829
+s2443
+i"SimpleGeo.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SimpleGeo+Internal.h
+c000000004D92A7BD00000000000007C6
+t1301456829
+s1990
+i"SimpleGeo.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SimpleGeo+Places.h
+c000000004D92A7BD0000000000001C82
+t1301456829
+s7298
+i"SimpleGeo.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SimpleGeo+Storage.h
+c000000004D92A7BD0000000000003A3C
+t1301456829
+s14908
+i"SimpleGeo.h"
+i"SGFeatureCollection.h"
+i"SGGeometryCollection.h"
+i"SGStoredRecord.h"
+
+N/Users/knassar/Code/iphone/SimpleGeo.framework/src/SimpleGeo.h
+c000000004D92A7BD00000000000013E3
+t1301456829
+s5091
+i"ASIHTTPRequest.h"
+i"SGFeature.h"
+i"SGFeatureCollection.h"
+i"SGPoint.h"
+i"SimpleGeo+Context.h"
+i"SimpleGeo+Places.h"
+
+N/var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch.gch
+t2
+s0
+
+N/var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-gkknbtdtmerxkqhbaeswjrezondi/SimpleGeo_Prefix.pch.gch
+t2
+s0
+
+NSimpleGeo-Info.plist
+c000000004D92A7BD00000000000002BC
+t1301456829
+s700
+
+CCheck dependencies
+r0
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc1e64457df42b341^0a2c8057df42b341^---0#1#0#--18"Check dependencies
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIAuthenticationDialog.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.695327
+e323149658.325563
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIAuthenticationDialog.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIAuthenticationDialog.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIAuthenticationDialog.m172bb259df42b341^b856535adf42b341^---0#0#0#-19%DVTDocumentLocation2@116"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIAuthenticationDialog.m0000000000000000^2560"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIAuthenticationDialog.o ../ext/asi-http-request/ASIAuthenticationDialog.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIAuthenticationDialog.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIAuthenticationDialog.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIBase64Transcoder.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/TouchFoundation/ASIBase64Transcoder.c normal i386 c com.apple.compilers.gcc.4_2
+s323149655.626456
+e323149655.731501
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIBase64Transcoder.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/TouchFoundation/ASIBase64Transcoder.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/TouchFoundation/ASIBase64Transcoder.cbb7fa057df42b341^bb42bb57df42b341^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/TouchFoundation/ASIBase64Transcoder.c0000000000000000^2478"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIBase64Transcoder.o ../ext/TouchFoundation/ASIBase64Transcoder.c normal i386 c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-gkknbtdtmerxkqhbaeswjrezondi/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/TouchFoundation/ASIBase64Transcoder.c -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIBase64Transcoder.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataCompressor.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.350013
+e323149656.587241
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataCompressor.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataCompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataCompressor.m2ec55958df42b341^54539658df42b341^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataCompressor.m0000000000000000^2536"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataCompressor.o ../ext/asi-http-request/ASIDataCompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataCompressor.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataCompressor.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataDecompressor.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.414382
+e323149656.658969
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataDecompressor.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataDecompressor.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataDecompressor.m18426a58df42b341^20b6a858df42b341^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataDecompressor.m0000000000000000^2544"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataDecompressor.o ../ext/asi-http-request/ASIDataDecompressor.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataDecompressor.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDataDecompressor.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDownloadCache.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.252036
+e323149656.837135
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDownloadCache.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDownloadCache.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDownloadCache.m5abc4058df42b341^3656d658df42b341^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDownloadCache.m0000000000000000^2532"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDownloadCache.o ../ext/asi-http-request/ASIDownloadCache.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDownloadCache.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIDownloadCache.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIFormDataRequest.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.587482
+e323149657.013504
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIFormDataRequest.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIFormDataRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIFormDataRequest.m8e939658df42b341^527d0359df42b341^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIFormDataRequest.m0000000000000000^2540"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIFormDataRequest.o ../ext/asi-http-request/ASIFormDataRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIFormDataRequest.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIFormDataRequest.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest+OAuth.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest+OAuth.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.739647
+e323149657.983958
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest+OAuth.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest+OAuth.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest+OAuth.m5e84bd59df42b341^08e3fb59df42b341^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest+OAuth.m0000000000000000^2548"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest+OAuth.o ../ext/asi-http-request/ASIHTTPRequest+OAuth.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest+OAuth.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest+OAuth.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.252076
+e323149664.407971
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest.m31b24058df42b341^b16e6860df42b341^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest.m0000000000000000^2524"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest.o ../ext/asi-http-request/ASIHTTPRequest.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIHTTPRequest.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIInputStream.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIInputStream.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.659190
+e323149656.830430
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIInputStream.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIInputStream.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIInputStream.m28f2a858df42b341^419fd458df42b341^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIInputStream.m0000000000000000^2524"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIInputStream.o ../ext/asi-http-request/ASIInputStream.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIInputStream.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASIInputStream.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASINetworkQueue.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.830734
+e323149657.443514
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASINetworkQueue.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASINetworkQueue.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASINetworkQueue.m17d3d458df42b341^beda7159df42b341^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASINetworkQueue.m0000000000000000^2528"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASINetworkQueue.o ../ext/asi-http-request/ASINetworkQueue.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASINetworkQueue.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/ASINetworkQueue.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGFeature.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGFeature.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.837479
+e323149656.919031
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGFeature.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGFeature.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGFeature.m198fd658df42b341^3d44eb58df42b341^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGFeature.m0000000000000000^2502"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGFeature.o ../src/NSArray+SGFeature.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGFeature.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGFeature.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGGeometry.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGGeometry.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.252038
+e323149656.349618
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGGeometry.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGGeometry.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGGeometry.m8eb04058df42b341^a0885958df42b341^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGGeometry.m0000000000000000^2506"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGGeometry.o ../src/NSArray+SGGeometry.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/NSArray+SGGeometry.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/NSArray+SGGeometry.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/Reachability.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.551505
+e323149657.857811
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/Reachability.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/Reachability/Reachability.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/Reachability/Reachability.m5c5a8d59df42b341^f9a0db59df42b341^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/Reachability/Reachability.m0000000000000000^2508"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/Reachability.o ../ext/Reachability/Reachability.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/Reachability/Reachability.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/Reachability.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeature.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeature.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.919221
+e323149657.185369
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeature.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeature.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeature.me97deb58df42b341^677c2f59df42b341^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeature.m0000000000000000^2470"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeature.o ../src/SGFeature.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeature.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeature.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeatureCollection.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeatureCollection.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.013788
+e323149657.158543
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeatureCollection.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeatureCollection.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeatureCollection.m03b60359df42b341^ed9e2859df42b341^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeatureCollection.m0000000000000000^2510"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeatureCollection.o ../src/SGFeatureCollection.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeatureCollection.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGFeatureCollection.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometry.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometry.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.158967
+e323149657.246664
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometry.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometry.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometry.me8dd2859df42b341^272e3f59df42b341^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometry.m0000000000000000^2474"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometry.o ../src/SGGeometry.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometry.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometry.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometryCollection.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometryCollection.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.858056
+e323149657.976648
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometryCollection.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometryCollection.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometryCollection.m91d3db59df42b341^a12efa59df42b341^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometryCollection.m0000000000000000^2514"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometryCollection.o ../src/SGGeometryCollection.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometryCollection.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGGeometryCollection.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGMultiPolygon.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGMultiPolygon.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149656.252101
+e323149656.414169
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGMultiPolygon.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGMultiPolygon.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGMultiPolygon.m9dbc4058df42b341^83506a58df42b341^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGMultiPolygon.m0000000000000000^2490"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGMultiPolygon.o ../src/SGMultiPolygon.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGMultiPolygon.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGMultiPolygon.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPoint.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.185711
+e323149657.342601
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPoint.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPoint.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPoint.m20b72f59df42b341^c3bc5759df42b341^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPoint.m0000000000000000^2462"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPoint.o ../src/SGPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPoint.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPoint.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPolygon.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPolygon.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.247044
+e323149657.414822
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPolygon.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPolygon.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPolygon.m016d3f59df42b341^b03a6a59df42b341^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPolygon.m0000000000000000^2470"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPolygon.o ../src/SGPolygon.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPolygon.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGPolygon.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGStoredRecord.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGStoredRecord.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.984154
+e323149658.188491
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGStoredRecord.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGStoredRecord.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGStoredRecord.m761bfc59df42b341^3449305adf42b341^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGStoredRecord.m0000000000000000^2490"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGStoredRecord.o ../src/SGStoredRecord.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGStoredRecord.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SGStoredRecord.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Context.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Context.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.346836
+e323149657.465197
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Context.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Context.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Context.m76fb5859df42b341^8a1f7759df42b341^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Context.m0000000000000000^2502"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Context.o ../src/SimpleGeo+Context.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Context.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Context.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Internal.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Internal.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.415197
+e323149657.551274
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Internal.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Internal.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Internal.m8e786a59df42b341^da1e8d59df42b341^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Internal.m0000000000000000^2506"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Internal.o ../src/SimpleGeo+Internal.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Internal.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Internal.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Places.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Places.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.443712
+e323149657.739415
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Places.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Places.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Places.m81cd7159df42b341^ed48bd59df42b341^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Places.m0000000000000000^2498"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Places.o ../src/SimpleGeo+Places.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Places.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Places.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Storage.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Storage.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.977551
+e323149658.417822
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Storage.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Storage.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Storage.mb56ffa59df42b341^62f66a5adf42b341^---0#0#0#-19%DVTDocumentLocation2@93"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Storage.m0000000000000000^2502"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Storage.o ../src/SimpleGeo+Storage.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Storage.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo+Storage.o
+
+CCompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo.o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149657.465561
+e323149657.695090
+r1
+xCompileC
+xbuild/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo.o
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo.maf5c7759df42b341^e9efb159df42b341^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo.m0000000000000000^2470"CompileC build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo.o ../src/SimpleGeo.m normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -include /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo.m -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo.o
+
+CCpHeader ../ext/Reachability/Reachability.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/Reachability.h
+s323149655.552076
+e323149655.554608
+r1
+xCpHeader
+x../ext/Reachability/Reachability.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/Reachability.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/Reachability.he86c8d57df42b341^c0259057df42b341^---0#0#0#-19%DVTDocumentLocation2@139"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/Reachability.h0000204dfb01f041^756"CpHeader ../ext/Reachability/Reachability.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/Reachability.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/Reachability/Reachability.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIAuthenticationDialog.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIAuthenticationDialog.h
+s323149655.552780
+e323149655.554733
+r1
+xCpHeader
+x../ext/asi-http-request/ASIAuthenticationDialog.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIAuthenticationDialog.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIAuthenticationDialog.h349d8d57df42b341^5e2c9057df42b341^---0#0#0#-19%DVTDocumentLocation2@150"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIAuthenticationDialog.h0000204dfb01f041^797"CpHeader ../ext/asi-http-request/ASIAuthenticationDialog.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIAuthenticationDialog.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIAuthenticationDialog.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASICacheDelegate.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASICacheDelegate.h
+s323149655.531034
+e323149655.534253
+r1
+xCpHeader
+x../ext/asi-http-request/ASICacheDelegate.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASICacheDelegate.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASICacheDelegate.hf10e8857df42b341^e3c78857df42b341^---0#0#0#-19%DVTDocumentLocation2@143"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASICacheDelegate.h0000204dfb01f041^776"CpHeader ../ext/asi-http-request/ASICacheDelegate.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASICacheDelegate.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASICacheDelegate.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIDataCompressor.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataCompressor.h
+s323149655.531041
+e323149655.534209
+r1
+xCpHeader
+x../ext/asi-http-request/ASIDataCompressor.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataCompressor.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataCompressor.heb1f8857df42b341^c6be8857df42b341^---0#0#0#-19%DVTDocumentLocation2@144"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataCompressor.h0000204dfb01f041^779"CpHeader ../ext/asi-http-request/ASIDataCompressor.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataCompressor.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataCompressor.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIDataDecompressor.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataDecompressor.h
+s323149655.531049
+e323149655.534204
+r1
+xCpHeader
+x../ext/asi-http-request/ASIDataDecompressor.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataDecompressor.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataDecompressor.hbd1a8857df42b341^22c58857df42b341^---0#0#0#-19%DVTDocumentLocation2@146"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataDecompressor.h0000204dfb01f041^785"CpHeader ../ext/asi-http-request/ASIDataDecompressor.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDataDecompressor.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDataDecompressor.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIDownloadCache.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDownloadCache.h
+s323149655.531470
+e323149655.534211
+r1
+xCpHeader
+x../ext/asi-http-request/ASIDownloadCache.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDownloadCache.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDownloadCache.hb3248857df42b341^74d18857df42b341^---0#0#0#-19%DVTDocumentLocation2@143"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDownloadCache.h0000204dfb01f041^776"CpHeader ../ext/asi-http-request/ASIDownloadCache.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIDownloadCache.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIDownloadCache.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIFormDataRequest.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIFormDataRequest.h
+s323149655.534525
+e323149655.540502
+r1
+xCpHeader
+x../ext/asi-http-request/ASIFormDataRequest.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIFormDataRequest.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIFormDataRequest.h59fa8857df42b341^537a8a57df42b341^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIFormDataRequest.h0000204dfb01f041^782"CpHeader ../ext/asi-http-request/ASIFormDataRequest.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIFormDataRequest.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIFormDataRequest.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIHTTPRequest+OAuth.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest+OAuth.h
+s323149655.552835
+e323149655.555319
+r1
+xCpHeader
+x../ext/asi-http-request/ASIHTTPRequest+OAuth.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest+OAuth.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest+OAuth.hada48d57df42b341^40339057df42b341^---0#0#0#-19%DVTDocumentLocation2@147"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest+OAuth.h0000204dfb01f041^788"CpHeader ../ext/asi-http-request/ASIHTTPRequest+OAuth.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest+OAuth.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest+OAuth.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIHTTPRequest.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest.h
+s323149655.534596
+e323149655.540657
+r1
+xCpHeader
+x../ext/asi-http-request/ASIHTTPRequest.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest.hcafb8857df42b341^a1838a57df42b341^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest.h0000204dfb01f041^770"CpHeader ../ext/asi-http-request/ASIHTTPRequest.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequest.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequest.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIHTTPRequestConfig.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestConfig.h
+s323149655.534743
+e323149655.540874
+r1
+xCpHeader
+x../ext/asi-http-request/ASIHTTPRequestConfig.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestConfig.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestConfig.h4cfd8857df42b341^d28b8a57df42b341^---0#0#0#-19%DVTDocumentLocation2@147"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestConfig.h0000204dfb01f041^788"CpHeader ../ext/asi-http-request/ASIHTTPRequestConfig.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestConfig.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequestConfig.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIHTTPRequestDelegate.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestDelegate.h
+s323149655.535199
+e323149655.540768
+r1
+xCpHeader
+x../ext/asi-http-request/ASIHTTPRequestDelegate.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestDelegate.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestDelegate.h871a8957df42b341^df888a57df42b341^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestDelegate.h0000204dfb01f041^794"CpHeader ../ext/asi-http-request/ASIHTTPRequestDelegate.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIHTTPRequestDelegate.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIHTTPRequestDelegate.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIInputStream.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIInputStream.h
+s323149655.541465
+e323149655.544261
+r1
+xCpHeader
+x../ext/asi-http-request/ASIInputStream.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIInputStream.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIInputStream.h1bb98a57df42b341^9f588b57df42b341^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIInputStream.h0000204dfb01f041^770"CpHeader ../ext/asi-http-request/ASIInputStream.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIInputStream.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIInputStream.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASINetworkQueue.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASINetworkQueue.h
+s323149655.542175
+e323149655.544302
+r1
+xCpHeader
+x../ext/asi-http-request/ASINetworkQueue.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASINetworkQueue.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASINetworkQueue.h54e28a57df42b341^4c548b57df42b341^---0#0#0#-19%DVTDocumentLocation2@142"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASINetworkQueue.h0000204dfb01f041^773"CpHeader ../ext/asi-http-request/ASINetworkQueue.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASINetworkQueue.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASINetworkQueue.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../ext/asi-http-request/ASIProgressDelegate.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIProgressDelegate.h
+s323149655.542566
+e323149655.545180
+r1
+xCpHeader
+x../ext/asi-http-request/ASIProgressDelegate.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIProgressDelegate.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIProgressDelegate.he8fa8a57df42b341^08928b57df42b341^---0#0#0#-19%DVTDocumentLocation2@146"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIProgressDelegate.h0000204dfb01f041^785"CpHeader ../ext/asi-http-request/ASIProgressDelegate.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/ASIProgressDelegate.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext/asi-http-request/ASIProgressDelegate.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SGFeature.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeature.h
+s323149655.544651
+e323149655.548435
+r1
+xCpHeader
+x../src/SGFeature.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeature.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeature.h55848b57df42b341^29eb8f57df42b341^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeature.h0000204dfb01f041^721"CpHeader ../src/SGFeature.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeature.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeature.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SGFeatureCollection.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeatureCollection.h
+s323149655.545490
+e323149655.548485
+r1
+xCpHeader
+x../src/SGFeatureCollection.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeatureCollection.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeatureCollection.h1bbc8b57df42b341^13f08f57df42b341^---0#0#0#-19%DVTDocumentLocation2@146"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeatureCollection.h0000204dfb01f041^751"CpHeader ../src/SGFeatureCollection.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGFeatureCollection.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGFeatureCollection.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SGGeometry.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGGeometry.h
+s323149655.545926
+e323149655.548773
+r1
+xCpHeader
+x../src/SGGeometry.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SGGeometry.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGGeometry.hfdd98b57df42b341^26fb8f57df42b341^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGGeometry.h0000204dfb01f041^724"CpHeader ../src/SGGeometry.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGGeometry.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGGeometry.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SGPoint.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPoint.h
+s323149655.547382
+e323149655.551872
+r1
+xCpHeader
+x../src/SGPoint.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPoint.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPoint.h863a8c57df42b341^36039057df42b341^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPoint.h0000204dfb01f041^715"CpHeader ../src/SGPoint.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPoint.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPoint.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SGPolygon.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPolygon.h
+s323149655.549270
+e323149655.552648
+r1
+xCpHeader
+x../src/SGPolygon.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPolygon.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPolygon.hbce78c57df42b341^6b0e9057df42b341^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPolygon.h0000204dfb01f041^721"CpHeader ../src/SGPolygon.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGPolygon.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGPolygon.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SGStoredRecord.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGStoredRecord.h
+s323149655.554741
+e323149655.557466
+r1
+xCpHeader
+x../src/SGStoredRecord.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SGStoredRecord.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGStoredRecord.he61e8e57df42b341^a33b9057df42b341^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGStoredRecord.h0000204dfb01f041^736"CpHeader ../src/SGStoredRecord.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SGStoredRecord.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SGStoredRecord.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SimpleGeo+Context.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Context.h
+s323149655.542858
+e323149655.545651
+r1
+xCpHeader
+x../src/SimpleGeo+Context.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Context.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Context.h630d8b57df42b341^d5b08b57df42b341^---0#0#0#-19%DVTDocumentLocation2@144"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Context.h0000204dfb01f041^745"CpHeader ../src/SimpleGeo+Context.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Context.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Context.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SimpleGeo+Internal.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Internal.h
+s323149655.550120
+e323149655.552722
+r1
+xCpHeader
+x../src/SimpleGeo+Internal.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Internal.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Internal.hae0d8d57df42b341^c6149057df42b341^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Internal.h0000204dfb01f041^748"CpHeader ../src/SimpleGeo+Internal.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Internal.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Internal.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SimpleGeo+Places.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Places.h
+s323149655.544533
+e323149655.547113
+r1
+xCpHeader
+x../src/SimpleGeo+Places.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Places.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Places.ha27e8b57df42b341^71e28f57df42b341^---0#0#0#-19%DVTDocumentLocation2@143"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Places.h0000204dfb01f041^742"CpHeader ../src/SimpleGeo+Places.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Places.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Places.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SimpleGeo+Storage.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Storage.h
+s323149655.553921
+e323149655.557543
+r1
+xCpHeader
+x../src/SimpleGeo+Storage.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Storage.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Storage.h4aed8d57df42b341^a73e9057df42b341^---0#0#0#-19%DVTDocumentLocation2@144"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Storage.h0000204dfb01f041^745"CpHeader ../src/SimpleGeo+Storage.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo+Storage.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo+Storage.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CCpHeader ../src/SimpleGeo.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo.h
+s323149655.550702
+e323149655.553792
+r1
+xCpHeader
+x../src/SimpleGeo.h
+xbuild/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo.h
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo.hf9138d57df42b341^b91b9057df42b341^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo.h0000204dfb01f041^721"CpHeader ../src/SimpleGeo.h build/Release-iphonesimulator/SimpleGeo.framework/Headers/SimpleGeo.h    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../src/SimpleGeo.h /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Headers
+
+CLd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/SimpleGeo normal i386
+s323149664.408331
+e323149664.470002
+r1
+xLd
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/SimpleGeo
+xnormal
+xi386
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Link /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/SimpleGeo5cac6860df42b341^76517860df42b341^---0#0#0#--1210"Ld build/Release-iphonesimulator/SimpleGeo.framework/SimpleGeo normal i386    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -r -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -filelist /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/Objects-normal/i386/SimpleGeo.LinkFileList -nostdlib -mmacosx-version-min=10.6 -ObjC -Xlinker -objc_abi_version -Xlinker 2 -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/SimpleGeo
+
+CProcessInfoPlistFile /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Info.plist SimpleGeo-Info.plist
+s323149655.525341
+e323149655.528994
+r1
+xProcessInfoPlistFile
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Info.plist
+xSimpleGeo-Info.plist
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Process SimpleGeo-Info.plist12a08657df42b341^22518857df42b341^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/SimpleGeo-Info.plist0000000000000000^654"ProcessInfoPlistFile build/Release-iphonesimulator/SimpleGeo.framework/Info.plist SimpleGeo-Info.plist    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    builtin-infoPlistUtility SimpleGeo-Info.plist -expandbuildsettings -format binary -platform iphonesimulator -o /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework/Info.plist
+
+CProcessPCH /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch.gch SimpleGeo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s323149655.560606
+e323149656.251456
+r1
+xProcessPCH
+x/var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch.gch
+xSimpleGeo_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile SimpleGeo_Prefix.pch5fb48f57df42b341^3e5e4058df42b341^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/SimpleGeo_Prefix.pch0000000000000000^2408"ProcessPCH /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch.gch SimpleGeo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/SimpleGeo_Prefix.pch -o /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-cnhwvnjllxentgbhzhcetuytsohm/SimpleGeo_Prefix.pch.gch
+
+CProcessPCH /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-gkknbtdtmerxkqhbaeswjrezondi/SimpleGeo_Prefix.pch.gch SimpleGeo_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
+s323149655.560603
+e323149655.626063
+r1
+xProcessPCH
+x/var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-gkknbtdtmerxkqhbaeswjrezondi/SimpleGeo_Prefix.pch.gch
+xSimpleGeo_Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile SimpleGeo_Prefix.pch7db18f57df42b341^f643a057df42b341^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/SimpleGeo_Prefix.pch0000000000000000^2344"ProcessPCH /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-gkknbtdtmerxkqhbaeswjrezondi/SimpleGeo_Prefix.pch.gch SimpleGeo_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -D__IPHONE_OS_VERSION_MIN_REQUIRED=40000 -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-generated-files.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-own-target-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-all-target-headers.hmap -iquote /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/SimpleGeo-project-headers.hmap -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/include -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources/i386 -I/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/SimpleGeo.build/Release-iphonesimulator/SimpleGeo.build/DerivedSources -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator -F/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/../ext -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/SimpleGeo_Prefix.pch -o /var/folders/Vu/VuQoqehOGJS0rg6+vN+O-++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SimpleGeo_Prefix-gkknbtdtmerxkqhbaeswjrezondi/SimpleGeo_Prefix.pch.gch
+
+CTouch /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework
+s323149664.471478
+e323149664.478110
+r1
+xTouch
+x/Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection106"Touch /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.frameworke3c77860df42b341^38657a60df42b341^---0#0#0#--503"Touch build/Release-iphonesimulator/SimpleGeo.framework    cd /Users/knassar/Code/iphone/SimpleGeo.framework/iOS    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/Applications/liftweb-1.0.1/apache-maven/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/texbin:/usr/X11/bin"    /usr/bin/touch -c /Users/knassar/Code/iphone/SimpleGeo.framework/iOS/build/Release-iphonesimulator/SimpleGeo.framework
+
