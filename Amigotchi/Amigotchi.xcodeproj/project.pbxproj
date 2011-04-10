@@ -122,6 +122,7 @@
 		C77E5C9E13526B160051BD37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5C9D13526B160051BD37 /* AppDelegate.m */; };
 		C77E5CA113526B160051BD37 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA013526B160051BD37 /* RootViewController.m */; };
 		C77E5CA413526B160051BD37 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA313526B160051BD37 /* HelloWorldLayer.m */; };
+		C7E1DB6313526D09007A4B73 /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1DB6213526D09007A4B73 /* Pet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,6 +361,8 @@
 		C77E5CA213526B160051BD37 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		C77E5CA313526B160051BD37 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		C77E5CA513526B160051BD37 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		C7E1DB6113526D09007A4B73 /* Pet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pet.h; sourceTree = "<group>"; };
+		C7E1DB6213526D09007A4B73 /* Pet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +419,7 @@
 		C77E5B5113526B140051BD37 /* Amigotchi */ = {
 			isa = PBXGroup;
 			children = (
+				C7E1DB5F13526CE5007A4B73 /* Classes */,
 				C77E5C5713526B150051BD37 /* LICENSE_cocos2d.txt */,
 				C77E5C6613526B160051BD37 /* LICENSE_CocosDenshion.txt */,
 				C77E5C7113526B160051BD37 /* LICENSE_TouchJSON.txt */,
@@ -702,6 +706,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C7E1DB5F13526CE5007A4B73 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C7E1DB6113526D09007A4B73 /* Pet.h */,
+				C7E1DB6213526D09007A4B73 /* Pet.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -866,6 +879,7 @@
 				C77E5C9E13526B160051BD37 /* AppDelegate.m in Sources */,
 				C77E5CA113526B160051BD37 /* RootViewController.m in Sources */,
 				C77E5CA413526B160051BD37 /* HelloWorldLayer.m in Sources */,
+				C7E1DB6313526D09007A4B73 /* Pet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,6 +973,7 @@
 				C77E5CAA13526B160051BD37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
