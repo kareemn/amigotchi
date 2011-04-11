@@ -13,6 +13,7 @@
 #import "ASIHTTPRequest.h"
 #import "AmigoAPI.h"
 #import "AmigoUser.h"
+#import "AmigoPet.h"
 
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer<FBSessionDelegate>

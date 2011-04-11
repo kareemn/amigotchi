@@ -54,6 +54,11 @@ static NSString* kAppId = @"196872950351792";
 		[self addChild: message];
         [self initApi];
         [self initFacebookButtons];
+        
+        AmigoPet * dragon = [[AmigoPet alloc] init];
+        dragon.position = ccp(100, 100);
+        [self addChild:dragon z:10];
+        
 
 	}
 	return self;

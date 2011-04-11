@@ -4,57 +4,31 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>dragon_body.png</key>
+            <key>dragon_idle_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,38},{32,25}}</string>
+                <string>{{0,0},{320,392}}</string>
                 <key>offset</key>
-                <string>{0,-12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{4,24},{32,25}}</string>
+                <string>{{0,0},{320,392}}</string>
                 <key>sourceSize</key>
-                <string>{40,49}</string>
+                <string>{320,392}</string>
             </dict>
-            <key>dragon_head.png</key>
+            <key>dragon_idle_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,9},{26,29}}</string>
+                <string>{{0,392},{304,384}}</string>
                 <key>offset</key>
-                <string>{0,10}</string>
+                <string>{0,-4}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{7,0},{26,29}}</string>
+                <string>{{8,8},{304,384}}</string>
                 <key>sourceSize</key>
-                <string>{40,49}</string>
-            </dict>
-            <key>dragon_l_wing.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{0,0},{12,9}}</string>
-                <key>offset</key>
-                <string>{-14,1}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,19},{12,9}}</string>
-                <key>sourceSize</key>
-                <string>{40,49}</string>
-            </dict>
-            <key>dragon_r_wing.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{12,0},{12,9}}</string>
-                <key>offset</key>
-                <string>{14,1}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{28,19},{12,9}}</string>
-                <key>sourceSize</key>
-                <string>{40,49}</string>
+                <string>{320,392}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -62,7 +36,7 @@
             <key>format</key>
             <integer>2</integer>
             <key>size</key>
-            <string>{32,64}</string>
+            <string>{512,1024}</string>
             <key>textureFileName</key>
             <string>dragon.png</string>
         </dict>
