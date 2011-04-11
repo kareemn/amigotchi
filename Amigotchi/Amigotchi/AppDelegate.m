@@ -12,7 +12,6 @@
 #import "GameConfig.h"
 #import "HelloWorldLayer.h"
 #import "RootViewController.h"
-
 @implementation AppDelegate
 
 @synthesize window;
