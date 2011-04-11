@@ -7,12 +7,13 @@
 //
 
 #import "AmigoAPI.h"
+#import "JSON.h"
 
 static NSString* API_ROOT = @"http://amigotchiapi.appspot.com";
 static NSString* LOGIN_ENDPOINT = @"/user/login";
 
 @implementation AmigoAPI
-@synthesize queue;
+@synthesize queue, user, userLayer;
 
 - (id)init {
     self = [super init];
@@ -23,11 +24,15 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
            [self setQueue:[[[ASINetworkQueue alloc] init] autorelease] ];
         }
         
+        [self setUser:[[AmigoUser alloc] init] ];
+        
     }
     return self;
 }
 
 -(void)login:(NSString*)access_token {
+    
+    [[self user] setAccess_token:access_token];
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", API_ROOT, LOGIN_ENDPOINT] ];
     
@@ -50,16 +55,25 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     NSString *response = [request responseString];
     id parsedJson = [self parseJsonResponse:response];
     
+    NSLog(@"%@", [parsedJson description]);
+    
     NSString *first_name = [parsedJson objectForKey:@"first_name"];
-    if (first_name != nil){
-        NSLog([NSString stringWithFormat:@"Hello %@",first_name]);
+    NSString *profile_id = [parsedJson objectForKey:@"id"];
+    
+    if (first_name != nil && profile_id != nil){
+        
+        [[self user] setName:first_name];
+        [[self user] setProfile_id:profile_id];
+        
+        NSLog(@"%@", [[self user] description]);
     }
 }
 
 - (void)requestWentWrong:(ASIHTTPRequest *)request
 {
+    [[self user] setAccess_token:[NSString stringWithFormat:@"0"]];
     NSError *error = [request error];
-    NSLog(error);
+    NSLog(@"%@", error);
 }
 
 /**

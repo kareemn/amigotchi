@@ -11,6 +11,10 @@
 
 @implementation AmigoUser
 
-@synthesize name;
+@synthesize name, profile_id, access_token;
+
+-(NSString *)description{
+    return [NSString stringWithFormat:@"AmigoUser={name: %@, profile_id: %@, access_token: %@}", name, profile_id, access_token];
+}
 
 @end

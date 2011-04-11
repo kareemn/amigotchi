@@ -42,13 +42,13 @@ static NSString* kAppId = @"196872950351792";
         
 		
 		// create and initialize a Label
-		message = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
+		message = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:32];
 
 		// ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
 	
 		// position the label on the center of the screen
-		message.position =  ccp( size.width /2 , size.height/2 );
+		message.position =  ccp( size.width /2 , size.height/2 + size.height/3 );
 		
 		// add the label as a child to this Layer
 		[self addChild: message];
@@ -66,6 +66,7 @@ static NSString* kAppId = @"196872950351792";
 
 -(void)initApi {
     api = [[AmigoAPI alloc] init];
+    [api setUserLayer:self];
 }
 
 -(void)initFacebookButtons{
@@ -83,7 +84,7 @@ static NSString* kAppId = @"196872950351792";
     CGSize size = [[CCDirector sharedDirector] winSize];
     
     //position menu
-    fbMenu.position = ccp(size.width * .5, size.height * .5 + facebookLoginButton.contentSize.height * 3);
+    fbMenu.position = ccp(size.width * .5, size.height * .75 + facebookLoginButton.contentSize.height * 3);
     
     [self addChild:fbMenu];
 }
@@ -110,9 +111,12 @@ static NSString* kAppId = @"196872950351792";
 - (void)fbDidLogin {
     isFBLogged = YES;
     [message setString:@"Login successful"];
+    
     [api login:[facebook accessToken]];
     
-    NSLog([facebook accessToken]);
+    if(user == nil){
+        user = [[AmigoUser alloc] init];
+    }
     
     [facebookLoginButton setVisible:NO];
     [facebookLogoutButton setVisible:YES];
@@ -133,6 +137,10 @@ static NSString* kAppId = @"196872950351792";
     
     [facebookLoginButton setVisible:YES];
     [facebookLogoutButton setVisible:NO];
+}
+
+-(void)updateUser{
+    
 }
 
 
