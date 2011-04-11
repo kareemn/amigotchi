@@ -112,6 +112,8 @@ static NSString* kAppId = @"196872950351792";
     [message setString:@"Login successful"];
     [api login:[facebook accessToken]];
     
+    NSLog([facebook accessToken]);
+    
     [facebookLoginButton setVisible:NO];
     [facebookLogoutButton setVisible:YES];
 }
