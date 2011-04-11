@@ -10,6 +10,8 @@
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 #import "FBConnect.h"
+#import "ASIHTTPRequest.h"
+#import "AmigoAPI.h"
 
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer<FBSessionDelegate>
@@ -22,16 +24,19 @@
     CCMenuItem          *facebookLoginButton;
     CCMenuItem          *facebookLogoutButton;
     CCLabelTTF          *message;
+    AmigoAPI            *api;
 
 }
 
 @property (nonatomic, readwrite, retain) Facebook *facebook;
 @property (nonatomic, readwrite, retain) NSArray  *permissions;
+@property (nonatomic, readwrite, retain) AmigoAPI *api;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
 
 -(void)initFacebookButtons;
+-(void)initApi;
 -(void)facebookLogin;
 
 @end

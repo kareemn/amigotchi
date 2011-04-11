@@ -15,7 +15,7 @@ static NSString* kAppId = @"196872950351792";
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
-@synthesize facebook,permissions;
+@synthesize facebook, permissions ,api;
 
 +(CCScene *) scene
 {
@@ -52,11 +52,15 @@ static NSString* kAppId = @"196872950351792";
 		
 		// add the label as a child to this Layer
 		[self addChild: message];
-        
+        [self initApi];
         [self initFacebookButtons];
 
 	}
 	return self;
+}
+
+-(void)initApi {
+    api = [[AmigoAPI alloc] init];
 }
 
 -(void)initFacebookButtons{
@@ -85,7 +89,7 @@ static NSString* kAppId = @"196872950351792";
     }
     
     permissions =  [[NSArray arrayWithObjects:
-                     @"read_stream", @"offline_access", @"user_checkins", @"publish_checkins",nil] retain];
+                     @"offline_access", @"user_checkins", @"publish_checkins",nil] retain];
     
     [facebook authorize:permissions delegate:self];
     
@@ -101,7 +105,7 @@ static NSString* kAppId = @"196872950351792";
 - (void)fbDidLogin {
     isFBLogged = YES;
     [message setString:@"Login successful"];
-    
+    [api login:[facebook accessToken]];
     
     [facebookLoginButton setVisible:NO];
     [facebookLogoutButton setVisible:YES];

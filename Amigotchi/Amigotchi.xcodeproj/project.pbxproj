@@ -141,6 +141,7 @@
 		C77E5CA413526B160051BD37 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA313526B160051BD37 /* HelloWorldLayer.m */; };
 		C79739F71352B8B700230B49 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F61352B8B700230B49 /* SystemConfiguration.framework */; };
 		C79739F91352B91900230B49 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F81352B91900230B49 /* MobileCoreServices.framework */; };
+		C79739FE1352BA5800230B49 /* AmigoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C79739FD1352BA5800230B49 /* AmigoAPI.m */; };
 		C7AAE1AD1352B80700BEAC71 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */; };
 		C7DDABEE13527BC700CB250B /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDABD313527BC700CB250B /* Facebook.m */; };
 		C7DDABEF13527BC700CB250B /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7DDABD613527BC700CB250B /* FBDialog.bundle */; };
@@ -434,6 +435,8 @@
 		C77E5CA513526B160051BD37 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		C79739F61352B8B700230B49 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C79739F81352B91900230B49 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C79739FC1352BA5800230B49 /* AmigoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoAPI.h; sourceTree = "<group>"; };
+		C79739FD1352BA5800230B49 /* AmigoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoAPI.m; sourceTree = "<group>"; };
 		C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C7DDABCF13527BC700CB250B /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
 		C7DDABD213527BC700CB250B /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
@@ -903,6 +906,8 @@
 			children = (
 				C7E1DB6113526D09007A4B73 /* Pet.h */,
 				C7E1DB6213526D09007A4B73 /* Pet.m */,
+				C79739FC1352BA5800230B49 /* AmigoAPI.h */,
+				C79739FD1352BA5800230B49 /* AmigoAPI.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1116,6 +1121,7 @@
 				C77728691352B5AC007A44B9 /* ASIInputStream.m in Sources */,
 				C777286A1352B5AC007A44B9 /* ASINetworkQueue.m in Sources */,
 				C777286B1352B5AC007A44B9 /* Reachability.m in Sources */,
+				C79739FE1352BA5800230B49 /* AmigoAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

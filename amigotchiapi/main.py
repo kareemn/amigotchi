@@ -51,13 +51,13 @@ class LoginHandler(webapp.RequestHandler):
             urllib.urlencode(dict(access_token=access_token))))
 
         if profile.get("error"):
-           self.response.out.write("login failed")
+           self.response.out.write(json.dumps(profile))
         else:
-	        user = User(key_name=str(profile["id"]), id=str(profile["id"]),
-	                    name=profile["name"], access_token=access_token,
-	                    profile_url=profile["link"])
-	        user.put()
-			self.response.out.write("login successful")
+            user = User(key_name=str(profile["id"]), id=str(profile["id"]),
+                        name=profile["name"], access_token=access_token,
+                        profile_url=profile["link"])
+            user.put()
+            self.response.out.write(json.dumps(profile))
 
 
 def main():
