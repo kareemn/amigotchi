@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C777275313528860007A44B9 /* LoginNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274B1352885F007A44B9 /* LoginNormal.png */; };
+		C777275413528860007A44B9 /* LoginNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274C1352885F007A44B9 /* LoginNormal@2x.png */; };
+		C777275513528860007A44B9 /* LoginPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274D1352885F007A44B9 /* LoginPressed.png */; };
+		C777275613528860007A44B9 /* LoginPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274E13528860007A44B9 /* LoginPressed@2x.png */; };
+		C777275713528860007A44B9 /* LogoutNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274F13528860007A44B9 /* LogoutNormal.png */; };
+		C777275813528860007A44B9 /* LogoutNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C777275013528860007A44B9 /* LogoutNormal@2x.png */; };
+		C777275913528860007A44B9 /* LogoutPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = C777275113528860007A44B9 /* LogoutPressed.png */; };
+		C777275A13528860007A44B9 /* LogoutPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C777275213528860007A44B9 /* LogoutPressed@2x.png */; };
 		C77E5B4213526B140051BD37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E5B4113526B140051BD37 /* QuartzCore.framework */; };
 		C77E5B4413526B140051BD37 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E5B4313526B140051BD37 /* OpenGLES.framework */; };
 		C77E5B4613526B140051BD37 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77E5B4513526B140051BD37 /* OpenAL.framework */; };
@@ -147,6 +155,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C777274B1352885F007A44B9 /* LoginNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginNormal.png; sourceTree = "<group>"; };
+		C777274C1352885F007A44B9 /* LoginNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginNormal@2x.png"; sourceTree = "<group>"; };
+		C777274D1352885F007A44B9 /* LoginPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginPressed.png; sourceTree = "<group>"; };
+		C777274E13528860007A44B9 /* LoginPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginPressed@2x.png"; sourceTree = "<group>"; };
+		C777274F13528860007A44B9 /* LogoutNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoutNormal.png; sourceTree = "<group>"; };
+		C777275013528860007A44B9 /* LogoutNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoutNormal@2x.png"; sourceTree = "<group>"; };
+		C777275113528860007A44B9 /* LogoutPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoutPressed.png; sourceTree = "<group>"; };
+		C777275213528860007A44B9 /* LogoutPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoutPressed@2x.png"; sourceTree = "<group>"; };
 		C77E5B3D13526B140051BD37 /* Amigotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amigotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77E5B4113526B140051BD37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C77E5B4313526B140051BD37 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -492,6 +508,14 @@
 		C77E5B5213526B140051BD37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C777274B1352885F007A44B9 /* LoginNormal.png */,
+				C777274C1352885F007A44B9 /* LoginNormal@2x.png */,
+				C777274D1352885F007A44B9 /* LoginPressed.png */,
+				C777274E13528860007A44B9 /* LoginPressed@2x.png */,
+				C777274F13528860007A44B9 /* LogoutNormal.png */,
+				C777275013528860007A44B9 /* LogoutNormal@2x.png */,
+				C777275113528860007A44B9 /* LogoutPressed.png */,
+				C777275213528860007A44B9 /* LogoutPressed@2x.png */,
 				C77E5B5313526B140051BD37 /* Default.png */,
 				C77E5B5513526B140051BD37 /* fps_images.png */,
 				C77E5B5713526B140051BD37 /* Icon-72.png */,
@@ -883,6 +907,14 @@
 				C77E5B6213526B140051BD37 /* Icon@2x.png in Resources */,
 				C77E5B6513526B140051BD37 /* iTunesArtwork in Resources */,
 				C7DDABEF13527BC700CB250B /* FBDialog.bundle in Resources */,
+				C777275313528860007A44B9 /* LoginNormal.png in Resources */,
+				C777275413528860007A44B9 /* LoginNormal@2x.png in Resources */,
+				C777275513528860007A44B9 /* LoginPressed.png in Resources */,
+				C777275613528860007A44B9 /* LoginPressed@2x.png in Resources */,
+				C777275713528860007A44B9 /* LogoutNormal.png in Resources */,
+				C777275813528860007A44B9 /* LogoutNormal@2x.png in Resources */,
+				C777275913528860007A44B9 /* LogoutPressed.png in Resources */,
+				C777275A13528860007A44B9 /* LogoutPressed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

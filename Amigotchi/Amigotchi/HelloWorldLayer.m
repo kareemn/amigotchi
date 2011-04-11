@@ -10,8 +10,13 @@
 // Import the interfaces
 #import "HelloWorldLayer.h"
 
+
+static NSString* kAppId = @"196872950351792";
+
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
+
+@synthesize facebook,permissions;
 
 +(CCScene *) scene
 {
@@ -34,21 +39,67 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
+        
 		
 		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
+		message = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
 
 		// ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
 	
 		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
+		message.position =  ccp( size.width /2 , size.height/2 );
 		
 		// add the label as a child to this Layer
-		[self addChild: label];
+		[self addChild: message];
+        
+        [self initFacebookButtons];
+
 	}
 	return self;
 }
+
+-(void)initFacebookButtons{
+    //change images
+    facebookLoginButton = [CCMenuItemImage itemFromNormalImage:@"LoginNormal.png" selectedImage:@"LoginPressed.png" disabledImage:@"LoginPressed.png" target:self selector:@selector(facebookLogin)];
+    
+    //add buttons to menu
+    CCMenu *fbMenu = [CCMenu menuWithItems:facebookLoginButton, facebookLogoutButton, nil];
+    
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    
+    //position menu
+    fbMenu.position = ccp(size.width * .5, size.height * .5 + facebookLoginButton.contentSize.height * 3);
+    
+    [self addChild:fbMenu];
+}
+
+-(void)facebookLogin{
+    if (facebook == nil){
+       facebook = [[Facebook alloc] initWithAppId:kAppId];
+    }
+    
+    permissions =  [[NSArray arrayWithObjects:
+                     @"read_stream", @"offline_access", @"user_checkins", @"publish_checkins",nil] retain];
+    
+    [facebook authorize:permissions delegate:self];
+}
+
+/* automatically called when facebook authorize delegate:self is successful */
+- (void)fbDidLogin {
+    isFBLogged = YES;
+}
+
+/* automatically called when faecbook authorize is cancelled/failed */
+-(void)fbDidNotLogin:(BOOL)cancelled {
+    if (cancelled) {
+        [message setString:@"Login cancelled :)"];
+    } else {
+        [message setString:@"Error. Please try again."];
+    }
+}
+
+
 
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

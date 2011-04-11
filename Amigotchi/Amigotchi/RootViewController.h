@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBConnect.h"
 
 
-@interface RootViewController : UIViewController {
-
+@interface RootViewController : UIViewController< FBSessionDelegate> {
 }
+
 
 @end
