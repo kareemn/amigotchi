@@ -12,6 +12,7 @@
 #import "FBConnect.h"
 #import "ASIHTTPRequest.h"
 #import "AmigoAPI.h"
+#import "AmigoUser.h"
 
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer<FBSessionDelegate>
@@ -24,7 +25,10 @@
     CCMenuItem          *facebookLoginButton;
     CCMenuItem          *facebookLogoutButton;
     CCLabelTTF          *message;
+    
+    //amigo stuff
     AmigoAPI            *api;
+    AmigoUser           *user;
 
 }
 

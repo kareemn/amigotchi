@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface Pet :  CCNode{
+@interface AmigoPet :  CCNode{
     CCSprite        *bodySprite;
     CCSprite        *headSprite;
     CCSprite        *limbSprite;

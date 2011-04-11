@@ -6,8 +6,8 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Pet.h"
+#import "AmigoPet.h"
 
-@implementation Pet
+@implementation AmigoPet
 
 @end
