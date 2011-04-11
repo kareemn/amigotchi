@@ -22,7 +22,7 @@ static NSString* kDialogBaseURL = @"https://m.facebook.com/dialog/";
 static NSString* kGraphBaseURL = @"https://graph.facebook.com/";
 static NSString* kRestserverBaseURL = @"https://api.facebook.com/method/";
 
-static NSString* kFBAppAuthURL = @"fbauth://authorize";
+//static NSString* kFBAppAuthURL = @"fbauth://authorize";
 static NSString* kRedirectURL = @"fbconnect://success";
 
 static NSString* kLogin = @"oauth";
@@ -129,10 +129,13 @@ static NSString* kSDKVersion = @"2";
   // This minimizes the chance that the user will have to enter his or
   // her credentials in order to authorize the application.
   BOOL didOpenOtherApp = NO;
+    
+    
+    //comment this block out if you want to make it open an in-app facebook login
+    /*
   UIDevice *device = [UIDevice currentDevice];
 	
-  //comment this block out if you want to make it open an in-app facebook login
-  /*
+
   if ([device respondsToSelector:@selector(isMultitaskingSupported)] && [device isMultitaskingSupported]) {
     if (tryFBAppAuth) {
       NSString *fbAppUrl = [FBRequest serializeURL:kFBAppAuthURL params:params];
