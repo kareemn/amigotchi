@@ -63,6 +63,11 @@ static NSString* kAppId = @"196872950351792";
     //change images
     facebookLoginButton = [CCMenuItemImage itemFromNormalImage:@"LoginNormal.png" selectedImage:@"LoginPressed.png" disabledImage:@"LoginPressed.png" target:self selector:@selector(facebookLogin)];
     
+    
+    facebookLogoutButton = [CCMenuItemImage itemFromNormalImage:@"LogoutNormal.png" selectedImage:@"LogoutPressed.png" disabledImage:@"LogoutPressed.png" target:self selector:@selector(facebookLogout)];
+    
+    [facebookLogoutButton setVisible:NO];
+    
     //add buttons to menu
     CCMenu *fbMenu = [CCMenu menuWithItems:facebookLoginButton, facebookLogoutButton, nil];
     
@@ -85,10 +90,20 @@ static NSString* kAppId = @"196872950351792";
     [facebook authorize:permissions delegate:self];
 }
 
+-(void)facebookLogout{
+    [facebook logout:self];
+    
+}
+
 /* automatically called when facebook authorize delegate:self is successful */
 - (void)fbDidLogin {
     isFBLogged = YES;
+    [message setString:@"Login successful"];
+    
+    [facebookLoginButton setVisible:NO];
+    [facebookLogoutButton setVisible:YES];
 }
+
 
 /* automatically called when faecbook authorize is cancelled/failed */
 -(void)fbDidNotLogin:(BOOL)cancelled {
@@ -99,6 +114,12 @@ static NSString* kAppId = @"196872950351792";
     }
 }
 
+-(void)fbDidLogout{
+    [message setString:@"Logout successful"];
+    
+    [facebookLoginButton setVisible:YES];
+    [facebookLogoutButton setVisible:NO];
+}
 
 
 // on "dealloc" you need to release all your retained objects
