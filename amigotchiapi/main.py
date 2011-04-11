@@ -14,17 +14,55 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+import urllib
+
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
+from google.appengine.ext import db
+
+from django.utils import simplejson as json
+
+class User(db.Model):
+    id = db.StringProperty(required=True)
+    created = db.DateTimeProperty(auto_now_add=True)
+    updated = db.DateTimeProperty(auto_now=True)
+    name = db.StringProperty(required=True)
+    profile_url = db.StringProperty(required=True)
+    access_token = db.StringProperty(required=True)
 
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
         self.response.out.write('Hello world!')
 
+class LoginHandler(webapp.RequestHandler):
+    def get(self):
+        self.response.out.write("doesn't work here buddy")
+
+    def post(self):
+    
+        access_token = self.request.get("access_token")
+
+        # Download the user profile and cache a local instance of the
+        # basic profile info
+        profile = json.load(urllib.urlopen(
+            "https://graph.facebook.com/me?" +
+            urllib.urlencode(dict(access_token=access_token))))
+
+        if profile.get("error"):
+           self.response.out.write("login failed")
+        else:
+	        user = User(key_name=str(profile["id"]), id=str(profile["id"]),
+	                    name=profile["name"], access_token=access_token,
+	                    profile_url=profile["link"])
+	        user.put()
+			self.response.out.write("login successful")
+
 
 def main():
-    application = webapp.WSGIApplication([('/', MainHandler)],
+    application = webapp.WSGIApplication([('/', MainHandler),
+                                          ('/user/login', LoginHandler)],
                                          debug=True)
     util.run_wsgi_app(application)
 

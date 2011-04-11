@@ -102,6 +102,7 @@ static NSString* kAppId = @"196872950351792";
     isFBLogged = YES;
     [message setString:@"Login successful"];
     
+    
     [facebookLoginButton setVisible:NO];
     [facebookLogoutButton setVisible:YES];
 }
