@@ -66,7 +66,6 @@ static NSString* kAppId = @"196872950351792";
 
 -(void)initApi {
     api = [[AmigoAPI alloc] init];
-    [api setUserLayer:self];
 }
 
 -(void)initFacebookButtons{
@@ -139,8 +138,8 @@ static NSString* kAppId = @"196872950351792";
     [facebookLogoutButton setVisible:NO];
 }
 
--(void)updateUser{
-    
+-(void)updateUserLabel:(NSString*)name{
+    [message setString:[NSString stringWithFormat:@"Hello %@", name]];
 }
 
 
