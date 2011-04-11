@@ -10,7 +10,6 @@
 // Import the interfaces
 #import "HelloWorldLayer.h"
 
-
 static NSString* kAppId = @"196872950351792";
 
 // HelloWorldLayer implementation
@@ -28,6 +27,7 @@ static NSString* kAppId = @"196872950351792";
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
+    
 	
 	// return the scene
 	return scene;
@@ -88,10 +88,12 @@ static NSString* kAppId = @"196872950351792";
                      @"read_stream", @"offline_access", @"user_checkins", @"publish_checkins",nil] retain];
     
     [facebook authorize:permissions delegate:self];
+    
 }
 
 -(void)facebookLogout{
     [facebook logout:self];
+    
     
 }
 

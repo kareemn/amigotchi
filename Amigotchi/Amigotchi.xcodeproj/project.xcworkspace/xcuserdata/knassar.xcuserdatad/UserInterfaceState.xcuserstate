@@ -1052,11 +1052,11 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>324176635.43594301</real>
-		<string>{2008, 1319}</string>
+		<real>324177009.66148198</real>
+		<string>{1321, 1631}</string>
 		<false/>
-		<string>{3241, 0}</string>
-		<string>-fbDidLogout</string>
+		<string>{2514, 0}</string>
+		<string>-facebookLogin</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
 			<key>$class</key>
@@ -6970,9 +6970,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>324176635.43276298</real>
-		<string>{2008, 1319}</string>
-		<string>{3241, 0}</string>
+		<real>324177009.65861797</real>
+		<string>{1321, 1631}</string>
+		<string>{2514, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
