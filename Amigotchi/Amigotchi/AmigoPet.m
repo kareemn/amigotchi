@@ -34,6 +34,8 @@ CCAnimation * idleAnimation;
         CCSpriteFrameCache * cache = [CCSpriteFrameCache sharedSpriteFrameCache];
         [cache addSpriteFramesWithFile:@"dragon.plist"];
         
+        //[[CCSprite alloc] initWithSpriteFrame:@"NARDS"];
+        
         //Idle animation
         idleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay:1.0/2];
         

@@ -33,13 +33,13 @@
             <key>dragon_poked.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{624,0},{288,328}}</string>
+                <string>{{624,0},{288,368}}</string>
                 <key>offset</key>
-                <string>{0,-32}</string>
+                <string>{0,-12}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{16,64},{288,328}}</string>
+                <string>{{16,24},{288,368}}</string>
                 <key>sourceSize</key>
                 <string>{320,392}</string>
             </dict>

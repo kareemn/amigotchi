@@ -15,9 +15,11 @@
 #import "AmigoUser.h"
 #import "AmigoPet.h"
 
-#define MENU_HEIGHT 20
-#define PET_LAYER 5
+#define MENU_HEIGHT 50
+
 #define DEVICE_LAYER 3
+#define PET_LAYER 5
+#define HUD_LAYER 9
 
 // HomeLayer
 @interface HomeLayer : CCLayer<FBSessionDelegate>

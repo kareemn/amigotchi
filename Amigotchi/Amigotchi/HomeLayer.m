@@ -55,16 +55,16 @@ static NSString* kAppId = @"196872950351792";
         [self initApi];
         [self initFacebookButtons];
         
+        // add device dressing
+        CCSprite * screen = [[CCSprite alloc] initWithFile:@"screen.png"];
+        screen.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
+        [self addChild:screen z:DEVICE_LAYER];
+        
         // add a dragon
         AmigoPet * dragon = [[AmigoPet alloc] init];
         dragon.scale = .5;
-        dragon.position = ccp(size.width/2, size.height/2 + MENU_HEIGHT);
+        dragon.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
         [self addChild:dragon z:PET_LAYER];
-        
-        // add device dressing
-        CCSprite * screen = [[CCSprite alloc] initWithFile:@"screen.png"];
-        screen.position = dragon.position = ccp(size.width/2, size.height/2 + MENU_HEIGHT);
-        [self addChild:screen z:DEVICE_LAYER];
         
 
 	}
@@ -92,7 +92,7 @@ static NSString* kAppId = @"196872950351792";
     //position menu
     fbMenu.position = ccp(size.width * .5, size.height - facebookLoginButton.contentSize.height);
     
-    [self addChild:fbMenu];
+    [self addChild:fbMenu z:HUD_LAYER];
 }
 
 -(void)facebookLogin{
