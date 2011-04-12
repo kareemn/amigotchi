@@ -11,7 +11,7 @@
 #import "HomeLayer.h"
 #import "Accessory.h"
 
-@interface AmigoPet :  CCNode{
+@interface AmigoPet :  CCNode<CCTargetedTouchDelegate>{
     //HomeLayer * theGame;
     
     CCSprite        * mySprite;
@@ -36,5 +36,6 @@
 @property (retain, nonatomic) NSString * type;
 
 -(void)setSpritesForType:(NSString*)type;
+-(void)poke;
 
 @end
