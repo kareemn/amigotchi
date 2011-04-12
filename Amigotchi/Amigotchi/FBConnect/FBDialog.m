@@ -346,7 +346,7 @@ BOOL FBIsDeviceIPad() {
     [self addSubview:_webView];
 
     _spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
-      UIActivityIndicatorViewStyleWhiteLarge];
+      UIActivityIndicatorViewStyleGray];
     _spinner.autoresizingMask =
       UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin
       | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
@@ -354,6 +354,12 @@ BOOL FBIsDeviceIPad() {
     _modalBackgroundView = [[UIView alloc] init];
   }
   return self;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+ 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    _spinner.hidden = NO;
+ 	[_spinner startAnimating];
 }
 
 - (void)dealloc {
