@@ -17,6 +17,7 @@
 
 #define MENU_HEIGHT 20
 #define PET_LAYER 5
+#define DEVICE_LAYER 3
 
 // HomeLayer
 @interface HomeLayer : CCLayer<FBSessionDelegate>
@@ -47,8 +48,5 @@
 -(void)initApi;
 -(void)facebookLogin;
 
-
-/*USER LAYER FUNCS*/
-+(void)updateUserLabel:(NSString*)name;
 
 @end

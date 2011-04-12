@@ -116,7 +116,7 @@ static NSString* kAppId = @"196872950351792";
 /* automatically called when facebook authorize delegate:self is successful */
 - (void)fbDidLogin {
     isFBLogged = YES;
-    [message setString:@"Login successful"];
+    NSLog(@"Login successful");
     
     [api login:[facebook accessToken]];
     
@@ -132,14 +132,14 @@ static NSString* kAppId = @"196872950351792";
 /* automatically called when faecbook authorize is cancelled/failed */
 -(void)fbDidNotLogin:(BOOL)cancelled {
     if (cancelled) {
-        [message setString:@"Login cancelled :)"];
+         NSLog(@"Login cancelled :)");
     } else {
-        [message setString:@"Error. Please try again."];
+         NSLog(@"Error. Please try again.");
     }
 }
 
 -(void)fbDidLogout{
-    [message setString:@"Logout successful"];
+     NSLog(@"Logout successful");
     
     [facebookLoginButton setVisible:YES];
     [facebookLogoutButton setVisible:NO];
