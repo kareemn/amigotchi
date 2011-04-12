@@ -1,5 +1,5 @@
 //
-//  HelloWorldLayer.m
+//  HomeLayer.m
 //  Amigotchi
 //
 //  Created by Kareem Nassar on 4/10/11.
@@ -8,12 +8,12 @@
 
 
 // Import the interfaces
-#import "HelloWorldLayer.h"
+#import "HomeLayer.h"
 
 static NSString* kAppId = @"196872950351792";
 
-// HelloWorldLayer implementation
-@implementation HelloWorldLayer
+// HomeLayer implementation
+@implementation HomeLayer
 
 @synthesize facebook, permissions ,api;
 
@@ -23,7 +23,7 @@ static NSString* kAppId = @"196872950351792";
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
-	HelloWorldLayer *layer = [HelloWorldLayer node];
+	HomeLayer *layer = [HomeLayer node];
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
@@ -45,19 +45,22 @@ static NSString* kAppId = @"196872950351792";
 		message = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:32];
 
 		// ask director the the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
+		CGSize size = [[CCDirector sharedDirector] winSize]; 
+        CGSize homeSize = CGSizeMake(size.width, size.height - MENU_HEIGHT);
 	
 		// position the label on the center of the screen
-		message.position =  ccp( size.width /2 , size.height/2 + size.height/3 );
+		//message.position =  ccp( size.width /2 , size.height/2 + size.height/3 );
 		
 		// add the label as a child to this Layer
-		[self addChild: message];
+		//[self addChild: message];
         [self initApi];
         [self initFacebookButtons];
         
+        // add a dragon
         AmigoPet * dragon = [[AmigoPet alloc] init];
-        dragon.position = ccp(100, 100);
-        [self addChild:dragon z:10];
+        dragon.scale = .5;
+        dragon.position = ccp(homeSize.width/2, homeSize.height/2);
+        [self addChild:dragon z:PET_LAYER];
         
 
 	}

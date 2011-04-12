@@ -9,17 +9,29 @@
 #import "AmigoPet.h"
 
 @implementation AmigoPet
-@synthesize /*theGame,*/ mySprite;
+@synthesize /*theGame,*/ mySprite, type;
 
 -(id) init
 {
     if((self = [super init]))
     {
-        //self.theGame = game;
+        self.type = @"dragon";
+        [self setSpritesForType:self.type];
         
+        [self addChild:self.mySprite];
+        NSLog(@"init: Adding sprite to AmigoPet.\n");
+    }
+    return (self);
+}
+
+-(void)setSpritesForType:(NSString *)_type
+{
+    if(_type == @"dragon")
+    {
         CCSpriteFrameCache * cache = [CCSpriteFrameCache sharedSpriteFrameCache];
         [cache addSpriteFramesWithFile:@"dragon.plist"];
         
+        //Idle animation
         CCAnimation * idleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay:1.0/2];
         
         for(int i = 1; i < 3; i++)
@@ -31,11 +43,8 @@
         
         self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
         [self.mySprite runAction:idleAction];
-        
-        [self addChild:self.mySprite];
-        NSLog(@"init: Adding sprite to AmigoPet.\n");
-        //[game addChild:self];
     }
-    return (self);
 }
+
+
 @end

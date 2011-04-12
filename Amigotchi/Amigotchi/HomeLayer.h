@@ -1,5 +1,5 @@
 //
-//  HelloWorldLayer.h
+//  HomeLayer.h
 //  Amigotchi
 //
 //  Created by Kareem Nassar on 4/10/11.
@@ -15,8 +15,11 @@
 #import "AmigoUser.h"
 #import "AmigoPet.h"
 
-// HelloWorldLayer
-@interface HelloWorldLayer : CCLayer<FBSessionDelegate>
+#define MENU_HEIGHT 20
+#define PET_LAYER 5
+
+// HomeLayer
+@interface HomeLayer : CCLayer<FBSessionDelegate>
 {
     Facebook            *facebook;
     NSArray             *permissions;
@@ -37,7 +40,7 @@
 @property (nonatomic, readwrite, retain) NSArray  *permissions;
 @property (nonatomic, readwrite, retain) AmigoAPI *api;
 
-// returns a CCScene that contains the HelloWorldLayer as the only child
+// returns a CCScene that contains the HomeLayer as the only child
 +(CCScene *) scene;
 
 -(void)initFacebookButtons;

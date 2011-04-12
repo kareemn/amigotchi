@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37D2BA9E1353CD0A008B5302 /* Accesory.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D2BA9D1353CD0A008B5302 /* Accesory.m */; };
 		37DBCBF31353816400BC025D /* dragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37DBCBF11353816400BC025D /* dragon.plist */; };
 		37DBCBF41353816400BC025D /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DBCBF21353816400BC025D /* dragon.png */; };
 		C777275313528860007A44B9 /* LoginNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274B1352885F007A44B9 /* LoginNormal.png */; };
@@ -140,7 +141,7 @@
 		C77E5C9B13526B160051BD37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5C9A13526B160051BD37 /* main.m */; };
 		C77E5C9E13526B160051BD37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5C9D13526B160051BD37 /* AppDelegate.m */; };
 		C77E5CA113526B160051BD37 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA013526B160051BD37 /* RootViewController.m */; };
-		C77E5CA413526B160051BD37 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA313526B160051BD37 /* HelloWorldLayer.m */; };
+		C77E5CA413526B160051BD37 /* HomeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA313526B160051BD37 /* HomeLayer.m */; };
 		C79739F71352B8B700230B49 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F61352B8B700230B49 /* SystemConfiguration.framework */; };
 		C79739F91352B91900230B49 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F81352B91900230B49 /* MobileCoreServices.framework */; };
 		C79739FE1352BA5800230B49 /* AmigoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C79739FD1352BA5800230B49 /* AmigoAPI.m */; };
@@ -171,6 +172,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37D2BA9C1353CD0A008B5302 /* Accesory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accesory.h; sourceTree = "<group>"; };
+		37D2BA9D1353CD0A008B5302 /* Accesory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accesory.m; sourceTree = "<group>"; };
 		37DBCBF11353816400BC025D /* dragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = dragon.plist; path = Resources/dragon.plist; sourceTree = "<group>"; };
 		37DBCBF21353816400BC025D /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon.png; path = Resources/dragon.png; sourceTree = "<group>"; };
 		C777274B1352885F007A44B9 /* LoginNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginNormal.png; sourceTree = "<group>"; };
@@ -435,8 +438,8 @@
 		C77E5C9D13526B160051BD37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C77E5C9F13526B160051BD37 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		C77E5CA013526B160051BD37 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		C77E5CA213526B160051BD37 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		C77E5CA313526B160051BD37 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
+		C77E5CA213526B160051BD37 /* HomeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeLayer.h; sourceTree = "<group>"; };
+		C77E5CA313526B160051BD37 /* HomeLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeLayer.m; sourceTree = "<group>"; };
 		C77E5CA513526B160051BD37 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		C79739F61352B8B700230B49 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C79739F81352B91900230B49 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -574,8 +577,6 @@
 				C77E5C9D13526B160051BD37 /* AppDelegate.m */,
 				C77E5C9F13526B160051BD37 /* RootViewController.h */,
 				C77E5CA013526B160051BD37 /* RootViewController.m */,
-				C77E5CA213526B160051BD37 /* HelloWorldLayer.h */,
-				C77E5CA313526B160051BD37 /* HelloWorldLayer.m */,
 				C77E5CA513526B160051BD37 /* GameConfig.h */,
 				C77E5B5213526B140051BD37 /* Resources */,
 				C77E5B6613526B140051BD37 /* cocos2d */,
@@ -913,12 +914,16 @@
 		C7E1DB5F13526CE5007A4B73 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				37D2BA9C1353CD0A008B5302 /* Accesory.h */,
+				37D2BA9D1353CD0A008B5302 /* Accesory.m */,
 				C7E1DB6113526D09007A4B73 /* AmigoPet.h */,
 				C7E1DB6213526D09007A4B73 /* AmigoPet.m */,
 				C79739FC1352BA5800230B49 /* AmigoAPI.h */,
 				C79739FD1352BA5800230B49 /* AmigoAPI.m */,
 				C79739FF1353003C00230B49 /* AmigoUser.h */,
 				C7973A001353003C00230B49 /* AmigoUser.m */,
+				C77E5CA213526B160051BD37 /* HomeLayer.h */,
+				C77E5CA313526B160051BD37 /* HomeLayer.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1113,7 +1118,7 @@
 				C77E5C9B13526B160051BD37 /* main.m in Sources */,
 				C77E5C9E13526B160051BD37 /* AppDelegate.m in Sources */,
 				C77E5CA113526B160051BD37 /* RootViewController.m in Sources */,
-				C77E5CA413526B160051BD37 /* HelloWorldLayer.m in Sources */,
+				C77E5CA413526B160051BD37 /* HomeLayer.m in Sources */,
 				C7E1DB6313526D09007A4B73 /* AmigoPet.m in Sources */,
 				C7DDABEE13527BC700CB250B /* Facebook.m in Sources */,
 				C7DDABF013527BC700CB250B /* FBDialog.m in Sources */,
@@ -1136,6 +1141,7 @@
 				C777286B1352B5AC007A44B9 /* Reachability.m in Sources */,
 				C79739FE1352BA5800230B49 /* AmigoAPI.m in Sources */,
 				C7973A011353003D00230B49 /* AmigoUser.m in Sources */,
+				37D2BA9E1353CD0A008B5302 /* Accesory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,14 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "HelloWorldLayer.h"
+#import "HomeLayer.h"
+#import "Accesory.h"
 
 @interface AmigoPet :  CCNode{
-    //HelloWorldLayer * theGame;
+    //HomeLayer * theGame;
     
     CCSprite        * mySprite;
     
+    Accesory        * acc1;
+    Accesory        * acc2;
+    
     NSString        * name;
+    NSString        * type;
     
     int             hunger;
     int             attention;
@@ -26,9 +31,10 @@
     
 }
 
-//@property (retain, nonatomic) HelloWorldLayer * theGame;
+//@property (retain, nonatomic) HomeLayer * theGame;
 @property (retain, nonatomic) CCSprite * mySprite;
+@property (retain, nonatomic) NSString * type;
 
-//-(id)initWithGame:(HelloWorldLayer *)game;
+-(void)setSpritesForType:(NSString*)type;
 
 @end
