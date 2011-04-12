@@ -47,4 +47,8 @@
 -(void)initApi;
 -(void)facebookLogin;
 
+
+/*USER LAYER FUNCS*/
++(void)updateUserLabel:(NSString*)name;
+
 @end
