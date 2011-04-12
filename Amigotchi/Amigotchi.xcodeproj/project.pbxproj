@@ -10,6 +10,8 @@
 		378B7BC613540B130060242D /* dragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC413540B130060242D /* dragon.plist */; };
 		378B7BC713540B130060242D /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC513540B130060242D /* dragon.png */; };
 		378B7BC9135410060060242D /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC8135410060060242D /* app_icon.png */; };
+		C716CE371354B2D700CBD983 /* PetLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE361354B2D700CBD983 /* PetLayer.m */; };
+		C716CE3A1354B4A400CBD983 /* LoginLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE391354B4A400CBD983 /* LoginLayer.m */; };
 		C74BEFA81353E997004AEE78 /* Accessory.m in Sources */ = {isa = PBXBuildFile; fileRef = C74BEFA71353E997004AEE78 /* Accessory.m */; };
 		C754BBC81353EB3D000BE450 /* app_icon_s.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC61353EB3D000BE450 /* app_icon_s.png */; };
 		C754BBC91353EB3D000BE450 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC71353EB3D000BE450 /* screen.png */; };
@@ -178,6 +180,11 @@
 		378B7BC413540B130060242D /* dragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = dragon.plist; path = Resources/dragon.plist; sourceTree = "<group>"; };
 		378B7BC513540B130060242D /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon.png; path = Resources/dragon.png; sourceTree = "<group>"; };
 		378B7BC8135410060060242D /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		C716CE351354B2D700CBD983 /* PetLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetLayer.h; sourceTree = "<group>"; };
+		C716CE361354B2D700CBD983 /* PetLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetLayer.m; sourceTree = "<group>"; };
+		C716CE381354B4A400CBD983 /* LoginLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginLayer.h; sourceTree = "<group>"; };
+		C716CE391354B4A400CBD983 /* LoginLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginLayer.m; sourceTree = "<group>"; };
+		C716CE3B1354B93B00CBD983 /* AmigoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoConfig.h; sourceTree = "<group>"; };
 		C74BEFA61353E997004AEE78 /* Accessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accessory.h; sourceTree = "<group>"; };
 		C74BEFA71353E997004AEE78 /* Accessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accessory.m; sourceTree = "<group>"; };
 		C754BBC61353EB3D000BE450 /* app_icon_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_s.png; path = Resources/app_icon_s.png; sourceTree = "<group>"; };
@@ -505,6 +512,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C716CE3C1354BA1700CBD983 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				C77E5CA213526B160051BD37 /* HomeLayer.h */,
+				C77E5CA313526B160051BD37 /* HomeLayer.m */,
+				C716CE351354B2D700CBD983 /* PetLayer.h */,
+				C716CE361354B2D700CBD983 /* PetLayer.m */,
+				C716CE381354B4A400CBD983 /* LoginLayer.h */,
+				C716CE391354B4A400CBD983 /* LoginLayer.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		C716CE3D1354BA2F00CBD983 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7E1DB6113526D09007A4B73 /* AmigoPet.h */,
+				C7E1DB6213526D09007A4B73 /* AmigoPet.m */,
+				C74BEFA61353E997004AEE78 /* Accessory.h */,
+				C74BEFA71353E997004AEE78 /* Accessory.m */,
+				C79739FF1353003C00230B49 /* AmigoUser.h */,
+				C7973A001353003C00230B49 /* AmigoUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		C777284C1352B535007A44B9 /* ASI-HTTP */ = {
 			isa = PBXGroup;
 			children = (
@@ -923,16 +956,11 @@
 		C7E1DB5F13526CE5007A4B73 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C7E1DB6113526D09007A4B73 /* AmigoPet.h */,
-				C7E1DB6213526D09007A4B73 /* AmigoPet.m */,
-				C74BEFA61353E997004AEE78 /* Accessory.h */,
-				C74BEFA71353E997004AEE78 /* Accessory.m */,
+				C716CE3D1354BA2F00CBD983 /* Models */,
+				C716CE3C1354BA1700CBD983 /* Layers */,
 				C79739FC1352BA5800230B49 /* AmigoAPI.h */,
 				C79739FD1352BA5800230B49 /* AmigoAPI.m */,
-				C79739FF1353003C00230B49 /* AmigoUser.h */,
-				C7973A001353003C00230B49 /* AmigoUser.m */,
-				C77E5CA213526B160051BD37 /* HomeLayer.h */,
-				C77E5CA313526B160051BD37 /* HomeLayer.m */,
+				C716CE3B1354B93B00CBD983 /* AmigoConfig.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1154,6 +1182,8 @@
 				C79739FE1352BA5800230B49 /* AmigoAPI.m in Sources */,
 				C7973A011353003D00230B49 /* AmigoUser.m in Sources */,
 				C74BEFA81353E997004AEE78 /* Accessory.m in Sources */,
+				C716CE371354B2D700CBD983 /* PetLayer.m in Sources */,
+				C716CE3A1354B4A400CBD983 /* LoginLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

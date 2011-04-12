@@ -9,13 +9,13 @@
 
 // Import the interfaces
 #import "HomeLayer.h"
-
-static NSString* kAppId = @"196872950351792";
+#import "PetLayer.h"
+#import "LoginLayer.h"
 
 // HomeLayer implementation
 @implementation HomeLayer
 
-@synthesize facebook, permissions ,api;
+
 
 +(CCScene *) scene
 {
@@ -40,114 +40,21 @@ static NSString* kAppId = @"196872950351792";
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
         
-		
-		// create and initialize a Label
-		message = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:32];
 
 		// ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize]; 
-	
-		// position the label on the center of the screen
-		//message.position =  ccp( size.width /2 , size.height/2 + size.height/3 );
-		
-		// add the label as a child to this Layer
-		//[self addChild: message];
-        [self initApi];
-        [self initFacebookButtons];
         
-        // add device dressing
-        CCSprite * screen = [[CCSprite alloc] initWithFile:@"screen.png"];
-        screen.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
-        [self addChild:screen z:DEVICE_LAYER];
+        LoginLayer *loginlayer = [[LoginLayer alloc] init];
+        [self addChild:loginlayer z:LOGIN_LAYER];
         
-        // add a dragon
-        AmigoPet * dragon = [[AmigoPet alloc] init];
-        dragon.scale = .5;
-        dragon.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
-        [self addChild:dragon z:PET_LAYER];
+        PetLayer *petlayer = [[PetLayer alloc] init];
+        [self addChild:petlayer z:PET_LAYER];
         
 
 	}
 	return self;
 }
 
--(void)initApi {
-    api = [[AmigoAPI alloc] init];
-}
-
--(void)initFacebookButtons{
-    //change images
-    facebookLoginButton = [CCMenuItemImage itemFromNormalImage:@"LoginNormal.png" selectedImage:@"LoginPressed.png" disabledImage:@"LoginPressed.png" target:self selector:@selector(facebookLogin)];
-    
-    
-    facebookLogoutButton = [CCMenuItemImage itemFromNormalImage:@"LogoutNormal.png" selectedImage:@"LogoutPressed.png" disabledImage:@"LogoutPressed.png" target:self selector:@selector(facebookLogout)];
-    
-    [facebookLogoutButton setVisible:NO];
-    
-    //add buttons to menu
-    CCMenu *fbMenu = [CCMenu menuWithItems:facebookLoginButton, facebookLogoutButton, nil];
-    
-    CGSize size = [[CCDirector sharedDirector] winSize];
-    
-    //position menu
-    fbMenu.position = ccp(size.width * .5, size.height - facebookLoginButton.contentSize.height);
-    
-    [self addChild:fbMenu z:HUD_LAYER];
-}
-
--(void)facebookLogin{
-    if (facebook == nil){
-       facebook = [[Facebook alloc] initWithAppId:kAppId];
-    }
-    
-    permissions =  [[NSArray arrayWithObjects:
-                     @"offline_access", @"user_checkins", @"publish_checkins",nil] retain];
-    
-    [facebook authorize:permissions delegate:self];
-    
-}
-
--(void)facebookLogout{
-    [facebook logout:self];
-    
-    
-}
-
-/* automatically called when facebook authorize delegate:self is successful */
-- (void)fbDidLogin {
-    isFBLogged = YES;
-    NSLog(@"Login successful");
-    
-    [api login:[facebook accessToken]];
-    
-    if(user == nil){
-        user = [[AmigoUser alloc] init];
-    }
-    
-    [facebookLoginButton setVisible:NO];
-    [facebookLogoutButton setVisible:YES];
-}
-
-
-/* automatically called when faecbook authorize is cancelled/failed */
--(void)fbDidNotLogin:(BOOL)cancelled {
-    if (cancelled) {
-         NSLog(@"Login cancelled :)");
-    } else {
-         NSLog(@"Error. Please try again.");
-    }
-}
-
--(void)fbDidLogout{
-     NSLog(@"Logout successful");
-    
-    [facebookLoginButton setVisible:YES];
-    [facebookLogoutButton setVisible:NO];
-}
-
--(void)updateUserLabel:(NSString*)name{
-    [message setString:[NSString stringWithFormat:@"Hello %@", name]];
-}
 
 
 // on "dealloc" you need to release all your retained objects
