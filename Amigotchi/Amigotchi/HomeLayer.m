@@ -46,7 +46,6 @@ static NSString* kAppId = @"196872950351792";
 
 		// ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize]; 
-        CGSize homeSize = CGSizeMake(size.width, size.height - MENU_HEIGHT);
 	
 		// position the label on the center of the screen
 		//message.position =  ccp( size.width /2 , size.height/2 + size.height/3 );
@@ -59,8 +58,13 @@ static NSString* kAppId = @"196872950351792";
         // add a dragon
         AmigoPet * dragon = [[AmigoPet alloc] init];
         dragon.scale = .5;
-        dragon.position = ccp(homeSize.width/2, homeSize.height/2);
+        dragon.position = ccp(size.width/2, size.height/2 + MENU_HEIGHT);
         [self addChild:dragon z:PET_LAYER];
+        
+        // add device dressing
+        CCSprite * screen = [[CCSprite alloc] initWithFile:@"screen.png"];
+        screen.position = dragon.position = ccp(size.width/2, size.height/2 + MENU_HEIGHT);
+        [self addChild:screen z:DEVICE_LAYER];
         
 
 	}
@@ -86,7 +90,7 @@ static NSString* kAppId = @"196872950351792";
     CGSize size = [[CCDirector sharedDirector] winSize];
     
     //position menu
-    fbMenu.position = ccp(size.width * .5, size.height * .75 + facebookLoginButton.contentSize.height * 3);
+    fbMenu.position = ccp(size.width * .5, size.height - facebookLoginButton.contentSize.height);
     
     [self addChild:fbMenu];
 }
