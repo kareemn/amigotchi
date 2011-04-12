@@ -12,6 +12,7 @@
 @synthesize /*theGame,*/ mySprite, type;
 
 CCAnimation * pokeAnimation;
+CCAnimation * idleAnimation;
 
 -(id) init
 {
@@ -34,7 +35,7 @@ CCAnimation * pokeAnimation;
         [cache addSpriteFramesWithFile:@"dragon.plist"];
         
         //Idle animation
-        CCAnimation * idleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay:1.0/2];
+        idleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay:1.0/2];
         
         for(int i = 1; i < 3; i++)
         {
@@ -44,8 +45,8 @@ CCAnimation * pokeAnimation;
         id idleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:idleAnimation]];
         
         //Poke animation
-        //pokeAnimation = [[CCAnimation alloc] initWithName:@"idle" delay:1.0/2];
-        //[pokeAnimation addFrame:[cache spriteFrameByName:@"dragon_poked.png"]];
+        pokeAnimation = [[CCAnimation alloc] initWithName:@"idle" delay:1.0/2];
+        [pokeAnimation addFrame:[cache spriteFrameByName:@"dragon_poked.png"]];
         
         self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
         [self.mySprite runAction:idleAction];
@@ -55,7 +56,6 @@ CCAnimation * pokeAnimation;
 -(void)poke
 {
     //Poke animation
-    //id pokeAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:pokeAnimation]];
 }
 
 //Overwritten functions
@@ -81,12 +81,16 @@ CCAnimation * pokeAnimation;
 {
     if ( ![self containsTouchLocation:touch]) return NO;
     NSLog(@"AmigoPet ccTouchBegan\n");
-    //[self.mySprite runAction:pokeAction];
+    id pokeAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:pokeAnimation]];
+    [self.mySprite runAction:pokeAction];
     return YES;
 }
 
 -(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    NSLog(@"AmigoPet ccTouchEnded\n");
+    id idleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:idleAnimation]];
+    [self.mySprite runAction:idleAction];
 }
 
 -(void)onEnter

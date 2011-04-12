@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37DBCBF31353816400BC025D /* dragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37DBCBF11353816400BC025D /* dragon.plist */; };
-		37DBCBF41353816400BC025D /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DBCBF21353816400BC025D /* dragon.png */; };
+		378B7BC613540B130060242D /* dragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC413540B130060242D /* dragon.plist */; };
+		378B7BC713540B130060242D /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC513540B130060242D /* dragon.png */; };
 		C74BEFA81353E997004AEE78 /* Accessory.m in Sources */ = {isa = PBXBuildFile; fileRef = C74BEFA71353E997004AEE78 /* Accessory.m */; };
 		C754BBC81353EB3D000BE450 /* app_icon_s.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC61353EB3D000BE450 /* app_icon_s.png */; };
 		C754BBC91353EB3D000BE450 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC71353EB3D000BE450 /* screen.png */; };
@@ -174,8 +174,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		37DBCBF11353816400BC025D /* dragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = dragon.plist; path = Resources/dragon.plist; sourceTree = "<group>"; };
-		37DBCBF21353816400BC025D /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon.png; path = Resources/dragon.png; sourceTree = "<group>"; };
+		378B7BC413540B130060242D /* dragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = dragon.plist; path = Resources/dragon.plist; sourceTree = "<group>"; };
+		378B7BC513540B130060242D /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon.png; path = Resources/dragon.png; sourceTree = "<group>"; };
 		C74BEFA61353E997004AEE78 /* Accessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accessory.h; sourceTree = "<group>"; };
 		C74BEFA71353E997004AEE78 /* Accessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accessory.m; sourceTree = "<group>"; };
 		C754BBC61353EB3D000BE450 /* app_icon_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_s.png; path = Resources/app_icon_s.png; sourceTree = "<group>"; };
@@ -596,10 +596,10 @@
 		C77E5B5213526B140051BD37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				378B7BC413540B130060242D /* dragon.plist */,
+				378B7BC513540B130060242D /* dragon.png */,
 				C754BBC61353EB3D000BE450 /* app_icon_s.png */,
 				C754BBC71353EB3D000BE450 /* screen.png */,
-				37DBCBF11353816400BC025D /* dragon.plist */,
-				37DBCBF21353816400BC025D /* dragon.png */,
 				C777274B1352885F007A44B9 /* LoginNormal.png */,
 				C777274C1352885F007A44B9 /* LoginNormal@2x.png */,
 				C777274D1352885F007A44B9 /* LoginPressed.png */,
@@ -1015,10 +1015,10 @@
 				C777275813528860007A44B9 /* LogoutNormal@2x.png in Resources */,
 				C777275913528860007A44B9 /* LogoutPressed.png in Resources */,
 				C777275A13528860007A44B9 /* LogoutPressed@2x.png in Resources */,
-				37DBCBF31353816400BC025D /* dragon.plist in Resources */,
-				37DBCBF41353816400BC025D /* dragon.png in Resources */,
 				C754BBC81353EB3D000BE450 /* app_icon_s.png in Resources */,
 				C754BBC91353EB3D000BE450 /* screen.png in Resources */,
+				378B7BC613540B130060242D /* dragon.plist in Resources */,
+				378B7BC713540B130060242D /* dragon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
