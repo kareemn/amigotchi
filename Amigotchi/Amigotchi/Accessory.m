@@ -6,9 +6,9 @@
 //  Copyright 2011 kipgfx. All rights reserved.
 //
 
-#import "Accesory.h"
+#import "Accessory.h"
 
 
-@implementation Accesory
+@implementation Accessory
 
 @end

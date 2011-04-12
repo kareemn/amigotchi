@@ -9,15 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "HomeLayer.h"
-#import "Accesory.h"
+#import "Accessory.h"
 
 @interface AmigoPet :  CCNode{
     //HomeLayer * theGame;
     
     CCSprite        * mySprite;
     
-    Accesory        * acc1;
-    Accesory        * acc2;
+    Accessory        * acc1;
+    Accessory        * acc2;
     
     NSString        * name;
     NSString        * type;
