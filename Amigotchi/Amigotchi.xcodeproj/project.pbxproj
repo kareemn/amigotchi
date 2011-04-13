@@ -10,6 +10,7 @@
 		378B7BC613540B130060242D /* dragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC413540B130060242D /* dragon.plist */; };
 		378B7BC713540B130060242D /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC513540B130060242D /* dragon.png */; };
 		378B7BC9135410060060242D /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC8135410060060242D /* app_icon.png */; };
+		37B8E7B613553315009D0B3F /* AmigoPetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B8E7B513553315009D0B3F /* AmigoPetView.m */; };
 		C70A7B621354C520007A82CB /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C70A7B611354C520007A82CB /* app_icon.png */; };
 		C716CE371354B2D700CBD983 /* PetLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE361354B2D700CBD983 /* PetLayer.m */; };
 		C716CE3A1354B4A400CBD983 /* LoginLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE391354B4A400CBD983 /* LoginLayer.m */; };
@@ -181,6 +182,8 @@
 		378B7BC413540B130060242D /* dragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = dragon.plist; path = Resources/dragon.plist; sourceTree = "<group>"; };
 		378B7BC513540B130060242D /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon.png; path = Resources/dragon.png; sourceTree = "<group>"; };
 		378B7BC8135410060060242D /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		37B8E7B413553315009D0B3F /* AmigoPetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoPetView.h; sourceTree = "<group>"; };
+		37B8E7B513553315009D0B3F /* AmigoPetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoPetView.m; sourceTree = "<group>"; };
 		C70A7B611354C520007A82CB /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon.png; path = Resources/app_icon.png; sourceTree = "<group>"; };
 		C716CE351354B2D700CBD983 /* PetLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetLayer.h; sourceTree = "<group>"; };
 		C716CE361354B2D700CBD983 /* PetLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetLayer.m; sourceTree = "<group>"; };
@@ -514,6 +517,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37B8E7B3135532C3009D0B3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37B8E7B413553315009D0B3F /* AmigoPetView.h */,
+				37B8E7B513553315009D0B3F /* AmigoPetView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C716CE3C1354BA1700CBD983 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
@@ -960,6 +972,7 @@
 			isa = PBXGroup;
 			children = (
 				C716CE3D1354BA2F00CBD983 /* Models */,
+				37B8E7B3135532C3009D0B3F /* Views */,
 				C716CE3C1354BA1700CBD983 /* Layers */,
 				C79739FC1352BA5800230B49 /* AmigoAPI.h */,
 				C79739FD1352BA5800230B49 /* AmigoAPI.m */,
@@ -1188,6 +1201,7 @@
 				C74BEFA81353E997004AEE78 /* Accessory.m in Sources */,
 				C716CE371354B2D700CBD983 /* PetLayer.m in Sources */,
 				C716CE3A1354B4A400CBD983 /* LoginLayer.m in Sources */,
+				37B8E7B613553315009D0B3F /* AmigoPetView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
