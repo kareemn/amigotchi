@@ -11,7 +11,16 @@
 
 
 @interface AmigoPetView : CCNode {
-    
+    CCSprite *          mySprite;
+    CCAnimation *       idleAnimation;
+    CCAnimation *       pokeAnimation;
+    CCSpriteFrameCache *cache;
 }
 
+-(void)setSprites;
+
+@property (nonatomic, retain) CCSprite * mySprite;
+@property (nonatomic, retain) CCAnimation * idleAnimation;
+@property (nonatomic, retain) CCAnimation * pokeAnimation;
+@property (nonatomic, retain) CCSpriteFrameCache * cache;
 @end

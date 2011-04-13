@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "HomeLayer.h"
 #import "Accessory.h"
+#import "AmigoPetView.h"
 
 @interface AmigoPet :  CCNode<CCTargetedTouchDelegate>{
     //HomeLayer * theGame;
@@ -28,6 +29,8 @@
     int             age;
     int             strength;
     int             bathroom;
+    
+    AmigoPetView *  view;  //Replace mySprite with this
     
 }
 
