@@ -15,6 +15,8 @@
     CCAnimation *       idleAnimation;
     CCAnimation *       pokeAnimation;
     CCSpriteFrameCache *cache;
+    id                  idleAction;
+    id                  pokeAction;
 }
 
 -(void)setSprites;

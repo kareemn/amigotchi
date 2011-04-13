@@ -12,6 +12,9 @@
 @implementation AmigoPetView
 @synthesize mySprite, idleAnimation, pokeAnimation, cache;
 
+id idleAction;
+id pokeAction;
+
 -(id)init
 {
     if((self = [super init]))
@@ -37,11 +40,14 @@
         NSString * fname = [NSString stringWithFormat:@"dragon_idle_%i.png", i];
         [self.idleAnimation addFrame:[self.cache spriteFrameByName:fname]];
     }
+    idleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.idleAnimation]];
     
     //pokeAnimation
     [self.pokeAnimation addFrame:[self.cache spriteFrameByName:@"dragon_poked.png"]];
+    pokeAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:pokeAnimation]];
     
     //Set and go!
     self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
+    [self.mySprite runAction:idleAction];
 }
 @end

@@ -37,6 +37,7 @@
 //@property (retain, nonatomic) HomeLayer * theGame;
 @property (retain, nonatomic) CCSprite * mySprite;
 @property (retain, nonatomic) NSString * type;
+@property (retain, nonatomic) AmigoPetView * view;
 
 -(void)setSpritesForType:(NSString*)type;
 -(void)poke;

@@ -9,7 +9,7 @@
 #import "AmigoPet.h"
 
 @implementation AmigoPet
-@synthesize /*theGame,*/ mySprite, type;
+@synthesize /*theGame,*/ mySprite, type, view;
 
 CCAnimation * pokeAnimation;
 CCAnimation * idleAnimation;
@@ -19,9 +19,12 @@ CCAnimation * idleAnimation;
     if((self = [super init]))
     {
         self.type = @"dragon";
-        [self setSpritesForType:self.type];
+        //[self setSpritesForType:self.type];
         
-        [self addChild:self.mySprite];
+        //[self addChild:self.mySprite];
+        self.view = [[AmigoPetView alloc] init];
+        
+        [self addChild:self.view];
         NSLog(@"init: Adding sprite to AmigoPet.\n");
     }
     return (self);
