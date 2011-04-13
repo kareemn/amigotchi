@@ -10,13 +10,13 @@
 #import "cocos2d.h"
 
 
-@interface AmigoPetView : CCNode {
+@interface AmigoPetView : CCNode<CCTargetedTouchDelegate> {
     CCSprite *          mySprite;
     CCAnimation *       idleAnimation;
     CCAnimation *       pokeAnimation;
     CCSpriteFrameCache *cache;
-    id                  idleAction;
-    id                  pokeAction;
+    CCRepeatForever *   idleAction;
+    CCRepeatForever *   pokeAction;
 }
 
 -(void)setSprites;
@@ -25,4 +25,6 @@
 @property (nonatomic, retain) CCAnimation * idleAnimation;
 @property (nonatomic, retain) CCAnimation * pokeAnimation;
 @property (nonatomic, retain) CCSpriteFrameCache * cache;
+@property (nonatomic, retain) CCRepeatForever * idleAction;
+@property (nonatomic, retain) CCRepeatForever * pokeAction;
 @end
