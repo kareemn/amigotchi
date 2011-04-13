@@ -12,6 +12,10 @@
 #import "Accessory.h"
 #import "AmigoPetView.h"
 
+#define MAX_HUNGER 20
+#define MAX_BATHROOM 40
+#define MAX_ATTENTION 10
+
 @interface AmigoPet :  CCNode{
     Accessory        * acc1;
     Accessory        * acc2;
@@ -21,9 +25,9 @@
     
     int             hunger;
     int             attention;
-    int             health;
+    //int             health;
     int             age;
-    int             strength;
+    //int             strength;
     int             bathroom;
     
     AmigoPetView *  view;  //Replace mySprite with this
@@ -35,6 +39,13 @@
 
 @property (retain, nonatomic) AmigoPetView * view;
 
+@property (readwrite, assign) int hunger;
+@property (readwrite, assign) int age;
+@property (readwrite, assign) int bathroom;
+@property (readwrite, assign) int attention;
+
 -(void)poke;
+-(void)feed:(int)amount;
+-(void)takeDump;
 
 @end

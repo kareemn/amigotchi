@@ -9,7 +9,7 @@
 #import "AmigoPet.h"
 
 @implementation AmigoPet
-@synthesize name, type, view;
+@synthesize name, type, view, age, hunger, attention, bathroom;
 
 -(id) init
 {
@@ -17,8 +17,11 @@
     {
         self.type = @"dragon";
         self.view = [[AmigoPetView alloc] init];
-        
-        self.name = @"Putnam";
+        self.name = @"Issa";
+        self.age = 0;
+        self.hunger = 0;
+        self.attention = MAX_ATTENTION;
+        self.bathroom = 0;
         
         [self addChild:self.view];
     }
@@ -28,6 +31,16 @@
 -(void)poke
 {
     //Poke animation
+}
+
+-(void)feed:(int)amount
+{
+    self.hunger -= amount;
+}
+
+-(void) takeDump
+{
+    self.bathroom = 0;
 }
 
 @end
