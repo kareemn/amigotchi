@@ -45,10 +45,19 @@
         AmigoPet * dragon = [[AmigoPet alloc] init];
         dragon.scale = .5;
         dragon.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
+        
+        [dragon addObserver:self forKeyPath:@"bathroom" options:(NSKeyValueObservingOptionNew |
+                                                         NSKeyValueObservingOptionInitial) context:nil];
         [self addChild:dragon z:PET_LAYER];
         
         
 	}
 	return self;
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    
+}
+         
 @end

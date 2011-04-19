@@ -16,4 +16,5 @@
 // returns a CCScene that contains the HomeLayer as the only child
 +(CCScene *) scene;
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context;
 @end

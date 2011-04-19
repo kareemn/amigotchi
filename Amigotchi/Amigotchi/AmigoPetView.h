@@ -11,15 +11,9 @@
 
 
 @interface AmigoPetView : CCNode<CCTargetedTouchDelegate> {
-    CCSprite *          mySprite;
-    CCAnimation *       idleAnimation;
-    CCAnimation *       pokeAnimation;
-    CCSpriteFrameCache *cache;
-    CCRepeatForever *   idleAction;
-    CCRepeatForever *   pokeAction;
 }
 
--(void)setSprites;
+- (void)setSprites;
 
 @property (nonatomic, retain) CCSprite * mySprite;
 @property (nonatomic, retain) CCAnimation * idleAnimation;

@@ -15,13 +15,13 @@
 {
     if((self = [super init]))
     {
-        self.type = @"dragon";
-        self.view = [[AmigoPetView alloc] init];
-        self.name = @"Issa";
-        self.age = 0;
-        self.hunger = 0;
-        self.attention = MAX_ATTENTION;
-        self.bathroom = 0;
+        self->type = @"dragon";
+        self->view = [[AmigoPetView alloc] init];
+        self->name = @"Issa";
+        self->age = 0;
+        self->hunger = 0;
+        self->attention = MAX_ATTENTION;
+        self->bathroom = 0;
         
         [self addChild:self.view];
     }

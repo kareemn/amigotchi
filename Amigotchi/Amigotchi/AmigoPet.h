@@ -44,8 +44,8 @@
 @property (readwrite, assign) int bathroom;
 @property (readwrite, assign) int attention;
 
--(void)poke;
--(void)feed:(int)amount;
--(void)takeDump;
+- (void)poke;
+- (void)feed:(int)amount;
+- (void)takeDump;
 
 @end
