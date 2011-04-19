@@ -19,3 +19,4 @@ static NSString* kAppId = @"196872950351792";
 
 //notifications event types
 static NSString* PETVIEWCHANGE = @"petView";
+static NSString* LOGINVIEWCHANGE = @"loginView";

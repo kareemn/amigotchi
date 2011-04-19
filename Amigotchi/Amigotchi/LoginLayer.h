@@ -11,30 +11,27 @@
 #import "FBConnect.h"
 #import "AmigoAPI.h"
 #import "AmigoConfig.h"
+#import "LoginView.h"
 
 @interface LoginLayer : CCLayer<FBSessionDelegate> {
-    Facebook            *facebook;
-    NSArray             *permissions;
     
-    BOOL                isFBLogged;
     
-    CCMenuItem          *facebookLoginButton;
-    CCMenuItem          *facebookLogoutButton;
-    
-    //amigo stuff
-    AmigoAPI            *api;
-    AmigoUser           *user;
 }
 
-@property (nonatomic, readwrite, retain) Facebook *facebook;
-@property (nonatomic, readwrite, retain) NSArray  *permissions;
-@property (nonatomic, readwrite, retain) AmigoAPI *api;
+@property (nonatomic, retain) Facebook      *facebook;
+@property (nonatomic)         BOOL          isFBLogged;
+@property (nonatomic, retain) NSArray       *permissions;
+@property (nonatomic, retain) AmigoAPI      *api;
+@property (nonatomic, retain) AmigoUser     *user;
+@property (nonatomic, retain)  LoginView     *view;
+
 
 // returns a CCScene that contains the FacebookLayer as the only child
 +(CCScene *) scene;
 
 -(void)initApi;
--(void)initFacebookButtons;
+-(void)initNotifiation;
+
 -(void)facebookLogin;
 
 @end

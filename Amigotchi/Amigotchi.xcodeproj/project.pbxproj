@@ -169,6 +169,7 @@
 		C7DDABF613527BC700CB250B /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDABE613527BC700CB250B /* SBJsonBase.m */; };
 		C7DDABF713527BC700CB250B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDABE813527BC700CB250B /* SBJsonParser.m */; };
 		C7DDABF813527BC700CB250B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDABEA13527BC700CB250B /* SBJsonWriter.m */; };
+		C7DF4192135E592500662BDF /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DF4191135E592500662BDF /* LoginView.m */; };
 		C7E1DB6313526D09007A4B73 /* AmigoPet.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E1DB6213526D09007A4B73 /* AmigoPet.m */; };
 /* End PBXBuildFile section */
 
@@ -501,6 +502,8 @@
 		C7DDABE813527BC700CB250B /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		C7DDABE913527BC700CB250B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		C7DDABEA13527BC700CB250B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		C7DF4190135E592500662BDF /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		C7DF4191135E592500662BDF /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		C7E1DB6113526D09007A4B73 /* AmigoPet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoPet.h; sourceTree = "<group>"; };
 		C7E1DB6213526D09007A4B73 /* AmigoPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoPet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -534,6 +537,8 @@
 				374A62D2135E41DE00FE23E3 /* EnvironmentView.m */,
 				37B8E7B413553315009D0B3F /* AmigoPetView.h */,
 				37B8E7B513553315009D0B3F /* AmigoPetView.m */,
+				C7DF4190135E592500662BDF /* LoginView.h */,
+				C7DF4191135E592500662BDF /* LoginView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1222,6 +1227,7 @@
 				37B8E7B613553315009D0B3F /* AmigoPetView.m in Sources */,
 				374A62D3135E41DE00FE23E3 /* EnvironmentView.m in Sources */,
 				374A62D6135E44B600FE23E3 /* EnvironmentLayer.m in Sources */,
+				C7DF4192135E592500662BDF /* LoginView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

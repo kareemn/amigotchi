@@ -11,20 +11,19 @@
 
 @implementation LoginLayer
 
-@synthesize facebook, permissions ,api;
-
+@synthesize facebook = _facebook, isFBLogged = _isFBLogged, permissions = _permissions, api = _api, user = _user, view = _view;
 +(CCScene *) scene
 {
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
-	
+    
 	// 'layer' is an autorelease object.
 	LoginLayer *layer = [LoginLayer node];
-	
+    
 	// add layer as a child to scene
 	[scene addChild: layer];
     
-	
+    
 	// return the scene
 	return scene;
 }
@@ -37,67 +36,62 @@
 	if( (self=[super init])) {
         
         [self initApi];
-        [self initFacebookButtons];
+        [self initNotifiation];
+        self.view = [[LoginView alloc] init];
+        [self addChild:self.view z:HUD_LAYER];
         
 	}
 	return self;
 }
 
 -(void)initApi {
-    api = [[AmigoAPI alloc] init];
+    self.api = [[AmigoAPI alloc] init];
 }
 
--(void)initFacebookButtons{
-    //change images
-    facebookLoginButton = [CCMenuItemImage itemFromNormalImage:@"LoginNormal.png" selectedImage:@"LoginPressed.png" disabledImage:@"LoginPressed.png" target:self selector:@selector(facebookLogin)];
-    
-    
-    facebookLogoutButton = [CCMenuItemImage itemFromNormalImage:@"LogoutNormal.png" selectedImage:@"LogoutPressed.png" disabledImage:@"LogoutPressed.png" target:self selector:@selector(facebookLogout)];
-    
-    [facebookLogoutButton setVisible:NO];
-    
-    //add buttons to menu
-    CCMenu *fbMenu = [CCMenu menuWithItems:facebookLoginButton, facebookLogoutButton, nil];
-    
-    CGSize size = [[CCDirector sharedDirector] winSize];
-    
-    //position menu
-    fbMenu.position = ccp(size.width * .5, size.height - facebookLoginButton.contentSize.height);
-    
-    [self addChild:fbMenu z:HUD_LAYER];
+-(void)initNotifiation {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputFromView:) name:LOGINVIEWCHANGE object:nil];
 }
+
+-(void)inputFromView:(NSNotification *)notification{
+    if([[notification object] isEqualToString:@"facebook_login"])
+    {
+        [self facebookLogin];
+    }
+    else if( [[notification object] isEqualToString:@"facebook_logout"] ){
+        [self facebookLogout];
+    }
+}
+
 
 -(void)facebookLogin{
-    if (facebook == nil){
-        facebook = [[Facebook alloc] initWithAppId:kAppId];
+    if (self.facebook == nil){
+        self.facebook = [[Facebook alloc] initWithAppId:kAppId];
     }
     
-    permissions =  [[NSArray arrayWithObjects:
-                     @"offline_access", @"user_checkins", @"publish_checkins",nil] retain];
+    self.permissions =  [[NSArray arrayWithObjects:
+                          @"offline_access", @"user_checkins", @"publish_checkins",nil] retain];
     
-    [facebook authorize:permissions delegate:self];
+    [self.facebook authorize:self.permissions delegate:self];
     
 }
 
 -(void)facebookLogout{
-    [facebook logout:self];
-    
+    [self.facebook logout:self];
     
 }
 
 /* automatically called when facebook authorize delegate:self is successful */
 - (void)fbDidLogin {
-    isFBLogged = YES;
+    self.isFBLogged = YES;
     NSLog(@"Login successful");
     
-    [api login:[facebook accessToken]];
+    [self.api login:[self.facebook accessToken]];
     
-    if(user == nil){
-        user = [[AmigoUser alloc] init];
+    if(self.user == nil){
+        self.user = [[AmigoUser alloc] init];
     }
     
-    [facebookLoginButton setVisible:NO];
-    [facebookLogoutButton setVisible:YES];
+    [self.view facebookLoggedIn];
 }
 
 
@@ -113,8 +107,8 @@
 -(void)fbDidLogout{
     NSLog(@"Logout successful");
     
-    [facebookLoginButton setVisible:YES];
-    [facebookLogoutButton setVisible:NO];
+    [self.view facebookLoggedOut];
+    
 }
 
 
