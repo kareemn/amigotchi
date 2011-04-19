@@ -30,6 +30,7 @@
     return self;
 }
 
+
 -(void) setSprites
 {
     [cache addSpriteFramesWithFile:@"dragon.plist"];
@@ -82,6 +83,11 @@
 {
     NSLog(@"AmigoPetView ccTouchEnded\n");
     [self.mySprite stopAction:self.pokeAction];
+    
+    //NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"hey", @"ho", nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"poke"]];
+                                                            //Call feedSelector
 }
 
 -(void)onEnter

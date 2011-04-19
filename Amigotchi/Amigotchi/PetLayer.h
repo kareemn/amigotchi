@@ -16,5 +16,11 @@
 // returns a CCScene that contains the HomeLayer as the only child
 +(CCScene *) scene;
 
+@property (nonatomic, retain) AmigoPet * pet;
+@property (nonatomic, retain) AmigoPetView * view;
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context;
+-(void)inputFromView:(NSNotification *)notification;
+-(void)feedClicked:(int)balls;
+-(void)happinessClicked:(int)butt;
 @end

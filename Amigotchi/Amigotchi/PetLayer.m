@@ -10,6 +10,7 @@
 
 
 @implementation PetLayer
+@synthesize pet = _pet, view = _view;
 +(CCScene *) scene
 {
 	// 'scene' is an autorelease object.
@@ -41,23 +42,53 @@
         screen.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
         [self addChild:screen z:DEVICE_LAYER];
         
-        // add a dragon
-        AmigoPet * dragon = [[AmigoPet alloc] init];
-        dragon.scale = .5;
-        dragon.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
+        // add a pet model
+        self.pet = [[AmigoPet alloc] init];
         
-        [dragon addObserver:self forKeyPath:@"bathroom" options:(NSKeyValueObservingOptionNew |
+        [self.pet addObserver:self forKeyPath:@"bathroom" options:(NSKeyValueObservingOptionNew |
                                                          NSKeyValueObservingOptionInitial) context:nil];
-        [self addChild:dragon z:PET_LAYER];
+        
+        //add a pet view
+        self.view = [[AmigoPetView alloc] init];
+        self.view.scale = .5;
+        self.view.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
+        [self addChild:self.view z:PET_LAYER];
+        
+        //listen for notifications
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputFromView:) name:PETVIEWCHANGE object:nil];
         
         
 	}
 	return self;
 }
 
+-(void)inputFromView:(NSNotification *)notification{
+    
+    NSLog([[notification userInfo] description]);
+    NSLog([[notification object] description]);
+    NSLog(@"something from view");
+    if([[notification object] isEqualToString:@"poke"])
+    {
+        self.pet.bathroom++;
+    }
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    
+    NSLog(@"keypath is: %@", keyPath);
+    NSLog(@"object is: %@", [object description]);
+    NSLog(@"change is: %@", [change description]);
+    NSLog(@"Poops.\n");
+}
+
+-(void)happinessClicked:(int)butt
+{
+    self.pet.happiness += butt;
+}
+
+-(void)feedClicked:(int)balls
+{
+    self.pet.hunger += balls;
 }
          
 @end

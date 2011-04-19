@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "AmigoConfig.h"
 
 
 @interface AmigoPetView : CCNode<CCTargetedTouchDelegate> {
+
 }
 
 - (void)setSprites;
@@ -21,4 +23,5 @@
 @property (nonatomic, retain) CCSpriteFrameCache * cache;
 @property (nonatomic, retain) CCRepeatForever * idleAction;
 @property (nonatomic, retain) CCRepeatForever * pokeAction;
+
 @end
