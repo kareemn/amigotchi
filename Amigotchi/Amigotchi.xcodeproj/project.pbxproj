@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374A62CF135E40E200FE23E3 /* background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 374A62CD135E40E200FE23E3 /* background.plist */; };
+		374A62D0135E40E200FE23E3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 374A62CE135E40E200FE23E3 /* background.png */; };
+		374A62D3135E41DE00FE23E3 /* EnvironmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A62D2135E41DE00FE23E3 /* EnvironmentView.m */; };
+		374A62D6135E44B600FE23E3 /* EnvironmentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A62D5135E44B500FE23E3 /* EnvironmentLayer.m */; };
 		378B7BC613540B130060242D /* dragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC413540B130060242D /* dragon.plist */; };
 		378B7BC713540B130060242D /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC513540B130060242D /* dragon.png */; };
 		378B7BC9135410060060242D /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC8135410060060242D /* app_icon.png */; };
@@ -179,6 +183,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		374A62CD135E40E200FE23E3 /* background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = background.plist; path = Resources/background.plist; sourceTree = "<group>"; };
+		374A62CE135E40E200FE23E3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
+		374A62D1135E41DE00FE23E3 /* EnvironmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentView.h; sourceTree = "<group>"; };
+		374A62D2135E41DE00FE23E3 /* EnvironmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentView.m; sourceTree = "<group>"; };
+		374A62D4135E44B500FE23E3 /* EnvironmentLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentLayer.h; sourceTree = "<group>"; };
+		374A62D5135E44B500FE23E3 /* EnvironmentLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentLayer.m; sourceTree = "<group>"; };
 		378B7BC413540B130060242D /* dragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = dragon.plist; path = Resources/dragon.plist; sourceTree = "<group>"; };
 		378B7BC513540B130060242D /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon.png; path = Resources/dragon.png; sourceTree = "<group>"; };
 		378B7BC8135410060060242D /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
@@ -520,6 +530,8 @@
 		37B8E7B3135532C3009D0B3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				374A62D1135E41DE00FE23E3 /* EnvironmentView.h */,
+				374A62D2135E41DE00FE23E3 /* EnvironmentView.m */,
 				37B8E7B413553315009D0B3F /* AmigoPetView.h */,
 				37B8E7B513553315009D0B3F /* AmigoPetView.m */,
 			);
@@ -531,6 +543,8 @@
 			children = (
 				C77E5CA213526B160051BD37 /* HomeLayer.h */,
 				C77E5CA313526B160051BD37 /* HomeLayer.m */,
+				374A62D4135E44B500FE23E3 /* EnvironmentLayer.h */,
+				374A62D5135E44B500FE23E3 /* EnvironmentLayer.m */,
 				C716CE351354B2D700CBD983 /* PetLayer.h */,
 				C716CE361354B2D700CBD983 /* PetLayer.m */,
 				C716CE381354B4A400CBD983 /* LoginLayer.h */,
@@ -649,6 +663,8 @@
 				C70A7B611354C520007A82CB /* app_icon.png */,
 				378B7BC413540B130060242D /* dragon.plist */,
 				378B7BC513540B130060242D /* dragon.png */,
+				374A62CD135E40E200FE23E3 /* background.plist */,
+				374A62CE135E40E200FE23E3 /* background.png */,
 				C754BBC61353EB3D000BE450 /* app_icon_s.png */,
 				C754BBC71353EB3D000BE450 /* screen.png */,
 				C777274B1352885F007A44B9 /* LoginNormal.png */,
@@ -1068,6 +1084,8 @@
 				378B7BC713540B130060242D /* dragon.png in Resources */,
 				378B7BC9135410060060242D /* app_icon.png in Resources */,
 				C70A7B621354C520007A82CB /* app_icon.png in Resources */,
+				374A62CF135E40E200FE23E3 /* background.plist in Resources */,
+				374A62D0135E40E200FE23E3 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1202,6 +1220,8 @@
 				C716CE371354B2D700CBD983 /* PetLayer.m in Sources */,
 				C716CE3A1354B4A400CBD983 /* LoginLayer.m in Sources */,
 				37B8E7B613553315009D0B3F /* AmigoPetView.m in Sources */,
+				374A62D3135E41DE00FE23E3 /* EnvironmentView.m in Sources */,
+				374A62D6135E44B600FE23E3 /* EnvironmentLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

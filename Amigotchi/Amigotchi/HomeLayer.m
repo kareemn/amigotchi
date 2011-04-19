@@ -11,6 +11,7 @@
 #import "HomeLayer.h"
 #import "PetLayer.h"
 #import "LoginLayer.h"
+#import "EnvironmentLayer.h"
 
 // HomeLayer implementation
 @implementation HomeLayer
@@ -40,15 +41,14 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
         
-
-		// ask director the the window size
-		CGSize size = [[CCDirector sharedDirector] winSize]; 
-        
         LoginLayer *loginlayer = [[LoginLayer alloc] init];
         [self addChild:loginlayer z:LOGIN_LAYER];
         
         PetLayer *petlayer = [[PetLayer alloc] init];
         [self addChild:petlayer z:PET_LAYER];
+        
+        EnvironmentLayer *envLayer = [[EnvironmentLayer alloc] init];
+        [self addChild:envLayer];
         
 
 	}

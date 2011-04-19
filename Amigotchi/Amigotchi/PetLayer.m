@@ -37,11 +37,6 @@
 		// ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize]; 
         
-        // add device dressing
-        CCSprite * screen = [[CCSprite alloc] initWithFile:@"screen.png"];
-        screen.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
-        [self addChild:screen z:DEVICE_LAYER];
-        
         // add a pet model
         self.pet = [[AmigoPet alloc] init];
         
@@ -51,7 +46,7 @@
         //add a pet view
         self.view = [[AmigoPetView alloc] init];
         self.view.scale = .5;
-        self.view.position = ccp(size.width/2, size.height - MENU_HEIGHT - screen.contentSize.height/2);
+        self.view.position = ccp(size.width/2, size.height - MENU_HEIGHT - self.view.mySprite.contentSize.height/2);
         [self addChild:self.view z:PET_LAYER];
         
         //listen for notifications
