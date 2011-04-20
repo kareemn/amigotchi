@@ -11,10 +11,7 @@
 #import "HomeLayer.h"
 #import "Accessory.h"
 #import "AmigoPetView.h"
-
-#define MAX_HUNGER 20
-#define MAX_BATHROOM 40
-#define MAX_HAPPINESS 20
+#import "AmigoConfig.h"
 
 @interface AmigoPet :  CCNode{
 }

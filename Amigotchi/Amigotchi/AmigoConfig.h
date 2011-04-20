@@ -14,6 +14,10 @@
 #define LOGIN_LAYER 6
 #define HUD_LAYER 9
 
+#define MAX_HUNGER 20
+#define MAX_BATHROOM 40
+#define MAX_HAPPINESS 20
+
 //facebook app id
 static NSString* kAppId = @"196872950351792";
 

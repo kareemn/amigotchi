@@ -16,12 +16,15 @@
 }
 
 - (void)setSprites;
+- (void) refreshSpriteswithHappiness:(int)happiness;
 
 @property (nonatomic, retain) CCSprite * mySprite;
 @property (nonatomic, retain) CCAnimation * idleAnimation;
+@property (nonatomic, retain) CCAnimation * unhappyIdleAnimation;
 @property (nonatomic, retain) CCAnimation * pokeAnimation;
 @property (nonatomic, retain) CCSpriteFrameCache * cache;
 @property (nonatomic, retain) CCRepeatForever * idleAction;
+@property (nonatomic, retain) CCRepeatForever * unhappyIdleAction;
 @property (nonatomic, retain) CCRepeatForever * pokeAction;
 
 @end

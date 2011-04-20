@@ -26,6 +26,8 @@
         
         self.sky.scale = self.ground.scale = 0.5;
         self.sky.position = self.ground.position = ccp(size.width/2, size.height/2);
+        //self.sky.color = ccRED;
+        
         
         [self addChild:self.sky z:SKY_LAYER];
         [self addChild:self.ground z:GROUND_LAYER];

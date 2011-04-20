@@ -7,10 +7,10 @@
 //
 
 #import "AmigoPetView.h"
-
+#import "AmigoConfig.h"
 
 @implementation AmigoPetView
-@synthesize mySprite, idleAnimation, pokeAnimation, cache, pokeAction, idleAction;
+@synthesize mySprite, idleAnimation, unhappyIdleAnimation, pokeAnimation, cache, pokeAction, idleAction, unhappyIdleAction;
 
 //id idleAction;
 //id pokeAction;
@@ -22,9 +22,13 @@
         self.cache = [CCSpriteFrameCache sharedSpriteFrameCache];
         
         self.idleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
+        self.unhappyIdleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
         self.pokeAnimation = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
         
         [self setSprites];
+        //Set and go!
+        self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
+        [self.mySprite runAction:self.idleAction];
         [self addChild:mySprite];
     }
     return self;
@@ -43,13 +47,34 @@
     }
     self.idleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.idleAnimation]];
     
+    //unhappyIdleAnimation
+    for(int i = 1; i < 3; i++)
+    {
+        NSString * fname = [NSString stringWithFormat:@"dragon_idle_unhappy_%i.png", i];
+        [self.unhappyIdleAnimation addFrame:[self.cache spriteFrameByName:fname]];
+    }
+    self.unhappyIdleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.unhappyIdleAnimation]];
+    
     //pokeAnimation
     [self.pokeAnimation addFrame:[self.cache spriteFrameByName:@"dragon_poked.png"]];
     self.pokeAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.pokeAnimation]];
     
     //Set and go!
-    self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
-    [self.mySprite runAction:self.idleAction];
+    //self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
+    //[self.mySprite runAction:self.idleAction];
+}
+
+-(void) refreshSpriteswithHappiness:(int)happiness
+{
+    [self.mySprite stopAllActions];
+    if(happiness >= MAX_HAPPINESS/2)
+    {
+        [self.mySprite runAction:self.idleAction];
+    }
+    else
+    {
+        [self.mySprite runAction:self.unhappyIdleAction];
+    }
 }
 
 //Overwritten functions
