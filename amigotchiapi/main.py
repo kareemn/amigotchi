@@ -36,6 +36,9 @@ class Pet(db.Model):
     updated = db.DateTimeProperty(auto_now=True)
     name = db.StringProperty(required=True)
     owner = db.ReferenceProperty(User)
+    hunger = db.IntegerProperty()
+    happiness = db.IntegerProperty()
+    bathroom = db.IntegerProperty()
     pic = db.BlobProperty()
 
 
