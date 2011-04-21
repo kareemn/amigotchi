@@ -75,7 +75,6 @@
     NSLog(@"keypath is: %@", keyPath);
     NSLog(@"object is: %@", [object description]);
     NSLog(@"change is: %@", [change description]);
-    NSLog(@"Poops.\n");
     [self.view refreshSpriteswithHappiness:self.pet.happiness];
 }
 
