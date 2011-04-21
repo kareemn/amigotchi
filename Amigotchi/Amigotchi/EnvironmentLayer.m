@@ -10,7 +10,7 @@
 
 
 @implementation EnvironmentLayer
-@synthesize view;
+@synthesize view, model;
 
 - (id) init
 {

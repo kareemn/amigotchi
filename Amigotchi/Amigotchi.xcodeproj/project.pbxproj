@@ -15,6 +15,9 @@
 		378B7BC713540B130060242D /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC513540B130060242D /* dragon.png */; };
 		378B7BC9135410060060242D /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC8135410060060242D /* app_icon.png */; };
 		37B8E7B613553315009D0B3F /* AmigoPetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B8E7B513553315009D0B3F /* AmigoPetView.m */; };
+		37D18F851360CE8A0031DFF5 /* Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D18F841360CE890031DFF5 /* Environment.m */; };
+		37D18F881360CF1D0031DFF5 /* AccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D18F871360CF1D0031DFF5 /* AccessoryView.m */; };
+		37D18F8B1360CF4F0031DFF5 /* AccessoryLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D18F8A1360CF4F0031DFF5 /* AccessoryLayer.m */; };
 		C70A7B621354C520007A82CB /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C70A7B611354C520007A82CB /* app_icon.png */; };
 		C716CE371354B2D700CBD983 /* PetLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE361354B2D700CBD983 /* PetLayer.m */; };
 		C716CE3A1354B4A400CBD983 /* LoginLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE391354B4A400CBD983 /* LoginLayer.m */; };
@@ -195,6 +198,12 @@
 		378B7BC8135410060060242D /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
 		37B8E7B413553315009D0B3F /* AmigoPetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoPetView.h; sourceTree = "<group>"; };
 		37B8E7B513553315009D0B3F /* AmigoPetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoPetView.m; sourceTree = "<group>"; };
+		37D18F831360CE890031DFF5 /* Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Environment.h; sourceTree = "<group>"; };
+		37D18F841360CE890031DFF5 /* Environment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Environment.m; sourceTree = "<group>"; };
+		37D18F861360CF1D0031DFF5 /* AccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryView.h; sourceTree = "<group>"; };
+		37D18F871360CF1D0031DFF5 /* AccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryView.m; sourceTree = "<group>"; };
+		37D18F891360CF4F0031DFF5 /* AccessoryLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryLayer.h; sourceTree = "<group>"; };
+		37D18F8A1360CF4F0031DFF5 /* AccessoryLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryLayer.m; sourceTree = "<group>"; };
 		C70A7B611354C520007A82CB /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon.png; path = Resources/app_icon.png; sourceTree = "<group>"; };
 		C716CE351354B2D700CBD983 /* PetLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetLayer.h; sourceTree = "<group>"; };
 		C716CE361354B2D700CBD983 /* PetLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetLayer.m; sourceTree = "<group>"; };
@@ -538,6 +547,8 @@
 				37B8E7B413553315009D0B3F /* AmigoPetView.h */,
 				37B8E7B513553315009D0B3F /* AmigoPetView.m */,
 				C7DF4190135E592500662BDF /* LoginView.h */,
+				37D18F861360CF1D0031DFF5 /* AccessoryView.h */,
+				37D18F871360CF1D0031DFF5 /* AccessoryView.m */,
 				C7DF4191135E592500662BDF /* LoginView.m */,
 			);
 			name = Views;
@@ -550,6 +561,8 @@
 				C77E5CA313526B160051BD37 /* HomeLayer.m */,
 				374A62D4135E44B500FE23E3 /* EnvironmentLayer.h */,
 				374A62D5135E44B500FE23E3 /* EnvironmentLayer.m */,
+				37D18F891360CF4F0031DFF5 /* AccessoryLayer.h */,
+				37D18F8A1360CF4F0031DFF5 /* AccessoryLayer.m */,
 				C716CE351354B2D700CBD983 /* PetLayer.h */,
 				C716CE361354B2D700CBD983 /* PetLayer.m */,
 				C716CE381354B4A400CBD983 /* LoginLayer.h */,
@@ -565,6 +578,8 @@
 				C7E1DB6213526D09007A4B73 /* AmigoPet.m */,
 				C74BEFA61353E997004AEE78 /* Accessory.h */,
 				C74BEFA71353E997004AEE78 /* Accessory.m */,
+				37D18F831360CE890031DFF5 /* Environment.h */,
+				37D18F841360CE890031DFF5 /* Environment.m */,
 				C79739FF1353003C00230B49 /* AmigoUser.h */,
 				C7973A001353003C00230B49 /* AmigoUser.m */,
 			);
@@ -1228,6 +1243,9 @@
 				374A62D3135E41DE00FE23E3 /* EnvironmentView.m in Sources */,
 				374A62D6135E44B600FE23E3 /* EnvironmentLayer.m in Sources */,
 				C7DF4192135E592500662BDF /* LoginView.m in Sources */,
+				37D18F851360CE8A0031DFF5 /* Environment.m in Sources */,
+				37D18F881360CF1D0031DFF5 /* AccessoryView.m in Sources */,
+				37D18F8B1360CF4F0031DFF5 /* AccessoryLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
