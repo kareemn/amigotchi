@@ -27,9 +27,14 @@
         
         [self setSprites];
         //Set and go!
-        self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
+        self.mySprite = [CCSprite spriteWithSpriteFrameName:@"baby_penguin_idle_1.png"];
         [self.mySprite runAction:self.idleAction];
         [self addChild:mySprite];
+        
+        self->sae = [SimpleAudioEngine sharedEngine];
+        if(self->sae != nil){
+            [self->sae preloadBackgroundMusic:@"penguin_sound.mp3"];
+        }
     }
     return self;
 }
@@ -37,27 +42,34 @@
 
 -(void) setSprites
 {
-    [cache addSpriteFramesWithFile:@"dragon.plist"];
+    [cache addSpriteFramesWithFile:@"penguin.plist"];
     
     //idleAnimation
-    for(int i = 1; i < 3; i++)
+    for(int i = 1; i < 5; i++)
     {
-        NSString * fname = [NSString stringWithFormat:@"dragon_idle_%i.png", i];
+        NSString * fname = [NSString stringWithFormat:@"baby_penguin_idle_%i.png", i];
         [self.idleAnimation addFrame:[self.cache spriteFrameByName:fname]];
     }
     self.idleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.idleAnimation]];
     
     //unhappyIdleAnimation
+    /*
     for(int i = 1; i < 3; i++)
     {
         NSString * fname = [NSString stringWithFormat:@"dragon_idle_unhappy_%i.png", i];
         [self.unhappyIdleAnimation addFrame:[self.cache spriteFrameByName:fname]];
     }
     self.unhappyIdleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.unhappyIdleAnimation]];
+    */
     
     //pokeAnimation
-    [self.pokeAnimation addFrame:[self.cache spriteFrameByName:@"dragon_poked.png"]];
+    for(int i = 1; i < 3; i++){
+        NSString * fname = [NSString stringWithFormat:@"baby_penguin_laugh_%i.png", i];
+       [self.pokeAnimation addFrame:[self.cache spriteFrameByName:fname]];
+    }
+    
     self.pokeAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.pokeAnimation]];
+
     
     //Set and go!
     //self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
@@ -67,14 +79,8 @@
 -(void) refreshSpriteswithHappiness:(int)happiness
 {
     [self.mySprite stopAllActions];
-    if(happiness >= MAX_HAPPINESS/2)
-    {
         [self.mySprite runAction:self.idleAction];
-    }
-    else
-    {
-        [self.mySprite runAction:self.unhappyIdleAction];
-    }
+
 }
 
 //Overwritten functions
@@ -101,12 +107,15 @@
     if ( ![self containsTouchLocation:touch]) return NO;
     NSLog(@"AmigoPetView ccTouchBegan\n");
     [self.mySprite runAction:self.pokeAction];
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"penguin_sound.mp3"];
+    
     return YES;
 }
 
 -(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
     NSLog(@"AmigoPetView ccTouchEnded\n");
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [self.mySprite stopAction:self.pokeAction];
     
     //NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"hey", @"ho", nil];

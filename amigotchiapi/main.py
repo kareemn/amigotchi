@@ -39,6 +39,7 @@ class Pet(db.Model):
     hunger = db.IntegerProperty()
     happiness = db.IntegerProperty()
     bathroom = db.IntegerProperty()
+    age = db.IntegerProperty()
     pic = db.BlobProperty()
 
 
@@ -93,9 +94,11 @@ class PetNewHandler(webapp.RequestHandler):
             user_key = db.Key.from_path('User', user_id)
 
             current_user = User.get(user_key)
-            pet = Pet( name=pet_name, owner=current_user )
-            pet.put()
-            self.response.out.write(json.dumps(profile))
+            pet = Pet( name=pet_name, owner=current_user, age=0, hunger=0, happiness=0, bathroom=0)
+            pet_key = pet.put()
+            output = {}
+            output["pet_id"] = pet_key.id()
+            self.response.out.write(  json.dumps( output) )
 
 
 def main():

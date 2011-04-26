@@ -153,6 +153,11 @@
 		C77E5C9E13526B160051BD37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5C9D13526B160051BD37 /* AppDelegate.m */; };
 		C77E5CA113526B160051BD37 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA013526B160051BD37 /* RootViewController.m */; };
 		C77E5CA413526B160051BD37 /* HomeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA313526B160051BD37 /* HomeLayer.m */; };
+		C7955E50136676D300AA6544 /* penguin.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7955E4E136676D300AA6544 /* penguin.plist */; };
+		C7955E51136676D300AA6544 /* penguin.png in Resources */ = {isa = PBXBuildFile; fileRef = C7955E4F136676D300AA6544 /* penguin.png */; };
+		C7955E541366803600AA6544 /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = C7955E521366803600AA6544 /* icon_retina.png */; };
+		C7955E551366803600AA6544 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C7955E531366803600AA6544 /* icon.png */; };
+		C7955E571366835900AA6544 /* penguin_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C7955E561366835900AA6544 /* penguin_sound.mp3 */; };
 		C79739F71352B8B700230B49 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F61352B8B700230B49 /* SystemConfiguration.framework */; };
 		C79739F91352B91900230B49 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F81352B91900230B49 /* MobileCoreServices.framework */; };
 		C79739FE1352BA5800230B49 /* AmigoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C79739FD1352BA5800230B49 /* AmigoAPI.m */; };
@@ -235,7 +240,7 @@
 		C77728601352B5AC007A44B9 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		C77728611352B5AC007A44B9 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		C77728621352B5AC007A44B9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		C77E5B3D13526B140051BD37 /* Amigotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amigotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77E5B3D13526B140051BD37 /* Tickle my Penguin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tickle my Penguin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77E5B4113526B140051BD37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C77E5B4313526B140051BD37 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		C77E5B4513526B140051BD37 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -470,6 +475,11 @@
 		C77E5CA213526B160051BD37 /* HomeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeLayer.h; sourceTree = "<group>"; };
 		C77E5CA313526B160051BD37 /* HomeLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeLayer.m; sourceTree = "<group>"; };
 		C77E5CA513526B160051BD37 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		C7955E4E136676D300AA6544 /* penguin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = penguin.plist; path = Resources/penguin.plist; sourceTree = "<group>"; };
+		C7955E4F136676D300AA6544 /* penguin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = penguin.png; path = Resources/penguin.png; sourceTree = "<group>"; };
+		C7955E521366803600AA6544 /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_retina.png; sourceTree = SOURCE_ROOT; };
+		C7955E531366803600AA6544 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
+		C7955E561366835900AA6544 /* penguin_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = penguin_sound.mp3; path = Resources/penguin_sound.mp3; sourceTree = "<group>"; };
 		C79739F61352B8B700230B49 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C79739F81352B91900230B49 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C79739FC1352BA5800230B49 /* AmigoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoAPI.h; sourceTree = "<group>"; };
@@ -613,7 +623,7 @@
 		C77E5B3E13526B140051BD37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C77E5B3D13526B140051BD37 /* Amigotchi.app */,
+				C77E5B3D13526B140051BD37 /* Tickle my Penguin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -665,6 +675,11 @@
 		C77E5B5213526B140051BD37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C7955E561366835900AA6544 /* penguin_sound.mp3 */,
+				C7955E521366803600AA6544 /* icon_retina.png */,
+				C7955E531366803600AA6544 /* icon.png */,
+				C7955E4E136676D300AA6544 /* penguin.plist */,
+				C7955E4F136676D300AA6544 /* penguin.png */,
 				C70A7B611354C520007A82CB /* app_icon.png */,
 				378B7BC413540B130060242D /* dragon.plist */,
 				378B7BC513540B130060242D /* dragon.png */,
@@ -1005,9 +1020,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C77E5B3C13526B140051BD37 /* Amigotchi */ = {
+		C77E5B3C13526B140051BD37 /* Tickle my Penguin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C77E5CA813526B160051BD37 /* Build configuration list for PBXNativeTarget "Amigotchi" */;
+			buildConfigurationList = C77E5CA813526B160051BD37 /* Build configuration list for PBXNativeTarget "Tickle my Penguin" */;
 			buildPhases = (
 				C77E5B3913526B140051BD37 /* Sources */,
 				C77E5B3A13526B140051BD37 /* Frameworks */,
@@ -1017,9 +1032,9 @@
 			);
 			dependencies = (
 			);
-			name = Amigotchi;
+			name = "Tickle my Penguin";
 			productName = Amigotchi;
-			productReference = C77E5B3D13526B140051BD37 /* Amigotchi.app */;
+			productReference = C77E5B3D13526B140051BD37 /* Tickle my Penguin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1045,7 +1060,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				C77E5B3C13526B140051BD37 /* Amigotchi */,
+				C77E5B3C13526B140051BD37 /* Tickle my Penguin */,
 			);
 		};
 /* End PBXProject section */
@@ -1091,6 +1106,11 @@
 				C70A7B621354C520007A82CB /* app_icon.png in Resources */,
 				374A62CF135E40E200FE23E3 /* background.plist in Resources */,
 				374A62D0135E40E200FE23E3 /* background.png in Resources */,
+				C7955E50136676D300AA6544 /* penguin.plist in Resources */,
+				C7955E51136676D300AA6544 /* penguin.png in Resources */,
+				C7955E541366803600AA6544 /* icon_retina.png in Resources */,
+				C7955E551366803600AA6544 /* icon.png in Resources */,
+				C7955E571366835900AA6544 /* penguin_sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1334,7 +1354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C77E5CA813526B160051BD37 /* Build configuration list for PBXNativeTarget "Amigotchi" */ = {
+		C77E5CA813526B160051BD37 /* Build configuration list for PBXNativeTarget "Tickle my Penguin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C77E5CA913526B160051BD37 /* Debug */,

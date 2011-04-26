@@ -15,7 +15,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C77E5B3C13526B140051BD37"
                BuildableName = "Amigotchi.app"
-               BlueprintName = "Amigotchi"
+               BlueprintName = "Tickle my Penguin"
                ReferencedContainer = "container:Amigotchi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,7 +42,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C77E5B3C13526B140051BD37"
             BuildableName = "Amigotchi.app"
-            BlueprintName = "Amigotchi"
+            BlueprintName = "Tickle my Penguin"
             ReferencedContainer = "container:Amigotchi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,7 +61,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C77E5B3C13526B140051BD37"
             BuildableName = "Amigotchi.app"
-            BlueprintName = "Amigotchi"
+            BlueprintName = "Tickle my Penguin"
             ReferencedContainer = "container:Amigotchi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

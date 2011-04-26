@@ -61,9 +61,6 @@
 
 -(void)inputFromView:(NSNotification *)notification{
     
-    NSLog([[notification userInfo] description]);
-    NSLog([[notification object] description]);
-    NSLog(@"something from view");
     if([[notification object] isEqualToString:@"poke"])
     {
         self.pet.happiness--;
@@ -72,10 +69,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSLog(@"keypath is: %@", keyPath);
-    NSLog(@"object is: %@", [object description]);
-    NSLog(@"change is: %@", [change description]);
-    NSLog(@"Poops.\n");
+
     [self.view refreshSpriteswithHappiness:self.pet.happiness];
 }
 

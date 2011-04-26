@@ -12,8 +12,8 @@
 	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>app_icon_s.png</string>
-		<string>app_icon.png</string>
+		<string>icon.png</string>
+		<string>icon_retina.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.kipkipkareem.${PRODUCT_NAME:rfc1034identifier}</string>

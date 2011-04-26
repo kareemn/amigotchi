@@ -14,10 +14,6 @@
 
 #import "AmigoUser.h"
 @interface AmigoAPI : NSObject {
-    ASINetworkQueue         *queue;
-    AmigoUser               *user;
-    
-    
 }
 
 @property (nonatomic, readwrite, retain) ASINetworkQueue      *queue;

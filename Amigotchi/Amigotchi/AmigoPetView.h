@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "AmigoConfig.h"
+#import "SimpleAudioEngine.h"
 
 
 @interface AmigoPetView : CCNode<CCTargetedTouchDelegate> {
-
+    SimpleAudioEngine *sae;
 }
 
 - (void)setSprites;

@@ -13,7 +13,7 @@ static NSString* API_ROOT = @"http://amigotchiapi.appspot.com";
 static NSString* LOGIN_ENDPOINT = @"/user/login";
 
 @implementation AmigoAPI
-@synthesize queue, user;
+@synthesize queue = _queue, user = _user;
 
 - (id)init {
     self = [super init];
@@ -39,8 +39,8 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
     
-    [request setDidFinishSelector:@selector(requestDone:)];
-    [request setDidFailSelector:@selector(requestWentWrong:)];
+    [request setDidFinishSelector:@selector(loginDone:)];
+    [request setDidFailSelector:@selector(loginWentWrong:)];
     
     [request setPostValue:access_token forKey:@"access_token"];
     
@@ -50,7 +50,7 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     [[self queue] go];
 }
 
-- (void)requestDone:(ASIHTTPRequest *)request
+- (void)loginDone:(ASIHTTPRequest *)request
 {
     NSString *response = [request responseString];
     id parsedJson = [self parseJsonResponse:response];
@@ -70,7 +70,7 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     }
 }
 
-- (void)requestWentWrong:(ASIHTTPRequest *)request
+- (void)loginWentWrong:(ASIHTTPRequest *)request
 {
     [[self user] setAccess_token:[NSString stringWithFormat:@"0"]];
     NSError *error = [request error];
