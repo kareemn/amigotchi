@@ -12,6 +12,7 @@
 #import "PetLayer.h"
 #import "LoginLayer.h"
 #import "EnvironmentLayer.h"
+#import "ButtonLayer.h"
 
 // HomeLayer implementation
 @implementation HomeLayer
@@ -47,6 +48,9 @@
         
         EnvironmentLayer *envLayer = [[EnvironmentLayer alloc] init];
         [self addChild:envLayer];
+        
+        ButtonLayer *buttonLayer = [[ButtonLayer alloc] init];
+        [self addChild:buttonLayer];
         
 
 	}

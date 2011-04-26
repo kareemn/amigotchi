@@ -18,6 +18,7 @@
 		C70A7B621354C520007A82CB /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C70A7B611354C520007A82CB /* app_icon.png */; };
 		C716CE371354B2D700CBD983 /* PetLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE361354B2D700CBD983 /* PetLayer.m */; };
 		C716CE3A1354B4A400CBD983 /* LoginLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE391354B4A400CBD983 /* LoginLayer.m */; };
+		C735B7D51366913900716E8A /* ButtonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C735B7D41366913800716E8A /* ButtonLayer.m */; };
 		C74BEFA81353E997004AEE78 /* Accessory.m in Sources */ = {isa = PBXBuildFile; fileRef = C74BEFA71353E997004AEE78 /* Accessory.m */; };
 		C754BBC81353EB3D000BE450 /* app_icon_s.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC61353EB3D000BE450 /* app_icon_s.png */; };
 		C754BBC91353EB3D000BE450 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC71353EB3D000BE450 /* screen.png */; };
@@ -206,6 +207,8 @@
 		C716CE381354B4A400CBD983 /* LoginLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginLayer.h; sourceTree = "<group>"; };
 		C716CE391354B4A400CBD983 /* LoginLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginLayer.m; sourceTree = "<group>"; };
 		C716CE3B1354B93B00CBD983 /* AmigoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoConfig.h; sourceTree = "<group>"; };
+		C735B7D31366913800716E8A /* ButtonLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonLayer.h; sourceTree = "<group>"; };
+		C735B7D41366913800716E8A /* ButtonLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonLayer.m; sourceTree = "<group>"; };
 		C74BEFA61353E997004AEE78 /* Accessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accessory.h; sourceTree = "<group>"; };
 		C74BEFA71353E997004AEE78 /* Accessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accessory.m; sourceTree = "<group>"; };
 		C754BBC61353EB3D000BE450 /* app_icon_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_s.png; path = Resources/app_icon_s.png; sourceTree = "<group>"; };
@@ -564,6 +567,8 @@
 				C716CE361354B2D700CBD983 /* PetLayer.m */,
 				C716CE381354B4A400CBD983 /* LoginLayer.h */,
 				C716CE391354B4A400CBD983 /* LoginLayer.m */,
+				C735B7D31366913800716E8A /* ButtonLayer.h */,
+				C735B7D41366913800716E8A /* ButtonLayer.m */,
 			);
 			name = Layers;
 			sourceTree = "<group>";
@@ -1248,6 +1253,7 @@
 				374A62D3135E41DE00FE23E3 /* EnvironmentView.m in Sources */,
 				374A62D6135E44B600FE23E3 /* EnvironmentLayer.m in Sources */,
 				C7DF4192135E592500662BDF /* LoginView.m in Sources */,
+				C735B7D51366913900716E8A /* ButtonLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
