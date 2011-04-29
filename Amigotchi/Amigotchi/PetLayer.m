@@ -61,8 +61,8 @@
 
 -(void)inputFromView:(NSNotification *)notification{
     
-    NSLog([[notification userInfo] description]);
-    NSLog([[notification object] description]);
+   // NSLog([[notification userInfo] description]);
+    //NSLog([[notification object] description]);
     NSLog(@"something from view");
     if([[notification object] isEqualToString:@"poke"])
     {

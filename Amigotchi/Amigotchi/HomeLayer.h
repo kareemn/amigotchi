@@ -12,11 +12,13 @@
 #import "FBConnect.h"
 #import "AmigoAPI.h"
 #import "AmigoUser.h"
-#import "AmigoPet.h"
 #import "AmigoConfig.h"
 
+#import "PetLayer.h"
+#import "LoginLayer.h"
+#import "EnvironmentLayer.h"
+#import "MapLayer.h"
 
-#define MENU_HEIGHT 50
 
 // HomeLayer
 @interface HomeLayer : CCLayer
@@ -24,8 +26,16 @@
 
 }
 
+@property (nonatomic, retain) PetLayer          *petlayer;
+@property (nonatomic, retain) LoginLayer        *loginlayer;
+@property (nonatomic, retain) EnvironmentLayer  *envlayer;
+@property (nonatomic, retain) MapLayer          *maplayer;
+
+
 // returns a CCScene that contains the HomeLayer as the only child
 +(CCScene *) scene;
 
+//called when user logs in
+- (void) userDidLogin;
 
 @end

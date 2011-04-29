@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "HomeLayer.h"
 #import "Accessory.h"
-#import "AmigoPetView.h"
 #import "AmigoConfig.h"
 
 @interface AmigoPet :  CCNode{

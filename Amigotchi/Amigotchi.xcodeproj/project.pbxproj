@@ -21,6 +21,10 @@
 		C70A7B621354C520007A82CB /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C70A7B611354C520007A82CB /* app_icon.png */; };
 		C716CE371354B2D700CBD983 /* PetLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE361354B2D700CBD983 /* PetLayer.m */; };
 		C716CE3A1354B4A400CBD983 /* LoginLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE391354B4A400CBD983 /* LoginLayer.m */; };
+		C73F28F1136A6EEB005E5952 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C73F28F0136A6EEB005E5952 /* MapView.m */; };
+		C73F28F3136A6F95005E5952 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73F28F2136A6F95005E5952 /* MapKit.framework */; };
+		C73F28F6136A7005005E5952 /* MapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C73F28F5136A7005005E5952 /* MapLayer.m */; };
+		C73F28F9136A70FE005E5952 /* CCUIViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C73F28F8136A70FE005E5952 /* CCUIViewWrapper.m */; };
 		C74BEFA81353E997004AEE78 /* Accessory.m in Sources */ = {isa = PBXBuildFile; fileRef = C74BEFA71353E997004AEE78 /* Accessory.m */; };
 		C754BBC81353EB3D000BE450 /* app_icon_s.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC61353EB3D000BE450 /* app_icon_s.png */; };
 		C754BBC91353EB3D000BE450 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC71353EB3D000BE450 /* screen.png */; };
@@ -210,6 +214,13 @@
 		C716CE381354B4A400CBD983 /* LoginLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginLayer.h; sourceTree = "<group>"; };
 		C716CE391354B4A400CBD983 /* LoginLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginLayer.m; sourceTree = "<group>"; };
 		C716CE3B1354B93B00CBD983 /* AmigoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoConfig.h; sourceTree = "<group>"; };
+		C73F28EF136A6EEB005E5952 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		C73F28F0136A6EEB005E5952 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		C73F28F2136A6F95005E5952 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C73F28F4136A7005005E5952 /* MapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLayer.h; sourceTree = "<group>"; };
+		C73F28F5136A7005005E5952 /* MapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLayer.m; sourceTree = "<group>"; };
+		C73F28F7136A70FE005E5952 /* CCUIViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUIViewWrapper.h; sourceTree = "<group>"; };
+		C73F28F8136A70FE005E5952 /* CCUIViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUIViewWrapper.m; sourceTree = "<group>"; };
 		C74BEFA61353E997004AEE78 /* Accessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accessory.h; sourceTree = "<group>"; };
 		C74BEFA71353E997004AEE78 /* Accessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accessory.m; sourceTree = "<group>"; };
 		C754BBC61353EB3D000BE450 /* app_icon_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_s.png; path = Resources/app_icon_s.png; sourceTree = "<group>"; };
@@ -522,6 +533,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C73F28F3136A6F95005E5952 /* MapKit.framework in Frameworks */,
 				C79739F91352B91900230B49 /* MobileCoreServices.framework in Frameworks */,
 				C79739F71352B8B700230B49 /* SystemConfiguration.framework in Frameworks */,
 				C77E5B4213526B140051BD37 /* QuartzCore.framework in Frameworks */,
@@ -546,10 +558,12 @@
 				374A62D2135E41DE00FE23E3 /* EnvironmentView.m */,
 				37B8E7B413553315009D0B3F /* AmigoPetView.h */,
 				37B8E7B513553315009D0B3F /* AmigoPetView.m */,
-				C7DF4190135E592500662BDF /* LoginView.h */,
 				37D18F861360CF1D0031DFF5 /* AccessoryView.h */,
 				37D18F871360CF1D0031DFF5 /* AccessoryView.m */,
+				C7DF4190135E592500662BDF /* LoginView.h */,
 				C7DF4191135E592500662BDF /* LoginView.m */,
+				C73F28EF136A6EEB005E5952 /* MapView.h */,
+				C73F28F0136A6EEB005E5952 /* MapView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -557,6 +571,8 @@
 		C716CE3C1354BA1700CBD983 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				C73F28F4136A7005005E5952 /* MapLayer.h */,
+				C73F28F5136A7005005E5952 /* MapLayer.m */,
 				C77E5CA213526B160051BD37 /* HomeLayer.h */,
 				C77E5CA313526B160051BD37 /* HomeLayer.m */,
 				374A62D4135E44B500FE23E3 /* EnvironmentLayer.h */,
@@ -636,6 +652,7 @@
 		C77E5B4013526B140051BD37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C73F28F2136A6F95005E5952 /* MapKit.framework */,
 				C79739F81352B91900230B49 /* MobileCoreServices.framework */,
 				C79739F61352B8B700230B49 /* SystemConfiguration.framework */,
 				C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */,
@@ -876,6 +893,8 @@
 				C77E5C5313526B150051BD37 /* utlist.h */,
 				C77E5C5413526B150051BD37 /* ZipUtils.h */,
 				C77E5C5513526B150051BD37 /* ZipUtils.m */,
+				C73F28F7136A70FE005E5952 /* CCUIViewWrapper.h */,
+				C73F28F8136A70FE005E5952 /* CCUIViewWrapper.m */,
 			);
 			name = cocos2d;
 			sourceTree = "<group>";
@@ -1246,6 +1265,9 @@
 				37D18F851360CE8A0031DFF5 /* Environment.m in Sources */,
 				37D18F881360CF1D0031DFF5 /* AccessoryView.m in Sources */,
 				37D18F8B1360CF4F0031DFF5 /* AccessoryLayer.m in Sources */,
+				C73F28F1136A6EEB005E5952 /* MapView.m in Sources */,
+				C73F28F6136A7005005E5952 /* MapLayer.m in Sources */,
+				C73F28F9136A70FE005E5952 /* CCUIViewWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

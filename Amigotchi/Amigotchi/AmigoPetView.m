@@ -7,7 +7,6 @@
 //
 
 #import "AmigoPetView.h"
-#import "AmigoConfig.h"
 
 @implementation AmigoPetView
 @synthesize mySprite, idleAnimation, unhappyIdleAnimation, pokeAnimation, cache, pokeAction, idleAction, unhappyIdleAction;

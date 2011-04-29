@@ -25,13 +25,19 @@
 @property (nonatomic, retain) AmigoUser     *user;
 @property (nonatomic, retain)  LoginView     *view;
 
+@property (nonatomic) id            loginDelegate;
+@property (nonatomic) SEL                   loginCallBack;
+
 
 // returns a CCScene that contains the FacebookLayer as the only child
 +(CCScene *) scene;
 
--(void)initApi;
--(void)initNotifiation;
+- (id) initWithLoginDelagate: (id)del andSelector:(SEL)loginFunc;
 
--(void)facebookLogin;
+- (void)initApi;
+- (void)initNotifiation;
+
+- (void)facebookLogin;
+- (void)facebookLogout;
 
 @end

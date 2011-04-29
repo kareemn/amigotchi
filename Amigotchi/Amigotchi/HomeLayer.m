@@ -9,14 +9,15 @@
 
 // Import the interfaces
 #import "HomeLayer.h"
-#import "PetLayer.h"
-#import "LoginLayer.h"
-#import "EnvironmentLayer.h"
+
 
 // HomeLayer implementation
 @implementation HomeLayer
 
-
+@synthesize petlayer = petlayer_;
+@synthesize maplayer = maplayer_;
+@synthesize envlayer = envlayer_;
+@synthesize loginlayer = loginlayer_;
 
 +(CCScene *) scene
 {
@@ -41,15 +42,32 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
         
-        LoginLayer *loginlayer = [[LoginLayer alloc] init];
-        [self addChild:loginlayer z:LOGIN_LAYER];
+        LoginLayer *temploginlayer = [[LoginLayer alloc] initWithLoginDelagate:self andSelector:@selector(userDidLogin)];
+        self.loginlayer = temploginlayer;
         
-        PetLayer *petlayer = [[PetLayer alloc] init];
-        [self addChild:petlayer z:PET_LAYER];
+        [self addChild:self.loginlayer z:LOGIN_LAYER];
+        [temploginlayer release];
         
-        EnvironmentLayer *envLayer = [[EnvironmentLayer alloc] init];
-        [self addChild:envLayer];
         
+        PetLayer *temppetlayer = [[PetLayer alloc] init];
+        self.petlayer = temppetlayer;
+        [self addChild:self.petlayer z:PET_LAYER];
+        [temppetlayer release];
+        
+        EnvironmentLayer *tempenvLayer = [[EnvironmentLayer alloc] init];
+        self.envlayer = tempenvLayer;
+        
+        [self addChild:self.envlayer];
+        [tempenvLayer release];
+        
+        /*
+        MapLayer *tempmaplayer = [[MapLayer alloc] init];
+        self.maplayer = tempmaplayer;
+        
+        [self addChild:self.maplayer];
+        [tempmaplayer release];
+        */
+         
 
 	}
 	return self;
@@ -57,14 +75,21 @@
 
 
 
-// on "dealloc" you need to release all your retained objects
+
+- (void) userDidLogin {
+    
+    NSLog(@"HomeLayer:userDidLogin");
+}
+
+
+
 - (void) dealloc
 {
-	// in case you have something to dealloc, do it in this method
-	// in this particular example nothing needs to be released.
-	// cocos2d will automatically release all the children (Label)
-	
-	// don't forget to call "super dealloc"
+	[petlayer_ release];
+    [loginlayer_ release];
+    [maplayer_ release];
+    [envlayer_ release];
+    
 	[super dealloc];
 }
 @end
