@@ -22,11 +22,6 @@
     return (self);
 }
 
--(void)poke
-{
-    //Poke animation
-}
-
 -(void)feed:(int)amount
 {
     self.hunger -= amount;

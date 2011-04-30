@@ -15,14 +15,20 @@
 
 }
 
-- (void)setSprites;
-- (void) refreshSpriteswithHappiness:(int)happiness;
+- (void) setSprites;
+- (void) setButtons;
+- (void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom;
+- (void) handleButton:(id)sender;
 
 @property (nonatomic, retain) CCSprite * mySprite;
+@property (nonatomic, retain) CCMenu * buttons;
+
+@property (nonatomic, retain) CCSpriteFrameCache * cache;
+
 @property (nonatomic, retain) CCAnimation * idleAnimation;
 @property (nonatomic, retain) CCAnimation * unhappyIdleAnimation;
 @property (nonatomic, retain) CCAnimation * pokeAnimation;
-@property (nonatomic, retain) CCSpriteFrameCache * cache;
+
 @property (nonatomic, retain) CCRepeatForever * idleAction;
 @property (nonatomic, retain) CCRepeatForever * unhappyIdleAction;
 @property (nonatomic, retain) CCRepeatForever * pokeAction;

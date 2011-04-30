@@ -44,6 +44,10 @@
                                                          NSKeyValueObservingOptionInitial) context:nil];
         [self.pet addObserver:self forKeyPath:@"happiness" options:(NSKeyValueObservingOptionNew |
                                                                    NSKeyValueObservingOptionInitial) context:nil];
+        [self.pet addObserver:self forKeyPath:@"age" options:(NSKeyValueObservingOptionNew |
+                                                                    NSKeyValueObservingOptionInitial) context:nil];
+        [self.pet addObserver:self forKeyPath:@"hunger" options:(NSKeyValueObservingOptionNew |
+                                                                    NSKeyValueObservingOptionInitial) context:nil];
         
         //add a pet view
         self.view = [[AmigoPetView alloc] init];
@@ -63,7 +67,7 @@
     
    // NSLog([[notification userInfo] description]);
     //NSLog([[notification object] description]);
-    NSLog(@"something from view");
+    NSLog(@"inputFromView:: received %@.\n", [notification object]);
     if([[notification object] isEqualToString:@"poke"])
     {
         self.pet.happiness--;
@@ -75,7 +79,7 @@
     NSLog(@"keypath is: %@", keyPath);
     NSLog(@"object is: %@", [object description]);
     NSLog(@"change is: %@", [change description]);
-    [self.view refreshSpriteswithHappiness:self.pet.happiness];
+    [self.view refreshSpriteswithHappiness:self.pet.happiness andHunger:self.pet.hunger andBathroom:self.pet.bathroom];
 }
 
 -(void)happinessClicked:(int)butt

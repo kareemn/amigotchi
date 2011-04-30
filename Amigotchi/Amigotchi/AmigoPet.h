@@ -17,14 +17,12 @@
 @property (retain, nonatomic) NSString * name;
 @property (retain, nonatomic) NSString * type;
 
-//@property (retain, nonatomic) AmigoPetView * view;
 
 @property (readwrite, assign) int hunger;
 @property (readwrite, assign) int age;
 @property (readwrite, assign) int bathroom;
 @property (readwrite, assign) int happiness;
 
-- (void)poke;
 - (void)feed:(int)amount;
 - (void)takeDump;
 

@@ -10,6 +10,7 @@
 
 @implementation AmigoPetView
 @synthesize mySprite, idleAnimation, unhappyIdleAnimation, pokeAnimation, cache, pokeAction, idleAction, unhappyIdleAction;
+@synthesize buttons = buttons_;
 
 //id idleAction;
 //id pokeAction;
@@ -25,10 +26,15 @@
         self.pokeAnimation = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
         
         [self setSprites];
+        [self setButtons];
+        
         //Set and go!
         self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
         [self.mySprite runAction:self.idleAction];
-        [self addChild:mySprite];
+        [self addChild:self.mySprite];
+        [self addChild:self.buttons];
+        
+        //Button Stuff
     }
     return self;
 }
@@ -58,12 +64,26 @@
     [self.pokeAnimation addFrame:[self.cache spriteFrameByName:@"dragon_poked.png"]];
     self.pokeAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.pokeAnimation]];
     
-    //Set and go!
-    //self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
-    //[self.mySprite runAction:self.idleAction];
+    //feedButton
+    //self.feedButton = [CCSprite spriteWithFile:@"Icon.png"];
+    //self.feedButton.position = ccp(200, 200);
+    
 }
 
--(void) refreshSpriteswithHappiness:(int)happiness
+-(void) setButtons
+{
+    CCMenuItem *feedButton = [CCMenuItemImage 
+                                itemFromNormalImage:@"Icon.png" selectedImage:@"Icon-72.png" 
+                                target:self selector:@selector(handleButton:)];
+    feedButton.position = ccp(60, 60);
+    feedButton.tag = BUTTON_FEED;
+    
+    self.buttons = [CCMenu menuWithItems:feedButton, nil];
+    self.buttons.position = CGPointZero;
+    [feedButton release];
+}
+
+-(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom
 {
     [self.mySprite stopAllActions];
     if(happiness >= MAX_HAPPINESS/2)
@@ -74,6 +94,11 @@
     {
         [self.mySprite runAction:self.unhappyIdleAction];
     }
+}
+
+-(void)handleButton:(id)sender
+{
+    NSLog(@"handleButton:: tag: %@\n", sender);
 }
 
 //Overwritten functions
@@ -97,15 +122,18 @@
 
 -(BOOL)ccTouchBegan:(UITouch*) touch  withEvent:(UIEvent*) event
 {
-    if ( ![self containsTouchLocation:touch]) return NO;
-    NSLog(@"AmigoPetView ccTouchBegan\n");
-    [self.mySprite runAction:self.pokeAction];
-    return YES;
+    
+    if ([self containsTouchLocation:touch])
+    {
+        [self.mySprite runAction:self.pokeAction];
+        return YES;
+    }
+    return NO;
 }
 
 -(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    NSLog(@"AmigoPetView ccTouchEnded\n");
+    //NSLog(@"AmigoPetView ccTouchEnded\n");
     [self.mySprite stopAction:self.pokeAction];
     
     //NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"hey", @"ho", nil];
