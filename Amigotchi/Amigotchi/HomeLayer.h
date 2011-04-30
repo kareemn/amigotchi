@@ -13,6 +13,7 @@
 #import "AmigoAPI.h"
 #import "AmigoUser.h"
 #import "AmigoConfig.h"
+#import "AmigoCallbackDelegate.h"
 
 #import "PetLayer.h"
 #import "LoginLayer.h"
@@ -33,9 +34,12 @@
 
 
 // returns a CCScene that contains the HomeLayer as the only child
-+(CCScene *) scene;
++ (CCScene *) scene;
+
+//create Login callback delegate to pass in to loginlayer on init 
+- (AmigoCallbackDelegate *) createLoginCallbackDelegate;
 
 //called when user logs in
-- (void) userDidLogin;
+- (void) loggedInCallback;
 
 @end

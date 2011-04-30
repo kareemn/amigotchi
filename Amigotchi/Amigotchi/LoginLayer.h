@@ -12,6 +12,7 @@
 #import "AmigoAPI.h"
 #import "AmigoConfig.h"
 #import "LoginView.h"
+#import "AmigoCallbackDelegate.h"
 
 @interface LoginLayer : CCLayer<FBSessionDelegate> {
     
@@ -25,14 +26,13 @@
 @property (nonatomic, retain) AmigoUser     *user;
 @property (nonatomic, retain)  LoginView     *view;
 
-@property (nonatomic) id            loginDelegate;
-@property (nonatomic) SEL                   loginCallBack;
+@property (nonatomic, retain) AmigoCallbackDelegate  *loginDelegate;
 
 
 // returns a CCScene that contains the FacebookLayer as the only child
 +(CCScene *) scene;
 
-- (id) initWithLoginDelagate: (id)del andSelector:(SEL)loginFunc;
+- (id) initWithLoginDelagate: (AmigoCallbackDelegate *)del;
 
 - (void)initApi;
 - (void)initNotifiation;

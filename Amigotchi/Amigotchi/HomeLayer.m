@@ -42,7 +42,7 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
         
-        LoginLayer *temploginlayer = [[LoginLayer alloc] initWithLoginDelagate:self andSelector:@selector(userDidLogin)];
+        LoginLayer *temploginlayer = [[LoginLayer alloc] initWithLoginDelagate:[self createLoginCallbackDelegate]];
         self.loginlayer = temploginlayer;
         
         [self addChild:self.loginlayer z:LOGIN_LAYER];
@@ -73,12 +73,21 @@
 	return self;
 }
 
-
-
-
-- (void) userDidLogin {
+- (AmigoCallbackDelegate *) createLoginCallbackDelegate {
     
-    NSLog(@"HomeLayer:userDidLogin");
+    AmigoCallbackDelegate *delegate = [[[AmigoCallbackDelegate alloc] 
+                                        initWithDelegate:self 
+                                        andSelectorNameArray:[NSArray arrayWithObjects:@"loggedInCallback",
+                                                              nil]] 
+                                       autorelease];
+    
+    return delegate;
+}
+
+
+- (void) loggedInCallback {
+    
+    NSLog(@"HomeLayer::loggedInCallback");
 }
 
 

@@ -13,7 +13,7 @@
 
 @synthesize facebook = _facebook, isFBLogged = _isFBLogged, permissions = _permissions, api = _api, user = _user, view = _view;
 
-@synthesize loginCallBack = loginCallBack_, loginDelegate = loginDelegate_;
+@synthesize loginDelegate = loginDelegate_;
 
 +(CCScene *) scene
 {
@@ -47,12 +47,11 @@
 	return self;
 }
 
--(id) initWithLoginDelagate: (id)del andSelector:(SEL)loginFunc{
+-(id) initWithLoginDelagate: (id)del{
     self = [self init];
     
     if(self){
         self.loginDelegate = del;
-        self.loginCallBack = loginFunc;
     }
     
     return self;
@@ -107,9 +106,8 @@
     
     [self.view facebookLoggedIn];
     
-    if( [self.loginDelegate respondsToSelector:self.loginCallBack] ){
-        [self.loginDelegate performSelector:self.loginCallBack];
-    }
+    /* to add more callbacks to the loginDelegate modify the HomeLayer createLoginCallbackDelegate */
+    [self.loginDelegate performCallback:@"loggedInCallback"];
 }
 
 
