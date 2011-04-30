@@ -72,15 +72,20 @@
 
 -(void) setButtons
 {
+    //Feed button
     CCMenuItem *feedButton = [CCMenuItemImage 
                                 itemFromNormalImage:@"Icon.png" selectedImage:@"Icon-72.png" 
                                 target:self selector:@selector(handleButton:)];
     feedButton.position = ccp(60, 60);
     feedButton.tag = BUTTON_FEED;
     
+    //Checkin button
+    
+    //Take dump button
+    
+    //Make the menu
     self.buttons = [CCMenu menuWithItems:feedButton, nil];
     self.buttons.position = CGPointZero;
-    [feedButton release];
 }
 
 -(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom
