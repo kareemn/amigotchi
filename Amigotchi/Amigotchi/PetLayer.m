@@ -50,7 +50,7 @@
                                                                     NSKeyValueObservingOptionInitial) context:nil];
         
         //add a pet view
-        self.view = [[AmigoPetView alloc] init];
+        self.view = [[AmigoPetView alloc] initWithCallbackDelegate:[self createCallbackDelegate]];
         self.view.scale = .5;
         self.view.position = ccp(size.width/2, size.height - MENU_HEIGHT - self.view.mySprite.contentSize.height/2);
         [self addChild:self.view z:PET_LAYER];
@@ -90,6 +90,30 @@
 -(void)feedClicked:(int)balls
 {
     self.pet.hunger += balls;
+}
+
+- (AmigoCallbackDelegate *) createCallbackDelegate {
+    AmigoCallbackDelegate *delegate = [[[AmigoCallbackDelegate alloc] 
+                                                initWithDelegate:self 
+                                                andSelectorNameArray:[NSArray arrayWithObjects:@"foodButtonCallback",
+                                                                                               @"checkinButtonCallback",
+                                                                                               @"mapButtonCallback" , nil]] 
+                                       autorelease];
+    
+    return delegate;
+}
+
+
+- (void) foodButtonCallback {
+    NSLog(@"PetLayer::foodButtonCallback");
+}
+- (void) checkinButtonCallback {
+    NSLog(@"PetLayer::checkinButtonCallback");
+    
+}
+- (void) mapButtonCallback {
+    NSLog(@"PetLayer::mapButtonCallback");
+    
 }
          
 @end

@@ -21,6 +21,8 @@
 #define MAX_HAPPINESS 20
 
 #define BUTTON_FEED 1
+#define BUTTON_CHECKIN 2
+#define BUTTON_MAP 3
 
 //facebook app id
 static NSString* kAppId = @"196872950351792";

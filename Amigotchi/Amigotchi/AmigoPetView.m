@@ -11,6 +11,7 @@
 @implementation AmigoPetView
 @synthesize mySprite, idleAnimation, unhappyIdleAnimation, pokeAnimation, cache, pokeAction, idleAction, unhappyIdleAction;
 @synthesize buttons = buttons_;
+@synthesize callbackDelegate = callbackDelegate_;
 
 //id idleAction;
 //id pokeAction;
@@ -36,6 +37,16 @@
         
         //Button Stuff
     }
+    return self;
+}
+
+- (id) initWithCallbackDelegate: (AmigoCallbackDelegate *)delegate {
+    self = [self init];
+    
+    if(self){
+        self.callbackDelegate = delegate;
+    }
+    
     return self;
 }
 
@@ -76,16 +87,35 @@
     CCMenuItem *feedButton = [CCMenuItemImage 
                                 itemFromNormalImage:@"Icon.png" selectedImage:@"Icon-72.png" 
                                 target:self selector:@selector(handleButton:)];
-    feedButton.position = ccp(60, 60);
+    
     feedButton.tag = BUTTON_FEED;
     
+    
     //Checkin button
+    CCMenuItem *getFoodButton = [CCMenuItemImage 
+                                 itemFromNormalImage:@"Icon.png" selectedImage:@"Icon-72.png" 
+                                 target:self selector:@selector(handleButton:)];
+    
+    getFoodButton.tag = BUTTON_CHECKIN;
+    getFoodButton.position = ccp(80, 0);
+    
+    //map button
+    CCMenuItem *mapButton = [CCMenuItemImage 
+                                 itemFromNormalImage:@"Icon.png" selectedImage:@"Icon-72.png" 
+                                 target:self selector:@selector(handleButton:)];
+    
+    mapButton.tag = BUTTON_MAP;
+    mapButton.position = ccp(160, 0);
     
     //Take dump button
     
     //Make the menu
-    self.buttons = [CCMenu menuWithItems:feedButton, nil];
-    self.buttons.position = CGPointZero;
+    self.buttons = [CCMenu menuWithItems:feedButton, getFoodButton, mapButton, nil];
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    
+    NSLog(@"width: %f height: %f", size.width, size.height);
+    
+    self.buttons.position = CGPointMake(-.4* size.width, -.9 * size.height);
 }
 
 -(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom
@@ -104,6 +134,33 @@
 -(void)handleButton:(id)sender
 {
     NSLog(@"handleButton:: tag: %@\n", sender);
+    
+    CCMenuItem *clickedButton = (CCMenuItem *)sender;
+    /*
+     allowed callbacks on PetLayer for now to add more modify the 
+     PetLayer createCallbackDelegate function
+     
+     @"foodButtonCallback"
+     @"checkinButtonCallback"
+     @"mapButtonCallback"
+    */
+    switch(clickedButton.tag){
+        case BUTTON_FEED:
+            NSLog(@"AmigoPetView::Clicked button to feed pet");
+            [self.callbackDelegate performCallback:@"foodButtonCallback"];
+            break;
+        case BUTTON_CHECKIN:
+            NSLog(@"AmigoPetView::Clicked button to checkin");
+            [self.callbackDelegate performCallback:@"checkinButtonCallback"];
+            break;
+        case BUTTON_MAP:
+            NSLog(@"AmigoPetView::Clicked button to see map");
+            [self.callbackDelegate performCallback:@"mapButtonCallback"];
+            break;
+        default:
+            break;
+            
+    }
 }
 
 //Overwritten functions
@@ -157,6 +214,13 @@
 {
 	[[CCTouchDispatcher sharedDispatcher] removeDelegate:self];
 	[super onExit];
+}
+
+- (void) dealloc {
+    
+    [callbackDelegate_ release];
+    
+    [super dealloc];
 }
 
 @end
