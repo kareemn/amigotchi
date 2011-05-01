@@ -83,39 +83,55 @@
 
 -(void) setButtons
 {
-    [self.cache addSpriteFramesWithFile:@"buttons.plist"];
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    int numButtons = 3;
     
+    float spacing = 2*((size.width) / numButtons); //The 2 is from the scaling in the layer.
+    float curX = (self.mySprite.position.x) - (spacing * (numButtons/2.0));
+    NSLog(@"spacing: %f.\n", spacing);
+    
+    [self.cache addSpriteFramesWithFile:@"buttons.plist"];
     //Feed button
-    CCMenuItem *feedButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button_pressed.png"]];
+    CCMenuItem *feedButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button_pressed.png"] target:self selector:@selector(handleButton:)];
+    curX += feedButton.contentSize.width/2;
     
     feedButton.tag = BUTTON_FEED;
-    
+    feedButton.position = ccp(curX, 0);
+    NSLog(@"Placing feedButton at %f.\n", curX);
+    curX += spacing;
     
     //Checkin button
-    CCMenuItem *checkinButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"checkin_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"checkin_button_pressed.png"]];
+    CCMenuItem *checkinButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"checkin_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"checkin_button_pressed.png"] target:self selector:@selector(handleButton:)];
     
     checkinButton.tag = BUTTON_CHECKIN;
-    checkinButton.position = ccp(80, 0);
+    checkinButton.position = ccp(curX, 0);
+    NSLog(@"Placing checkinButton at %f.\n", curX);
+    curX += spacing;
     
     //map button
-    CCMenuItem *mapButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"map_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"map_button_pressed.png"]];
+    CCMenuItem *mapButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"map_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"map_button_pressed.png"] target:self selector:@selector(handleButton:)];
     
     mapButton.tag = BUTTON_MAP;
-    mapButton.position = ccp(160, 0);
+    mapButton.position = ccp(curX, 0);
+    NSLog(@"Placing mapButton at %f.\n", curX);
+    curX += spacing;
     
     //Take dump button
     
     //Make the menu
     self.buttons = [CCMenu menuWithItems:feedButton, checkinButton, mapButton, nil];
-    CGSize size = [[CCDirector sharedDirector] winSize];
     
     NSLog(@"width: %f height: %f", size.width, size.height);
     
-    self.buttons.position = CGPointMake(-.4* size.width, -.9 * size.height);
+    //self.buttons.position = CGPointMake(-.4* size.width, -.9 * size.height);
+    self.buttons.position = CGPointMake(self.mySprite.position.x, -.8 * size.height);
 }
 
 -(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom
 {
+    //All sprite-related calculations will go here.
+    
+    //This code so far just shows how we will use it.
     [self.mySprite stopAllActions];
     if(happiness >= MAX_HAPPINESS/2)
     {
@@ -197,7 +213,6 @@
     //NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"hey", @"ho", nil];
     
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"poke"]];
-                                                            //Call feedSelector
 }
 
 -(void)onEnter
