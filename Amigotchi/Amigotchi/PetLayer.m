@@ -67,7 +67,7 @@
     
    // NSLog([[notification userInfo] description]);
     //NSLog([[notification object] description]);
-    NSLog(@"inputFromView:: received %@.\n", [notification object]);
+    //NSLog(@"inputFromView:: received %@.\n", [notification object]);
     if([[notification object] isEqualToString:@"poke"])
     {
     }
@@ -75,9 +75,13 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSLog(@"keypath is: %@", keyPath);
+    /*NSLog(@"keypath is: %@", keyPath);
     NSLog(@"object is: %@", [object description]);
-    NSLog(@"change is: %@", [change description]);
+    NSLog(@"change is: %@", [change description]);*/
+    if([keyPath isEqualToString:@"hunger"])
+    {
+        NSLog(@"I am the PetLayer and I see that my pet's hunger has changed!\n");
+    }
     [self.view refreshSpriteswithHappiness:self.pet.happiness andHunger:self.pet.hunger andBathroom:self.pet.bathroom];
 }
 
@@ -105,6 +109,7 @@
 
 - (void) foodButtonCallback {
     NSLog(@"PetLayer::foodButtonCallback");
+    self.pet.hunger--;
 }
 - (void) checkinButtonCallback {
     NSLog(@"PetLayer::checkinButtonCallback");
