@@ -167,6 +167,8 @@
 		C79739F91352B91900230B49 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F81352B91900230B49 /* MobileCoreServices.framework */; };
 		C79739FE1352BA5800230B49 /* AmigoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C79739FD1352BA5800230B49 /* AmigoAPI.m */; };
 		C7973A011353003D00230B49 /* AmigoUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C7973A001353003C00230B49 /* AmigoUser.m */; };
+		C79F1E69136CF3D000A7BAD8 /* CheckinView.m in Sources */ = {isa = PBXBuildFile; fileRef = C79F1E67136CF3D000A7BAD8 /* CheckinView.m */; };
+		C79F1E6C136CF3DC00A7BAD8 /* CheckinLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C79F1E6B136CF3DC00A7BAD8 /* CheckinLayer.m */; };
 		C7AAE1AD1352B80700BEAC71 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */; };
 		C7DDABEE13527BC700CB250B /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDABD313527BC700CB250B /* Facebook.m */; };
 		C7DDABEF13527BC700CB250B /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7DDABD613527BC700CB250B /* FBDialog.bundle */; };
@@ -503,6 +505,10 @@
 		C79739FD1352BA5800230B49 /* AmigoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoAPI.m; sourceTree = "<group>"; };
 		C79739FF1353003C00230B49 /* AmigoUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoUser.h; sourceTree = "<group>"; };
 		C7973A001353003C00230B49 /* AmigoUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoUser.m; sourceTree = "<group>"; };
+		C79F1E67136CF3D000A7BAD8 /* CheckinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinView.m; sourceTree = "<group>"; };
+		C79F1E68136CF3D000A7BAD8 /* CheckinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinView.h; sourceTree = "<group>"; };
+		C79F1E6A136CF3DC00A7BAD8 /* CheckinLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinLayer.h; sourceTree = "<group>"; };
+		C79F1E6B136CF3DC00A7BAD8 /* CheckinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinLayer.m; sourceTree = "<group>"; };
 		C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C7DDABCF13527BC700CB250B /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
 		C7DDABD213527BC700CB250B /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
@@ -561,6 +567,8 @@
 		37B8E7B3135532C3009D0B3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C79F1E67136CF3D000A7BAD8 /* CheckinView.m */,
+				C79F1E68136CF3D000A7BAD8 /* CheckinView.h */,
 				374A62D1135E41DE00FE23E3 /* EnvironmentView.h */,
 				374A62D2135E41DE00FE23E3 /* EnvironmentView.m */,
 				37B8E7B413553315009D0B3F /* AmigoPetView.h */,
@@ -578,6 +586,8 @@
 		C716CE3C1354BA1700CBD983 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				C79F1E6A136CF3DC00A7BAD8 /* CheckinLayer.h */,
+				C79F1E6B136CF3DC00A7BAD8 /* CheckinLayer.m */,
 				C73F28F4136A7005005E5952 /* MapLayer.h */,
 				C73F28F5136A7005005E5952 /* MapLayer.m */,
 				C77E5CA213526B160051BD37 /* HomeLayer.h */,
@@ -1290,6 +1300,8 @@
 				C73F28F6136A7005005E5952 /* MapLayer.m in Sources */,
 				C73F28F9136A70FE005E5952 /* CCUIViewWrapper.m in Sources */,
 				C72A847B136BBF860095BD51 /* AmigoCallbackDelegate.m in Sources */,
+				C79F1E69136CF3D000A7BAD8 /* CheckinView.m in Sources */,
+				C79F1E6C136CF3DC00A7BAD8 /* CheckinLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
