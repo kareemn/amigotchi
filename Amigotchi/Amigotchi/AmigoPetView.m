@@ -9,7 +9,7 @@
 #import "AmigoPetView.h"
 
 @implementation AmigoPetView
-@synthesize mySprite, idleAnimation, unhappyIdleAnimation, pokeAnimation, cache, pokeAction, idleAction, unhappyIdleAction;
+@synthesize mySprite, idleAnimation = idleAnimation_, pokeAnimation, cache, pokeAction, idleAction = idleAction_;
 @synthesize buttons = buttons_;
 @synthesize callbackDelegate = callbackDelegate_;
 
@@ -23,8 +23,10 @@
         self.cache = [CCSpriteFrameCache sharedSpriteFrameCache];
         
         self.idleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
-        self.unhappyIdleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
         self.pokeAnimation = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
+        
+        [self.idleAnimation release];
+        [self.pokeAnimation release];
         
         [self setSprites];
         [self setButtons];
@@ -63,21 +65,9 @@
     }
     self.idleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.idleAnimation]];
     
-    //unhappyIdleAnimation
-    for(int i = 1; i < 3; i++)
-    {
-        NSString * fname = [NSString stringWithFormat:@"dragon_idle_unhappy_%i.png", i];
-        [self.unhappyIdleAnimation addFrame:[self.cache spriteFrameByName:fname]];
-    }
-    self.unhappyIdleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.unhappyIdleAnimation]];
-    
     //pokeAnimation
     [self.pokeAnimation addFrame:[self.cache spriteFrameByName:@"dragon_poked.png"]];
     self.pokeAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.pokeAnimation]];
-    
-    //feedButton
-    //self.feedButton = [CCSprite spriteWithFile:@"Icon.png"];
-    //self.feedButton.position = ccp(200, 200);
     
 }
 
@@ -91,6 +81,7 @@
     NSLog(@"spacing: %f.\n", spacing);
     
     [self.cache addSpriteFramesWithFile:@"buttons.plist"];
+    
     //Feed button
     CCMenuItem *feedButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button_pressed.png"] target:self selector:@selector(handleButton:)];
     curX += feedButton.contentSize.width/2;
@@ -130,17 +121,30 @@
 -(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom
 {
     //All sprite-related calculations will go here.
-    
-    //This code so far just shows how we will use it.
     [self.mySprite stopAllActions];
+    
+    self.idleAnimation = nil;
+    self.idleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
+    
     if(happiness >= MAX_HAPPINESS/2)
     {
-        [self.mySprite runAction:self.idleAction];
+        for(int i = 1; i < 3; i++)
+        {
+            NSString * fname = [NSString stringWithFormat:@"dragon_idle_%i.png", i];
+            [self.idleAnimation addFrame:[self.cache spriteFrameByName:fname]];
+        }
     }
     else
     {
-        [self.mySprite runAction:self.unhappyIdleAction];
+        //Unhappy
+        for(int i = 1; i < 3; i++)
+        {
+            NSString * fname = [NSString stringWithFormat:@"dragon_idle_unhappy_%i.png", i];
+            [self.idleAnimation addFrame:[self.cache spriteFrameByName:fname]];
+        }
     }
+    self.idleAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.idleAnimation]];
+    [self.mySprite runAction:self.idleAction];
 }
 
 -(void)handleButton:(id)sender
