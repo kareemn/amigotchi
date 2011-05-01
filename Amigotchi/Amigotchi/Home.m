@@ -8,11 +8,11 @@
 
 
 // Import the interfaces
-#import "HomeLayer.h"
+#import "Home.h"
 
 
 // HomeLayer implementation
-@implementation HomeLayer
+@implementation Home
 
 @synthesize petlayer = petlayer_;
 @synthesize maplayer = maplayer_;
@@ -26,7 +26,7 @@
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
-	HomeLayer *layer = [HomeLayer node];
+	Home *layer = [Home node];
 	
 	// add layer as a child to scene
 	[scene addChild: layer];

@@ -162,7 +162,7 @@
 		C77E5C9B13526B160051BD37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5C9A13526B160051BD37 /* main.m */; };
 		C77E5C9E13526B160051BD37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5C9D13526B160051BD37 /* AppDelegate.m */; };
 		C77E5CA113526B160051BD37 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA013526B160051BD37 /* RootViewController.m */; };
-		C77E5CA413526B160051BD37 /* HomeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA313526B160051BD37 /* HomeLayer.m */; };
+		C77E5CA413526B160051BD37 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = C77E5CA313526B160051BD37 /* Home.m */; };
 		C79739F71352B8B700230B49 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F61352B8B700230B49 /* SystemConfiguration.framework */; };
 		C79739F91352B91900230B49 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F81352B91900230B49 /* MobileCoreServices.framework */; };
 		C79739FE1352BA5800230B49 /* AmigoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C79739FD1352BA5800230B49 /* AmigoAPI.m */; };
@@ -496,8 +496,8 @@
 		C77E5C9D13526B160051BD37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C77E5C9F13526B160051BD37 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		C77E5CA013526B160051BD37 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		C77E5CA213526B160051BD37 /* HomeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeLayer.h; sourceTree = "<group>"; };
-		C77E5CA313526B160051BD37 /* HomeLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeLayer.m; sourceTree = "<group>"; };
+		C77E5CA213526B160051BD37 /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
+		C77E5CA313526B160051BD37 /* Home.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		C77E5CA513526B160051BD37 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		C79739F61352B8B700230B49 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C79739F81352B91900230B49 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -586,12 +586,12 @@
 		C716CE3C1354BA1700CBD983 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				C77E5CA213526B160051BD37 /* Home.h */,
+				C77E5CA313526B160051BD37 /* Home.m */,
 				C79F1E6A136CF3DC00A7BAD8 /* CheckinLayer.h */,
 				C79F1E6B136CF3DC00A7BAD8 /* CheckinLayer.m */,
 				C73F28F4136A7005005E5952 /* MapLayer.h */,
 				C73F28F5136A7005005E5952 /* MapLayer.m */,
-				C77E5CA213526B160051BD37 /* HomeLayer.h */,
-				C77E5CA313526B160051BD37 /* HomeLayer.m */,
 				374A62D4135E44B500FE23E3 /* EnvironmentLayer.h */,
 				374A62D5135E44B500FE23E3 /* EnvironmentLayer.m */,
 				37D18F891360CF4F0031DFF5 /* AccessoryLayer.h */,
@@ -1263,7 +1263,7 @@
 				C77E5C9B13526B160051BD37 /* main.m in Sources */,
 				C77E5C9E13526B160051BD37 /* AppDelegate.m in Sources */,
 				C77E5CA113526B160051BD37 /* RootViewController.m in Sources */,
-				C77E5CA413526B160051BD37 /* HomeLayer.m in Sources */,
+				C77E5CA413526B160051BD37 /* Home.m in Sources */,
 				C7E1DB6313526D09007A4B73 /* AmigoPet.m in Sources */,
 				C7DDABEE13527BC700CB250B /* Facebook.m in Sources */,
 				C7DDABF013527BC700CB250B /* FBDialog.m in Sources */,

@@ -23,7 +23,7 @@
 
 
 // HomeLayer
-@interface HomeLayer : CCLayer
+@interface Home : CCLayer
 {    
 
 }
