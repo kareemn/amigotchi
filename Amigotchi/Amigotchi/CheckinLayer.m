@@ -21,8 +21,6 @@
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
-    
-	
 	// return the scene
 	return scene;
 }

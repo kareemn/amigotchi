@@ -45,38 +45,27 @@
         
         LoginLayer *temploginlayer = [[LoginLayer alloc] initWithLoginDelagate:[self createLoginCallbackDelegate]];
         self.loginlayer = temploginlayer;
-        
-        [self addChild:self.loginlayer z:LOGIN_LAYER];
         [temploginlayer release];
         
         
         PetLayer *temppetlayer = [[PetLayer alloc] init];
         self.petlayer = temppetlayer;
-        [self addChild:self.petlayer z:PET_LAYER];
         [temppetlayer release];
         
         EnvironmentLayer *tempenvLayer = [[EnvironmentLayer alloc] init];
         self.envlayer = tempenvLayer;
-        
-        [self addChild:self.envlayer];
         [tempenvLayer release];
         
-        /*
+/*
         MapLayer *tempmaplayer = [[MapLayer alloc] init];
         self.maplayer = tempmaplayer;
-        
-        [self addChild:self.maplayer];
         [tempmaplayer release];
-        */
-        /*
+
         CheckinLayer *tempcheckinlayer = [[CheckinLayer alloc] init];
         self.checkinlayer = tempcheckinlayer;
-        
-        [self addChild:self.checkinlayer];
         [tempcheckinlayer release];
-         */
-         
-
+*/
+        [self showLoginScreen];
 	}
 	return self;
 }
@@ -92,10 +81,39 @@
     return delegate;
 }
 
+- (void) showLoginScreen {
+    NSLog(@"Home::showLoginScreen");
+    [self removeAllChildrenWithCleanup:NO];
+    [self addChild:self.loginlayer z:LOGIN_LAYER];
+}
+
+- (void) showPetScreen {
+    NSLog(@"Home::showPetScreen");
+    [self removeAllChildrenWithCleanup:NO];
+    
+    [self addChild:self.petlayer z:PET_LAYER];
+    [self addChild:self.envlayer];
+    
+}
+- (void) showMapScreen {
+    NSLog(@"Home::showMapScreen");
+    [self removeAllChildrenWithCleanup:NO];
+    [self addChild:self.maplayer];
+}
+- (void) showCheckinScreen {
+    NSLog(@"Home::showCheckinScreen");
+    [self removeAllChildrenWithCleanup:NO];
+    [self addChild:self.checkinlayer];
+}
+- (void) showFoodScreen {
+    NSLog(@"Home::showFoodScreen");
+    
+}
 
 - (void) loggedInCallback {
     
     NSLog(@"HomeLayer::loggedInCallback");
+    [self showPetScreen];
 }
 
 

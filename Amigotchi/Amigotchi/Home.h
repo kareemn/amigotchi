@@ -43,4 +43,10 @@
 //called when user logs in
 - (void) loggedInCallback;
 
+- (void) showLoginScreen;
+- (void) showPetScreen;
+- (void) showMapScreen;
+- (void) showCheckinScreen;
+- (void) showFoodScreen;
+
 @end

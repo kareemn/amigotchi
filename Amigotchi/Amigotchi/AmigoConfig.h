@@ -10,7 +10,7 @@
 
 #define SKY_LAYER 1
 #define GROUND_LAYER 3
-#define PET_LAYER 5
+#define PET_LAYER 100
 #define LOGIN_LAYER 6
 #define HUD_LAYER 9
 
