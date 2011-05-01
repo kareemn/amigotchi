@@ -18,6 +18,7 @@
 @synthesize maplayer = maplayer_;
 @synthesize envlayer = envlayer_;
 @synthesize loginlayer = loginlayer_;
+@synthesize checkinlayer = checkinlayer_;
 
 +(CCScene *) scene
 {
@@ -67,6 +68,13 @@
         [self addChild:self.maplayer];
         [tempmaplayer release];
         */
+        /*
+        CheckinLayer *tempcheckinlayer = [[CheckinLayer alloc] init];
+        self.checkinlayer = tempcheckinlayer;
+        
+        [self addChild:self.checkinlayer];
+        [tempcheckinlayer release];
+         */
          
 
 	}
@@ -98,6 +106,7 @@
     [loginlayer_ release];
     [maplayer_ release];
     [envlayer_ release];
+    [checkinlayer_ release];
     
 	[super dealloc];
 }
