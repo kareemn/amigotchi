@@ -53,7 +53,7 @@
 
 -(void) setSprites
 {
-    [cache addSpriteFramesWithFile:@"dragon.plist"];
+    [self.cache addSpriteFramesWithFile:@"dragon.plist"];
     
     //idleAnimation
     for(int i = 1; i < 3; i++)
@@ -83,26 +83,22 @@
 
 -(void) setButtons
 {
+    [self.cache addSpriteFramesWithFile:@"buttons.plist"];
+    
     //Feed button
-    CCMenuItem *feedButton = [CCMenuItemImage 
-                                itemFromNormalImage:@"Icon.png" selectedImage:@"Icon-72.png" 
-                                target:self selector:@selector(handleButton:)];
+    CCMenuItem *feedButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button_pressed.png"]];
     
     feedButton.tag = BUTTON_FEED;
     
     
     //Checkin button
-    CCMenuItem *getFoodButton = [CCMenuItemImage 
-                                 itemFromNormalImage:@"Icon.png" selectedImage:@"Icon-72.png" 
-                                 target:self selector:@selector(handleButton:)];
+    CCMenuItem *checkinButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"checkin_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"checkin_button_pressed.png"]];
     
-    getFoodButton.tag = BUTTON_CHECKIN;
-    getFoodButton.position = ccp(80, 0);
+    checkinButton.tag = BUTTON_CHECKIN;
+    checkinButton.position = ccp(80, 0);
     
     //map button
-    CCMenuItem *mapButton = [CCMenuItemImage 
-                                 itemFromNormalImage:@"Icon.png" selectedImage:@"Icon-72.png" 
-                                 target:self selector:@selector(handleButton:)];
+    CCMenuItem *mapButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"map_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"map_button_pressed.png"]];
     
     mapButton.tag = BUTTON_MAP;
     mapButton.position = ccp(160, 0);
@@ -110,7 +106,7 @@
     //Take dump button
     
     //Make the menu
-    self.buttons = [CCMenu menuWithItems:feedButton, getFoodButton, mapButton, nil];
+    self.buttons = [CCMenu menuWithItems:feedButton, checkinButton, mapButton, nil];
     CGSize size = [[CCDirector sharedDirector] winSize];
     
     NSLog(@"width: %f height: %f", size.width, size.height);
