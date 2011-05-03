@@ -197,10 +197,13 @@
         CCSprite * tempPoop = [self.poops objectAtIndex:i];
         if(tempPoop.position.x > 2000)
         {
-            //It's offscreen.
-            int newX = 160 - (rand()%320);
+            //It's offscreen.  Move it on.
+            int newX = 300 - (rand()%600);
+            
             tempPoop.position = ccp(newX, tempPoop.position.y);
-            [tempPoop runAction:self.poopAction];
+        
+            CCAction * tempAction = [CCRepeatForever actionWithAction: [self.poopAction copy]];
+            [tempPoop runAction:tempAction];
         }
     }
     for(i = i; i < MAX_BATHROOM; i++)

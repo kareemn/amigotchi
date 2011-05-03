@@ -81,8 +81,8 @@
     NSLog(@"change is: %@", [change description]);*/
     if([keyPath isEqualToString:@"hunger"])
     {
-        NSLog(@"I am the PetLayer and I see that my pet's hunger has changed!\n");
     }
+    NSLog(@"KVO!\n");
     [self.view refreshSpriteswithHappiness:self.pet.happiness andHunger:self.pet.hunger andBathroom:self.pet.bathroom];
 }
 
@@ -116,7 +116,8 @@
 }
 - (void) checkinButtonCallback {
     NSLog(@"PetLayer::checkinButtonCallback");
-    self.pet.bathroom++;
+    if(self.pet.bathroom < MAX_BATHROOM)
+        self.pet.bathroom++;
 }
 - (void) mapButtonCallback {
     NSLog(@"PetLayer::mapButtonCallback");
