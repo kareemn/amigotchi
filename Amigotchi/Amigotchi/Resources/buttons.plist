@@ -7,80 +7,106 @@
             <key>checkin_button.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{104,104}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{104,104}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>sourceSize</key>
-                <string>{104,104}</string>
+                <string>{120,120}</string>
             </dict>
             <key>checkin_button_pressed.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{104,0},{104,104}}</string>
+                <string>{{120,0},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{104,104}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>sourceSize</key>
-                <string>{104,104}</string>
+                <string>{120,120}</string>
             </dict>
             <key>feed_button.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,104},{104,104}}</string>
+                <string>{{0,120},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{104,104}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>sourceSize</key>
-                <string>{104,104}</string>
+                <string>{120,120}</string>
             </dict>
             <key>feed_button_pressed.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{104,104},{104,104}}</string>
+                <string>{{120,120},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{104,104}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>sourceSize</key>
-                <string>{104,104}</string>
+                <string>{120,120}</string>
             </dict>
             <key>map_button.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,208},{104,104}}</string>
+                <string>{{0,240},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{104,104}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>sourceSize</key>
-                <string>{104,104}</string>
+                <string>{120,120}</string>
             </dict>
             <key>map_button_pressed.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{104,208},{104,104}}</string>
+                <string>{{120,240},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{104,104}}</string>
+                <string>{{0,0},{120,120}}</string>
                 <key>sourceSize</key>
-                <string>{104,104}</string>
+                <string>{120,120}</string>
+            </dict>
+            <key>toilet_button.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,360},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
+            </dict>
+            <key>toilet_button_pressed.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{120,360},{120,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{120,120}}</string>
+                <key>sourceSize</key>
+                <string>{120,120}</string>
             </dict>
         </dict>
         <key>metadata</key>

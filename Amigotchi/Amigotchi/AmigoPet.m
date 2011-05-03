@@ -27,7 +27,7 @@
     self.hunger -= amount;
 }
 
--(void) takeDump
+-(void) cleanBathroom
 {
     self.bathroom = 0;
 }

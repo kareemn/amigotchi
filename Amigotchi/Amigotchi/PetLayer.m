@@ -101,7 +101,9 @@
                                                 initWithDelegate:self 
                                                 andSelectorNameArray:[NSArray arrayWithObjects:@"foodButtonCallback",
                                                                                                @"checkinButtonCallback",
-                                                                                               @"mapButtonCallback" , nil]] 
+                                                                                               @"mapButtonCallback",
+                                                                                               @"toiletButtonCallback",
+                                                                      nil]] 
                                        autorelease];
     
     return delegate;
@@ -114,11 +116,16 @@
 }
 - (void) checkinButtonCallback {
     NSLog(@"PetLayer::checkinButtonCallback");
-    
+    self.pet.bathroom++;
 }
 - (void) mapButtonCallback {
     NSLog(@"PetLayer::mapButtonCallback");
     
+}
+- (void) toiletButtonCallback
+{
+    NSLog(@"PetLayer::toiletButtonCallback");
+    [self.pet cleanBathroom];
 }
          
 @end

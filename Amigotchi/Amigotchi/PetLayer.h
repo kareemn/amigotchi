@@ -34,5 +34,6 @@
 - (void) foodButtonCallback;
 - (void) checkinButtonCallback;
 - (void) mapButtonCallback;
+- (void) toiletButtonCallback;
 
 @end

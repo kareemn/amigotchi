@@ -24,6 +24,6 @@
 @property (readwrite, assign) int happiness;
 
 - (void)feed:(int)amount;
-- (void)takeDump;
+- (void)cleanBathroom;
 
 @end

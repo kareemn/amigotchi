@@ -17,12 +17,13 @@
 #define MENU_HEIGHT 50
 
 #define MAX_HUNGER 20
-#define MAX_BATHROOM 40
+#define MAX_BATHROOM 10
 #define MAX_HAPPINESS 20
 
 #define BUTTON_FEED 1
 #define BUTTON_CHECKIN 2
 #define BUTTON_MAP 3
+#define BUTTON_TOILET 4
 
 //facebook app id
 static NSString* kAppId = @"196872950351792";

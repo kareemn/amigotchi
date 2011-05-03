@@ -21,10 +21,12 @@
 - (void) setButtons;
 - (void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom;
 - (void) handleButton:(id)sender;
+- (void) drawPoops:(int)numPoops;
 
 
 @property (nonatomic, retain) AmigoCallbackDelegate *callbackDelegate;
 @property (nonatomic, retain) CCSprite * mySprite;
+@property (nonatomic, retain) NSMutableArray * poops;
 @property (nonatomic, retain) CCMenu * buttons;
 @property (nonatomic, retain) CCSpriteFrameCache * cache;
 
