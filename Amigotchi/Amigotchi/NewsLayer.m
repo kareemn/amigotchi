@@ -24,19 +24,41 @@
         [self addChild:self.view];
         
         CGSize size = [[CCDirector sharedDirector] winSize];
-        self.view.position = ccp(size.width/2, (size.height + self.view.newsStand.contentSize.height/2.5));
+        self.view.position = ccp(size.width/2, (size.height + self.view.newsStand.contentSize.height/2.0));
     }
     
     return self;
 }
-
--(void) enqueue:(News *)news
+-(void)newsWithString:(NSString *)aString
 {
+    [self removeChild:self.view cleanup:YES];
+    self.view = nil;
     
+    NewsView *theView = [[NewsView alloc] initWithString:aString]; 
+    self.view = theView;
+    [theView release];
+    
+    [self addChild:self.view];
+    
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    self.view.position = ccp(size.width/2, (size.height + self.view.newsStand.contentSize.height/2.0));
+    [self.view display];
+}
+
+-(void) enqueue:(NSString *)aString
+{
+    [self.newsQueue addObject:aString];
 }
 
 -(void) showAllNews
 {
+    //NSLog(@"showAllNews: Showing %d news stories.\n", [self.newsQueue count]);
+    if([self.newsQueue count] > 0)
+    {
+        NSLog([self.newsQueue objectAtIndex:0]);
+        [self.newsQueue removeObjectAtIndex:0];
+        [self showAllNews];
+    }
     
 }
 

@@ -47,7 +47,12 @@
 
 -(void) display
 {
-    [self runAction:[CCJumpTo actionWithDuration:2.0 position:self.position height:-30 jumps:1]];
+    int h = self.label.contentSize.height * 2;
+    
+    id slideIn = [CCJumpTo actionWithDuration:0.5 position:ccp(self.position.x, self.position.y - h) height:-20 jumps:1];
+    id hover = [CCJumpTo actionWithDuration:1.5 position:ccp(self.position.x, self.position.y - h) height:0 jumps:1];
+    id slideOut = [CCJumpTo actionWithDuration:0.5 position:self.position height:-20 jumps:1];
+    [self runAction:[CCSequence actions:slideIn, hover, slideOut, nil]];
 }
 
 -(void)dealloc

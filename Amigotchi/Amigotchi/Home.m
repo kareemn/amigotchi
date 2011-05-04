@@ -114,6 +114,11 @@
     }
     else if( [theobj isEqualToString:@"toilet"] ) {
         NSLog(@"navigateNotification::toilet clicked");
+        //FOR TESTING
+        //[self.newsLayer.view display];
+        [self.newsLayer newsWithString:@"All clean!"];
+        [self.newsLayer showAllNews];
+        [self.newsLayer enqueue:@"Hi there."];
     }
 }
 
@@ -177,6 +182,7 @@
     [maplayer_ release];
     [envlayer_ release];
     [checkinlayer_ release];
+    [newsLayer_ release];
     
 	[super dealloc];
 }

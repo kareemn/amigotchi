@@ -110,7 +110,7 @@
 }
 
 
-- (void) foodButtonCallback {
+/*- (void) foodButtonCallback {
     NSLog(@"PetLayer::foodButtonCallback");
     self.pet.hunger--;
 }
@@ -127,6 +127,6 @@
 {
     NSLog(@"PetLayer::toiletButtonCallback");
     [self.pet cleanBathroom];
-}
+}*/
          
 @end
