@@ -117,8 +117,6 @@
         //FOR TESTING
         //[self.newsLayer.view display];
         [self.newsLayer newsWithString:@"All clean!"];
-        [self.newsLayer showAllNews];
-        [self.newsLayer enqueue:@"Hi there."];
     }
     else if( [theobj isEqualToString:@"PetLayer"] ) {
         NSLog(@"navigateNotification::petlayer clicked");
@@ -180,6 +178,7 @@
     
     NSLog(@"HomeLayer::loggedInCallback");
     [self showPetScreen];
+    [self.newsLayer newsWithString:@"Welcome back!"];
 }
 
 

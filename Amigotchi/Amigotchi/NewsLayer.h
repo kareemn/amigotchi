@@ -15,10 +15,7 @@
     
 }
 
-@property (nonatomic, retain) NSMutableArray * newsQueue;
 @property (nonatomic, retain) NewsView * view;
 
--(void) enqueue:(NSString*)aString;
--(void) showAllNews;
 -(void) newsWithString:(NSString*)aString;
 @end

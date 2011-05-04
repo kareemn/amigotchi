@@ -10,13 +10,12 @@
 
 
 @implementation NewsLayer
-@synthesize newsQueue = newsQueue_, view = view_;
+@synthesize view = view_;
 
 -(id) init
 {
     if((self = [super init]))
     {
-        self.newsQueue = [NSMutableArray array];
         NewsView *theView = [[NewsView alloc] initWithString:@"Welcome back!"]; 
         self.view = theView;
         [theView release];
@@ -45,26 +44,10 @@
     [self.view display];
 }
 
--(void) enqueue:(NSString *)aString
-{
-    [self.newsQueue addObject:aString];
-}
 
--(void) showAllNews
-{
-    //NSLog(@"showAllNews: Showing %d news stories.\n", [self.newsQueue count]);
-    if([self.newsQueue count] > 0)
-    {
-        NSLog([self.newsQueue objectAtIndex:0]);
-        [self.newsQueue removeObjectAtIndex:0];
-        [self showAllNews];
-    }
-    
-}
 
 -(void) dealloc
 {
-    newsQueue_ = nil;
     view_ = nil;
     [super dealloc];
 }
