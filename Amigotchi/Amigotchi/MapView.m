@@ -11,4 +11,18 @@
 
 @implementation MapView
 
+
+- (id) initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    
+    if (self != nil){
+        UIToolbar *toolbar = [UIToolbar new];
+        toolbar.frame = frame;
+        
+        [self addSubview:toolbar];
+    }
+    
+    return self;
+}
+
 @end

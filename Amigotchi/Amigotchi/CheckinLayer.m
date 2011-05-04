@@ -12,6 +12,7 @@
 @implementation CheckinLayer
 
 @synthesize wrapper = wrapper_;
+@synthesize table = table_;
 
 +(CCScene *) scene
 {
@@ -31,9 +32,10 @@
     self = [super init];
     
     if(self){
-        CheckinView *table = [[CheckinView alloc] init];
-        self.wrapper = [CCUIViewWrapper wrapperForUIView:table];
+        self.table = [[CheckinView alloc] init];
+        [self.table release];
         
+        self.wrapper = [CCUIViewWrapper wrapperForUIView:self.table];
         
         CGSize size = [[CCDirector sharedDirector] winSize];
         self.wrapper.contentSize = size;
@@ -55,6 +57,7 @@
     [wrapper_ release];
     [super dealloc];
 }
+
 
 
 @end

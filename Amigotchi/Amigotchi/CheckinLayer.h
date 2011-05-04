@@ -11,10 +11,16 @@
 #import "CheckinView.h"
 #import "CCUIViewWrapper.h"
 
+@interface CheckinDataSource : NSObject<UITableViewDataSource> {
+
+}
+@end
+
 @interface CheckinLayer : CCLayer {
     
 }
 
 @property (nonatomic, retain) CCUIViewWrapper *wrapper;
+@property (nonatomic, retain) CheckinView     *table;
 
 @end

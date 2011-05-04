@@ -12,6 +12,7 @@
 @implementation MapLayer
 
 @synthesize wrapper = wrapper_;
+@synthesize mapview = mapview_;
 
 +(CCScene *) scene
 {
@@ -33,8 +34,10 @@
     self = [super init];
     
     if(self){
-        MapView *map = [[MapView alloc] init];
-        self.wrapper = [CCUIViewWrapper wrapperForUIView:map];
+        self.mapview = [[MapView alloc] init];
+        [self.mapview release];
+        
+        self.wrapper = [CCUIViewWrapper wrapperForUIView:self.mapview];
         
         
         CGSize size = [[CCDirector sharedDirector] winSize];
@@ -48,13 +51,16 @@
 }
 
 - (void) setVisible:(BOOL)visible{
+    self.mapview.showsUserLocation = YES;
     [self.wrapper setVisible:visible];
     [super setVisible:visible];
 }
 
 - (void) dealloc {
+    [mapview_ release];
     [wrapper_ release];
     [super dealloc];
 }
+
 
 @end
