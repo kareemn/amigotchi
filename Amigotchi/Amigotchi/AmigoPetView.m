@@ -231,18 +231,22 @@
         case BUTTON_FEED:
             NSLog(@"AmigoPetView::Clicked button to feed pet");
             [self.callbackDelegate performCallback:@"foodButtonCallback"];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"FoodLayer"]];
             break;
         case BUTTON_CHECKIN:
             NSLog(@"AmigoPetView::Clicked button to checkin");
             [self.callbackDelegate performCallback:@"checkinButtonCallback"];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"CheckinLayer"]];
             break;
         case BUTTON_MAP:
             NSLog(@"AmigoPetView::Clicked button to see map");
             [self.callbackDelegate performCallback:@"mapButtonCallback"];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"MapLayer"]];
             break;
         case BUTTON_TOILET:
             NSLog(@"AmigoPetView::Clicked button to clean bathroom");
             [self.callbackDelegate performCallback:@"toiletButtonCallback"];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"MapLayer"]];
             break;
         default:
             break;

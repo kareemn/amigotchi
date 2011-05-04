@@ -7,10 +7,12 @@
 //
 
 #import "CheckinLayer.h"
-#import "CCUIViewWrapper.h"
 
 
 @implementation CheckinLayer
+
+@synthesize wrapper = wrapper_;
+
 +(CCScene *) scene
 {
 	// 'scene' is an autorelease object.
@@ -30,17 +32,28 @@
     
     if(self){
         CheckinView *table = [[CheckinView alloc] init];
-        CCUIViewWrapper *wrapper = [CCUIViewWrapper wrapperForUIView:table];
+        self.wrapper = [CCUIViewWrapper wrapperForUIView:table];
         
         
         CGSize size = [[CCDirector sharedDirector] winSize];
-        wrapper.contentSize = size;
+        self.wrapper.contentSize = size;
+        
         //wrapper.position = ccp(64,64);
-        [self addChild:wrapper];
+        [self addChild:self.wrapper];
         
     }
     
     return self;
+}
+
+- (void) setVisible:(BOOL)visible{
+    [self.wrapper setVisible:visible];
+    [super setVisible:visible];
+}
+
+- (void) dealloc {
+    [wrapper_ release];
+    [super dealloc];
 }
 
 

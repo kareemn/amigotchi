@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CCUIViewWrapper.h"
 
 @interface MapLayer : CCLayer {
     
 }
 
+@property (nonatomic, retain) CCUIViewWrapper *wrapper;
+
 +(CCScene *) scene;
+
+
 
 @end

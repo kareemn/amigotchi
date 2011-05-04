@@ -8,9 +8,10 @@
 
 #import "MapLayer.h"
 #import "MapView.h"
-#import "CCUIViewWrapper.h"
 
 @implementation MapLayer
+
+@synthesize wrapper = wrapper_;
 
 +(CCScene *) scene
 {
@@ -33,17 +34,27 @@
     
     if(self){
         MapView *map = [[MapView alloc] init];
-        CCUIViewWrapper *wrapper = [CCUIViewWrapper wrapperForUIView:map];
+        self.wrapper = [CCUIViewWrapper wrapperForUIView:map];
         
         
         CGSize size = [[CCDirector sharedDirector] winSize];
-        wrapper.contentSize = size;
+        self.wrapper.contentSize = size;
         //wrapper.position = ccp(64,64);
-        [self addChild:wrapper];
+        [self addChild:self.wrapper];
         
     }
     
     return self;
+}
+
+- (void) setVisible:(BOOL)visible{
+    [self.wrapper setVisible:visible];
+    [super setVisible:visible];
+}
+
+- (void) dealloc {
+    [wrapper_ release];
+    [super dealloc];
 }
 
 @end

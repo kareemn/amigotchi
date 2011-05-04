@@ -39,7 +39,7 @@
 
 //create Login callback delegate to pass in to loginlayer on init 
 - (AmigoCallbackDelegate *) createLoginCallbackDelegate;
-
+-(void)navigateNotification:(NSNotification *)notification;
 //called when user logs in
 - (void) loggedInCallback;
 
