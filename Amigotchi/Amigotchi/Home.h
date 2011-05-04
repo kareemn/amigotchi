@@ -20,6 +20,7 @@
 #import "EnvironmentLayer.h"
 #import "MapLayer.h"
 #import "CheckinLayer.h"
+#import "NewsLayer.h"
 
 
 // HomeLayer
@@ -33,6 +34,7 @@
 @property (nonatomic, retain) EnvironmentLayer  *envlayer;
 @property (nonatomic, retain) MapLayer          *maplayer;
 @property (nonatomic, retain) CheckinLayer      *checkinlayer;
+@property (nonatomic, retain) NewsLayer         *newsLayer;
 
 // returns a CCScene that contains the HomeLayer as the only child
 + (CCScene *) scene;

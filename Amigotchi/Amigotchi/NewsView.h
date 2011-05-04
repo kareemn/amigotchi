@@ -14,4 +14,10 @@
 }
 @property (nonatomic, retain) NSString * myString;
 @property (nonatomic, retain) CCSprite * mySprite;
+@property (nonatomic, retain) CCSprite * newsStand;
+
+-(id)initWithString:(NSString*)aString;
+-(id)initWithString:(NSString*)aString andSprite:(CCSprite *)aSprite;
+-(void)display;
+
 @end

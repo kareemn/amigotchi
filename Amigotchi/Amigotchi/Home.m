@@ -19,6 +19,7 @@
 @synthesize envlayer = envlayer_;
 @synthesize loginlayer = loginlayer_;
 @synthesize checkinlayer = checkinlayer_;
+@synthesize newsLayer = newsLayer_;
 
 +(CCScene *) scene
 {
@@ -58,7 +59,6 @@
         self.envlayer = tempenvLayer;
         [tempenvLayer release];
         
-
         MapLayer *tempmaplayer = [[MapLayer alloc] init];
         self.maplayer = tempmaplayer;
         [tempmaplayer release];
@@ -67,12 +67,17 @@
         self.checkinlayer = tempcheckinlayer;
         [tempcheckinlayer release];
         
+        NewsLayer * tempnewslayer = [[NewsLayer alloc] init];
+        self.newsLayer = tempnewslayer;
+        [tempnewslayer release];
+        
         
         [self addChild:self.loginlayer z:LOGIN_LAYER];
         [self addChild:self.petlayer z:PET_LAYER];
         [self addChild:self.envlayer];
         [self addChild:self.maplayer];
         [self addChild:self.checkinlayer];
+        [self addChild:self.newsLayer z:HUD_LAYER];
 
         [self showLoginScreen];
 	}
@@ -120,6 +125,7 @@
     [self.envlayer setVisible:NO];
     [self.maplayer setVisible:NO];
     [self.checkinlayer setVisible:NO];
+    [self.newsLayer setVisible:NO];
 }
 
 - (void) showPetScreen {
@@ -129,6 +135,7 @@
     [self.envlayer setVisible:YES];
     [self.maplayer setVisible:NO];
     [self.checkinlayer setVisible:NO];
+    [self.newsLayer setVisible:YES];
     
     
 }
@@ -139,6 +146,7 @@
     [self.envlayer setVisible:NO];
     [self.maplayer setVisible:YES];
     [self.checkinlayer setVisible:NO];
+    [self.newsLayer setVisible:NO];
 }
 - (void) showCheckinScreen {
     NSLog(@"Home::showCheckinScreen");
@@ -147,6 +155,7 @@
     [self.envlayer setVisible:NO];
     [self.maplayer setVisible:NO];
     [self.checkinlayer setVisible:YES];
+    [self.newsLayer setVisible:NO];
 }
 - (void) showFoodScreen {
     NSLog(@"Home::showFoodScreen");

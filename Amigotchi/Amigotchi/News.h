@@ -16,4 +16,6 @@
 
 @property (nonatomic, retain) NSString * myString;
 @property int type;
+
+-(id)initWithString:(NSString*)aString andType:(int)aType;
 @end
