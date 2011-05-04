@@ -81,6 +81,7 @@
 }
 
 - (void) dealloc {
+    
     [mapview_ release];
     [mapwrapper_ release];
     [navwrapper_ release];
@@ -90,6 +91,13 @@
 - (void) done {
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"PetLayer"]];
 }
+
+- (void) setOpacity:(GLubyte)thing{
+    [self.mapwrapper setOpacity:thing];
+    [self.navwrapper  setOpacity:thing];
+    
+}
+
 
 
 @end

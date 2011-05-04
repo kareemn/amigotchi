@@ -124,6 +124,11 @@
         NSLog(@"navigateNotification::petlayer clicked");
         [self showPetScreen];
     }
+    else if( [theobj isEqualToString:@"feed"] ) {
+        NSLog(@"navigateNotification::feed clicked");
+        [self.newsLayer newsWithString:@"Yummy!"];
+        [self.newsLayer showAllNews];
+    }
 }
 
 - (void) showLoginScreen {

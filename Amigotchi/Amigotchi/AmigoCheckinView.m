@@ -97,5 +97,10 @@
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"PetLayer"]];
 }
 
+- (void) setOpacity:(GLubyte)thing{
+    [self.tablewrapper setOpacity:thing];
+    [self.navwrapper setOpacity:thing];
+    
+}
 
 @end

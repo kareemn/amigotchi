@@ -24,7 +24,7 @@
 @property (nonatomic, retain) UINavigationBar *navbar;
 
 +(CCScene *) scene;
-
+- (void) setOpacity:(GLubyte)thing;
 
 
 

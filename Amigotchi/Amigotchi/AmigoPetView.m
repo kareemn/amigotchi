@@ -230,7 +230,7 @@
     switch(clickedButton.tag){
         case BUTTON_FEED:
             NSLog(@"AmigoPetView::Clicked button to feed pet");
-            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"FoodLayer"]];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"feed"]];
             break;
         case BUTTON_CHECKIN:
             NSLog(@"AmigoPetView::Clicked button to checkin");

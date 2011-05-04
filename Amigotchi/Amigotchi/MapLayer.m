@@ -47,10 +47,15 @@
 - (void) setVisible:(BOOL)visible{
     if (visible) {
         self.view.mapview.showsUserLocation = YES;
+        
+        [self.view runAction:[CCFadeIn actionWithDuration:0.2f]];
     }
-    
+    else{
+       [self.view runAction:[CCFadeOut actionWithDuration:0.2f]];
+    }
     [self.view.mapwrapper setVisible:visible];
     [self.view.navwrapper setVisible:visible];
+    
     
     [super setVisible:visible];
 }

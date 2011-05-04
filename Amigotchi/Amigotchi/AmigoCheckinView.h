@@ -24,4 +24,6 @@
 - (void) setupNavBar;
 - (id) initWithDataSource:(CheckinDataSource *)datasource;
 
+//need this for CCFadeIn
+- (void) setOpacity:(GLubyte)thing;
 @end

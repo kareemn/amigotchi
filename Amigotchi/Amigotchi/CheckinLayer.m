@@ -51,7 +51,14 @@
 }
 
 - (void) setVisible:(BOOL)visible{
-    [self.view.table reloadData];
+    if (visible) {
+        [self.view.table reloadData];
+        [self.view runAction:[CCFadeIn actionWithDuration:0.1f]];
+    }
+    else{
+        [self.view runAction:[CCFadeOut actionWithDuration:0.1f]];
+    }
+    
     [self.view.tablewrapper setVisible:visible];
     [self.view.navwrapper setVisible:visible];
     
