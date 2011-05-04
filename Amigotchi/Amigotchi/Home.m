@@ -44,6 +44,7 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
         //listen for notifications
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateNotification:) name:AMIGONAVNOTIFICATION object:nil];
         
         LoginLayer *temploginlayer = [[LoginLayer alloc] initWithLoginDelagate:[self createLoginCallbackDelegate]];
@@ -125,7 +126,7 @@
     else if( [theobj isEqualToString:@"feed"] ) {
         NSLog(@"navigateNotification::feed clicked");
         [self.newsLayer newsWithString:@"Yummy!"];
-        [self.newsLayer showAllNews];
+        
     }
 }
 
@@ -138,6 +139,9 @@
     [self.maplayer setVisible:NO];
     [self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:NO];
+    
+    
+
 }
 
 - (void) showPetScreen {

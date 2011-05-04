@@ -172,6 +172,8 @@
 		C79739F91352B91900230B49 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79739F81352B91900230B49 /* MobileCoreServices.framework */; };
 		C79739FE1352BA5800230B49 /* AmigoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C79739FD1352BA5800230B49 /* AmigoAPI.m */; };
 		C7973A011353003D00230B49 /* AmigoUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C7973A001353003C00230B49 /* AmigoUser.m */; };
+		C79A96591371DADC002C5062 /* particleTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = C79A96571371DADC002C5062 /* particleTexture.png */; };
+		C79A965A1371DADC002C5062 /* ringoffire.plist in Resources */ = {isa = PBXBuildFile; fileRef = C79A96581371DADC002C5062 /* ringoffire.plist */; };
 		C79F1E6C136CF3DC00A7BAD8 /* AmigoCheckinView.m in Sources */ = {isa = PBXBuildFile; fileRef = C79F1E6B136CF3DC00A7BAD8 /* AmigoCheckinView.m */; };
 		C7AAE1AD1352B80700BEAC71 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */; };
 		C7D370F91370E617000DC0E6 /* CheckinDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D370F81370E617000DC0E6 /* CheckinDataSource.m */; };
@@ -519,6 +521,8 @@
 		C79739FD1352BA5800230B49 /* AmigoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoAPI.m; sourceTree = "<group>"; };
 		C79739FF1353003C00230B49 /* AmigoUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoUser.h; sourceTree = "<group>"; };
 		C7973A001353003C00230B49 /* AmigoUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoUser.m; sourceTree = "<group>"; };
+		C79A96571371DADC002C5062 /* particleTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particleTexture.png; sourceTree = "<group>"; };
+		C79A96581371DADC002C5062 /* ringoffire.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ringoffire.plist; sourceTree = "<group>"; };
 		C79F1E6A136CF3DC00A7BAD8 /* AmigoCheckinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoCheckinView.h; sourceTree = "<group>"; };
 		C79F1E6B136CF3DC00A7BAD8 /* AmigoCheckinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoCheckinView.m; sourceTree = "<group>"; };
 		C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -745,6 +749,8 @@
 		C77E5B5213526B140051BD37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C79A96571371DADC002C5062 /* particleTexture.png */,
+				C79A96581371DADC002C5062 /* ringoffire.plist */,
 				C70A7B611354C520007A82CB /* app_icon.png */,
 				375FD379136CE8BC004DAC1F /* buttons.plist */,
 				375FD37A136CE8BC004DAC1F /* buttons.png */,
@@ -1180,6 +1186,8 @@
 				375FD37B136CE8BC004DAC1F /* buttons.plist in Resources */,
 				375FD37C136CE8BC004DAC1F /* buttons.png in Resources */,
 				374C86F91370CE7F00D7A5A8 /* newsstand.png in Resources */,
+				C79A96591371DADC002C5062 /* particleTexture.png in Resources */,
+				C79A965A1371DADC002C5062 /* ringoffire.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
