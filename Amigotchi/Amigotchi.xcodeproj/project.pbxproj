@@ -174,6 +174,7 @@
 		C79F1E69136CF3D000A7BAD8 /* CheckinView.m in Sources */ = {isa = PBXBuildFile; fileRef = C79F1E67136CF3D000A7BAD8 /* CheckinView.m */; };
 		C79F1E6C136CF3DC00A7BAD8 /* CheckinLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C79F1E6B136CF3DC00A7BAD8 /* CheckinLayer.m */; };
 		C7AAE1AD1352B80700BEAC71 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */; };
+		C7D370F91370E617000DC0E6 /* CheckinDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D370F81370E617000DC0E6 /* CheckinDataSource.m */; };
 		C7DDABEE13527BC700CB250B /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDABD313527BC700CB250B /* Facebook.m */; };
 		C7DDABEF13527BC700CB250B /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7DDABD613527BC700CB250B /* FBDialog.bundle */; };
 		C7DDABF013527BC700CB250B /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDABD813527BC700CB250B /* FBDialog.m */; };
@@ -521,6 +522,8 @@
 		C79F1E6A136CF3DC00A7BAD8 /* CheckinLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinLayer.h; sourceTree = "<group>"; };
 		C79F1E6B136CF3DC00A7BAD8 /* CheckinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinLayer.m; sourceTree = "<group>"; };
 		C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C7D370F71370E617000DC0E6 /* CheckinDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinDataSource.h; sourceTree = "<group>"; };
+		C7D370F81370E617000DC0E6 /* CheckinDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinDataSource.m; sourceTree = "<group>"; };
 		C7DDABCF13527BC700CB250B /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
 		C7DDABD213527BC700CB250B /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		C7DDABD313527BC700CB250B /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
@@ -632,6 +635,8 @@
 				37D18F841360CE890031DFF5 /* Environment.m */,
 				374C86EF1370CA0800D7A5A8 /* News.h */,
 				374C86F01370CA0800D7A5A8 /* News.m */,
+				C7D370F71370E617000DC0E6 /* CheckinDataSource.h */,
+				C7D370F81370E617000DC0E6 /* CheckinDataSource.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1324,6 +1329,7 @@
 				374C86F11370CA0800D7A5A8 /* News.m in Sources */,
 				374C86F41370CA2800D7A5A8 /* NewsLayer.m in Sources */,
 				374C86F71370CA5A00D7A5A8 /* NewsView.m in Sources */,
+				C7D370F91370E617000DC0E6 /* CheckinDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

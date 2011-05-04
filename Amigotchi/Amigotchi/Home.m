@@ -115,6 +115,10 @@
     else if( [theobj isEqualToString:@"toilet"] ) {
         NSLog(@"navigateNotification::toilet clicked");
     }
+    else if( [theobj isEqualToString:@"PetLayer"] ) {
+        NSLog(@"navigateNotification::petlayer clicked");
+        [self showPetScreen];
+    }
 }
 
 - (void) showLoginScreen {

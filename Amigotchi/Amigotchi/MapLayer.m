@@ -8,6 +8,7 @@
 
 #import "MapLayer.h"
 #import "MapView.h"
+#import "AmigoConfig.h"
 
 @implementation MapLayer
 
@@ -37,6 +38,27 @@
         self.mapview = [[MapView alloc] init];
         [self.mapview release];
         
+        
+        UINavigationBar *tableViewNavigationBar = [[UINavigationBar alloc] initWithFrame: CGRectMake(0.0f, 0.0f, 320.0f, 44.0f)];
+        UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" 
+                                                                        style:UIBarButtonSystemItemDone target:nil action:nil];
+        rightButton.target = self;
+        rightButton.action = @selector(done);
+        
+        UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:@"Title"];
+        
+        item.rightBarButtonItem = rightButton;
+        item.hidesBackButton = YES;
+        
+        [tableViewNavigationBar pushNavigationItem:item animated:NO];
+        
+        [item release];
+        [rightButton release];
+        
+        [self.mapview addSubview:tableViewNavigationBar];
+        [tableViewNavigationBar release];
+        
+        
         self.wrapper = [CCUIViewWrapper wrapperForUIView:self.mapview];
         
         
@@ -60,6 +82,10 @@
     [mapview_ release];
     [wrapper_ release];
     [super dealloc];
+}
+
+- (void) done {
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"PetLayer"]];
 }
 
 
