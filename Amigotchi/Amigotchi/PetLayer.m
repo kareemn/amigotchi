@@ -50,7 +50,7 @@
                                                                     NSKeyValueObservingOptionInitial) context:nil];
         
         //add a pet view
-        self.view = [[AmigoPetView alloc] initWithCallbackDelegate:[self createCallbackDelegate]];
+        self.view = [[AmigoPetView alloc] init];
         self.view.scale = .5;
         self.view.position = ccp(size.width/2, size.height - MENU_HEIGHT - self.view.mySprite.contentSize.height/2);
         [self addChild:self.view z:PET_LAYER];
@@ -70,7 +70,7 @@
     //NSLog(@"inputFromView:: received %@.\n", [notification object]);
     if([[notification object] isEqualToString:@"poke"])
     {
-        self.pet.happiness -= 3;
+        self.pet.happiness += 2;
     }
 }
 
@@ -86,28 +86,6 @@
     [self.view refreshSpriteswithHappiness:self.pet.happiness andHunger:self.pet.hunger andBathroom:self.pet.bathroom];
 }
 
--(void)happinessClicked:(int)butt
-{
-    self.pet.happiness += butt;
-}
-
--(void)feedClicked:(int)balls
-{
-    self.pet.hunger += balls;
-}
-
-- (AmigoCallbackDelegate *) createCallbackDelegate {
-    AmigoCallbackDelegate *delegate = [[[AmigoCallbackDelegate alloc] 
-                                                initWithDelegate:self 
-                                                andSelectorNameArray:[NSArray arrayWithObjects:@"foodButtonCallback",
-                                                                                               @"checkinButtonCallback",
-                                                                                               @"mapButtonCallback",
-                                                                                               @"toiletButtonCallback",
-                                                                      nil]] 
-                                       autorelease];
-    
-    return delegate;
-}
 
 
 /*- (void) foodButtonCallback {

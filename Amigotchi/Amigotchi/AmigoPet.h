@@ -25,5 +25,6 @@
 
 - (void)feed:(int)amount;
 - (void)cleanBathroom;
+- (void)step:(ccTime*)dt;
 
 @end
