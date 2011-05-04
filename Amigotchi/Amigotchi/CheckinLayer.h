@@ -10,11 +10,7 @@
 #import "cocos2d.h"
 #import "CheckinView.h"
 #import "CCUIViewWrapper.h"
-
-@interface CheckinDataSource : NSObject<UITableViewDataSource> {
-
-}
-@end
+#import "CheckinDataSource.h"
 
 @interface CheckinLayer : CCLayer {
     
@@ -22,5 +18,6 @@
 
 @property (nonatomic, retain) CCUIViewWrapper *wrapper;
 @property (nonatomic, retain) CheckinView     *table;
+@property (nonatomic, retain) CheckinDataSource *datasource;
 
 @end

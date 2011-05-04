@@ -120,6 +120,10 @@
         [self.newsLayer showAllNews];
         [self.newsLayer enqueue:@"Hi there."];
     }
+    else if( [theobj isEqualToString:@"PetLayer"] ) {
+        NSLog(@"navigateNotification::petlayer clicked");
+        [self showPetScreen];
+    }
 }
 
 - (void) showLoginScreen {
