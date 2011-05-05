@@ -116,8 +116,7 @@
     }
     else if( [theobj isEqualToString:@"toilet"] ) {
         NSLog(@"navigateNotification::toilet clicked");
-        [self.petlayer.pet cleanBathroom];
-        [self.newsLayer newsWithString:@"All clean!"];
+        [self.petlayer.pet updateBathroom:-1];
     }
     else if( [theobj isEqualToString:@"PetLayer"] ) {
         NSLog(@"navigateNotification::petlayer clicked");
@@ -125,7 +124,7 @@
     }
     else if( [theobj isEqualToString:@"feed"] ) {
         NSLog(@"navigateNotification::feed clicked");
-        [self.newsLayer newsWithString:@"Yummy!"];
+        [self.petlayer.pet feed:1];
         
     }
     else 

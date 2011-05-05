@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "News.h"
 #import "NewsView.h"
 
 @interface NewsLayer : CCNode {
@@ -18,4 +17,5 @@
 @property (nonatomic, retain) NewsView * view;
 
 -(void) newsWithString:(NSString*)aString;
+-(void) newsWithString:(NSString*)aString andSprite:(CCSprite*)aSprite;
 @end

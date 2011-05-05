@@ -24,7 +24,12 @@
 @property (readwrite, assign) int happiness;
 
 - (void)feed:(int)amount;
+- (void)updateHappiness:(int)amount;
+- (void)updateBathroom:(int)amount;
 - (void)cleanBathroom;
 - (void)step:(ccTime*)dt;
+
+- (NSDictionary*)saveState;
+- (void)loadState;
 
 @end

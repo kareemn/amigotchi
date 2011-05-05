@@ -47,12 +47,29 @@
 
 -(void) display
 {
+    //Handle children
+    [self removeChild:self.label cleanup:YES];
+    self.label = [CCLabelTTF labelWithString:self.myString fontName:@"Helvetica" fontSize:20];
+    self.label.position = ccp(self.newsStand.position.x,
+                              self.newsStand.position.y - self.newsStand.contentSize.height/2 + self.label.contentSize.height);
+    [self addChild:self.label];
+    
+    //Get height
     int h = self.label.contentSize.height * 2;
+    if(self.mySprite)
+    {
+        h += self.mySprite.contentSize.height;
+        //self.mySprite
+    }
     
     id slideIn = [CCJumpTo actionWithDuration:0.5 position:ccp(self.position.x, self.position.y - h) height:-20 jumps:1];
     id hover = [CCJumpTo actionWithDuration:1.5 position:ccp(self.position.x, self.position.y - h) height:0 jumps:1];
     id slideOut = [CCJumpTo actionWithDuration:0.5 position:self.position height:-20 jumps:1];
-    [self runAction:[CCSequence actions:slideIn, hover, slideOut, nil]];
+    
+    CCSequence * seq = [CCSequence actionOne:slideIn two:hover];
+    seq = [CCSequence actionOne:seq two:slideOut];
+    
+    [self runAction:seq];
 }
 
 -(void)dealloc
