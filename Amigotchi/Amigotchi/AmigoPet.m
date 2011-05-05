@@ -102,6 +102,8 @@
     //Send news
     if(wasHappy == YES && isHappy == NO)
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"I'm upset."]];
+    if(wasHappy == NO && isHappy == YES)
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"(^-^)"]];
 }
 
 -(void) cleanBathroom

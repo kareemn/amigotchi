@@ -70,7 +70,7 @@
     //NSLog(@"inputFromView:: received %@.\n", [notification object]);
     if([[notification object] isEqualToString:@"poke"])
     {
-        self.pet.happiness += 2;
+        [self.pet updateHappiness:2];
     }
 }
 
