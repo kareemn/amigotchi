@@ -81,6 +81,7 @@
         [self addChild:self.newsLayer z:HUD_LAYER];
 
         [self showLoginScreen];
+        
 	}
 	return self;
 }
@@ -115,9 +116,7 @@
     }
     else if( [theobj isEqualToString:@"toilet"] ) {
         NSLog(@"navigateNotification::toilet clicked");
-        //FOR TESTING
-        //[self.newsLayer.view display];
-        [self.newsLayer newsWithString:@"All clean!"];
+        [self.petlayer.pet updateBathroom:-1];
     }
     else if( [theobj isEqualToString:@"PetLayer"] ) {
         NSLog(@"navigateNotification::petlayer clicked");
@@ -125,8 +124,12 @@
     }
     else if( [theobj isEqualToString:@"feed"] ) {
         NSLog(@"navigateNotification::feed clicked");
-        [self.newsLayer newsWithString:@"Yummy!"];
+        [self.petlayer.pet feed:1];
         
+    }
+    else 
+    {
+        [self.newsLayer newsWithString:theobj];
     }
 }
 
@@ -183,6 +186,7 @@
     NSLog(@"HomeLayer::loggedInCallback");
     [self showPetScreen];
     [self.newsLayer newsWithString:@"Welcome back!"];
+    [[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.petlayer.pet interval:4.0f paused:NO];
 }
 
 

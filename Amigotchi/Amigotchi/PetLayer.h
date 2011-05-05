@@ -26,10 +26,6 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context;
 -(void)inputFromView:(NSNotification *)notification;
 
--(void)feedClicked:(int)balls;
--(void)happinessClicked:(int)butt;
-
-- (AmigoCallbackDelegate *) createCallbackDelegate;
 
 
 @end

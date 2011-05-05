@@ -30,14 +30,26 @@
 }
 -(void)newsWithString:(NSString *)aString
 {
-    [self removeChild:self.view cleanup:YES];
+    /*[self removeChild:self.view cleanup:YES];
     self.view = nil;
     
     NewsView *theView = [[NewsView alloc] initWithString:aString]; 
     self.view = theView;
     [theView release];
     
-    [self addChild:self.view];
+    [self addChild:self.view];*/
+    self.view.myString = aString;
+    self.view.mySprite = nil;
+    
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    self.view.position = ccp(size.width/2, (size.height + self.view.newsStand.contentSize.height/2.0));
+    [self.view display];
+}
+
+-(void)newsWithString:(NSString *)aString andSprite:(CCSprite *)aSprite
+{
+    self.view.myString = aString;
+    self.view.mySprite = aSprite;
     
     CGSize size = [[CCDirector sharedDirector] winSize];
     self.view.position = ccp(size.width/2, (size.height + self.view.newsStand.contentSize.height/2.0));

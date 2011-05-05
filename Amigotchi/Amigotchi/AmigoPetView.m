@@ -190,7 +190,6 @@
 
 -(void) drawPoops:(int)numPoops
 {
-    NSLog(@"Drawing %d poops.\n", numPoops);
     int i;
     for(i = 0; i < numPoops; i++)
     {
