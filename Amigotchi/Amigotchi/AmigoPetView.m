@@ -11,15 +11,20 @@
 
 @property (nonatomic, retain) CCAnimation * poopAnimation;
 @property (nonatomic, retain) CCAction * poopAction;
+@property (nonatomic, retain) CCSprite * hungerBarContainer;
+@property (nonatomic, retain) CCSprite * happinessBarContainer;
 
 @end
 
 @implementation AmigoPetView
-@synthesize mySprite, idleAnimation = idleAnimation_, pokeAnimation, cache, pokeAction, idleAction = idleAction_;
+@synthesize mySprite = mySprite_, idleAnimation = idleAnimation_, pokeAnimation = pokeAnimation_;
+@synthesize cache, pokeAction = pokeAction_, idleAction = idleAction_;
 @synthesize buttons = buttons_;
 @synthesize callbackDelegate = callbackDelegate_;
 @synthesize poops = poops_;
 @synthesize poopAnimation = poopAnimation_, poopAction = poopAction_;
+@synthesize happinessBar = happinessBar_, hungerBar = hungerBar_;
+@synthesize happinessBarContainer = happinessBarContainer_, hungerBarContainer = hungerBarContainer_;
 
 //id idleAction;
 //id pokeAction;
@@ -47,8 +52,10 @@
         [self.mySprite runAction:self.idleAction];
         [self addChild:self.mySprite];
         [self addChild:self.buttons];
-        
-        //Button Stuff
+        [self addChild:self.hungerBarContainer];
+        [self addChild:self.happinessBarContainer];
+        [self addChild:self.happinessBar];
+        [self addChild:self.hungerBar];
     }
     return self;
 }
@@ -102,6 +109,20 @@
         [self addChild:poop z:PET_LAYER];
         [poop release];
     }
+    
+    
+    //Bars
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    
+    self.happinessBar = [CCSprite spriteWithFile:@"happiness_bar.png"];
+    self.happinessBar.position = ccp(0, size.height * 0.7);
+    self.happinessBarContainer = [CCSprite spriteWithFile:@"happiness_bar_container.png"];
+    self.happinessBarContainer.position = self.happinessBar.position;
+    
+    self.hungerBar = [CCSprite spriteWithFile:@"hunger_bar.png"];
+    self.hungerBar.position = ccp(0, self.happinessBar.position.y - self.happinessBarContainer.contentSize.height * 1.1);
+    self.hungerBarContainer = [CCSprite spriteWithFile:@"hunger_bar_container.png"];
+    self.hungerBarContainer.position = self.hungerBar.position;
 }
 
 -(void) setButtons
@@ -186,6 +207,7 @@
     [self.mySprite runAction:self.idleAction];
     
     [self drawPoops:bathroom];
+    [self drawBarsHappiness:happiness Hunger:hunger];
 }
 
 -(void) drawPoops:(int)numPoops
@@ -211,6 +233,18 @@
         [tempPoop stopAllActions];
         tempPoop.position = ccp(3000, tempPoop.position.y);
     }
+}
+
+-(void) drawBarsHappiness:(int)happiness Hunger:(int)hunger
+{
+    //Happiness Bar
+    //self.happinessBar.position = ccp(self.mySprite.position.x, self.mySprite.position.y + self.mySprite.contentSize.height * 0.8);
+    self.happinessBar.scaleX = happiness * 3;
+    
+    //Hunger Bar
+    int food = MAX_HUNGER - hunger;
+    //self.hungerBar.position = ccp(self.happinessBar.position.x, self.happinessBar.position.y - self.happinessBar.contentSize.height * 1.2);
+    self.hungerBar.scaleX = food * 3;
 }
 
 -(void)handleButton:(id)sender
@@ -302,8 +336,21 @@
 }
 
 - (void) dealloc {
+    //First remove children
     
+    
+    //Then release stuff
     [callbackDelegate_ release];
+    [mySprite_ release];
+    [poops_ release];
+    [idleAction_ release];
+    [idleAnimation_ release];
+    [pokeAction_ release];
+    [pokeAnimation_ release];
+    [poopAction_ release];
+    [poopAnimation_ release];
+    [happinessBar_ release];
+    [hungerBar_ release];
     
     [super dealloc];
 }

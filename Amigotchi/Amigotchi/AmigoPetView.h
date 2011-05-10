@@ -22,6 +22,7 @@
 - (void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom;
 - (void) handleButton:(id)sender;
 - (void) drawPoops:(int)numPoops;
+- (void) drawBarsHappiness:(int)happiness Hunger:(int)hunger;
 
 
 @property (nonatomic, retain) AmigoCallbackDelegate *callbackDelegate;
@@ -35,5 +36,8 @@
 
 @property (nonatomic, retain) CCRepeatForever * idleAction;
 @property (nonatomic, retain) CCRepeatForever * pokeAction;
+
+@property (nonatomic, retain) CCSprite * happinessBar;
+@property (nonatomic, retain) CCSprite * hungerBar;
 
 @end
