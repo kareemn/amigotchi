@@ -36,6 +36,17 @@
 	if( (self=[super init])) {
         
         self.view = [[AmigoMapView alloc] init];
+        
+        CLLocationCoordinate2D c; 
+        c.latitude = 0;
+        c.longitude = 0;
+        
+        AmigoMapAnnotation *pin = [[AmigoMapAnnotation alloc] initWithCoordinate:c];
+        [pin setTitle:@"Test"];
+        [pin setSubtitle:@"Equator!"];
+        [self.view addPin:pin];
+        [pin release];
+        
         [self.view release];
         
         [self addChild:self.view z:HUD_LAYER];

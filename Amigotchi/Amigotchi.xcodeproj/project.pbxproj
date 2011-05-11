@@ -34,6 +34,9 @@
 		C73F28F3136A6F95005E5952 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73F28F2136A6F95005E5952 /* MapKit.framework */; };
 		C73F28F6136A7005005E5952 /* AmigoMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C73F28F5136A7005005E5952 /* AmigoMapView.m */; };
 		C73F28F9136A70FE005E5952 /* CCUIViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C73F28F8136A70FE005E5952 /* CCUIViewWrapper.m */; };
+		C7445326137A1C1E00E80EB1 /* AmigoMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7445325137A1C1E00E80EB1 /* AmigoMapAnnotation.m */; };
+		C7445329137A211300E80EB1 /* AmigoLocationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7445328137A211300E80EB1 /* AmigoLocationDelegate.m */; };
+		C744532B137A237E00E80EB1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744532A137A237E00E80EB1 /* CoreLocation.framework */; };
 		C74BEFA81353E997004AEE78 /* Accessory.m in Sources */ = {isa = PBXBuildFile; fileRef = C74BEFA71353E997004AEE78 /* Accessory.m */; };
 		C754BBC81353EB3D000BE450 /* app_icon_s.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC61353EB3D000BE450 /* app_icon_s.png */; };
 		C754BBC91353EB3D000BE450 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC71353EB3D000BE450 /* screen.png */; };
@@ -247,6 +250,11 @@
 		C73F28F5136A7005005E5952 /* AmigoMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoMapView.m; sourceTree = "<group>"; };
 		C73F28F7136A70FE005E5952 /* CCUIViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUIViewWrapper.h; sourceTree = "<group>"; };
 		C73F28F8136A70FE005E5952 /* CCUIViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUIViewWrapper.m; sourceTree = "<group>"; };
+		C7445324137A1C1E00E80EB1 /* AmigoMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoMapAnnotation.h; sourceTree = "<group>"; };
+		C7445325137A1C1E00E80EB1 /* AmigoMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoMapAnnotation.m; sourceTree = "<group>"; };
+		C7445327137A211300E80EB1 /* AmigoLocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoLocationDelegate.h; sourceTree = "<group>"; };
+		C7445328137A211300E80EB1 /* AmigoLocationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoLocationDelegate.m; sourceTree = "<group>"; };
+		C744532A137A237E00E80EB1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C74BEFA61353E997004AEE78 /* Accessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accessory.h; sourceTree = "<group>"; };
 		C74BEFA71353E997004AEE78 /* Accessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accessory.m; sourceTree = "<group>"; };
 		C754BBC61353EB3D000BE450 /* app_icon_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_s.png; path = Resources/app_icon_s.png; sourceTree = "<group>"; };
@@ -569,6 +577,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C744532B137A237E00E80EB1 /* CoreLocation.framework in Frameworks */,
 				C73F28F3136A6F95005E5952 /* MapKit.framework in Frameworks */,
 				C79739F91352B91900230B49 /* MobileCoreServices.framework in Frameworks */,
 				C79739F71352B8B700230B49 /* SystemConfiguration.framework in Frameworks */,
@@ -604,6 +613,8 @@
 				C7DF4191135E592500662BDF /* LoginView.m */,
 				374C86F51370CA5A00D7A5A8 /* NewsView.h */,
 				374C86F61370CA5A00D7A5A8 /* NewsView.m */,
+				C7445324137A1C1E00E80EB1 /* AmigoMapAnnotation.h */,
+				C7445325137A1C1E00E80EB1 /* AmigoMapAnnotation.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -653,6 +664,8 @@
 			children = (
 				C72A8479136BBF860095BD51 /* AmigoCallbackDelegate.h */,
 				C72A847A136BBF860095BD51 /* AmigoCallbackDelegate.m */,
+				C7445327137A211300E80EB1 /* AmigoLocationDelegate.h */,
+				C7445328137A211300E80EB1 /* AmigoLocationDelegate.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -689,6 +702,7 @@
 		C77E5B3213526B140051BD37 = {
 			isa = PBXGroup;
 			children = (
+				C744532A137A237E00E80EB1 /* CoreLocation.framework */,
 				378B7BC8135410060060242D /* app_icon.png */,
 				C77E5B5113526B140051BD37 /* Amigotchi */,
 				C77E5B4013526B140051BD37 /* Frameworks */,
@@ -1348,6 +1362,8 @@
 				C7D370F91370E617000DC0E6 /* CheckinDataSource.m in Sources */,
 				C76CCF4213711FBD00C86CCD /* MapLayer.m in Sources */,
 				C76CCF45137121D800C86CCD /* CheckinLayer.m in Sources */,
+				C7445326137A1C1E00E80EB1 /* AmigoMapAnnotation.m in Sources */,
+				C7445329137A211300E80EB1 /* AmigoLocationDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

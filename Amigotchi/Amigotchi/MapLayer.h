@@ -11,7 +11,6 @@
 #import "AmigoMapView.h"
 #import "AmigoConfig.h"
 
-
 @interface MapLayer : CCLayer {
     
 }

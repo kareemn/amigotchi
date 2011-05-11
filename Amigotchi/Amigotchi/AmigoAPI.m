@@ -13,7 +13,7 @@ static NSString* API_ROOT = @"http://amigotchiapi.appspot.com";
 static NSString* LOGIN_ENDPOINT = @"/user/login";
 
 @implementation AmigoAPI
-@synthesize queue, user;
+@synthesize queue = queue_, user = user_;
 
 - (id)init {
     self = [super init];

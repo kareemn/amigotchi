@@ -20,6 +20,7 @@
 @synthesize loginlayer = loginlayer_;
 @synthesize checkinlayer = checkinlayer_;
 @synthesize newsLayer = newsLayer_;
+@synthesize locDelegate = locDelegate_;
 
 +(CCScene *) scene
 {
@@ -46,6 +47,8 @@
         //listen for notifications
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateNotification:) name:AMIGONAVNOTIFICATION object:nil];
+        
+        self.locDelegate = [[[AmigoLocationDelegate alloc] init] autorelease];
         
         LoginLayer *temploginlayer = [[LoginLayer alloc] initWithLoginDelagate:[self createLoginCallbackDelegate]];
         self.loginlayer = temploginlayer;
@@ -199,6 +202,7 @@
     [envlayer_ release];
     [checkinlayer_ release];
     [newsLayer_ release];
+    [locDelegate_ release];
     
 	[super dealloc];
 }

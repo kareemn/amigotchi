@@ -11,6 +11,7 @@
 #import "CCUIViewWrapper.h"
 #import "UIKit/UIKit.h"
 #import <MapKit/MKMapView.h>
+#import "AmigoMapAnnotation.h"
 
 @interface AmigoMapView : CCNode {
     
@@ -25,6 +26,7 @@
 
 +(CCScene *) scene;
 - (void) setOpacity:(GLubyte)thing;
+- (void) addPin:(AmigoMapAnnotation *)pin;
 
 
 

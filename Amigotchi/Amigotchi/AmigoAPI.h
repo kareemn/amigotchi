@@ -11,19 +11,15 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "ASINetworkQueue.h"
-
 #import "AmigoUser.h"
+
 @interface AmigoAPI : NSObject {
-    ASINetworkQueue         *queue;
-    AmigoUser               *user;
     
     
 }
 
 @property (nonatomic, readwrite, retain) ASINetworkQueue      *queue;
 @property (nonatomic, readwrite, retain) AmigoUser            *user;
-
-
 
 
 -(void)login:(NSString*)access_token;

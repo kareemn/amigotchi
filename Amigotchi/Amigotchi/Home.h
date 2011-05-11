@@ -21,7 +21,7 @@
 #import "MapLayer.h"
 #import "CheckinLayer.h"
 #import "NewsLayer.h"
-
+#import "AmigoLocationDelegate.h"
 
 // HomeLayer
 @interface Home : CCLayer
@@ -29,12 +29,13 @@
 
 }
 
-@property (nonatomic, retain) PetLayer          *petlayer;
-@property (nonatomic, retain) LoginLayer        *loginlayer;
-@property (nonatomic, retain) EnvironmentLayer  *envlayer;
-@property (nonatomic, retain) MapLayer          *maplayer;
-@property (nonatomic, retain) CheckinLayer      *checkinlayer;
-@property (nonatomic, retain) NewsLayer         *newsLayer;
+@property (nonatomic, retain) PetLayer              *petlayer;
+@property (nonatomic, retain) LoginLayer            *loginlayer;
+@property (nonatomic, retain) EnvironmentLayer      *envlayer;
+@property (nonatomic, retain) MapLayer              *maplayer;
+@property (nonatomic, retain) CheckinLayer          *checkinlayer;
+@property (nonatomic, retain) NewsLayer             *newsLayer;
+@property (nonatomic, retain) AmigoLocationDelegate *locDelegate;
 
 // returns a CCScene that contains the HomeLayer as the only child
 + (CCScene *) scene;

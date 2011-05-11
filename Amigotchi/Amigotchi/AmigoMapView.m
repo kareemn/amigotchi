@@ -99,5 +99,10 @@
 }
 
 
+- (void) addPin:(AmigoMapAnnotation *)pin{
+    [self.mapview addAnnotation:pin];
+}
+
+
 
 @end
