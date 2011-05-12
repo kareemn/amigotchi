@@ -14,7 +14,7 @@
 @interface MapLayer : CCLayer {
     
 }
-
++(CCScene *) scene;
 @property (nonatomic, retain) AmigoMapView *view;
 
 @end

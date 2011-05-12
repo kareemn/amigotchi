@@ -11,7 +11,7 @@
 #import "CCUIViewWrapper.h"
 #import "CheckinDataSource.h"
 
-@interface AmigoCheckinView : CCLayer {
+@interface AmigoCheckinView : CCScene {
     
 }
 

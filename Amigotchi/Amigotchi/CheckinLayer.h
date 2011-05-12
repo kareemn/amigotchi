@@ -16,7 +16,7 @@
     
 }
 
-
++(CCScene *) scene;
 @property (nonatomic, retain) AmigoCheckinView *view;
 @property (nonatomic, retain) CheckinDataSource *datasource;
 

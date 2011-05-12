@@ -18,20 +18,6 @@
 @synthesize navbar = navbar_;
 
 
-+(CCScene *) scene
-{
-	// 'scene' is an autorelease object.
-	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
-	AmigoCheckinView *layer = [AmigoCheckinView node];
-	
-	// add layer as a child to scene
-	[scene addChild: layer];
-	// return the scene
-	return scene;
-}
-
 - (id) init {
     self = [super init];
     
@@ -94,7 +80,8 @@
 }
 
 - (void) done {
-    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"PetLayer"]];
+    //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"PetLayer"]];
+    [[CCDirector sharedDirector] popScene];
 }
 
 - (void) setOpacity:(GLubyte)thing{

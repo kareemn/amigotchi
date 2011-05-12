@@ -89,12 +89,14 @@
 }
 
 - (void) done {
-    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"PetLayer"]];
+    //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"PetLayer"]];
+    
+    [[CCDirector sharedDirector] popScene];
 }
 
 - (void) setOpacity:(GLubyte)thing{
     [self.mapwrapper setOpacity:thing];
-    [self.navwrapper  setOpacity:thing];
+    [self.navwrapper setOpacity:thing];
     
 }
 

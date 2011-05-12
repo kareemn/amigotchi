@@ -44,7 +44,7 @@
         self.view = [[AmigoCheckinView alloc] initWithDataSource:self.datasource];
         [self.view release];
         
-        [self addChild:self.view z:HUD_LAYER];
+        [self addChild:self.view z:0];
         
 	}
 	return self;

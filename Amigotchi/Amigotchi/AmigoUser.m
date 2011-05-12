@@ -18,6 +18,7 @@
 }
 
 - (void) dealloc {
+
     [name_ release];
     [profile_id_ release];
     [access_token_ release];

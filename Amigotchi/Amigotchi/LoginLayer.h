@@ -14,7 +14,7 @@
 #import "LoginView.h"
 #import "AmigoCallbackDelegate.h"
 
-@interface LoginLayer : CCLayer<FBSessionDelegate> {
+@interface LoginLayer : CCScene<FBSessionDelegate> {
     
     
 }

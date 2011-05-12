@@ -49,11 +49,11 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateNotification:) name:AMIGONAVNOTIFICATION object:nil];
         
         self.locDelegate = [[[AmigoLocationDelegate alloc] init] autorelease];
-        
+       
         LoginLayer *temploginlayer = [[LoginLayer alloc] initWithLoginDelagate:[self createLoginCallbackDelegate]];
         self.loginlayer = temploginlayer;
         [temploginlayer release];
-        
+
         
         PetLayer *temppetlayer = [[PetLayer alloc] init];
         self.petlayer = temppetlayer;
@@ -62,27 +62,31 @@
         EnvironmentLayer *tempenvLayer = [[EnvironmentLayer alloc] init];
         self.envlayer = tempenvLayer;
         [tempenvLayer release];
-        
+/*        
         MapLayer *tempmaplayer = [[MapLayer alloc] init];
         self.maplayer = tempmaplayer;
         [tempmaplayer release];
-
+ */
+/*
         CheckinLayer *tempcheckinlayer = [[CheckinLayer alloc] init];
         self.checkinlayer = tempcheckinlayer;
         [tempcheckinlayer release];
-        
+    */
         NewsLayer * tempnewslayer = [[NewsLayer alloc] init];
         self.newsLayer = tempnewslayer;
         [tempnewslayer release];
         
         
         [self addChild:self.loginlayer z:LOGIN_LAYER];
+        
+        
         [self addChild:self.petlayer z:PET_LAYER];
         [self addChild:self.envlayer];
-        [self addChild:self.maplayer];
-        [self addChild:self.checkinlayer];
+        //[self addChild:self.maplayer];
+        //[self addChild:self.checkinlayer];
         [self addChild:self.newsLayer z:HUD_LAYER];
-
+         
+        
         [self showLoginScreen];
         
 	}
@@ -138,12 +142,14 @@
 
 - (void) showLoginScreen {
     NSLog(@"Home::showLoginScreen");
+    [[CCDirector sharedDirector] pushScene:self.loginlayer];
+    
     
     [self.loginlayer setVisible:YES];
     [self.petlayer setVisible:NO];
     [self.envlayer setVisible:NO];
-    [self.maplayer setVisible:NO];
-    [self.checkinlayer setVisible:NO];
+    //[self.maplayer setVisible:NO];
+    //[self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:NO];
     
     
@@ -152,32 +158,45 @@
 
 - (void) showPetScreen {
     NSLog(@"Home::showPetScreen");
+    
     [self.loginlayer setVisible:NO];
     [self.petlayer setVisible:YES];
     [self.envlayer setVisible:YES];
-    [self.maplayer setVisible:NO];
-    [self.checkinlayer setVisible:NO];
+    //[self.maplayer setVisible:NO];
+    //[self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:YES];
+     
     
     
 }
 - (void) showMapScreen {
     NSLog(@"Home::showMapScreen");
+    
+    [[CCDirector sharedDirector] pushScene:[MapLayer scene]];
+    
+    
+    /*
     [self.loginlayer setVisible:NO];
     [self.petlayer setVisible:NO];
     [self.envlayer setVisible:NO];
     [self.maplayer setVisible:YES];
     [self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:NO];
+    */
 }
 - (void) showCheckinScreen {
     NSLog(@"Home::showCheckinScreen");
+    
+    [[CCDirector sharedDirector] pushScene:[CheckinLayer scene]];
+    
+    /*
     [self.loginlayer setVisible:NO];
     [self.petlayer setVisible:NO];
     [self.envlayer setVisible:NO];
     [self.maplayer setVisible:NO];
     [self.checkinlayer setVisible:YES];
     [self.newsLayer setVisible:NO];
+     */
 }
 - (void) showFoodScreen {
     NSLog(@"Home::showFoodScreen");
