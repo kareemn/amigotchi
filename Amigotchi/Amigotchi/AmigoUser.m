@@ -11,10 +11,18 @@
 
 @implementation AmigoUser
 
-@synthesize name, profile_id, access_token;
+@synthesize name = name_, profile_id = profile_id_, access_token = access_token_;
 
 -(NSString *)description{
-    return [NSString stringWithFormat:@"AmigoUser={name: %@, profile_id: %@, access_token: %@}", name, profile_id, access_token];
+    return [NSString stringWithFormat:@"AmigoUser={name: %@, profile_id: %@, access_token: %@}", self.name, self.profile_id, self.access_token];
+}
+
+- (void) dealloc {
+    [name_ release];
+    [profile_id_ release];
+    [access_token_ release];
+    
+    [super dealloc];
 }
 
 @end

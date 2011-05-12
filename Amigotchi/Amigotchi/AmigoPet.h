@@ -29,7 +29,7 @@
 - (void)cleanBathroom;
 - (void)step:(ccTime*)dt;
 
-- (NSDictionary*)saveState;
+- (void)saveState;
 - (void)loadState;
 
 @end
