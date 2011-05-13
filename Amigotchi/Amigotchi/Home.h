@@ -22,9 +22,12 @@
 #import "CheckinLayer.h"
 #import "NewsLayer.h"
 #import "AmigoLocationDelegate.h"
+#import "TestScene.h"
+
+#import "MapScene.h"
 
 // HomeLayer
-@interface Home : CCLayer
+@interface Home : CCScene
 {    
 
 }
@@ -32,7 +35,6 @@
 @property (nonatomic, retain) PetLayer              *petlayer;
 @property (nonatomic, retain) LoginLayer            *loginlayer;
 @property (nonatomic, retain) EnvironmentLayer      *envlayer;
-@property (nonatomic, retain) MapLayer              *maplayer;
 @property (nonatomic, retain) CheckinLayer          *checkinlayer;
 @property (nonatomic, retain) NewsLayer             *newsLayer;
 @property (nonatomic, retain) AmigoLocationDelegate *locDelegate;

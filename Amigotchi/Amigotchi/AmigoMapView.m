@@ -90,7 +90,7 @@
 
 - (void) done {
     //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"PetLayer"]];
-    
+    NSLog(@"Done.");
     [[CCDirector sharedDirector] popScene];
 }
 

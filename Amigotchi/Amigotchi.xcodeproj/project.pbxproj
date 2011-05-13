@@ -19,6 +19,8 @@
 		378B7BC613540B130060242D /* dragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC413540B130060242D /* dragon.plist */; };
 		378B7BC713540B130060242D /* dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC513540B130060242D /* dragon.png */; };
 		378B7BC9135410060060242D /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC8135410060060242D /* app_icon.png */; };
+		3798F25E137CB73100DD6457 /* MapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3798F25D137CB73100DD6457 /* MapScene.m */; };
+		3798F27F137CBC4300DD6457 /* TestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3798F27E137CBC4300DD6457 /* TestScene.m */; };
 		37B8E7B613553315009D0B3F /* AmigoPetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B8E7B513553315009D0B3F /* AmigoPetView.m */; };
 		37D18F851360CE8A0031DFF5 /* Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D18F841360CE890031DFF5 /* Environment.m */; };
 		37D18F881360CF1D0031DFF5 /* AccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D18F871360CF1D0031DFF5 /* AccessoryView.m */; };
@@ -225,6 +227,10 @@
 		378B7BC413540B130060242D /* dragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = dragon.plist; path = Resources/dragon.plist; sourceTree = "<group>"; };
 		378B7BC513540B130060242D /* dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dragon.png; path = Resources/dragon.png; sourceTree = "<group>"; };
 		378B7BC8135410060060242D /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		3798F25C137CB73100DD6457 /* MapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapScene.h; path = Amigotchi.xcodeproj/MapScene.h; sourceTree = SOURCE_ROOT; };
+		3798F25D137CB73100DD6457 /* MapScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapScene.m; path = Amigotchi.xcodeproj/MapScene.m; sourceTree = SOURCE_ROOT; };
+		3798F27D137CBC4300DD6457 /* TestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScene.h; sourceTree = "<group>"; };
+		3798F27E137CBC4300DD6457 /* TestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScene.m; sourceTree = "<group>"; };
 		37B8E7B413553315009D0B3F /* AmigoPetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoPetView.h; sourceTree = "<group>"; };
 		37B8E7B513553315009D0B3F /* AmigoPetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoPetView.m; sourceTree = "<group>"; };
 		37D18F831360CE890031DFF5 /* Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Environment.h; sourceTree = "<group>"; };
@@ -596,6 +602,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		378FB65B137CB31100DD7FBA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C77E5CA213526B160051BD37 /* Home.h */,
+				C77E5CA313526B160051BD37 /* Home.m */,
+				3798F25C137CB73100DD6457 /* MapScene.h */,
+				3798F25D137CB73100DD6457 /* MapScene.m */,
+				3798F27D137CBC4300DD6457 /* TestScene.h */,
+				3798F27E137CBC4300DD6457 /* TestScene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 		37B8E7B3135532C3009D0B3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,8 +641,6 @@
 		C716CE3C1354BA1700CBD983 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
-				C77E5CA213526B160051BD37 /* Home.h */,
-				C77E5CA313526B160051BD37 /* Home.m */,
 				C76CCF4013711FBD00C86CCD /* MapLayer.h */,
 				C76CCF4113711FBD00C86CCD /* MapLayer.m */,
 				C76CCF43137121D700C86CCD /* CheckinLayer.h */,
@@ -1108,6 +1125,7 @@
 				C716CE3D1354BA2F00CBD983 /* Models */,
 				37B8E7B3135532C3009D0B3F /* Views */,
 				C716CE3C1354BA1700CBD983 /* Layers */,
+				378FB65B137CB31100DD7FBA /* Scenes */,
 				C79739FC1352BA5800230B49 /* AmigoAPI.h */,
 				C79739FD1352BA5800230B49 /* AmigoAPI.m */,
 				C716CE3B1354B93B00CBD983 /* AmigoConfig.h */,
@@ -1364,6 +1382,8 @@
 				C76CCF45137121D800C86CCD /* CheckinLayer.m in Sources */,
 				C7445326137A1C1E00E80EB1 /* AmigoMapAnnotation.m in Sources */,
 				C7445329137A211300E80EB1 /* AmigoLocationDelegate.m in Sources */,
+				3798F25E137CB73100DD6457 /* MapScene.m in Sources */,
+				3798F27F137CBC4300DD6457 /* TestScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

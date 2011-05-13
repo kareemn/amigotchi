@@ -271,7 +271,7 @@
             break;
         case BUTTON_MAP:
             NSLog(@"AmigoPetView::Clicked button to see map");
-            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"MapLayer"]];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"MapScene"]];
             break;
         case BUTTON_TOILET:
             NSLog(@"AmigoPetView::Clicked button to clean bathroom");

@@ -15,7 +15,6 @@
 @implementation Home
 
 @synthesize petlayer = petlayer_;
-@synthesize maplayer = maplayer_;
 @synthesize envlayer = envlayer_;
 @synthesize loginlayer = loginlayer_;
 @synthesize checkinlayer = checkinlayer_;
@@ -62,11 +61,7 @@
         EnvironmentLayer *tempenvLayer = [[EnvironmentLayer alloc] init];
         self.envlayer = tempenvLayer;
         [tempenvLayer release];
-/*        
-        MapLayer *tempmaplayer = [[MapLayer alloc] init];
-        self.maplayer = tempmaplayer;
-        [tempmaplayer release];
- */
+
 /*
         CheckinLayer *tempcheckinlayer = [[CheckinLayer alloc] init];
         self.checkinlayer = tempcheckinlayer;
@@ -82,7 +77,6 @@
         
         [self addChild:self.petlayer z:PET_LAYER];
         [self addChild:self.envlayer];
-        //[self addChild:self.maplayer];
         //[self addChild:self.checkinlayer];
         [self addChild:self.newsLayer z:HUD_LAYER];
          
@@ -112,9 +106,9 @@
     
     NSString *theobj = [notification object];
     
-    if([theobj isEqualToString:@"MapLayer"])
+    if([theobj isEqualToString:@"MapScene"])
     {
-        NSLog(@"navigateNotification::show map layer clicked");
+        NSLog(@"navigateNotification::show map scene clicked");
         [self showMapScreen];
     }
     else if ( [theobj isEqualToString:@"CheckinLayer"] ){
@@ -148,7 +142,6 @@
     [self.loginlayer setVisible:YES];
     [self.petlayer setVisible:NO];
     [self.envlayer setVisible:NO];
-    //[self.maplayer setVisible:NO];
     //[self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:NO];
     
@@ -162,7 +155,6 @@
     [self.loginlayer setVisible:NO];
     [self.petlayer setVisible:YES];
     [self.envlayer setVisible:YES];
-    //[self.maplayer setVisible:NO];
     //[self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:YES];
      
@@ -172,14 +164,15 @@
 - (void) showMapScreen {
     NSLog(@"Home::showMapScreen");
     
-    [[CCDirector sharedDirector] pushScene:[MapLayer scene]];
+    MapScene * ms = [[TestScene alloc] init];
+    [[CCDirector sharedDirector] pushScene:ms];
+    [ms release];
     
     
     /*
     [self.loginlayer setVisible:NO];
     [self.petlayer setVisible:NO];
     [self.envlayer setVisible:NO];
-    [self.maplayer setVisible:YES];
     [self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:NO];
     */
@@ -193,7 +186,6 @@
     [self.loginlayer setVisible:NO];
     [self.petlayer setVisible:NO];
     [self.envlayer setVisible:NO];
-    [self.maplayer setVisible:NO];
     [self.checkinlayer setVisible:YES];
     [self.newsLayer setVisible:NO];
      */
@@ -217,7 +209,6 @@
 {
 	[petlayer_ release];
     [loginlayer_ release];
-    [maplayer_ release];
     [envlayer_ release];
     [checkinlayer_ release];
     [newsLayer_ release];
