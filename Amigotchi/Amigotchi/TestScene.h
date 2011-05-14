@@ -9,9 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "PetLayer.h"
+#import "CCUIViewWrapper.h"
+#import "UIKit/UIKit.h"
+#import <MapKit/MKMapView.h>
 
 @interface TestScene : CCScene {
     
 }
 @property (nonatomic, retain) CCLayer * layer;
+@property (nonatomic, retain) CCUIViewWrapper *mapwrapper;
+@property (nonatomic, retain) MKMapView         *mapview;
+
+-(void) popItLikesItsHot;
+
 @end
