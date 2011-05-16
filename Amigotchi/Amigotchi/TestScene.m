@@ -28,7 +28,7 @@
         self.mapwrapper = [CCUIViewWrapper wrapperForUIView:self.mapview];
         [self.layer addChild:self.mapwrapper];
         CGSize size = [[CCDirector sharedDirector] winSize];
-        self.mapwrapper.contentSize = size;
+        self.mapwrapper.contentSize = CGSizeMake(size.width, size.height/2);
         
         
         //
