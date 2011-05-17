@@ -1282,12 +1282,9 @@
 				37DC98011379D11E00934783 /* happiness_bar_container.png in Resources */,
 				37DC98021379D11E00934783 /* hunger_bar_container.png in Resources */,
 				37A59BDF138236EB0080C338 /* HomeViewController.xib in Resources */,
-<<<<<<< HEAD
 				C751678813824FB900202CE9 /* AmigoTableViewController.xib in Resources */,
 				C751678D138255B900202CE9 /* AmigoCheckinViewController.xib in Resources */,
-=======
 				3715815413824B6D00040BEC /* MapViewController.xib in Resources */,
->>>>>>> bc61972e6975ae36454fd674e64cc2d56924712c
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1442,14 +1439,11 @@
 				3798F25E137CB73100DD6457 /* MapScene.m in Sources */,
 				3798F27F137CBC4300DD6457 /* TestScene.m in Sources */,
 				37A59BDE138236EB0080C338 /* HomeViewController.m in Sources */,
-<<<<<<< HEAD
 				C751678213824A7700202CE9 /* AmigoNavigationController.m in Sources */,
 				C751678713824FB900202CE9 /* AmigoTableViewController.m in Sources */,
 				C751678C138255B900202CE9 /* AmigoCheckinViewController.m in Sources */,
 				C75167901382570500202CE9 /* AmigoCheckin.m in Sources */,
-=======
 				3715815313824B6D00040BEC /* MapViewController.m in Sources */,
->>>>>>> bc61972e6975ae36454fd674e64cc2d56924712c
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
