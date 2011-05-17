@@ -42,6 +42,12 @@
 		C7445329137A211300E80EB1 /* AmigoLocationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7445328137A211300E80EB1 /* AmigoLocationDelegate.m */; };
 		C744532B137A237E00E80EB1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C744532A137A237E00E80EB1 /* CoreLocation.framework */; };
 		C74BEFA81353E997004AEE78 /* Accessory.m in Sources */ = {isa = PBXBuildFile; fileRef = C74BEFA71353E997004AEE78 /* Accessory.m */; };
+		C751678213824A7700202CE9 /* AmigoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C751678113824A7700202CE9 /* AmigoNavigationController.m */; };
+		C751678713824FB900202CE9 /* AmigoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C751678513824FB900202CE9 /* AmigoTableViewController.m */; };
+		C751678813824FB900202CE9 /* AmigoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C751678613824FB900202CE9 /* AmigoTableViewController.xib */; };
+		C751678C138255B900202CE9 /* AmigoCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C751678A138255B900202CE9 /* AmigoCheckinViewController.m */; };
+		C751678D138255B900202CE9 /* AmigoCheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C751678B138255B900202CE9 /* AmigoCheckinViewController.xib */; };
+		C75167901382570500202CE9 /* AmigoCheckin.m in Sources */ = {isa = PBXBuildFile; fileRef = C751678F1382570500202CE9 /* AmigoCheckin.m */; };
 		C754BBC81353EB3D000BE450 /* app_icon_s.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC61353EB3D000BE450 /* app_icon_s.png */; };
 		C754BBC91353EB3D000BE450 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC71353EB3D000BE450 /* screen.png */; };
 		C76CCF4213711FBD00C86CCD /* MapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C76CCF4113711FBD00C86CCD /* MapLayer.m */; };
@@ -268,6 +274,16 @@
 		C744532A137A237E00E80EB1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C74BEFA61353E997004AEE78 /* Accessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accessory.h; sourceTree = "<group>"; };
 		C74BEFA71353E997004AEE78 /* Accessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accessory.m; sourceTree = "<group>"; };
+		C751678013824A7700202CE9 /* AmigoNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoNavigationController.h; sourceTree = "<group>"; };
+		C751678113824A7700202CE9 /* AmigoNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoNavigationController.m; sourceTree = "<group>"; };
+		C751678413824FB900202CE9 /* AmigoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoTableViewController.h; sourceTree = "<group>"; };
+		C751678513824FB900202CE9 /* AmigoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoTableViewController.m; sourceTree = "<group>"; };
+		C751678613824FB900202CE9 /* AmigoTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmigoTableViewController.xib; sourceTree = "<group>"; };
+		C7516789138255B900202CE9 /* AmigoCheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoCheckinViewController.h; sourceTree = "<group>"; };
+		C751678A138255B900202CE9 /* AmigoCheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoCheckinViewController.m; sourceTree = "<group>"; };
+		C751678B138255B900202CE9 /* AmigoCheckinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmigoCheckinViewController.xib; sourceTree = "<group>"; };
+		C751678E1382570500202CE9 /* AmigoCheckin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoCheckin.h; sourceTree = "<group>"; };
+		C751678F1382570500202CE9 /* AmigoCheckin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoCheckin.m; sourceTree = "<group>"; };
 		C754BBC61353EB3D000BE450 /* app_icon_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_s.png; path = Resources/app_icon_s.png; sourceTree = "<group>"; };
 		C754BBC71353EB3D000BE450 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screen.png; path = Resources/screen.png; sourceTree = "<group>"; };
 		C76CCF4013711FBD00C86CCD /* MapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLayer.h; sourceTree = "<group>"; };
@@ -677,6 +693,8 @@
 				37D18F841360CE890031DFF5 /* Environment.m */,
 				C7D370F71370E617000DC0E6 /* CheckinDataSource.h */,
 				C7D370F81370E617000DC0E6 /* CheckinDataSource.m */,
+				C751678E1382570500202CE9 /* AmigoCheckin.h */,
+				C751678F1382570500202CE9 /* AmigoCheckin.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -690,6 +708,21 @@
 				C7445328137A211300E80EB1 /* AmigoLocationDelegate.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		C751678313824F8900202CE9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C751678013824A7700202CE9 /* AmigoNavigationController.h */,
+				C751678113824A7700202CE9 /* AmigoNavigationController.m */,
+				C751678413824FB900202CE9 /* AmigoTableViewController.h */,
+				C751678513824FB900202CE9 /* AmigoTableViewController.m */,
+				C751678613824FB900202CE9 /* AmigoTableViewController.xib */,
+				C7516789138255B900202CE9 /* AmigoCheckinViewController.h */,
+				C751678A138255B900202CE9 /* AmigoCheckinViewController.m */,
+				C751678B138255B900202CE9 /* AmigoCheckinViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		C777284C1352B535007A44B9 /* ASI-HTTP */ = {
@@ -1129,6 +1162,7 @@
 		C7E1DB5F13526CE5007A4B73 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C751678313824F8900202CE9 /* Controllers */,
 				C72A847C136BC41B0095BD51 /* Helpers */,
 				C716CE3D1354BA2F00CBD983 /* Models */,
 				37B8E7B3135532C3009D0B3F /* Views */,
@@ -1240,6 +1274,8 @@
 				37DC98011379D11E00934783 /* happiness_bar_container.png in Resources */,
 				37DC98021379D11E00934783 /* hunger_bar_container.png in Resources */,
 				37A59BDF138236EB0080C338 /* HomeViewController.xib in Resources */,
+				C751678813824FB900202CE9 /* AmigoTableViewController.xib in Resources */,
+				C751678D138255B900202CE9 /* AmigoCheckinViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1394,6 +1430,10 @@
 				3798F25E137CB73100DD6457 /* MapScene.m in Sources */,
 				3798F27F137CBC4300DD6457 /* TestScene.m in Sources */,
 				37A59BDE138236EB0080C338 /* HomeViewController.m in Sources */,
+				C751678213824A7700202CE9 /* AmigoNavigationController.m in Sources */,
+				C751678713824FB900202CE9 /* AmigoTableViewController.m in Sources */,
+				C751678C138255B900202CE9 /* AmigoCheckinViewController.m in Sources */,
+				C75167901382570500202CE9 /* AmigoCheckin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

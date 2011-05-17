@@ -12,6 +12,8 @@
 #import "GameConfig.h"
 #import "Home.h"
 #import "RootViewController.h"
+
+
 @implementation AppDelegate
 
 @synthesize window;
@@ -109,11 +111,10 @@
 	//[[CCDirector sharedDirector] runWithScene: [Home scene]];
     HomeViewController *home = [[HomeViewController alloc] init];
     home.view = [[CCDirector sharedDirector] openGLView ];
-    home.title = @"hello screen";
+    home.title = @"Amigotchi";
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateNotification:) name:@"UINAVTHING" object:nil];
     
-    self.navigationController = [[[UINavigationController alloc] initWithRootViewController: home] autorelease];
+    self.navigationController = [[[AmigoNavigationController alloc] initWithRootViewController: home] autorelease];
     self.window.rootViewController = self.navigationController;
     [home release];
     
@@ -165,27 +166,6 @@
 	[super dealloc];
 }
 
--(void)navigateNotification:(NSNotification *)notification{
-    
-    // NSLog([[notification userInfo] description]);
-    //NSLog([[notification object] description]);
-    //NSLog(@"inputFromView:: received %@.\n", [notification object]);
-    
-    NSString *theobj = [notification object];
-    
-    if([theobj isEqualToString:@"checkin"])
-    {
-        NSLog(@"app del got stuff");
-        [self.navigationController pushViewController:[[UITableViewController alloc]init] animated:YES];
-        
-        
-    }
-    
-    else if ( [theobj isEqualToString:@"map"] ){
-        NSLog(@"app del got stuff");
-        [self.navigationController pushViewController:[[MKMapView alloc]init] animated:YES];
-    }
 
-}
 
 @end

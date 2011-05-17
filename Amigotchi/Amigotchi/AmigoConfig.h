@@ -33,3 +33,5 @@
 
 #define AMIGONAVNOTIFICATION @"com.kipkipkareem.amigotchi.navigate"
 #define LOGINVIEWCHANGE @"loginView"
+
+#define AMIGONAVCONTROLLER @"com.kipkipkareem.amigotchi.navcontroller"

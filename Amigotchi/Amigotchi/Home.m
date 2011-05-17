@@ -164,7 +164,7 @@
 }
 - (void) showMapScreen {
     NSLog(@"Home::showMapScreen");
-        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"UINAVTHING" object:@"map"]];
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVCONTROLLER object:@"map"]];
     /*MapScene * ms = [[TestScene alloc] init];
     [[CCDirector sharedDirector] pushScene:ms];
     [ms release];*/
@@ -182,7 +182,7 @@
     NSLog(@"Home::showCheckinScreen");
     
     //[[CCDirector sharedDirector] pushScene:[CheckinLayer scene]];
-    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"UINAVTHING" object:@"checkin"]];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVCONTROLLER object:@"checkin"]];
     
     /*
     [self.loginlayer setVisible:NO];
