@@ -12,6 +12,8 @@
 #import "GameConfig.h"
 #import "Home.h"
 #import "RootViewController.h"
+#import "MapViewController.h"
+
 @implementation AppDelegate
 
 @synthesize window;
@@ -183,7 +185,7 @@
     
     else if ( [theobj isEqualToString:@"map"] ){
         NSLog(@"app del got stuff");
-        [self.navigationController pushViewController:[[MKMapView alloc]init] animated:YES];
+        [self.navigationController pushViewController:[[MapViewController alloc]init] animated:YES];
     }
 
 }

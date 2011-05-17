@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3715815313824B6D00040BEC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3715815113824B6D00040BEC /* MapViewController.m */; };
+		3715815413824B6D00040BEC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3715815213824B6D00040BEC /* MapViewController.xib */; };
 		374A62CF135E40E200FE23E3 /* background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 374A62CD135E40E200FE23E3 /* background.plist */; };
 		374A62D0135E40E200FE23E3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 374A62CE135E40E200FE23E3 /* background.png */; };
 		374A62D3135E41DE00FE23E3 /* EnvironmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A62D2135E41DE00FE23E3 /* EnvironmentView.m */; };
@@ -213,6 +215,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3715815013824B6D00040BEC /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		3715815113824B6D00040BEC /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		3715815213824B6D00040BEC /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		374A62CD135E40E200FE23E3 /* background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = background.plist; path = Resources/background.plist; sourceTree = "<group>"; };
 		374A62CE135E40E200FE23E3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
 		374A62D1135E41DE00FE23E3 /* EnvironmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentView.h; sourceTree = "<group>"; };
@@ -771,6 +776,9 @@
 				C77E5C9713526B160051BD37 /* LICENSE_FontLabel.txt */,
 				C77E5C9C13526B160051BD37 /* AppDelegate.h */,
 				C77E5C9D13526B160051BD37 /* AppDelegate.m */,
+				3715815013824B6D00040BEC /* MapViewController.h */,
+				3715815113824B6D00040BEC /* MapViewController.m */,
+				3715815213824B6D00040BEC /* MapViewController.xib */,
 				37A59BDB138236EB0080C338 /* HomeViewController.h */,
 				37A59BDC138236EB0080C338 /* HomeViewController.m */,
 				37A59BDD138236EB0080C338 /* HomeViewController.xib */,
@@ -1240,6 +1248,7 @@
 				37DC98011379D11E00934783 /* happiness_bar_container.png in Resources */,
 				37DC98021379D11E00934783 /* hunger_bar_container.png in Resources */,
 				37A59BDF138236EB0080C338 /* HomeViewController.xib in Resources */,
+				3715815413824B6D00040BEC /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1394,6 +1403,7 @@
 				3798F25E137CB73100DD6457 /* MapScene.m in Sources */,
 				3798F27F137CBC4300DD6457 /* TestScene.m in Sources */,
 				37A59BDE138236EB0080C338 /* HomeViewController.m in Sources */,
+				3715815313824B6D00040BEC /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
