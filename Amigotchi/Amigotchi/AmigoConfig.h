@@ -26,11 +26,10 @@
 #define BUTTON_TOILET 4
 
 //facebook app id
-static NSString* kAppId = @"196872950351792";
+#define kAppId  @"196872950351792"
 
 //notifications event types
-static NSString* PETVIEWCHANGE = @"petView";
+#define PETVIEWCHANGE @"petView"
 
-static NSString* AMIGONAVNOTIFICATION = @"com.kipkipkareem.amigotchi.navigate";
-
-static NSString* LOGINVIEWCHANGE = @"loginView";
+#define AMIGONAVNOTIFICATION @"com.kipkipkareem.amigotchi.navigate"
+#define LOGINVIEWCHANGE @"loginView"
