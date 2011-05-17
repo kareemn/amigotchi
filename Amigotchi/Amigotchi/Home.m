@@ -152,12 +152,14 @@
 - (void) showPetScreen {
     NSLog(@"Home::showPetScreen");
     
+    [[CCDirector sharedDirector] pushScene: [[TestScene alloc] init]];
+    /*
     [self.loginlayer setVisible:NO];
     [self.petlayer setVisible:YES];
     [self.envlayer setVisible:YES];
     //[self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:YES];
-     
+     */
     
     
 }

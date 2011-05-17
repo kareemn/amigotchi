@@ -105,7 +105,16 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [Home scene]];
+	//[[CCDirector sharedDirector] runWithScene: [Home scene]];
+    HomeViewController *home = [[HomeViewController alloc] init];
+    home.view = [[CCDirector sharedDirector] openGLView ];
+    home.title = @"hello screen";
+    
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: home];
+    [home release];
+    
+    [[CCDirector sharedDirector] pushScene:[Home scene]];
 }
 
 
