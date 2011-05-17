@@ -12,7 +12,7 @@
 #import "GameConfig.h"
 #import "Home.h"
 #import "RootViewController.h"
-
+#import "MapViewController.h"
 
 @implementation AppDelegate
 
