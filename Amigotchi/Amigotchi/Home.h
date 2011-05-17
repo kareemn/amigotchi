@@ -38,6 +38,7 @@
 @property (nonatomic, retain) CheckinLayer          *checkinlayer;
 @property (nonatomic, retain) NewsLayer             *newsLayer;
 @property (nonatomic, retain) AmigoLocationDelegate *locDelegate;
+@property (nonatomic, retain) UINavigationController *nav;
 
 // returns a CCScene that contains the HomeLayer as the only child
 + (CCScene *) scene;

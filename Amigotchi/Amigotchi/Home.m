@@ -151,24 +151,23 @@
 
 - (void) showPetScreen {
     NSLog(@"Home::showPetScreen");
+    //[[CCDirector sharedDirector] pushScene: [[TestScene alloc] init]];
     
-    [[CCDirector sharedDirector] pushScene: [[TestScene alloc] init]];
-    /*
     [self.loginlayer setVisible:NO];
     [self.petlayer setVisible:YES];
     [self.envlayer setVisible:YES];
     //[self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:YES];
-     */
+     
     
     
 }
 - (void) showMapScreen {
     NSLog(@"Home::showMapScreen");
-    
-    MapScene * ms = [[TestScene alloc] init];
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"UINAVTHING" object:@"map"]];
+    /*MapScene * ms = [[TestScene alloc] init];
     [[CCDirector sharedDirector] pushScene:ms];
-    [ms release];
+    [ms release];*/
     
     
     /*
@@ -182,7 +181,8 @@
 - (void) showCheckinScreen {
     NSLog(@"Home::showCheckinScreen");
     
-    [[CCDirector sharedDirector] pushScene:[CheckinLayer scene]];
+    //[[CCDirector sharedDirector] pushScene:[CheckinLayer scene]];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"UINAVTHING" object:@"checkin"]];
     
     /*
     [self.loginlayer setVisible:NO];

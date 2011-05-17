@@ -15,6 +15,7 @@
 @implementation AppDelegate
 
 @synthesize window;
+@synthesize navigationController = navigationController_;
 
 - (void) removeStartupFlicker
 {
@@ -110,11 +111,13 @@
     home.view = [[CCDirector sharedDirector] openGLView ];
     home.title = @"hello screen";
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateNotification:) name:@"UINAVTHING" object:nil];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: home];
+    self.navigationController = [[[UINavigationController alloc] initWithRootViewController: home] autorelease];
+    self.window.rootViewController = self.navigationController;
     [home release];
     
-    [[CCDirector sharedDirector] pushScene:[Home scene]];
+    [[CCDirector sharedDirector] runWithScene: [Home scene]];
 }
 
 
@@ -157,7 +160,32 @@
 - (void)dealloc {
 	[[CCDirector sharedDirector] end];
 	[window release];
+    [navigationController_ release];
+    
 	[super dealloc];
+}
+
+-(void)navigateNotification:(NSNotification *)notification{
+    
+    // NSLog([[notification userInfo] description]);
+    //NSLog([[notification object] description]);
+    //NSLog(@"inputFromView:: received %@.\n", [notification object]);
+    
+    NSString *theobj = [notification object];
+    
+    if([theobj isEqualToString:@"checkin"])
+    {
+        NSLog(@"app del got stuff");
+        [self.navigationController pushViewController:[[UITableViewController alloc]init] animated:YES];
+        
+        
+    }
+    
+    else if ( [theobj isEqualToString:@"map"] ){
+        NSLog(@"app del got stuff");
+        [self.navigationController pushViewController:[[MKMapView alloc]init] animated:YES];
+    }
+
 }
 
 @end
