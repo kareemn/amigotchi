@@ -9,6 +9,7 @@
 #import "AmigoNavigationController.h"
 #import "AmigoConfig.h"
 #import "AmigoTableViewController.h"
+#import "MapViewController.h"
 
 @implementation AmigoNavigationController
 
@@ -38,7 +39,7 @@
     
     else if ( [theobj isEqualToString:@"map"] ){
         NSLog(@"app del got stuff");
-        //[self.navigationController pushViewController:[[MKMapView alloc]init] animated:YES];
+        [self pushViewController:[[MapViewController alloc]init] animated:YES];
     }
     
 }
