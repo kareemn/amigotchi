@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "AmigoAPI.h"
 
 @interface AmigoNavigationController : UINavigationController {
     
 }
+
+
 
 @end

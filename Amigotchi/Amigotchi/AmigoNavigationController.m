@@ -32,14 +32,15 @@
     if([theobj isEqualToString:@"checkin"])
     {
         NSLog(@"app del got stuff");
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGOAPINOTIFICATION object:@"updateNearbyPlaces"]];
         [self pushViewController: [[[AmigoTableViewController alloc] init ] autorelease] animated:YES];
-        
         
     }
     
     else if ( [theobj isEqualToString:@"map"] ){
         NSLog(@"app del got stuff");
-        [self pushViewController:[[MapViewController alloc]init] animated:YES];
+        [self pushViewController:[[MapViewController
+                                   alloc]init] animated:YES];
     }
     
 }

@@ -38,7 +38,6 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
         
-        [self initApi];
         [self initNotifiation];
         self.view = [[LoginView alloc] init];
         [self addChild:self.view z:HUD_LAYER];
@@ -47,19 +46,16 @@
 	return self;
 }
 
--(id) initWithLoginDelagate: (id)del{
+-(id) initWithAmigoAPI: (AmigoAPI *)a{
     self = [self init];
     
     if(self){
-        self.loginDelegate = del;
+        self.api = a;
     }
     
     return self;
 }
 
--(void)initApi {
-    self.api = [[AmigoAPI alloc] init];
-}
 
 -(void)initNotifiation {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputFromView:) name:LOGINVIEWCHANGE object:nil];
@@ -79,6 +75,7 @@
 -(void)facebookLogin{
     if (self.facebook == nil){
         self.facebook = [[Facebook alloc] initWithAppId:kAppId];
+        self.api.facebook = self.facebook;
     }
     
     self.permissions =  [[NSArray arrayWithObjects:
@@ -107,7 +104,6 @@
     [self.view facebookLoggedIn];
     
     /* to add more callbacks to the loginDelegate modify the HomeLayer createLoginCallbackDelegate */
-    [self.loginDelegate performCallback:@"loggedInCallback"];
 }
 
 

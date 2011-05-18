@@ -194,6 +194,7 @@
 		C79A965A1371DADC002C5062 /* ringoffire.plist in Resources */ = {isa = PBXBuildFile; fileRef = C79A96581371DADC002C5062 /* ringoffire.plist */; };
 		C79F1E6C136CF3DC00A7BAD8 /* AmigoCheckinView.m in Sources */ = {isa = PBXBuildFile; fileRef = C79F1E6B136CF3DC00A7BAD8 /* AmigoCheckinView.m */; };
 		C7AAE1AD1352B80700BEAC71 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */; };
+		C7C91A861384848400E462F9 /* NearbyPlacesRequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C91A851384848400E462F9 /* NearbyPlacesRequestResult.m */; };
 		C7D370F91370E617000DC0E6 /* CheckinDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D370F81370E617000DC0E6 /* CheckinDataSource.m */; };
 		C7DDABEE13527BC700CB250B /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DDABD313527BC700CB250B /* Facebook.m */; };
 		C7DDABEF13527BC700CB250B /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7DDABD613527BC700CB250B /* FBDialog.bundle */; };
@@ -571,6 +572,8 @@
 		C79F1E6A136CF3DC00A7BAD8 /* AmigoCheckinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoCheckinView.h; sourceTree = "<group>"; };
 		C79F1E6B136CF3DC00A7BAD8 /* AmigoCheckinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoCheckinView.m; sourceTree = "<group>"; };
 		C7AAE1AC1352B80700BEAC71 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C7C91A841384848400E462F9 /* NearbyPlacesRequestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyPlacesRequestResult.h; sourceTree = "<group>"; };
+		C7C91A851384848400E462F9 /* NearbyPlacesRequestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyPlacesRequestResult.m; sourceTree = "<group>"; };
 		C7D370F71370E617000DC0E6 /* CheckinDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinDataSource.h; sourceTree = "<group>"; };
 		C7D370F81370E617000DC0E6 /* CheckinDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinDataSource.m; sourceTree = "<group>"; };
 		C7DDABCF13527BC700CB250B /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
@@ -1119,6 +1122,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C7C91A831384844200E462F9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C79739FC1352BA5800230B49 /* AmigoAPI.h */,
+				C79739FD1352BA5800230B49 /* AmigoAPI.m */,
+				C7C91A841384848400E462F9 /* NearbyPlacesRequestResult.h */,
+				C7C91A851384848400E462F9 /* NearbyPlacesRequestResult.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		C7DDABCE13527BC700CB250B /* FBConnect */ = {
 			isa = PBXGroup;
 			children = (
@@ -1170,14 +1184,13 @@
 		C7E1DB5F13526CE5007A4B73 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C7C91A831384844200E462F9 /* API */,
 				C751678313824F8900202CE9 /* Controllers */,
 				C72A847C136BC41B0095BD51 /* Helpers */,
 				C716CE3D1354BA2F00CBD983 /* Models */,
 				37B8E7B3135532C3009D0B3F /* Views */,
 				C716CE3C1354BA1700CBD983 /* Layers */,
 				378FB65B137CB31100DD7FBA /* Scenes */,
-				C79739FC1352BA5800230B49 /* AmigoAPI.h */,
-				C79739FD1352BA5800230B49 /* AmigoAPI.m */,
 				C716CE3B1354B93B00CBD983 /* AmigoConfig.h */,
 			);
 			name = Classes;
@@ -1444,6 +1457,7 @@
 				C751678C138255B900202CE9 /* AmigoCheckinViewController.m in Sources */,
 				C75167901382570500202CE9 /* AmigoCheckin.m in Sources */,
 				3715815313824B6D00040BEC /* MapViewController.m in Sources */,
+				C7C91A861384848400E462F9 /* NearbyPlacesRequestResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

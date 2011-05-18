@@ -8,12 +8,21 @@
 
 #import "AmigoAPI.h"
 #import "JSON.h"
+#import "AmigoConfig.h"
 
 static NSString* API_ROOT = @"http://amigotchiapi.appspot.com";
 static NSString* LOGIN_ENDPOINT = @"/user/login";
 
+
+
+
+
 @implementation AmigoAPI
-@synthesize queue = queue_, user = user_;
+@synthesize queue = queue_, user = user_, locdelegate = locdelegate_;
+@synthesize facebook = facebook_;
+@synthesize nearbyDelegate = nearbyDelegate_;
+
+
 
 - (id)init {
     self = [super init];
@@ -24,8 +33,15 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
            [self setQueue:[[[ASINetworkQueue alloc] init] autorelease] ];
         }
         
-        [self setUser:[[AmigoUser alloc] init] ];
+        [self setUser:[[[AmigoUser alloc] init] autorelease]  ];
+        [self setLocdelegate:[[[AmigoLocationDelegate alloc] init] autorelease]  ];
+        [self setFacebook: [ [[Facebook alloc] init] autorelease]];
+        [self setNearbyDelegate:[[[NearbyPlacesRequestResult alloc] initializeWithDelegate:self] autorelease]];
         
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(apiNotification:) name:AMIGOAPINOTIFICATION object:nil];
+        
+               
     }
     return self;
 }
@@ -39,8 +55,8 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
     [request setDelegate:self];
     
-    [request setDidFinishSelector:@selector(requestDone:)];
-    [request setDidFailSelector:@selector(requestWentWrong:)];
+    [request setDidFinishSelector:@selector(loginRequestDone:)];
+    [request setDidFailSelector:@selector(loginRequestWentWrong:)];
     
     [request setPostValue:access_token forKey:@"access_token"];
     
@@ -48,9 +64,12 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     NSLog(@"adding to queue");
     [[self queue] addOperation:request];
     [[self queue] go];
+    
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"loggedin"]];
+    [self.locdelegate.locManager startUpdatingLocation];
 }
 
-- (void)requestDone:(ASIHTTPRequest *)request
+- (void)loginRequestDone:(ASIHTTPRequest *)request
 {
     NSString *response = [request responseString];
     id parsedJson = [self parseJsonResponse:response];
@@ -68,14 +87,51 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
         
         NSLog(@"%@", [[self user] description]);
     }
+    
 }
 
-- (void)requestWentWrong:(ASIHTTPRequest *)request
+- (void)loginRequestWentWrong:(ASIHTTPRequest *)request
 {
     [[self user] setAccess_token:[NSString stringWithFormat:@"0"]];
     NSError *error = [request error];
     NSLog(@"%@", error);
 }
+
+-(void)updateNearbyPlaces{
+    //&center=lat,long&distance=1000
+    
+    NSString *locString  = [NSString stringWithFormat:@"%f,%f", self.locdelegate.currLoc.coordinate.latitude, self.locdelegate.currLoc.coordinate.longitude];
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+								   @"place",@"type",
+								   locString,@"center",
+								   @"1000",@"distance", // In Meters (1000m = 0.62mi)
+								   nil];
+    [self.facebook requestWithGraphPath:@"search" andParams: params andDelegate:self.nearbyDelegate];
+    
+    /*
+    NSLog(@"getCheckinList AmigoUser::%@", [self user]);
+    NSString *urlString = [NSString stringWithFormat:@"%@%@&access_token=%@", GRAPH_ROOT, CHECKINLIST_ENDPOINT, self.user.access_token ];
+    
+    NSLog(@"urlString:: %@", urlString);
+    
+    
+    NSURL *url = [NSURL URLWithString:urlString ];
+    NSLog(@"getCheckinList url formed:%@", [url description]);
+    
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    [request setDidFinishSelector:@selector(checkinListRequestDone:)];
+    [request setDidFailSelector:@selector(checkinListRequestWentWrong:)];
+    
+    
+    NSLog(@"adding to queue");
+    [[self queue] addOperation:request];
+    [[self queue] go];
+     */
+}
+
+
 
 /**
  * parse the response data
@@ -87,6 +143,40 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     id result = [jsonParser objectWithString:responseString];
     return result;
     
+}
+
+- (void) nearbyPlacesRequestCompletedWithPlaces:(NSArray *)placesArray{
+    NSLog(@"HERRRREEEE");
+    NSLog(@"hey:: %@", [placesArray description]);
+}
+- (void) nearbyPlacesRequestFailed{
+    NSLog(@"nearbyPlacesRequestFailed");
+}
+
+
+-(void)apiNotification:(NSNotification *)notification{
+    
+    // NSLog([[notification userInfo] description]);
+    //NSLog([[notification object] description]);
+    //NSLog(@"inputFromView:: received %@.\n", [notification object]);
+    
+    NSString *theobj = [notification object];
+    
+    if([theobj isEqualToString:@"updateNearbyPlaces"])
+    {
+        [self updateNearbyPlaces];
+        
+    }
+    
+}
+
+- (void) dealloc {
+    [queue_ release];
+    [user_ release];
+    [locdelegate_ release];
+    [nearbyDelegate_ release];
+    
+    [super dealloc];
 }
 
 @end

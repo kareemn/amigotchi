@@ -12,18 +12,27 @@
 #import "ASIFormDataRequest.h"
 #import "ASINetworkQueue.h"
 #import "AmigoUser.h"
+#import "AmigoLocationDelegate.h"
+#import "Facebook.h"
+#import "NearbyPlacesRequestResult.h"
 
-@interface AmigoAPI : NSObject {
+@interface AmigoAPI : NSObject<NearbyPlacesRequestDelegate> {
     
     
 }
 
-@property (nonatomic, readwrite, retain) ASINetworkQueue      *queue;
-@property (nonatomic, readwrite, retain) AmigoUser            *user;
+@property (nonatomic, readwrite, retain) ASINetworkQueue        *queue;
+@property (nonatomic, readwrite, retain) AmigoUser              *user;
+@property (nonatomic, retain)            AmigoLocationDelegate  *locdelegate;
+@property (nonatomic, retain)            Facebook               *facebook;
+@property (nonatomic, retain)            NearbyPlacesRequestResult *nearbyDelegate;
 
 
 -(void)login:(NSString*)access_token;
-
+-(void) updateNearbyPlaces;
+- (void) nearbyPlacesRequestCompletedWithPlaces:(NSArray *)placesArray;
+- (void) nearbyPlacesRequestFailed;
+-(void)apiNotification:(NSNotification *)notification;
 
 //helpers
 - (id)parseJsonResponse:(NSString *)responseString;

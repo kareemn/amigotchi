@@ -32,9 +32,8 @@
 // returns a CCScene that contains the FacebookLayer as the only child
 +(CCScene *) scene;
 
-- (id) initWithLoginDelagate: (AmigoCallbackDelegate *)del;
+- (id) initWithAmigoAPI: (AmigoAPI *)a;
 
-- (void)initApi;
 - (void)initNotifiation;
 
 - (void)facebookLogin;

@@ -19,7 +19,7 @@
 @synthesize loginlayer = loginlayer_;
 @synthesize checkinlayer = checkinlayer_;
 @synthesize newsLayer = newsLayer_;
-@synthesize locDelegate = locDelegate_;
+@synthesize api = api_;
 
 +(CCScene *) scene
 {
@@ -46,10 +46,9 @@
         //listen for notifications
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateNotification:) name:AMIGONAVNOTIFICATION object:nil];
-        
-        self.locDelegate = [[[AmigoLocationDelegate alloc] init] autorelease];
+        self.api = [[[AmigoAPI alloc] init] autorelease];
        
-        LoginLayer *temploginlayer = [[LoginLayer alloc] initWithLoginDelagate:[self createLoginCallbackDelegate]];
+        LoginLayer *temploginlayer = [[LoginLayer alloc] initWithAmigoAPI:self.api];
         self.loginlayer = temploginlayer;
         [temploginlayer release];
 
@@ -127,6 +126,10 @@
         NSLog(@"navigateNotification::feed clicked");
         [self.petlayer.pet feed:1];
         
+    }
+    else if( [theobj isEqualToString:@"loggedin"] ){
+        NSLog(@"navigateNotification::loggedin");
+        [self loggedInCallback];
     }
     else 
     {
@@ -214,7 +217,6 @@
     [envlayer_ release];
     [checkinlayer_ release];
     [newsLayer_ release];
-    [locDelegate_ release];
     
 	[super dealloc];
 }

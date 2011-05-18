@@ -19,6 +19,9 @@
 	if(self != nil) {
 		self.locManager = [[[CLLocationManager alloc] init] autorelease];
 		self.locManager.delegate = self; 
+        self.currLoc = [[[CLLocation alloc] initWithLatitude:0 longitude:0] autorelease];
+        
+        
 	}
     
 	return self;

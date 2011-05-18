@@ -23,7 +23,7 @@
 #import "NewsLayer.h"
 #import "AmigoLocationDelegate.h"
 #import "TestScene.h"
-
+#import "AmigoAPI.h"
 #import "MapScene.h"
 
 // HomeLayer
@@ -37,8 +37,7 @@
 @property (nonatomic, retain) EnvironmentLayer      *envlayer;
 @property (nonatomic, retain) CheckinLayer          *checkinlayer;
 @property (nonatomic, retain) NewsLayer             *newsLayer;
-@property (nonatomic, retain) AmigoLocationDelegate *locDelegate;
-@property (nonatomic, retain) UINavigationController *nav;
+@property (nonatomic, retain) AmigoAPI              *api;
 
 // returns a CCScene that contains the HomeLayer as the only child
 + (CCScene *) scene;

@@ -32,6 +32,7 @@
 #define PETVIEWCHANGE @"petView"
 
 #define AMIGONAVNOTIFICATION @"com.kipkipkareem.amigotchi.navigate"
+#define AMIGOAPINOTIFICATION @"com.kipkipkareem.amigotchi.apinav"
 #define LOGINVIEWCHANGE @"loginView"
 
 #define AMIGONAVCONTROLLER @"com.kipkipkareem.amigotchi.navcontroller"
