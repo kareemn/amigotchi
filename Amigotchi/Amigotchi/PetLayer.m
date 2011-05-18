@@ -83,7 +83,7 @@
     {
     }
     NSLog(@"KVO!\n");
-    [self.view refreshSpriteswithHappiness:self.pet.happiness andHunger:self.pet.hunger andBathroom:self.pet.bathroom];
+    [self.view refreshSpriteswithHappiness:self.pet.happiness andHunger:self.pet.hunger andBathroom:self.pet.bathroom andAge:self.pet.age];
 }
 
 

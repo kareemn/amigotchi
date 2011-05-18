@@ -19,7 +19,7 @@
 - (id) initWithCallbackDelegate: (AmigoCallbackDelegate *)delegate;
 - (void) setSprites;
 - (void) setButtons;
-- (void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom;
+- (void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age;
 - (void) handleButton:(id)sender;
 - (void) drawPoops:(int)numPoops;
 - (void) drawBarsHappiness:(int)happiness Hunger:(int)hunger;

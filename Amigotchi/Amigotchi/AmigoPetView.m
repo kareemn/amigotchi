@@ -178,7 +178,7 @@
     self.buttons.position = CGPointMake(self.mySprite.position.x, -.8 * size.height);
 }
 
--(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom
+-(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age
 {
     //All sprite-related calculations will go here.
     [self.mySprite stopAllActions];
@@ -208,6 +208,8 @@
     
     [self drawPoops:bathroom];
     [self drawBarsHappiness:happiness Hunger:hunger];
+    
+    //scale it here.
 }
 
 -(void) drawPoops:(int)numPoops

@@ -116,6 +116,7 @@
     
     self.navigationController = [[[AmigoNavigationController alloc] initWithRootViewController: home] autorelease];
     self.window.rootViewController = self.navigationController;
+    self.navigationController.navigationBarHidden = NO;
     [home release];
     
     [[CCDirector sharedDirector] runWithScene: [Home scene]];
