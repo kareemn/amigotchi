@@ -11,6 +11,8 @@
 
 @implementation AmigoTableViewController
 
+@synthesize placesArray = placesArray_;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
