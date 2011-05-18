@@ -9,6 +9,7 @@
 
 // Import the interfaces
 #import "Home.h"
+#import "AppDelegate.h"
 
 
 // HomeLayer implementation
@@ -46,7 +47,8 @@
         //listen for notifications
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateNotification:) name:AMIGONAVNOTIFICATION object:nil];
-        self.api = [[[AmigoAPI alloc] init] autorelease];
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        self.api = [app api];
        
         LoginLayer *temploginlayer = [[LoginLayer alloc] initWithAmigoAPI:self.api];
         self.loginlayer = temploginlayer;
@@ -206,6 +208,8 @@
     [self showPetScreen];
     [self.newsLayer newsWithString:@"Welcome back!"];
     [[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.petlayer.pet interval:4.0f paused:NO];
+    
+    
 }
 
 

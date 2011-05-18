@@ -18,6 +18,7 @@
 
 @synthesize window;
 @synthesize navigationController = navigationController_;
+@synthesize api = api_;
 
 - (void) removeStartupFlicker
 {
@@ -56,6 +57,8 @@
 	// Init the View Controller
 	viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
 	viewController.wantsFullScreenLayout = YES;
+    
+    self.api = [[[AmigoAPI alloc] init] autorelease];
 	
 	//
 	// Create the EAGLView manually
@@ -163,6 +166,7 @@
 	[[CCDirector sharedDirector] end];
 	[window release];
     [navigationController_ release];
+    [api_ release];
     
 	[super dealloc];
 }

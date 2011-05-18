@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HomeViewController.h"
 #import "AmigoNavigationController.h"
+#import "AmigoAPI.h"
 
 @class RootViewController;
 
@@ -19,5 +20,6 @@
 
 @property (nonatomic, retain) UIWindow *window;
 @property (nonatomic, retain) AmigoNavigationController *navigationController;
+@property (nonatomic, retain) AmigoAPI                  *api;
 
 @end

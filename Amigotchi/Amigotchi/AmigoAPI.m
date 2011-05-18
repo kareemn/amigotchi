@@ -21,6 +21,7 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
 @synthesize queue = queue_, user = user_, locdelegate = locdelegate_;
 @synthesize facebook = facebook_;
 @synthesize nearbyDelegate = nearbyDelegate_;
+@synthesize checkintable = checkintable_;
 
 
 
@@ -148,6 +149,11 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
 - (void) nearbyPlacesRequestCompletedWithPlaces:(NSArray *)placesArray{
     NSLog(@"HERRRREEEE");
     NSLog(@"hey:: %@", [placesArray description]);
+    
+    if (self.checkintable != nil){
+       self.checkintable.placesArray = placesArray;
+    }
+    
 }
 - (void) nearbyPlacesRequestFailed{
     NSLog(@"nearbyPlacesRequestFailed");
@@ -175,6 +181,7 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     [user_ release];
     [locdelegate_ release];
     [nearbyDelegate_ release];
+    [checkintable_ release];
     
     [super dealloc];
 }

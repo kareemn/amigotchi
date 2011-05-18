@@ -8,6 +8,7 @@
 
 #import "AmigoTableViewController.h"
 #import "AmigoCheckinViewController.h"
+#import "AppDelegate.h"
 
 @implementation AmigoTableViewController
 
@@ -18,8 +19,21 @@
     self = [super initWithStyle:style];
     if (self) {
         self.title = @"Checkins";
+        self.placesArray = [NSArray array];
+        
+        AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        AmigoAPI *api = [app api];
+        api.checkintable = self;
+        
+        
     }
     return self;
+}
+
+- (void) setPlacesArray:(NSArray *)placesArray {
+    [placesArray_ release];
+    placesArray_ = [placesArray retain];
+    [self.tableView reloadData];
 }
 
 - (void)dealloc
@@ -92,24 +106,23 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return [self.placesArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+	static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
-    if (indexPath.row == 0) {
-        [cell.textLabel setText:@"hi"];
-    }
+	if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+	}
     
-    return cell;
+	cell.textLabel.text = (NSString *)[[self.placesArray objectAtIndex:indexPath.row] objectForKey:@"name"];
+	cell.detailTextLabel.text = (NSString *)[[self.placesArray objectAtIndex:indexPath.row] valueForKeyPath:@"location.street"];
+    
+	return cell;
 }
 
 /*
@@ -157,11 +170,8 @@
 {
     AmigoCheckin *checkin = [[AmigoCheckin alloc] init];
     
-    if (indexPath.row == 0) {
-        //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"]];
-        checkin.title = @"HIIIII";
+    checkin.title = (NSString *)[[self.placesArray objectAtIndex:indexPath.row] objectForKey:@"name"];
         
-    }
     // Navigation logic may go here. Create and push another view controller.
     
     AmigoCheckinViewController *checkinViewController = [[AmigoCheckinViewController alloc] initWithNibName:nil bundle:nil];
