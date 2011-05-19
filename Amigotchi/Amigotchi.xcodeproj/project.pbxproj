@@ -34,6 +34,7 @@
 		37DC98011379D11E00934783 /* happiness_bar_container.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DC97FF1379D11E00934783 /* happiness_bar_container.png */; };
 		37DC98021379D11E00934783 /* hunger_bar_container.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DC98001379D11E00934783 /* hunger_bar_container.png */; };
 		C70A7B621354C520007A82CB /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C70A7B611354C520007A82CB /* app_icon.png */; };
+		C70E86D41384B7F300D1323F /* checkin_box.png in Resources */ = {isa = PBXBuildFile; fileRef = C70E86D31384B7F300D1323F /* checkin_box.png */; };
 		C716CE371354B2D700CBD983 /* PetLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE361354B2D700CBD983 /* PetLayer.m */; };
 		C716CE3A1354B4A400CBD983 /* LoginLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C716CE391354B4A400CBD983 /* LoginLayer.m */; };
 		C72A847B136BBF860095BD51 /* AmigoCallbackDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A847A136BBF860095BD51 /* AmigoCallbackDelegate.m */; };
@@ -261,6 +262,7 @@
 		37DC97FF1379D11E00934783 /* happiness_bar_container.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = happiness_bar_container.png; path = Resources/happiness_bar_container.png; sourceTree = "<group>"; };
 		37DC98001379D11E00934783 /* hunger_bar_container.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hunger_bar_container.png; path = Resources/hunger_bar_container.png; sourceTree = "<group>"; };
 		C70A7B611354C520007A82CB /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon.png; path = Resources/app_icon.png; sourceTree = "<group>"; };
+		C70E86D31384B7F300D1323F /* checkin_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkin_box.png; path = Resources/checkin_box.png; sourceTree = "<group>"; };
 		C716CE351354B2D700CBD983 /* PetLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetLayer.h; sourceTree = "<group>"; };
 		C716CE361354B2D700CBD983 /* PetLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetLayer.m; sourceTree = "<group>"; };
 		C716CE381354B4A400CBD983 /* LoginLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginLayer.h; sourceTree = "<group>"; };
@@ -835,6 +837,7 @@
 		C77E5B5213526B140051BD37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C70E86D31384B7F300D1323F /* checkin_box.png */,
 				37DC97FF1379D11E00934783 /* happiness_bar_container.png */,
 				37DC98001379D11E00934783 /* hunger_bar_container.png */,
 				37DC97FD1379CC5700934783 /* hunger_bar.png */,
@@ -1298,6 +1301,7 @@
 				C751678813824FB900202CE9 /* AmigoTableViewController.xib in Resources */,
 				C751678D138255B900202CE9 /* AmigoCheckinViewController.xib in Resources */,
 				3715815413824B6D00040BEC /* MapViewController.xib in Resources */,
+				C70E86D41384B7F300D1323F /* checkin_box.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

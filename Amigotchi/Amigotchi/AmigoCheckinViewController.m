@@ -47,7 +47,9 @@
     
     if (self.checkin != nil) {
         self.title = self.checkin.title;
-        [checkinTitle setText: self.checkin.title];
+        checkinTitle.text = [NSString stringWithFormat:@"Are you sure you would like to check in to %@?", self.checkin.title];
+        button.target = self;
+        button.action = @selector(backHome);
     }
      
     
@@ -64,6 +66,12 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(void)backHome
+{
+    self.navigationController.navigationBarHidden = YES;
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

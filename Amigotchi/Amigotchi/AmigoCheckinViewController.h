@@ -12,9 +12,11 @@
 
 @interface AmigoCheckinViewController : UIViewController {
     IBOutlet UILabel *checkinTitle;
+    IBOutlet UIBarButtonItem * button;
 }
 
 @property (nonatomic, retain) AmigoCheckin *checkin;
 
+-(void)backHome;
 
 @end
