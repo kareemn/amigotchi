@@ -67,6 +67,8 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     [[self queue] go];
     
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"loggedin"]];
+    
+    
     [self.locdelegate.locManager startUpdatingLocation];
 }
 
@@ -154,9 +156,12 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
        self.checkintable.placesArray = placesArray;
     }
     
+    
 }
 - (void) nearbyPlacesRequestFailed{
     NSLog(@"nearbyPlacesRequestFailed");
+    
+    
 }
 
 

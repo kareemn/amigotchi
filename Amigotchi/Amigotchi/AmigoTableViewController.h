@@ -10,7 +10,7 @@
 
 
 @interface AmigoTableViewController : UITableViewController {
-    
+    UIActivityIndicatorView *spinner;
 }
 
 @property (nonatomic, retain) NSArray *placesArray;

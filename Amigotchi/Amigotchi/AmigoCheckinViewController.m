@@ -70,7 +70,7 @@
 
 -(void)backHome
 {
-    self.navigationController.navigationBarHidden = YES;
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

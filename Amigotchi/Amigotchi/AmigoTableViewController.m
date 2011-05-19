@@ -31,10 +31,20 @@
 }
 
 - (void) setPlacesArray:(NSArray *)placesArray {
+
     [placesArray_ release];
     placesArray_ = [placesArray retain];
     [self.tableView reloadData];
+    
+    if ([placesArray count] > 0) {
+        
+        [spinner stopAnimating];
+        [spinner release];
+        spinner = nil;
+    }
+    
 }
+
 
 - (void)dealloc
 {
@@ -54,10 +64,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if( spinner == nil){
+       spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    }
+    
+    [spinner setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/2.0)]; // I do this because I'm in landscape mode
+    [self.tableView addSubview:spinner];
+    [self.tableView bringSubviewToFront:spinner];
+    
+    [spinner startAnimating];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
