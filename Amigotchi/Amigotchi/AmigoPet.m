@@ -22,6 +22,20 @@
     return (self);
 }
 
+-(id)initWithDictionary:(NSDictionary *)dict
+{
+    if((self = [super init]))
+    {
+        self->type = [dict objectForKey:@"type"];
+        self->name = [dict objectForKey:@"name"];
+        self->age = [[dict objectForKey:@"age"]intValue];
+        self->hunger = [[dict objectForKey:@"hunger"]intValue];
+        self->happiness = [[dict objectForKey:@"happiness"]intValue];
+        self->bathroom = [[dict objectForKey:@"bathroom"]intValue];
+    }
+    return self;
+}
+
 -(void)feed:(int)amount
 {
     //Setup variables
@@ -48,8 +62,8 @@
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"I'm starving!"]];
     else if(self.hunger == 0)
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"I'm full!"]];
-    else if(amount > 0)
-        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"Yummy!"]];
+    //else if(amount > 0)
+        //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"Yummy!"]];
 }
 
 -(void)updateBathroom:(int)amount
@@ -113,7 +127,7 @@
 
 -(void) step:(ccTime *)dt
 {
-    NSLog(@"Updating!\n");
+    NSLog(@"AmigoPet::step: Updating!\n");
     
     [self updateBathroom:1];
     [self updateHappiness:(0 - self.bathroom - 1)];
@@ -121,11 +135,19 @@
 
 }
 
-- (void)saveState{
-    
-}
-- (void)loadState{
-    
+-(NSDictionary*)currentState
+{
+    NSArray * keys = [NSArray arrayWithObjects:@"name", @"type", @"age", @"hunger", @"happiness", @"bathroom", nil];
+    NSArray * objects = [NSArray arrayWithObjects:
+                         self.name,
+                         self.type,
+                         [NSNumber numberWithInt:self.age],
+                         [NSNumber numberWithInt:self.hunger],
+                         [NSNumber numberWithInt:self.happiness],
+                         [NSNumber numberWithInt:self.bathroom],
+                         nil];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    return dictionary;
 }
 
 @end

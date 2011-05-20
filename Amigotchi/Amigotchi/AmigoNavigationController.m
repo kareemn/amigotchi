@@ -31,7 +31,7 @@
     
     if([theobj isEqualToString:@"checkin"])
     {
-        NSLog(@"app del got stuff");
+        NSLog(@"AmigoNavigationController got a notification.\n");
         AmigoTableViewController *tableController = [[AmigoTableViewController alloc] init ];
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGOAPINOTIFICATION object:@"updateNearbyPlaces"]];
         

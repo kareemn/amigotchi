@@ -22,9 +22,7 @@
 #import "CheckinLayer.h"
 #import "NewsLayer.h"
 #import "AmigoLocationDelegate.h"
-#import "TestScene.h"
 #import "AmigoAPI.h"
-#import "MapScene.h"
 
 // HomeLayer
 @interface Home : CCScene
@@ -35,7 +33,7 @@
 @property (nonatomic, retain) PetLayer              *petlayer;
 @property (nonatomic, retain) LoginLayer            *loginlayer;
 @property (nonatomic, retain) EnvironmentLayer      *envlayer;
-@property (nonatomic, retain) CheckinLayer          *checkinlayer;
+//@property (nonatomic, retain) CheckinLayer          *checkinlayer;
 @property (nonatomic, retain) NewsLayer             *newsLayer;
 @property (nonatomic, retain) AmigoAPI              *api;
 
@@ -50,8 +48,9 @@
 
 - (void) showLoginScreen;
 - (void) showPetScreen;
-- (void) showMapScreen;
-- (void) showCheckinScreen;
 - (void) showFoodScreen;
+
+- (void)saveState;
+- (void)restoreState;
 
 @end

@@ -50,13 +50,18 @@
                                                                     NSKeyValueObservingOptionInitial) context:nil];
         
         //add a pet view
-        self.view = [[AmigoPetView alloc] init];
+        self.view = [[AmigoPetView alloc] initWithHappiness:self.pet.happiness
+                                                  andHunger:self.pet.hunger
+                                                andBathroom:self.pet.bathroom
+                                                     andAge:self.pet.age];
         self.view.scale = .5;
         self.view.position = ccp(size.width/2, size.height - MENU_HEIGHT - self.view.mySprite.contentSize.height/2);
         [self addChild:self.view z:PET_LAYER];
         
         //listen for notifications
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputFromView:) name:PETVIEWCHANGE object:nil];
+        
+        [[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.pet interval:10.0f paused:NO];
         
         
 	}
@@ -82,7 +87,7 @@
     if([keyPath isEqualToString:@"hunger"])
     {
     }
-    NSLog(@"KVO!\n");
+    //NSLog(@"KVO!\n");
     [self.view refreshSpriteswithHappiness:self.pet.happiness andHunger:self.pet.hunger andBathroom:self.pet.bathroom andAge:self.pet.age];
 }
 

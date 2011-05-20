@@ -20,7 +20,6 @@
 @synthesize mySprite = mySprite_, idleAnimation = idleAnimation_, pokeAnimation = pokeAnimation_;
 @synthesize cache, pokeAction = pokeAction_, idleAction = idleAction_;
 @synthesize buttons = buttons_;
-@synthesize callbackDelegate = callbackDelegate_;
 @synthesize poops = poops_;
 @synthesize poopAnimation = poopAnimation_, poopAction = poopAction_;
 @synthesize happinessBar = happinessBar_, hungerBar = hungerBar_;
@@ -60,16 +59,15 @@
     return self;
 }
 
-- (id) initWithCallbackDelegate: (AmigoCallbackDelegate *)delegate {
-    self = [self init];
-    
-    if(self){
-        self.callbackDelegate = delegate;
+-(id)initWithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age
+{
+    if((self = [super init]))
+    {
+        [self init];
+        [self refreshSpriteswithHappiness:happiness andHunger:hunger andBathroom:bathroom andAge:age];
     }
-    
     return self;
 }
-
 
 -(void) setSprites
 {
@@ -269,11 +267,13 @@
             break;
         case BUTTON_CHECKIN:
             NSLog(@"AmigoPetView::Clicked button to checkin");
-            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"CheckinLayer"]];
+            //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"CheckinLayer"]];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVCONTROLLER object:@"checkin"]];
             break;
         case BUTTON_MAP:
             NSLog(@"AmigoPetView::Clicked button to see map");
-            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"MapScene"]];
+            //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"MapScene"]];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVCONTROLLER object:@"map"]];
             break;
         case BUTTON_TOILET:
             NSLog(@"AmigoPetView::Clicked button to clean bathroom");
@@ -342,7 +342,6 @@
     
     
     //Then release stuff
-    [callbackDelegate_ release];
     [mySprite_ release];
     [poops_ release];
     [idleAction_ release];

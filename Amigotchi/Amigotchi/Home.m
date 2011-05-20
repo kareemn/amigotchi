@@ -18,7 +18,6 @@
 @synthesize petlayer = petlayer_;
 @synthesize envlayer = envlayer_;
 @synthesize loginlayer = loginlayer_;
-@synthesize checkinlayer = checkinlayer_;
 @synthesize newsLayer = newsLayer_;
 @synthesize api = api_;
 
@@ -53,8 +52,9 @@
         LoginLayer *temploginlayer = [[LoginLayer alloc] initWithAmigoAPI:self.api];
         self.loginlayer = temploginlayer;
         [temploginlayer release];
+        [self addChild:self.loginlayer z:LOGIN_LAYER];
 
-        
+        //We should do all this after log in is succesful
         PetLayer *temppetlayer = [[PetLayer alloc] init];
         self.petlayer = temppetlayer;
         [temppetlayer release];
@@ -63,22 +63,13 @@
         self.envlayer = tempenvLayer;
         [tempenvLayer release];
 
-/*
-        CheckinLayer *tempcheckinlayer = [[CheckinLayer alloc] init];
-        self.checkinlayer = tempcheckinlayer;
-        [tempcheckinlayer release];
-    */
         NewsLayer * tempnewslayer = [[NewsLayer alloc] init];
         self.newsLayer = tempnewslayer;
         [tempnewslayer release];
         
         
-        [self addChild:self.loginlayer z:LOGIN_LAYER];
-        
-        
         [self addChild:self.petlayer z:PET_LAYER];
         [self addChild:self.envlayer];
-        //[self addChild:self.checkinlayer];
         [self addChild:self.newsLayer z:HUD_LAYER];
          
         
@@ -110,11 +101,9 @@
     if([theobj isEqualToString:@"MapScene"])
     {
         NSLog(@"navigateNotification::show map scene clicked");
-        [self showMapScreen];
     }
     else if ( [theobj isEqualToString:@"CheckinLayer"] ){
         NSLog(@"navigateNotification::show checkin layer clicked");
-        [self showCheckinScreen];
     }
     else if( [theobj isEqualToString:@"toilet"] ) {
         NSLog(@"navigateNotification::toilet clicked");
@@ -141,75 +130,41 @@
 
 - (void) showLoginScreen {
     NSLog(@"Home::showLoginScreen");
-    [[CCDirector sharedDirector] pushScene:self.loginlayer];
-    
-    
     [self.loginlayer setVisible:YES];
     [self.petlayer setVisible:NO];
     [self.envlayer setVisible:NO];
-    //[self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:NO];
-    
-    
-
 }
 
 - (void) showPetScreen {
     NSLog(@"Home::showPetScreen");
-    //[[CCDirector sharedDirector] pushScene: [[TestScene alloc] init]];
-    
     [self.loginlayer setVisible:NO];
     [self.petlayer setVisible:YES];
     [self.envlayer setVisible:YES];
-    //[self.checkinlayer setVisible:NO];
     [self.newsLayer setVisible:YES];
-     
-    
-    
 }
-- (void) showMapScreen {
-    NSLog(@"Home::showMapScreen");
-        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVCONTROLLER object:@"map"]];
-    /*MapScene * ms = [[TestScene alloc] init];
-    [[CCDirector sharedDirector] pushScene:ms];
-    [ms release];*/
-    
-    
-    /*
-    [self.loginlayer setVisible:NO];
-    [self.petlayer setVisible:NO];
-    [self.envlayer setVisible:NO];
-    [self.checkinlayer setVisible:NO];
-    [self.newsLayer setVisible:NO];
-    */
-}
-- (void) showCheckinScreen {
-    NSLog(@"Home::showCheckinScreen");
-    
-    //[[CCDirector sharedDirector] pushScene:[CheckinLayer scene]];
-    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVCONTROLLER object:@"checkin"]];
-    
-    /*
-    [self.loginlayer setVisible:NO];
-    [self.petlayer setVisible:NO];
-    [self.envlayer setVisible:NO];
-    [self.checkinlayer setVisible:YES];
-    [self.newsLayer setVisible:NO];
-     */
-}
+
 - (void) showFoodScreen {
     NSLog(@"Home::showFoodScreen");
-    
 }
 
 - (void) loggedInCallback {
-    
     NSLog(@"HomeLayer::loggedInCallback");
     [self showPetScreen];
     [self.newsLayer newsWithString:@"Welcome back!"];
-    [[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.petlayer.pet interval:4.0f paused:NO];
-    
-    
+    //[[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.petlayer.pet interval:4.0f paused:NO];
+}
+
+-(void)saveState
+{
+    NSDictionary * theState = [self.petlayer.pet currentState];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:theState forKey:@"gameState"];
+    [defaults synchronize];
+}
+-(void)restoreState
+{
+    NSLog(@"FUCK!");
 }
 
 
@@ -219,7 +174,6 @@
 	[petlayer_ release];
     [loginlayer_ release];
     [envlayer_ release];
-    [checkinlayer_ release];
     [newsLayer_ release];
     
 	[super dealloc];

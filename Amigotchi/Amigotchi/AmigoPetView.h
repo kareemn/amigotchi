@@ -16,7 +16,7 @@
 
 }
 
-- (id) initWithCallbackDelegate: (AmigoCallbackDelegate *)delegate;
+- (id) initWithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age;
 - (void) setSprites;
 - (void) setButtons;
 - (void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age;
@@ -25,7 +25,6 @@
 - (void) drawBarsHappiness:(int)happiness Hunger:(int)hunger;
 
 
-@property (nonatomic, retain) AmigoCallbackDelegate *callbackDelegate;
 @property (nonatomic, retain) CCSprite * mySprite;
 @property (nonatomic, retain) NSMutableArray * poops;
 @property (nonatomic, retain) CCMenu * buttons;
