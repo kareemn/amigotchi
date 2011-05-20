@@ -23,7 +23,6 @@
 @property (readwrite, assign) int bathroom;
 @property (readwrite, assign) int happiness;
 
-- (id) initWithDictionary:(NSDictionary*)dict;
 - (void)feed:(int)amount;
 - (void)updateHappiness:(int)amount;
 - (void)updateBathroom:(int)amount;
@@ -31,5 +30,6 @@
 - (void)step:(ccTime*)dt;
 
 - (NSDictionary*)currentState;
+- (void)restoreState:(NSDictionary*)dict;
 
 @end

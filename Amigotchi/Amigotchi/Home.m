@@ -20,6 +20,7 @@
 @synthesize loginlayer = loginlayer_;
 @synthesize newsLayer = newsLayer_;
 @synthesize api = api_;
+@synthesize loggedIn = loggedIn_;
 
 +(CCScene *) scene
 {
@@ -43,6 +44,8 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
+        self.loggedIn = NO;
+        
         //listen for notifications
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateNotification:) name:AMIGONAVNOTIFICATION object:nil];
@@ -122,6 +125,10 @@
         NSLog(@"navigateNotification::loggedin");
         [self loggedInCallback];
     }
+    else if( [theobj isEqualToString:@"saveState"] ){
+        NSLog(@"navigateNotification::About to save state.\n");
+        [self saveState];
+    }
     else 
     {
         [self.newsLayer newsWithString:theobj];
@@ -151,20 +158,33 @@
 - (void) loggedInCallback {
     NSLog(@"HomeLayer::loggedInCallback");
     [self showPetScreen];
-    [self.newsLayer newsWithString:@"Welcome back!"];
+    [self restoreState];
+    self.loggedIn = YES;
+    //[self.newsLayer newsWithString:@"Welcome back!"];
     //[[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.petlayer.pet interval:4.0f paused:NO];
 }
 
 -(void)saveState
 {
+    if(self.loggedIn == NO)
+        return;
+    
+    NSLog(@"saveState: Logged in, saving state.\n");
     NSDictionary * theState = [self.petlayer.pet currentState];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:theState forKey:@"gameState"];
     [defaults synchronize];
 }
+
 -(void)restoreState
 {
-    NSLog(@"FUCK!");
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary * theState = [defaults objectForKey:@"gameState"];
+    if(theState)
+    {
+        [self.petlayer.pet restoreState:theState];
+        [self.newsLayer newsWithString:@"Welcome back!"];
+    }
 }
 
 

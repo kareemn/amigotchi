@@ -22,20 +22,6 @@
     return (self);
 }
 
--(id)initWithDictionary:(NSDictionary *)dict
-{
-    if((self = [super init]))
-    {
-        self->type = [dict objectForKey:@"type"];
-        self->name = [dict objectForKey:@"name"];
-        self->age = [[dict objectForKey:@"age"]intValue];
-        self->hunger = [[dict objectForKey:@"hunger"]intValue];
-        self->happiness = [[dict objectForKey:@"happiness"]intValue];
-        self->bathroom = [[dict objectForKey:@"bathroom"]intValue];
-    }
-    return self;
-}
-
 -(void)feed:(int)amount
 {
     //Setup variables
@@ -148,6 +134,16 @@
                          nil];
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     return dictionary;
+}
+
+-(void)restoreState:(NSDictionary *)dict
+{
+    self.type = [dict objectForKey:@"type"];
+    self.name = [dict objectForKey:@"name"];
+    self.age = [[dict objectForKey:@"age"]intValue];
+    self.hunger = [[dict objectForKey:@"hunger"]intValue];
+    self.happiness = [[dict objectForKey:@"happiness"]intValue];
+    self.bathroom = [[dict objectForKey:@"bathroom"]intValue];
 }
 
 @end

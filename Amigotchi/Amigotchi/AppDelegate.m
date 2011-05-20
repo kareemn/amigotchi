@@ -139,6 +139,7 @@
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application {
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"saveState"]];
 	[[CCDirector sharedDirector] stopAnimation];
 }
 

@@ -36,6 +36,7 @@
 //@property (nonatomic, retain) CheckinLayer          *checkinlayer;
 @property (nonatomic, retain) NewsLayer             *newsLayer;
 @property (nonatomic, retain) AmigoAPI              *api;
+@property BOOL loggedIn;
 
 // returns a CCScene that contains the HomeLayer as the only child
 + (CCScene *) scene;
