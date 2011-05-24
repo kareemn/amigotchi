@@ -181,8 +181,13 @@
     //All sprite-related calculations will go here.
     [self.mySprite stopAllActions];
     
-    self.idleAnimation = nil;
-    self.idleAnimation = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
+    if(self.idleAnimation)
+    {
+        self.idleAnimation = nil;
+    }
+    CCAnimation * newIdle = [[CCAnimation alloc] initWithName:@"idle" delay: 1.0/2];
+    self.idleAnimation = newIdle;
+    [newIdle release];
     
     if(happiness >= MAX_HAPPINESS/2)
     {
@@ -223,7 +228,7 @@
             
             tempPoop.position = ccp(newX, tempPoop.position.y);
         
-            CCAction * tempAction = [CCRepeatForever actionWithAction: [self.poopAction copy]];
+            CCAction * tempAction = [CCRepeatForever actionWithAction: [[self.poopAction copy]autorelease]];
             [tempPoop runAction:tempAction];
         }
     }
