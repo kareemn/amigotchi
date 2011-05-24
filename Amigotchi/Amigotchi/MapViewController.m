@@ -39,6 +39,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"Map";
 }
 
 - (void)viewDidUnload
@@ -46,6 +47,14 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    /*CLLocationCoordinate2D coord = {latitude: 37.423617, longitude: -122.220154};
+    MKCoordinateSpan span = {latitudeDelta: 1, longitudeDelta: 1};
+    MKCoordinateRegion region = {coord, span};
+    [mView setRegion:region];*/
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
