@@ -16,6 +16,7 @@
 		374C86F41370CA2800D7A5A8 /* NewsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 374C86F31370CA2800D7A5A8 /* NewsLayer.m */; };
 		374C86F71370CA5A00D7A5A8 /* NewsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374C86F61370CA5A00D7A5A8 /* NewsView.m */; };
 		374C86F91370CE7F00D7A5A8 /* newsstand.png in Resources */ = {isa = PBXBuildFile; fileRef = 374C86F81370CE7F00D7A5A8 /* newsstand.png */; };
+		3754D832138B55BF007C7A28 /* navbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3754D831138B55BF007C7A28 /* navbar_bg.png */; };
 		375FD37B136CE8BC004DAC1F /* buttons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 375FD379136CE8BC004DAC1F /* buttons.plist */; };
 		375FD37C136CE8BC004DAC1F /* buttons.png in Resources */ = {isa = PBXBuildFile; fileRef = 375FD37A136CE8BC004DAC1F /* buttons.png */; };
 		378B7BC613540B130060242D /* dragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC413540B130060242D /* dragon.plist */; };
@@ -235,6 +236,7 @@
 		374C86F51370CA5A00D7A5A8 /* NewsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsView.h; sourceTree = "<group>"; };
 		374C86F61370CA5A00D7A5A8 /* NewsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsView.m; sourceTree = "<group>"; };
 		374C86F81370CE7F00D7A5A8 /* newsstand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newsstand.png; path = Resources/newsstand.png; sourceTree = "<group>"; };
+		3754D831138B55BF007C7A28 /* navbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar_bg.png; path = Resources/navbar_bg.png; sourceTree = "<group>"; };
 		375FD379136CE8BC004DAC1F /* buttons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = buttons.plist; path = Resources/buttons.plist; sourceTree = "<group>"; };
 		375FD37A136CE8BC004DAC1F /* buttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttons.png; path = Resources/buttons.png; sourceTree = "<group>"; };
 		378B7BC413540B130060242D /* dragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = dragon.plist; path = Resources/dragon.plist; sourceTree = "<group>"; };
@@ -827,6 +829,7 @@
 		C77E5B5213526B140051BD37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3754D831138B55BF007C7A28 /* navbar_bg.png */,
 				C70E86D31384B7F300D1323F /* checkin_box.png */,
 				37DC97FF1379D11E00934783 /* happiness_bar_container.png */,
 				37DC98001379D11E00934783 /* hunger_bar_container.png */,
@@ -1292,6 +1295,7 @@
 				C751678D138255B900202CE9 /* AmigoCheckinViewController.xib in Resources */,
 				3715815413824B6D00040BEC /* MapViewController.xib in Resources */,
 				C70E86D41384B7F300D1323F /* checkin_box.png in Resources */,
+				3754D832138B55BF007C7A28 /* navbar_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

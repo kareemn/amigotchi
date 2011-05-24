@@ -70,7 +70,6 @@
 
 -(void)backHome
 {
-    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
