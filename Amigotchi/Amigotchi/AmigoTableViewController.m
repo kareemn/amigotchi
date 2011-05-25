@@ -190,6 +190,12 @@
     AmigoCheckin *checkin = [[AmigoCheckin alloc] init];
     
     checkin.title = (NSString *)[[self.placesArray objectAtIndex:indexPath.row] objectForKey:@"name"];
+    checkin.place_id = [[self.placesArray objectAtIndex:indexPath.row] objectForKey:@"id"];
+        
+    NSDictionary *location = [[self.placesArray objectAtIndex:indexPath.row] objectForKey:@"location"];
+    checkin.lat = [location objectForKey:@"latitude"] ;
+    checkin.lon = [location objectForKey:@"longitude"] ;
+    
         
     // Navigation logic may go here. Create and push another view controller.
     

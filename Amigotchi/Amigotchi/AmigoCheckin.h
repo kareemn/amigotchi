@@ -10,9 +10,12 @@
 
 
 @interface AmigoCheckin : NSObject {
-    
 }
 
+@property (nonatomic, retain) NSNumber *place_id;
 @property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *lat;
+@property (nonatomic, retain) NSString *lon;
+
 
 @end

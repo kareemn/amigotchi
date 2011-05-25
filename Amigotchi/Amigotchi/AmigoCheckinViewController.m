@@ -7,7 +7,7 @@
 //
 
 #import "AmigoCheckinViewController.h"
-
+#import "AppDelegate.h"
 
 @implementation AmigoCheckinViewController
 
@@ -47,6 +47,10 @@
     
     if (self.checkin != nil) {
         self.title = self.checkin.title;
+        NSLog(@"place id is %@", self.checkin.place_id);
+        NSLog(@"lon is %@", self.checkin.lon);
+        NSLog(@"lat is %@", self.checkin.lat);
+        
         checkinTitle.text = [NSString stringWithFormat:@"Are you sure you would like to check in to %@?", self.checkin.title];
         button.target = self;
         button.action = @selector(backHome);
@@ -70,6 +74,8 @@
 
 -(void)backHome
 {
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate.api checkin:self.checkin];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

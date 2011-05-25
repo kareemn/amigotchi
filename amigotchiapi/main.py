@@ -41,6 +41,14 @@ class Pet(db.Model):
     bathroom = db.IntegerProperty()
     pic = db.BlobProperty()
 
+##checkin
+class Checkin(db.Model):
+    checkindate = db.DateTimeProperty(auto_now_add=True)
+    title = db.StringProperty(required=True)
+    owner = db.ReferenceProperty(User)
+    place_id = db.StringProperty(required=True)
+    location = db.GeoPtProperty(required=True)
+
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
@@ -70,7 +78,6 @@ class UserLoginHandler(webapp.RequestHandler):
             self.response.out.write(json.dumps(profile))
 
 
-
 class PetNewHandler(webapp.RequestHandler):
     def get(self):
         self.response.out.write("doesn't work here buddy")
@@ -98,10 +105,74 @@ class PetNewHandler(webapp.RequestHandler):
             self.response.out.write(json.dumps(profile))
 
 
+###
+class CheckinHandler(webapp.RequestHandler):
+    def get(self):
+        self.response.out.write("doesn't work here buddy")
+
+    def post(self):
+
+        access_token = self.request.get("access_token")
+
+        checkin = {}
+        checkin["title"] = self.request.get("title")		
+        checkin["place_id"] = self.request.get("place_id")	
+        checkin["lon"] = float(self.request.get("lon"))
+        checkin["lat"] = float(self.request.get("lat"))
+
+        # Download the user profile and cache a local instance of the
+        # basic profile info
+        profile = json.load(urllib.urlopen(
+            "https://graph.facebook.com/me?" +
+            urllib.urlencode(dict(access_token=access_token))))
+
+        if profile.get("error"):
+           self.response.out.write(json.dumps(profile))
+        else:
+            user_id = profile["id"]
+            user_key = db.Key.from_path('User', user_id)
+
+            current_user = User.get(user_key)
+            savethis = Checkin( title=checkin["title"], owner=current_user, place_id=checkin["place_id"], location=db.GeoPt(checkin["lat"], checkin["lon"]) )
+            savethis.put()
+
+            self.response.out.write(json.dumps(checkin))
+
+##
+###
+class NearbyHandler(webapp.RequestHandler):
+    def get(self):
+        self.response.out.write("doesn't work here buddy")
+
+    def post(self):
+
+        access_token = self.request.get("access_token")
+        #nearby = {}
+        #nearby["lon"] = float(self.request.get("lon"))
+        #nearby["lat"] = float(self.request.get("lat"))
+
+        # Download the user profile and cache a local instance of the
+        # basic profile info
+        profile = json.load(urllib.urlopen(
+            "https://graph.facebook.com/me?" +
+            urllib.urlencode(dict(access_token=access_token))))
+
+        if profile.get("error"):
+           self.response.out.write(json.dumps(profile))
+        else:
+            nearby = []
+            q = Checkin.all()
+            results = q.fetch(5)
+            for checkin in results:
+               nearby.append(dict(lat=checkin.location.lat,lon=checkin.location.lon, title=checkin.title, owner=checkin.owner.name))
+            self.response.out.write(json.dumps(nearby))
+
 def main():
     application = webapp.WSGIApplication([('/', MainHandler),
                                           ('/user/login', UserLoginHandler),
-                                          ('/pet/new', PetNewHandler)],
+                                          ('/pet/new', PetNewHandler),
+                                          ('/checkin', CheckinHandler),
+                                          ('/nearby', NearbyHandler)],
                                          debug=True)
     util.run_wsgi_app(application)
 

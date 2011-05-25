@@ -7,7 +7,7 @@
 //
 
 #import "MapViewController.h"
-
+#import "AppDelegate.h"
 
 @implementation MapViewController
 
@@ -40,6 +40,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"Map";
+    
+    AppDelegate *delegate = [[UIApplication sharedApplication]delegate];
+    CLLocation *location = delegate.api.locdelegate.currLoc;
+    NSString *lat = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
+    NSString *lon = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
+    
+    [delegate.api getNearbyCheckinsForLat:lat andLon:lon];
 }
 
 - (void)viewDidUnload

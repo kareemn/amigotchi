@@ -12,6 +12,8 @@
 
 static NSString* API_ROOT = @"http://amigotchiapi.appspot.com";
 static NSString* LOGIN_ENDPOINT = @"/user/login";
+static NSString* CHECKIN_ENDPOINT = @"/checkin";
+static NSString* NEARBY_ENDPOINT = @"/nearby";
 
 
 
@@ -180,6 +182,90 @@ static NSString* LOGIN_ENDPOINT = @"/user/login";
     }
     
 }
+
+-(void) checkin: (AmigoCheckin *)c{
+    
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", API_ROOT, CHECKIN_ENDPOINT] ];
+    
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    [request setDidFinishSelector:@selector(checkinRequestDone:)];
+    [request setDidFailSelector:@selector(checkinRequestWentWrong:)];
+    
+    [request setPostValue:self.user.access_token forKey:@"access_token"];
+    [request setPostValue:c.place_id forKey:@"place_id"];
+    [request setPostValue:c.title forKey:@"title"];
+    [request setPostValue:c.lat forKey:@"lat"];
+    [request setPostValue:c.lon forKey:@"lon"];
+    
+    
+    NSLog(@"adding to queue");
+    [[self queue] addOperation:request];
+    [[self queue] go];
+    
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"checkedin"]];
+
+}
+
+
+- (void)checkinRequestDone:(ASIHTTPRequest *)request
+{
+    NSString *response = [request responseString];
+    //id parsedJson = [self parseJsonResponse:response];
+    
+    NSLog(@"checkinRequestDone %@", response);
+    
+}
+
+- (void)checkinRequestWentWrong:(ASIHTTPRequest *)request
+{
+    NSError *error = [request error];
+    NSLog(@"checkin error: %@", error);
+}
+
+
+
+-(void) getNearbyCheckinsForLat: (NSString *)lat andLon:(NSString *)lon{
+    
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", API_ROOT, NEARBY_ENDPOINT] ];
+    
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    [request setDidFinishSelector:@selector(nearbyRequestDone:)];
+    [request setDidFailSelector:@selector(nearbyRequestWentWrong:)];
+    
+    [request setPostValue:self.user.access_token forKey:@"access_token"];
+    [request setPostValue:lat forKey:@"lat"];
+    [request setPostValue:lon forKey:@"lon"];
+    
+    
+    NSLog(@"adding to queue");
+    [[self queue] addOperation:request];
+    [[self queue] go];
+    
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"checkedin"]];
+    
+}
+
+- (void)nearbyRequestDone:(ASIHTTPRequest *)request
+{
+    NSString *response = [request responseString];
+    //id parsedJson = [self parseJsonResponse:response];
+    
+    NSLog(@"nearbyRequestDone %@", response);
+    
+}
+
+- (void)nearbyRequestWentWrong:(ASIHTTPRequest *)request
+{
+    NSError *error = [request error];
+    NSLog(@"nearby error: %@", error);
+}
+
 
 - (void) dealloc {
     [queue_ release];

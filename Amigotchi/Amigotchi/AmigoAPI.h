@@ -16,6 +16,7 @@
 #import "Facebook.h"
 #import "NearbyPlacesRequestResult.h"
 #import "AmigoTableViewController.h"
+#import "AmigoCheckin.h"
 
 @interface AmigoAPI : NSObject<NearbyPlacesRequestDelegate> {
     
@@ -32,6 +33,9 @@
 
 -(void)login:(NSString*)access_token;
 -(void) updateNearbyPlaces;
+-(void) checkin: (AmigoCheckin *)c;
+-(void) getNearbyCheckinsForLat: (NSString *)lat andLon:(NSString *)lon;
+
 - (void) nearbyPlacesRequestCompletedWithPlaces:(NSArray *)placesArray;
 - (void) nearbyPlacesRequestFailed;
 -(void)apiNotification:(NSNotification *)notification;
