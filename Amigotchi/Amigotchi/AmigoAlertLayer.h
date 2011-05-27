@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "cocos2d.h"
+#import "AmigoAlertView.h"
 
 @interface AmigoAlertLayer : CCLayer {
     
 }
+@property (nonatomic, retain) AmigoAlertView * myView;
 
+-(void)displayAlertWithString:(NSString*)stringLabel andPicture:(NSString*)picturePath;
 @end

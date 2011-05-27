@@ -13,6 +13,7 @@
     
 }
 
+@property (nonatomic, retain) NSString * myString;
 @property (nonatomic, retain) CCSprite * box;
 @property (nonatomic, retain) CCSprite * picture;
 @property (nonatomic, retain) CCLabelTTF * label;

@@ -19,6 +19,7 @@
 @synthesize envlayer = envlayer_;
 @synthesize loginlayer = loginlayer_;
 @synthesize newsLayer = newsLayer_;
+@synthesize alertLayer = alertLayer_;
 @synthesize api = api_;
 @synthesize loggedIn = loggedIn_;
 
@@ -70,11 +71,15 @@
         self.newsLayer = tempnewslayer;
         [tempnewslayer release];
         
+        AmigoAlertLayer * tempAlertLayer = [[AmigoAlertLayer alloc] init];
+        self.alertLayer = tempAlertLayer;
+        [tempAlertLayer release];
+        
         
         [self addChild:self.petlayer z:PET_LAYER];
         [self addChild:self.envlayer];
         [self addChild:self.newsLayer z:HUD_LAYER];
-         
+        [self addChild:self.alertLayer z:HUD_LAYER];         
         
         [self showLoginScreen];
         
@@ -119,6 +124,7 @@
     else if( [theobj isEqualToString:@"feed"] ) {
         NSLog(@"navigateNotification::feed clicked");
         [self.petlayer.pet feed:1];
+        [self.alertLayer displayAlertWithString:@"Feeding..." andPicture:nil];
         
     }
     else if( [theobj isEqualToString:@"loggedin"] ){
@@ -163,9 +169,10 @@
     //[self.newsLayer newsWithString:@"Welcome back!"];
     //[[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.petlayer.pet interval:4.0f paused:NO];
     //Test alert stuff
-    AmigoAlertView * testAlert = [[AmigoAlertView alloc] initWithLabel:@"Logging in..." andPicture:@"screen.png"];
-    [self addChild:testAlert z:HUD_LAYER];
-    [testAlert display];
+    //AmigoAlertView * testAlert = [[AmigoAlertView alloc] initWithLabel:@"Logging in..." andPicture:@"screen.png"];
+    //[self addChild:testAlert z:HUD_LAYER];
+    //[testAlert display];
+    [self.alertLayer displayAlertWithString:@"Logging in..." andPicture:nil];
 }
 
 -(void)saveState
@@ -199,6 +206,7 @@
     [loginlayer_ release];
     [envlayer_ release];
     [newsLayer_ release];
+    [alertLayer_ release];
     [api_ release];
     
 	[super dealloc];

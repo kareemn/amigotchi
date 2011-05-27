@@ -10,5 +10,28 @@
 
 
 @implementation AmigoAlertLayer
+@synthesize myView = myView_;
 
+-(id)init
+{
+    if((self = [super init]))
+    {
+        self.myView = [[AmigoAlertView alloc] initWithLabel:@"default" andPicture:@"app_icon.png"];
+        [self.myView release];
+        [self addChild:self.myView];
+    }
+    return self;
+}
+
+-(void)displayAlertWithString:(NSString *)stringLabel andPicture:(NSString *)picturePath
+{
+    self.myView.myString = stringLabel;
+    [self.myView display];
+}
+
+-(void)dealloc
+{
+    [myView_ release];
+    [super dealloc];
+}
 @end
