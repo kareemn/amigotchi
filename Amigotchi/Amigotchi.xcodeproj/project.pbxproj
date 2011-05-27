@@ -26,6 +26,7 @@
 		378B7BC9135410060060242D /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 378B7BC8135410060060242D /* app_icon.png */; };
 		37A59BDE138236EB0080C338 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A59BDC138236EB0080C338 /* HomeViewController.m */; };
 		37A59BDF138236EB0080C338 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A59BDD138236EB0080C338 /* HomeViewController.xib */; };
+		37ABF554138F48F5002084B3 /* AmigoAlertLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37ABF553138F48F5002084B3 /* AmigoAlertLayer.m */; };
 		37B8E7B613553315009D0B3F /* AmigoPetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B8E7B513553315009D0B3F /* AmigoPetView.m */; };
 		37D18F881360CF1D0031DFF5 /* AccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D18F871360CF1D0031DFF5 /* AccessoryView.m */; };
 		37D18F8B1360CF4F0031DFF5 /* AccessoryLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D18F8A1360CF4F0031DFF5 /* AccessoryLayer.m */; };
@@ -243,6 +244,8 @@
 		37A59BDB138236EB0080C338 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		37A59BDC138236EB0080C338 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		37A59BDD138236EB0080C338 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		37ABF552138F48F5002084B3 /* AmigoAlertLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoAlertLayer.h; sourceTree = "<group>"; };
+		37ABF553138F48F5002084B3 /* AmigoAlertLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoAlertLayer.m; sourceTree = "<group>"; };
 		37B8E7B413553315009D0B3F /* AmigoPetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoPetView.h; sourceTree = "<group>"; };
 		37B8E7B513553315009D0B3F /* AmigoPetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoPetView.m; sourceTree = "<group>"; };
 		37D18F861360CF1D0031DFF5 /* AccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryView.h; sourceTree = "<group>"; };
@@ -654,6 +657,8 @@
 				C716CE361354B2D700CBD983 /* PetLayer.m */,
 				C716CE381354B4A400CBD983 /* LoginLayer.h */,
 				C716CE391354B4A400CBD983 /* LoginLayer.m */,
+				37ABF552138F48F5002084B3 /* AmigoAlertLayer.h */,
+				37ABF553138F48F5002084B3 /* AmigoAlertLayer.m */,
 			);
 			name = Layers;
 			sourceTree = "<group>";
@@ -1422,6 +1427,7 @@
 				3715815313824B6D00040BEC /* MapViewController.m in Sources */,
 				C7C91A861384848400E462F9 /* NearbyPlacesRequestResult.m in Sources */,
 				3731B20D138F2D58006F9CA4 /* AmigoAlertView.m in Sources */,
+				37ABF554138F48F5002084B3 /* AmigoAlertLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

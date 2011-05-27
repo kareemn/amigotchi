@@ -22,6 +22,7 @@
 #import "AmigoLocationDelegate.h"
 #import "AmigoAPI.h"
 #import "AmigoAlertView.h"
+#import "AmigoAlertLayer.h"
 
 // HomeLayer
 @interface Home : CCScene
@@ -33,6 +34,7 @@
 @property (nonatomic, retain) LoginLayer            *loginlayer;
 @property (nonatomic, retain) EnvironmentLayer      *envlayer;
 @property (nonatomic, retain) NewsLayer             *newsLayer;
+@property (nonatomic, retain) AmigoAlertLayer       *alertLayer;
 @property (nonatomic, retain) AmigoAPI              *api;
 @property BOOL loggedIn;
 
