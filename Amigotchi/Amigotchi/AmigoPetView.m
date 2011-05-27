@@ -18,7 +18,7 @@
 
 @implementation AmigoPetView
 @synthesize mySprite = mySprite_, idleAnimation = idleAnimation_, pokeAnimation = pokeAnimation_;
-@synthesize cache, pokeAction = pokeAction_, idleAction = idleAction_;
+@synthesize cache=cache_, pokeAction = pokeAction_, idleAction = idleAction_;
 @synthesize buttons = buttons_;
 @synthesize poops = poops_;
 @synthesize poopAnimation = poopAnimation_, poopAction = poopAction_;
@@ -349,14 +349,22 @@
     //Then release stuff
     [mySprite_ release];
     [poops_ release];
+    [buttons_ release];
+    [cache_ release];
+    
     [idleAction_ release];
     [idleAnimation_ release];
     [pokeAction_ release];
     [pokeAnimation_ release];
+    
     [poopAction_ release];
     [poopAnimation_ release];
+    
     [happinessBar_ release];
     [hungerBar_ release];
+    
+    [happinessBarContainer_ release];
+    [hungerBarContainer_ release];
     
     [super dealloc];
 }

@@ -10,7 +10,7 @@
 
 
 @implementation EnvironmentView
-@synthesize sky, ground;
+@synthesize sky = sky_, ground = ground_;
 -(id)init
 {
     if((self = [super init]))
@@ -33,5 +33,12 @@
         [self addChild:self.ground z:GROUND_LAYER];
     }
     return (self);
+}
+
+- (void) dealloc {
+    [sky_ release];
+    [ground_ release];
+    
+    [super dealloc];
 }
 @end

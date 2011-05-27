@@ -26,7 +26,12 @@
 	// return the scene
 	return scene;
 }
-
+-(void) dealloc {
+    [_pet release];
+    [_view release];
+    
+    [super dealloc];
+}
 // on "init" you need to initialize your instance
 -(id) init
 {

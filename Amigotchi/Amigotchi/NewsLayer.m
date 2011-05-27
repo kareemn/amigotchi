@@ -60,7 +60,7 @@
 
 -(void) dealloc
 {
-    view_ = nil;
+    [view_ release];
     [super dealloc];
 }
 

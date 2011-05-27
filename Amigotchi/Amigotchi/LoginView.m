@@ -25,6 +25,13 @@
     return self;
 }
 
+-(void)dealloc{
+    [_facebookLoginButton release];
+    [_facebookLogoutButton release];
+    
+    [super dealloc];
+}
+
 -(void)initFacebookButtons{
     //change images
     self.facebookLoginButton = [CCMenuItemImage itemFromNormalImage:@"LoginNormal.png" selectedImage:@"LoginPressed.png" disabledImage:@"LoginPressed.png" target:self selector:@selector(facebookLoginClicked)];
