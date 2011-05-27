@@ -18,8 +18,6 @@
 #import "PetLayer.h"
 #import "LoginLayer.h"
 #import "EnvironmentLayer.h"
-#import "MapLayer.h"
-#import "CheckinLayer.h"
 #import "NewsLayer.h"
 #import "AmigoLocationDelegate.h"
 #import "AmigoAPI.h"
@@ -34,7 +32,6 @@
 @property (nonatomic, retain) PetLayer              *petlayer;
 @property (nonatomic, retain) LoginLayer            *loginlayer;
 @property (nonatomic, retain) EnvironmentLayer      *envlayer;
-//@property (nonatomic, retain) CheckinLayer          *checkinlayer;
 @property (nonatomic, retain) NewsLayer             *newsLayer;
 @property (nonatomic, retain) AmigoAPI              *api;
 @property BOOL loggedIn;

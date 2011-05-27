@@ -24,6 +24,7 @@ static NSString* NEARBY_ENDPOINT = @"/nearby";
 @synthesize facebook = facebook_;
 @synthesize nearbyDelegate = nearbyDelegate_;
 @synthesize checkintable = checkintable_;
+@synthesize mapViewController = mapViewController_;
 
 
 
@@ -273,6 +274,7 @@ static NSString* NEARBY_ENDPOINT = @"/nearby";
     [locdelegate_ release];
     [nearbyDelegate_ release];
     [checkintable_ release];
+    [mapViewController_ release];
     
     [super dealloc];
 }

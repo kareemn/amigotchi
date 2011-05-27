@@ -16,6 +16,7 @@
 #import "Facebook.h"
 #import "NearbyPlacesRequestResult.h"
 #import "AmigoTableViewController.h"
+#import "MapViewController.h"
 #import "AmigoCheckin.h"
 
 @interface AmigoAPI : NSObject<NearbyPlacesRequestDelegate> {
@@ -29,6 +30,7 @@
 @property (nonatomic, retain)            Facebook               *facebook;
 @property (nonatomic, retain)            NearbyPlacesRequestResult *nearbyDelegate;
 @property (nonatomic, retain)            AmigoTableViewController  *checkintable;
+@property (nonatomic, retain)            MapViewController         *mapViewController;
 
 
 -(void)login:(NSString*)access_token;

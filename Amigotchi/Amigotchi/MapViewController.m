@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 
 @implementation MapViewController
+@synthesize checkins = checkins_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +23,7 @@
 
 - (void)dealloc
 {
+    [checkins_ release];
     [super dealloc];
 }
 
@@ -31,6 +33,18 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+-(void) setCheckins:(NSArray *)checkins{
+    [checkins_ release];
+    
+    checkins_ = [checkins retain];
+    
+    [self drawCheckins];
+}
+
+- (void) drawCheckins{
+
 }
 
 #pragma mark - View lifecycle

@@ -163,7 +163,7 @@
     //[self.newsLayer newsWithString:@"Welcome back!"];
     //[[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.petlayer.pet interval:4.0f paused:NO];
     //Test alert stuff
-    AmigoAlertView * testAlert = [[AmigoAlertView alloc] initWithLabel:@"Logging in..." andPicture:@"screen.png"];
+    AmigoAlertView * testAlert = [[[AmigoAlertView alloc] initWithLabel:@"Logging in..." andPicture:@"screen.png"] autorelease];
     [self addChild:testAlert z:HUD_LAYER];
     [testAlert display];
 }
