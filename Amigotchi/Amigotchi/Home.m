@@ -195,6 +195,7 @@
     [loginlayer_ release];
     [envlayer_ release];
     [newsLayer_ release];
+    [api_ release];
     
 	[super dealloc];
 }

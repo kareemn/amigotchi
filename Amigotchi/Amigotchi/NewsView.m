@@ -74,10 +74,10 @@
 
 -(void)dealloc
 {
-    newsStand_ = nil;
-    mySprite_ = nil;
-    myString_ = nil;
-    label_ = nil;
+    [newsStand_ release];
+    [mySprite_ release];
+    [myString_ release];
+    [label_ release];
     [super dealloc];
 }
 @end

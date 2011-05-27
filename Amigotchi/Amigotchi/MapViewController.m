@@ -47,6 +47,21 @@
     NSString *lon = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
     
     [delegate.api getNearbyCheckinsForLat:lat andLon:lon];
+    
+}
+
+- (void) centerOnUserLocation{
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    
+    span.latitudeDelta=0.6;
+    span.longitudeDelta=0.6;
+    
+    region.span=span;
+    region.center= mView.userLocation.location.coordinate;
+    
+    [mView setRegion:region animated:TRUE];
+    [mView regionThatFits:region];
 }
 
 - (void)viewDidUnload
@@ -62,6 +77,7 @@
     MKCoordinateSpan span = {latitudeDelta: 1, longitudeDelta: 1};
     MKCoordinateRegion region = {coord, span};
     [mView setRegion:region];*/
+        [self centerOnUserLocation];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

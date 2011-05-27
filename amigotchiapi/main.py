@@ -16,6 +16,7 @@
 #
 
 import urllib
+import datetime
 
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
@@ -37,8 +38,10 @@ class Pet(db.Model):
     name = db.StringProperty(required=True)
     owner = db.ReferenceProperty(User)
     hunger = db.IntegerProperty()
+    last_fed = db.DateTimeProperty()
     happiness = db.IntegerProperty()
     bathroom = db.IntegerProperty()
+    last_bathroom = db.DateTimeProperty()
     pic = db.BlobProperty()
 
 ##checkin
@@ -100,7 +103,7 @@ class PetNewHandler(webapp.RequestHandler):
             user_key = db.Key.from_path('User', user_id)
 
             current_user = User.get(user_key)
-            pet = Pet( name=pet_name, owner=current_user )
+            pet = Pet( name=pet_name, owner=current_user, last_fed = datetime.datetime.now(), last_bathroom = datetime.datetime.now())
             pet.put()
             self.response.out.write(json.dumps(profile))
 

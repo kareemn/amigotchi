@@ -10,6 +10,13 @@
 
 
 @implementation AccessoryLayer
-@synthesize model, view;
+@synthesize model = model_, view = view_;
+
+- (void) dealloc {
+    [model_ release];
+    [view_ release];
+    
+    [super dealloc];
+}
 
 @end

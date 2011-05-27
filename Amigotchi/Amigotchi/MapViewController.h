@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MKMapView.h>
-
+#import <MapKit/MKUserLocation.h>
 
 @interface MapViewController : UIViewController {
     IBOutlet MKMapView * mView;
 }
+
+- (void) centerOnUserLocation;
 
 @end

@@ -15,6 +15,17 @@
 
 @synthesize loginDelegate = loginDelegate_;
 
+-(void) dealloc{
+    [_facebook release];
+    [_permissions release];
+    [_api release];
+    [_user release];
+    [_view release];
+    [loginDelegate_ release];
+    
+    [super dealloc];
+}
+
 +(CCScene *) scene
 {
 	// 'scene' is an autorelease object.
