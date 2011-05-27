@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3715815313824B6D00040BEC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3715815113824B6D00040BEC /* MapViewController.m */; };
 		3715815413824B6D00040BEC /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3715815213824B6D00040BEC /* MapViewController.xib */; };
+		3731B20D138F2D58006F9CA4 /* AmigoAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3731B20C138F2D58006F9CA4 /* AmigoAlertView.m */; };
+		3731B20F138F2FAB006F9CA4 /* amigoAlertBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 3731B20E138F2FAB006F9CA4 /* amigoAlertBox.png */; };
 		374A62CF135E40E200FE23E3 /* background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 374A62CD135E40E200FE23E3 /* background.plist */; };
 		374A62D0135E40E200FE23E3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 374A62CE135E40E200FE23E3 /* background.png */; };
 		374A62D3135E41DE00FE23E3 /* EnvironmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374A62D2135E41DE00FE23E3 /* EnvironmentView.m */; };
@@ -225,6 +227,9 @@
 		3715815013824B6D00040BEC /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		3715815113824B6D00040BEC /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		3715815213824B6D00040BEC /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		3731B20B138F2D58006F9CA4 /* AmigoAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoAlertView.h; sourceTree = "<group>"; };
+		3731B20C138F2D58006F9CA4 /* AmigoAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoAlertView.m; sourceTree = "<group>"; };
+		3731B20E138F2FAB006F9CA4 /* amigoAlertBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amigoAlertBox.png; path = Resources/amigoAlertBox.png; sourceTree = "<group>"; };
 		374A62CD135E40E200FE23E3 /* background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = background.plist; path = Resources/background.plist; sourceTree = "<group>"; };
 		374A62CE135E40E200FE23E3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
 		374A62D1135E41DE00FE23E3 /* EnvironmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentView.h; sourceTree = "<group>"; };
@@ -648,6 +653,8 @@
 				37D18F861360CF1D0031DFF5 /* AccessoryView.h */,
 				37D18F871360CF1D0031DFF5 /* AccessoryView.m */,
 				37B8E7B413553315009D0B3F /* AmigoPetView.h */,
+				3731B20B138F2D58006F9CA4 /* AmigoAlertView.h */,
+				3731B20C138F2D58006F9CA4 /* AmigoAlertView.m */,
 				37B8E7B513553315009D0B3F /* AmigoPetView.m */,
 				374A62D1135E41DE00FE23E3 /* EnvironmentView.h */,
 				374A62D2135E41DE00FE23E3 /* EnvironmentView.m */,
@@ -829,6 +836,7 @@
 		C77E5B5213526B140051BD37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3731B20E138F2FAB006F9CA4 /* amigoAlertBox.png */,
 				3754D831138B55BF007C7A28 /* navbar_bg.png */,
 				C70E86D31384B7F300D1323F /* checkin_box.png */,
 				37DC97FF1379D11E00934783 /* happiness_bar_container.png */,
@@ -1296,6 +1304,7 @@
 				3715815413824B6D00040BEC /* MapViewController.xib in Resources */,
 				C70E86D41384B7F300D1323F /* checkin_box.png in Resources */,
 				3754D832138B55BF007C7A28 /* navbar_bg.png in Resources */,
+				3731B20F138F2FAB006F9CA4 /* amigoAlertBox.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1454,6 +1463,7 @@
 				C75167901382570500202CE9 /* AmigoCheckin.m in Sources */,
 				3715815313824B6D00040BEC /* MapViewController.m in Sources */,
 				C7C91A861384848400E462F9 /* NearbyPlacesRequestResult.m in Sources */,
+				3731B20D138F2D58006F9CA4 /* AmigoAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

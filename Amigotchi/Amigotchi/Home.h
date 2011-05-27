@@ -23,6 +23,7 @@
 #import "NewsLayer.h"
 #import "AmigoLocationDelegate.h"
 #import "AmigoAPI.h"
+#import "AmigoAlertView.h"
 
 // HomeLayer
 @interface Home : CCScene
