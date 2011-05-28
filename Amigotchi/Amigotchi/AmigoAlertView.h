@@ -17,6 +17,7 @@
 @property (nonatomic, retain) CCSprite * box;
 @property (nonatomic, retain) CCSprite * picture;
 @property (nonatomic, retain) CCLabelTTF * label;
+@property (nonatomic, retain) NSString * picturePath;
 
 -(id) initWithLabel:(NSString*)labelString andPicture:(NSString*)picturePath;
 -(void) display;

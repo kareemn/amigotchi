@@ -26,6 +26,7 @@
 -(void)displayAlertWithString:(NSString *)stringLabel andPicture:(NSString *)picturePath
 {
     self.myView.myString = stringLabel;
+    self.myView.picturePath = picturePath;
     [self.myView display];
 }
 
