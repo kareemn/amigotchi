@@ -113,14 +113,16 @@
     CGSize size = [[CCDirector sharedDirector] winSize];
     
     self.happinessBar = [CCSprite spriteWithFile:@"happiness_bar.png"];
-    self.happinessBar.position = ccp(0, size.height * 0.7);
+    self.happinessBar.position = ccp(0 - 300, size.height * 0.7);
+    self.happinessBar.anchorPoint = ccp(0,1);
     self.happinessBarContainer = [CCSprite spriteWithFile:@"happiness_bar_container.png"];
-    self.happinessBarContainer.position = self.happinessBar.position;
+    self.happinessBarContainer.position = ccp(0, self.happinessBar.position.y - self.happinessBar.contentSize.height/2);
     
     self.hungerBar = [CCSprite spriteWithFile:@"hunger_bar.png"];
-    self.hungerBar.position = ccp(0, self.happinessBar.position.y - self.happinessBarContainer.contentSize.height * 1.1);
+    self.hungerBar.position = ccp(0 - 300, self.happinessBar.position.y - self.happinessBarContainer.contentSize.height * 1.1);
+    self.hungerBar.anchorPoint = ccp(0,1);
     self.hungerBarContainer = [CCSprite spriteWithFile:@"hunger_bar_container.png"];
-    self.hungerBarContainer.position = self.hungerBar.position;
+    self.hungerBarContainer.position = ccp(0, self.hungerBar.position.y - self.hungerBar.contentSize.height/2);
 }
 
 -(void) setButtons
