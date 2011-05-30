@@ -113,7 +113,7 @@
     CGSize size = [[CCDirector sharedDirector] winSize];
     
     self.happinessBar = [CCSprite spriteWithFile:@"happiness_bar.png"];
-    self.happinessBar.position = ccp(0 - 300, size.height * 0.7);
+    self.happinessBar.position = ccp(0 - 300, size.height * 0.75);
     self.happinessBar.anchorPoint = ccp(0,1);
     self.happinessBarContainer = [CCSprite spriteWithFile:@"happiness_bar_container.png"];
     self.happinessBarContainer.position = ccp(0, self.happinessBar.position.y - self.happinessBar.contentSize.height/2);
@@ -166,7 +166,7 @@
     
     toiletButton.tag = BUTTON_TOILET;
     toiletButton.position = ccp(curX, 0);
-    NSLog(@"Placing toiletButton at %f.\n", curX);
+    //NSLog(@"Placing toiletButton at %f.\n", curX);
     curX += spacing;
     
     //Make the menu
@@ -247,12 +247,12 @@
 {
     //Happiness Bar
     //self.happinessBar.position = ccp(self.mySprite.position.x, self.mySprite.position.y + self.mySprite.contentSize.height * 0.8);
-    self.happinessBar.scaleX = happiness * 3;
+    self.happinessBar.scaleX = happiness * 3.5;
     
     //Hunger Bar
     int food = MAX_HUNGER - hunger;
     //self.hungerBar.position = ccp(self.happinessBar.position.x, self.happinessBar.position.y - self.happinessBar.contentSize.height * 1.2);
-    self.hungerBar.scaleX = food * 3;
+    self.hungerBar.scaleX = food * 3.5;
 }
 
 -(void)handleButton:(id)sender

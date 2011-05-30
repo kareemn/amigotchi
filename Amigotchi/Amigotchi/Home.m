@@ -64,8 +64,8 @@
         [temploginlayer release];
         [self addChild:self.loginlayer z:LOGIN_LAYER];
 
-        //We should do all this after log in is succesful
-        PetLayer *temppetlayer = [[PetLayer alloc] init];
+        //We now do all of this in the logged in callback
+        /*PetLayer *temppetlayer = [[PetLayer alloc] init];
         self.petlayer = temppetlayer;
         [temppetlayer release];
         
@@ -85,7 +85,7 @@
         [self addChild:self.petlayer z:PET_LAYER];
         [self addChild:self.envlayer];
         [self addChild:self.newsLayer z:HUD_LAYER];
-        [self addChild:self.alertLayer z:HUD_LAYER];         
+        [self addChild:self.alertLayer z:HUD_LAYER];*/        
         
         [self showLoginScreen];
         
@@ -114,21 +114,21 @@
     
     if([theobj isEqualToString:@"MapScene"])
     {
-        NSLog(@"navigateNotification::show map scene clicked");
+        //NSLog(@"navigateNotification::show map scene clicked");
     }
     else if ( [theobj isEqualToString:@"CheckinLayer"] ){
-        NSLog(@"navigateNotification::show checkin layer clicked");
+        //NSLog(@"navigateNotification::show checkin layer clicked");
     }
     else if( [theobj isEqualToString:@"toilet"] ) {
-        NSLog(@"navigateNotification::toilet clicked");
+        //NSLog(@"navigateNotification::toilet clicked");
         [self.petlayer.pet updateBathroom:-1];
     }
     else if( [theobj isEqualToString:@"PetLayer"] ) {
-        NSLog(@"navigateNotification::petlayer clicked");
+        //NSLog(@"navigateNotification::petlayer clicked");
         [self showPetScreen];
     }
     else if( [theobj isEqualToString:@"feed"] ) {
-        NSLog(@"navigateNotification::feed clicked");
+        //NSLog(@"navigateNotification::feed clicked");
         [self.petlayer.pet feed:1];
         [self.alertLayer displayAlertWithString:@"Feeding..." andPicture:@"foodAlert.png"];
         
@@ -168,6 +168,28 @@
 }
 
 - (void) loggedInCallback {
+    PetLayer *temppetlayer = [[PetLayer alloc] init];
+    self.petlayer = temppetlayer;
+    [temppetlayer release];
+    
+    EnvironmentLayer *tempenvLayer = [[EnvironmentLayer alloc] init];
+    self.envlayer = tempenvLayer;
+    [tempenvLayer release];
+    
+    NewsLayer * tempnewslayer = [[NewsLayer alloc] init];
+    self.newsLayer = tempnewslayer;
+    [tempnewslayer release];
+    
+    AmigoAlertLayer * tempAlertLayer = [[AmigoAlertLayer alloc] init];
+    self.alertLayer = tempAlertLayer;
+    [tempAlertLayer release];
+    
+    
+    [self addChild:self.petlayer z:PET_LAYER];
+    [self addChild:self.envlayer];
+    [self addChild:self.newsLayer z:HUD_LAYER];
+    [self addChild:self.alertLayer z:HUD_LAYER]; 
+    
     [self.alertLayer displayAlertWithString:@"Logging in..." andPicture:@"connecting_alert.png"];
     NSLog(@"HomeLayer::loggedInCallback");
     [self showPetScreen];

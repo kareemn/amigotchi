@@ -14,7 +14,7 @@
 #define LOGIN_LAYER 6
 #define HUD_LAYER 9
 
-#define MENU_HEIGHT 50
+#define MENU_HEIGHT 20
 
 #define MAX_HUNGER 20
 #define MAX_BATHROOM 10
