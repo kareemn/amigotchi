@@ -124,7 +124,7 @@
     else if( [theobj isEqualToString:@"feed"] ) {
         NSLog(@"navigateNotification::feed clicked");
         [self.petlayer.pet feed:1];
-        [self.alertLayer displayAlertWithString:@"Feeding..." andPicture:nil];
+        [self.alertLayer displayAlertWithString:@"Feeding..." andPicture:@"foodAlert.png"];
         
     }
     else if( [theobj isEqualToString:@"loggedin"] ){
@@ -162,18 +162,11 @@
 }
 
 - (void) loggedInCallback {
+    [self.alertLayer displayAlertWithString:@"Logging in..." andPicture:@"connecting_alert.png"];
     NSLog(@"HomeLayer::loggedInCallback");
     [self showPetScreen];
     [self restoreState];
     self.loggedIn = YES;
-    //[self.newsLayer newsWithString:@"Welcome back!"];
-    //[[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.petlayer.pet interval:4.0f paused:NO];
-    //Test alert stuff
-
-    //AmigoAlertView * testAlert = [[AmigoAlertView alloc] initWithLabel:@"Logging in..." andPicture:@"screen.png"];
-    //[self addChild:testAlert z:HUD_LAYER];
-    //[testAlert display];
-    [self.alertLayer displayAlertWithString:@"Logging in..." andPicture:nil];
 }
 
 -(void)saveState

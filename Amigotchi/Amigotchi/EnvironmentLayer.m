@@ -10,7 +10,7 @@
 
 
 @implementation EnvironmentLayer
-@synthesize view = view_, model = model_;
+@synthesize view = view_;
 
 - (id) init
 {
@@ -24,7 +24,7 @@
 
 - (void) dealloc {
     [view_ release];
-    [model_ release];
+//    [model_ release];
     
     [super dealloc];
 }

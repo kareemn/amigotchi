@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "EnvironmentView.h"
-#import "Environment.h"
+//#import "Environment.h"
 
 
 @interface EnvironmentLayer : CCNode {
     
 }
 
-@property (nonatomic, retain) Environment * model;
+//@property (nonatomic, retain) Environment * model;
 @property (nonatomic, retain) EnvironmentView * view;
 @end

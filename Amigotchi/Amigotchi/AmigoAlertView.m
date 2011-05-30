@@ -48,7 +48,7 @@
     
     [self removeChild:self.picture cleanup:YES];
     self.picture = [CCSprite spriteWithFile:self.picturePath];
-    self.picture.position = ccp(self.label.position.x, self.label.position.y + 10 + self.picture.contentSize.height/2);
+    self.picture.position = ccp(self.label.position.x, self.label.position.y + 20 + self.picture.contentSize.height/2);
     [self addChild:self.picture];
     
     

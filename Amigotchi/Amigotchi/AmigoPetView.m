@@ -130,7 +130,7 @@
     
     float spacing = 2*((size.width) / numButtons); //The 2 is from the scaling in the layer.
     float curX = (self.mySprite.position.x) - (spacing * (numButtons/2.0));
-    NSLog(@"spacing: %f.\n", spacing);
+    //NSLog(@"spacing: %f.\n", spacing);
     
     [self.cache addSpriteFramesWithFile:@"buttons.plist"];
     
@@ -140,7 +140,7 @@
     
     feedButton.tag = BUTTON_FEED;
     feedButton.position = ccp(curX, 0);
-    NSLog(@"Placing feedButton at %f.\n", curX);
+    //NSLog(@"Placing feedButton at %f.\n", curX);
     curX += spacing;
     
     //Checkin button
@@ -148,7 +148,7 @@
     
     checkinButton.tag = BUTTON_CHECKIN;
     checkinButton.position = ccp(curX, 0);
-    NSLog(@"Placing checkinButton at %f.\n", curX);
+    //NSLog(@"Placing checkinButton at %f.\n", curX);
     curX += spacing;
     
     //map button
@@ -156,7 +156,7 @@
     
     mapButton.tag = BUTTON_MAP;
     mapButton.position = ccp(curX, 0);
-    NSLog(@"Placing mapButton at %f.\n", curX);
+    //NSLog(@"Placing mapButton at %f.\n", curX);
     curX += spacing;
     
     //Toilet button
@@ -170,10 +170,11 @@
     //Make the menu
     self.buttons = [CCMenu menuWithItems:feedButton, checkinButton, mapButton, toiletButton, nil];
     
-    NSLog(@"width: %f height: %f", size.width, size.height);
+    //NSLog(@"width: %f height: %f", size.width, size.height);
     
     //self.buttons.position = CGPointMake(-.4* size.width, -.9 * size.height);
     self.buttons.position = CGPointMake(self.mySprite.position.x, -.8 * size.height);
+    [self.buttons alignItemsHorizontallyWithPadding:30];
 }
 
 -(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age
