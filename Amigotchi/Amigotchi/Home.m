@@ -47,7 +47,13 @@
 	if( (self=[super init])) {
         self.loggedIn = NO;
         
+        
+        //Title screen
+        CCSprite * titleScreen = [CCSprite spriteWithFile:@"title_screen.png"];
+        titleScreen.position = ccp(160, 240);
+        [self addChild:titleScreen];
         //listen for notifications
+        
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateNotification:) name:AMIGONAVNOTIFICATION object:nil];
         AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];

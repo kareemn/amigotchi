@@ -47,7 +47,8 @@
     CGSize size = [[CCDirector sharedDirector] winSize];
     
     //position menu
-    fbMenu.position = ccp(size.width * .5, size.height - 3* self.facebookLoginButton.contentSize.height);
+    //fbMenu.position = ccp(size.width * .5, size.height - 3* self.facebookLoginButton.contentSize.height);
+    fbMenu.position = ccp(size.width/2, size.height/6);
     
     [self addChild:fbMenu z:HUD_LAYER];
 }
