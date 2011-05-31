@@ -132,6 +132,8 @@
         [self.petlayer.pet feed:1];
         [self.alertLayer displayAlertWithString:@"Feeding..." andPicture:@"foodAlert.png"];
         
+        [self.api petLoad];
+        
     }
     else if( [theobj isEqualToString:@"loggedin"] ){
         NSLog(@"navigateNotification::loggedin");
@@ -213,6 +215,7 @@
 {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary * theState = [defaults objectForKey:@"gameState"];
+    
     if(theState)
     {
         [self.petlayer.pet restoreState:theState];

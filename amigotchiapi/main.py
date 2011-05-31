@@ -31,13 +31,11 @@ class User(db.Model):
     name = db.StringProperty(required=True)
     profile_url = db.StringProperty(required=True)
     access_token = db.StringProperty(required=True)
-
-class Pet(db.Model):
-    created = db.DateTimeProperty(auto_now_add=True)
-    updated = db.DateTimeProperty(auto_now=True)
-    name = db.StringProperty(required=True)
-    owner = db.ReferenceProperty(User)
+    pet_created = db.DateTimeProperty()
+    pet_updated = db.DateTimeProperty(auto_now=True)
+    pet_name = db.StringProperty()
     hunger = db.IntegerProperty()
+    pet_type = db.StringProperty()
     last_fed = db.DateTimeProperty()
     happiness = db.IntegerProperty()
     bathroom = db.IntegerProperty()
@@ -81,14 +79,60 @@ class UserLoginHandler(webapp.RequestHandler):
             self.response.out.write(json.dumps(profile))
 
 
-class PetNewHandler(webapp.RequestHandler):
+###
+class PetSaveHandler(webapp.RequestHandler):
     def get(self):
         self.response.out.write("doesn't work here buddy")
 
     def post(self):
 
         access_token = self.request.get("access_token")
+		
+        action = self.request.get("action")
+
         pet_name = self.request.get("name")
+        hunger = self.request.get("hunger")
+        happiness = self.request.get("happiness")
+        bathroom = self.request.get("bathroom")
+
+        # Download the user profile and cache a local instance of the
+        # basic profile info
+        profile = json.load(urllib.urlopen(
+            "https://graph.facebook.com/me?" +
+            urllib.urlencode(dict(access_token=access_token))))
+
+        if profile.get("error"):
+           self.response.out.write(json.dumps(profile))
+        else:
+            user_id = profile["id"]
+            if action == "feed":
+               pet = User( key_name=str(profile["id"]), id=str(profile["id"]), hunger=hunger, bathroom=bathroom, happiness=happiness, last_fed=datetime.datetime.now())
+            elif action == "bathroom":
+               pet = User( key_name=str(profile["id"]), id=str(profile["id"]), hunger=hunger, bathroom=bathroom, happiness=happiness, last_bathroom=datetime.datetime.now())
+            else:
+               pet = User( key_name=str(profile["id"]), id=str(profile["id"]), hunger=hunger, bathroom=bathroom, happiness=happiness)
+            pet.put()
+
+            user_key = db.Key.from_path('User', user_id)
+            current_user = User.get(user_key)
+            retpet = {}
+
+            retpet["name"] = current_user.pet_name
+            retpet["hunger"] = current_user.hunger
+            retpet["last_fed"] = current_user.last_fed
+            retpet["happiness"] = current_user.happiness
+            retpet["bathroom"] = current_user.bathroom
+            retpet["last_bathroom"] = current_user.last_bathroom
+
+            self.response.out.write(json.dumps(retpet))
+###
+class PetLoadHandler(webapp.RequestHandler):
+    def get(self):
+        self.response.out.write("doesn't work here buddy")
+
+    def post(self):
+
+        access_token = self.request.get("access_token")
 
         # Download the user profile and cache a local instance of the
         # basic profile info
@@ -103,11 +147,19 @@ class PetNewHandler(webapp.RequestHandler):
             user_key = db.Key.from_path('User', user_id)
 
             current_user = User.get(user_key)
-            pet = Pet( name=pet_name, owner=current_user, last_fed = datetime.datetime.now(), last_bathroom = datetime.datetime.now())
-            pet.put()
-            self.response.out.write(json.dumps(profile))
+            pet = {}
 
+            pet["name"] = current_user.pet_name
+            pet["hunger"] = current_user.hunger
+            pet["last_fed"] = current_user.last_fed
+            pet["happiness"] = current_user.happiness
+            pet["bathroom"] = current_user.bathroom
+            pet["last_bathroom"] = current_user.last_bathroom
 
+            pet["age"] = (datetime.datetime.today() - current_user.created).days
+            pet["type"] = current_user.pet_type
+
+            self.response.out.write(json.dumps(pet))
 ###
 class CheckinHandler(webapp.RequestHandler):
     def get(self):
@@ -118,8 +170,8 @@ class CheckinHandler(webapp.RequestHandler):
         access_token = self.request.get("access_token")
 
         checkin = {}
-        checkin["title"] = self.request.get("title")		
-        checkin["place_id"] = self.request.get("place_id")	
+        checkin["title"] = self.request.get("title")        
+        checkin["place_id"] = self.request.get("place_id")  
         checkin["lon"] = float(self.request.get("lon"))
         checkin["lat"] = float(self.request.get("lat"))
 
@@ -173,7 +225,8 @@ class NearbyHandler(webapp.RequestHandler):
 def main():
     application = webapp.WSGIApplication([('/', MainHandler),
                                           ('/user/login', UserLoginHandler),
-                                          ('/pet/new', PetNewHandler),
+                                          ('/pet/save', PetSaveHandler),
+                                          ('/pet/load', PetLoadHandler),
                                           ('/checkin', CheckinHandler),
                                           ('/nearby', NearbyHandler)],
                                          debug=True)

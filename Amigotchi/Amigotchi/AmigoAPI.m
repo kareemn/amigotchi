@@ -14,7 +14,8 @@ static NSString* API_ROOT = @"http://amigotchiapi.appspot.com";
 static NSString* LOGIN_ENDPOINT = @"/user/login";
 static NSString* CHECKIN_ENDPOINT = @"/checkin";
 static NSString* NEARBY_ENDPOINT = @"/nearby";
-
+static NSString* PETLOAD_ENDPOINT = @"/pet/load";
+static NSString* PETSAVE_ENDPOINT = @"/pet/save";
 
 
 
@@ -25,6 +26,7 @@ static NSString* NEARBY_ENDPOINT = @"/nearby";
 @synthesize nearbyDelegate = nearbyDelegate_;
 @synthesize checkintable = checkintable_;
 @synthesize mapViewController = mapViewController_;
+@synthesize postCheckinDelegate = postCheckinDelegate_;
 
 
 
@@ -41,6 +43,7 @@ static NSString* NEARBY_ENDPOINT = @"/nearby";
         [self setLocdelegate:[[[AmigoLocationDelegate alloc] init] autorelease]  ];
         [self setFacebook: [ [[Facebook alloc] init] autorelease]];
         [self setNearbyDelegate:[[[NearbyPlacesRequestResult alloc] initializeWithDelegate:self] autorelease]];
+        [self setPostCheckinDelegate:[[[PostCheckinRequestResult alloc] initializeWithDelegate:self] autorelease]];
         
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(apiNotification:) name:AMIGOAPINOTIFICATION object:nil];
@@ -101,6 +104,91 @@ static NSString* NEARBY_ENDPOINT = @"/nearby";
     [[self user] setAccess_token:[NSString stringWithFormat:@"0"]];
     NSError *error = [request error];
     NSLog(@"%@", error);
+}
+
+
+-(void)petSave:(AmigoPet *)pet withAction:(NSString*)action{
+    [[self user] setAccess_token:self.user.access_token];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", API_ROOT, PETSAVE_ENDPOINT] ];
+    
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    [request setDidFinishSelector:@selector(petSaveDone:)];
+    [request setDidFailSelector:@selector(petSaveWentWrong:)];
+    
+    [request setPostValue:self.user.access_token forKey:@"access_token"];
+    [request setPostValue:action forKey:@"action"];
+    [request setPostValue:[NSNumber numberWithInt:pet.hunger] forKey:@"hunger"];
+    [request setPostValue:[NSNumber numberWithInt:pet.bathroom] forKey:@"bathroom"];
+    [request setPostValue:[NSNumber numberWithInt:pet.bathroom] forKey:@""];
+    
+    
+    NSLog(@"adding to queue");
+    [[self queue] addOperation:request];
+    [[self queue] go];
+    
+    //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"loggedin"]];
+    
+}
+
+- (void)petSaveDone:(ASIHTTPRequest *)request
+{
+    NSLog(@"petSaveDone");
+    NSString *response = [request responseString];
+    NSLog(@"response:: %@", response);
+    
+}
+
+- (void)petSaveWentWrong:(ASIHTTPRequest *)request
+{
+    
+    NSString *response = [request responseString];
+    NSLog(@"petSaveWentWrong");
+    
+    NSLog(@"%@", response);
+}
+
+
+-(void)petLoad {
+    
+    [[self user] setAccess_token:self.user.access_token];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", API_ROOT, PETLOAD_ENDPOINT] ];
+    
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    [request setDidFinishSelector:@selector(petLoadDone:)];
+    [request setDidFailSelector:@selector(petLoadWentWrong:)];
+    
+    [request setPostValue:self.user.access_token forKey:@"access_token"];
+    
+    
+    NSLog(@"adding to queue");
+    [[self queue] addOperation:request];
+    [[self queue] go];
+    
+    //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"loggedin"]];
+    
+}
+
+- (void)petLoadDone:(ASIHTTPRequest *)request
+{
+    NSLog(@"petLoadDone");
+    NSString *response = [request responseString];
+    NSLog(@"response:: %@", response);
+    
+}
+
+- (void)petLoadWentWrong:(ASIHTTPRequest *)request
+{
+    
+    NSString *response = [request responseString];
+    NSLog(@"petLoadWentWrong");
+    
+    NSLog(@"%@", response);
 }
 
 -(void)updateNearbyPlaces{
@@ -206,6 +294,8 @@ static NSString* NEARBY_ENDPOINT = @"/nearby";
     [[self queue] addOperation:request];
     [[self queue] go];
     
+    [self postCheckinToFacebook:c];
+    
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"checkedin"]];
 
 }
@@ -248,6 +338,7 @@ static NSString* NEARBY_ENDPOINT = @"/nearby";
     [[self queue] addOperation:request];
     [[self queue] go];
     
+    
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"checkedin"]];
     
 }
@@ -267,6 +358,39 @@ static NSString* NEARBY_ENDPOINT = @"/nearby";
     NSLog(@"nearby error: %@", error);
 }
 
+- (void) postCheckinToFacebook:(AmigoCheckin *)checkin {
+    
+	SBJSON *jsonWriter = [[SBJSON new] autorelease];
+    
+    float longitude = [checkin.lon floatValue];
+    float latitude = [checkin.lat floatValue];
+    
+    NSString *message = @"";
+    
+	NSMutableDictionary *coordinatesDictionary = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                                  [NSString stringWithFormat: @"%f", latitude], @"latitude",
+                                                  [NSString stringWithFormat: @"%f", longitude], @"longitude",
+                                                  nil];
+    
+	NSString *coordinates = [jsonWriter stringWithObject:coordinatesDictionary];
+    
+	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+								   checkin.place_id, @"place", //The PlaceID
+								   coordinates, @"coordinates", // The latitude and longitude in string format (JSON)
+								   message, @"message", // The status message
+								   nil];
+    
+	[self.facebook requestWithGraphPath:@"me/checkins" andParams:params andHttpMethod:@"POST" andDelegate:self.postCheckinDelegate];
+}
+
+
+- (void) postCheckinRequestCompleted{
+    NSLog(@"postCheckinRequestCompleted");
+}
+- (void) postCheckinRequestFailed{
+    NSLog(@"postCheckinRequestFailed");
+}
+
 
 - (void) dealloc {
     [queue_ release];
@@ -275,6 +399,7 @@ static NSString* NEARBY_ENDPOINT = @"/nearby";
     [nearbyDelegate_ release];
     [checkintable_ release];
     [mapViewController_ release];
+    [postCheckinDelegate_ release];
     
     [super dealloc];
 }

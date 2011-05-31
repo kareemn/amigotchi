@@ -18,8 +18,10 @@
 #import "AmigoTableViewController.h"
 #import "MapViewController.h"
 #import "AmigoCheckin.h"
+#import "PostCheckinRequestResult.h"
+#import "AmigoPet.h"
 
-@interface AmigoAPI : NSObject<NearbyPlacesRequestDelegate> {
+@interface AmigoAPI : NSObject<NearbyPlacesRequestDelegate, PostCheckinRequestDelegate> {
     
     
 }
@@ -29,17 +31,28 @@
 @property (nonatomic, retain)            AmigoLocationDelegate  *locdelegate;
 @property (nonatomic, retain)            Facebook               *facebook;
 @property (nonatomic, retain)            NearbyPlacesRequestResult *nearbyDelegate;
+
+@property (nonatomic, retain)            PostCheckinRequestResult *postCheckinDelegate;
 @property (nonatomic, retain)            AmigoTableViewController  *checkintable;
 @property (nonatomic, retain)            MapViewController         *mapViewController;
 
 
 -(void)login:(NSString*)access_token;
+
+-(void)petSave:(AmigoPet *)pet withAction:(NSString*)action;
+-(void)petLoad;
 -(void) updateNearbyPlaces;
 -(void) checkin: (AmigoCheckin *)c;
 -(void) getNearbyCheckinsForLat: (NSString *)lat andLon:(NSString *)lon;
 
 - (void) nearbyPlacesRequestCompletedWithPlaces:(NSArray *)placesArray;
 - (void) nearbyPlacesRequestFailed;
+
+
+- (void) postCheckinToFacebook:(AmigoCheckin *)checkin;
+- (void) postCheckinRequestCompleted;
+- (void) postCheckinRequestFailed;
+
 -(void)apiNotification:(NSNotification *)notification;
 
 //helpers

@@ -140,6 +140,7 @@
     
 	cell.textLabel.text = (NSString *)[[self.placesArray objectAtIndex:indexPath.row] objectForKey:@"name"];
 	cell.detailTextLabel.text = (NSString *)[[self.placesArray objectAtIndex:indexPath.row] valueForKeyPath:@"location.street"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
 	return cell;
 }
