@@ -216,6 +216,13 @@
     [self drawBarsHappiness:happiness Hunger:hunger];
     
     //scale it here.
+    
+    float newScale = 0.6 + (age/20.0);
+    if(newScale > 1.6)
+    {
+        newScale = 1.6;
+    }
+    self.mySprite.scale = newScale;
 }
 
 -(void) drawPoops:(int)numPoops
