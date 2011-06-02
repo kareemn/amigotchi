@@ -16,16 +16,17 @@
 
 }
 
-- (id) initWithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age;
+- (id) initWithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age andAccessory:(NSString*)acc;
 - (void) setSprites;
 - (void) setButtons;
-- (void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age;
+- (void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age andAccessory:(NSString*)acc;
 - (void) handleButton:(id)sender;
 - (void) drawPoops:(int)numPoops;
 - (void) drawBarsHappiness:(int)happiness Hunger:(int)hunger;
 
 
 @property (nonatomic, retain) CCSprite * mySprite;
+@property (nonatomic, retain) CCSprite * accessory;
 @property (nonatomic, retain) NSMutableArray * poops;
 @property (nonatomic, retain) CCMenu * buttons;
 @property (nonatomic, retain) CCSpriteFrameCache * cache;

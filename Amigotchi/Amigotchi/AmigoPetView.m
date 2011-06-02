@@ -24,6 +24,7 @@
 @synthesize poopAnimation = poopAnimation_, poopAction = poopAction_;
 @synthesize happinessBar = happinessBar_, hungerBar = hungerBar_;
 @synthesize happinessBarContainer = happinessBarContainer_, hungerBarContainer = hungerBarContainer_;
+@synthesize accessory = accessory_;
 
 //id idleAction;
 //id pokeAction;
@@ -48,6 +49,12 @@
         
         //Set and go!
         self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
+        /*self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
+        self.accessory.visible = NO;
+        self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
+                                      self.mySprite.position.y + self.mySprite.contentSize.height * .95);
+        
+        [self.mySprite addChild:self.accessory];*/
         [self.mySprite runAction:self.idleAction];
         [self addChild:self.mySprite];
         [self addChild:self.buttons];
@@ -59,12 +66,18 @@
     return self;
 }
 
--(id)initWithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age
+-(id)initWithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age andAccessory:(NSString *)acc
 {
     if((self = [super init]))
     {
         [self init];
-        [self refreshSpriteswithHappiness:happiness andHunger:hunger andBathroom:bathroom andAge:age];
+        self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
+        self.accessory.visible = NO;
+        self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
+                                      self.mySprite.position.y + self.mySprite.contentSize.height * .95);
+        [self.mySprite addChild:self.accessory];
+        
+        [self refreshSpriteswithHappiness:happiness andHunger:hunger andBathroom:bathroom andAge:age andAccessory:acc];
     }
     return self;
 }
@@ -179,7 +192,7 @@
     [self.buttons alignItemsHorizontallyWithPadding:30];
 }
 
--(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age
+-(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age andAccessory:(NSString *)acc
 {
     //All sprite-related calculations will go here.
     [self.mySprite stopAllActions];
@@ -215,12 +228,22 @@
     [self drawPoops:bathroom];
     [self drawBarsHappiness:happiness Hunger:hunger];
     
+    //Accessory
+    if([acc isEqualToString:@"cowboy hat"])
+    {
+        self.accessory.visible = YES;
+    }
+    else if([acc isEqualToString:@"none"])
+    {
+        self.accessory.visible = NO;
+    }
+    
     //scale it here.
     
     float newScale = 0.6 + (age/20.0);
-    if(newScale > 1.6)
+    if(newScale > 1.2)
     {
-        newScale = 1.6;
+        newScale = 1.2;
     }
     self.mySprite.scale = newScale;
 }
@@ -353,14 +376,12 @@
 }
 
 - (void) dealloc {
-    //First remove children
-    
-    
     //Then release stuff
     [mySprite_ release];
     [poops_ release];
     [buttons_ release];
     [cache_ release];
+    [accessory_ release];
     
     [idleAction_ release];
     [idleAnimation_ release];

@@ -74,8 +74,21 @@
 
 -(void)backHome
 {
-    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    [delegate.api checkin:self.checkin];
+    if([self.checkin.title isEqualToString:@"California Polytechnic State University San Luis Obispo Campus"])
+    {
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"acc:cowboy hat"]];   
+    }
+    else
+    {
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"acc:none"]];
+    }
+    
+    BOOL shouldPostToFacebook = YES;
+    if(shouldPostToFacebook)
+    {
+        AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+        [delegate.api checkin:self.checkin];
+    }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

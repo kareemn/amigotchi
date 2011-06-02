@@ -143,6 +143,9 @@
         NSLog(@"navigateNotification::About to save state.\n");
         [self saveState];
     }
+    else if( [theobj isEqualToString:@"checkedin"] ){
+        [self.alertLayer displayAlertWithString:@"Checking in..." andPicture:@"fbAlert.png"];
+    }
     else 
     {
         [self.newsLayer newsWithString:theobj];

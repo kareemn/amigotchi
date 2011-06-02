@@ -53,12 +53,15 @@
                                                                     NSKeyValueObservingOptionInitial) context:nil];
         [self.pet addObserver:self forKeyPath:@"hunger" options:(NSKeyValueObservingOptionNew |
                                                                     NSKeyValueObservingOptionInitial) context:nil];
+        [self.pet addObserver:self forKeyPath:@"accessory" options:(NSKeyValueObservingOptionNew |
+                                                                 NSKeyValueObservingOptionInitial) context:nil];
         
         //add a pet view
         self.view = [[AmigoPetView alloc] initWithHappiness:self.pet.happiness
                                                   andHunger:self.pet.hunger
                                                 andBathroom:self.pet.bathroom
-                                                     andAge:self.pet.age];
+                                                     andAge:self.pet.age
+                                               andAccessory:self.pet.accessory];
         self.view.scale = .5;
         self.view.position = ccp(size.width/2, size.height - MENU_HEIGHT - self.view.mySprite.contentSize.height/2);
         [self addChild:self.view z:PET_LAYER];
@@ -82,6 +85,15 @@
     {
         [self.pet updateHappiness:2];
     }
+    
+    if([[notification object] isEqualToString:@"acc:cowboy hat"])
+    {
+        self.pet.accessory = @"cowboy hat";
+    }
+    else if([[notification object] isEqualToString:@"acc:none"])
+    {
+        self.pet.accessory = @"none";
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -93,7 +105,7 @@
     {
     }
     //NSLog(@"KVO!\n");
-    [self.view refreshSpriteswithHappiness:self.pet.happiness andHunger:self.pet.hunger andBathroom:self.pet.bathroom andAge:self.pet.age];
+    [self.view refreshSpriteswithHappiness:self.pet.happiness andHunger:self.pet.hunger andBathroom:self.pet.bathroom andAge:self.pet.age andAccessory:self.pet.accessory];
 }
 
 

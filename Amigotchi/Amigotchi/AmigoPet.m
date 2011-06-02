@@ -9,15 +9,17 @@
 #import "AmigoPet.h"
 
 @implementation AmigoPet
-@synthesize name, type, age, hunger, happiness, bathroom;
+@synthesize name = name_, type = type_, age = age_, hunger = hunger_, happiness = happiness_, bathroom = bathroom_;
+@synthesize accessory = accessory_;
 
 -(id) init
 {
     if((self = [super init]))
     {
-        self->type = @"dragon";
-        self->name = @"Issa";
-        self->happiness = MAX_HAPPINESS;
+        self.type = @"dragon";
+        self.name = @"Issa";
+        self.happiness = MAX_HAPPINESS;
+        self.accessory = @"none";
     }
     return (self);
 }
@@ -123,7 +125,7 @@
 
 -(NSDictionary*)currentState
 {
-    NSArray * keys = [NSArray arrayWithObjects:@"name", @"type", @"age", @"hunger", @"happiness", @"bathroom", nil];
+    NSArray * keys = [NSArray arrayWithObjects:@"name", @"type", @"age", @"hunger", @"happiness", @"bathroom", @"accessory", nil];
     NSArray * objects = [NSArray arrayWithObjects:
                          self.name,
                          self.type,
@@ -131,6 +133,7 @@
                          [NSNumber numberWithInt:self.hunger],
                          [NSNumber numberWithInt:self.happiness],
                          [NSNumber numberWithInt:self.bathroom],
+                         self.accessory,
                          nil];
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     return dictionary;
@@ -144,6 +147,7 @@
     self.hunger = [[dict objectForKey:@"hunger"]intValue];
     self.happiness = [[dict objectForKey:@"happiness"]intValue];
     self.bathroom = [[dict objectForKey:@"bathroom"]intValue];
+    self.accessory = [dict objectForKey:@"accessory"];
 }
 
 @end

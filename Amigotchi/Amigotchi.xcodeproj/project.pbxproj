@@ -32,6 +32,8 @@
 		37A59BDF138236EB0080C338 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A59BDD138236EB0080C338 /* HomeViewController.xib */; };
 		37ABF554138F48F5002084B3 /* AmigoAlertLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37ABF553138F48F5002084B3 /* AmigoAlertLayer.m */; };
 		37B8E7B613553315009D0B3F /* AmigoPetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B8E7B513553315009D0B3F /* AmigoPetView.m */; };
+		37C1FF3B139824110014869C /* cowboy_hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1FF3A139824110014869C /* cowboy_hat.png */; };
+		37C1FF79139837B10014869C /* fbAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C1FF78139837B10014869C /* fbAlert.png */; };
 		37D18F881360CF1D0031DFF5 /* AccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D18F871360CF1D0031DFF5 /* AccessoryView.m */; };
 		37D18F8B1360CF4F0031DFF5 /* AccessoryLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D18F8A1360CF4F0031DFF5 /* AccessoryLayer.m */; };
 		37DC97FC1379C75000934783 /* happiness_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DC97FB1379C75000934783 /* happiness_bar.png */; };
@@ -257,6 +259,8 @@
 		37ABF553138F48F5002084B3 /* AmigoAlertLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoAlertLayer.m; sourceTree = "<group>"; };
 		37B8E7B413553315009D0B3F /* AmigoPetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoPetView.h; sourceTree = "<group>"; };
 		37B8E7B513553315009D0B3F /* AmigoPetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoPetView.m; sourceTree = "<group>"; };
+		37C1FF3A139824110014869C /* cowboy_hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cowboy_hat.png; path = Resources/cowboy_hat.png; sourceTree = "<group>"; };
+		37C1FF78139837B10014869C /* fbAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fbAlert.png; path = Resources/fbAlert.png; sourceTree = "<group>"; };
 		37D18F861360CF1D0031DFF5 /* AccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryView.h; sourceTree = "<group>"; };
 		37D18F871360CF1D0031DFF5 /* AccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessoryView.m; sourceTree = "<group>"; };
 		37D18F891360CF4F0031DFF5 /* AccessoryLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessoryLayer.h; sourceTree = "<group>"; };
@@ -633,6 +637,7 @@
 				3744A5D41390ABED00D0EA62 /* foodAlert.png */,
 				3731B20E138F2FAB006F9CA4 /* amigoAlertBox.png */,
 				37231B641394293A005CC2F3 /* connecting_alert.png */,
+				37C1FF78139837B10014869C /* fbAlert.png */,
 			);
 			name = Alert;
 			sourceTree = "<group>";
@@ -830,6 +835,7 @@
 			children = (
 				37231B631394292C005CC2F3 /* Alert */,
 				3754D831138B55BF007C7A28 /* navbar_bg.png */,
+				37C1FF3A139824110014869C /* cowboy_hat.png */,
 				372C150913944ECB004F029E /* title_screen.png */,
 				C70E86D31384B7F300D1323F /* checkin_box.png */,
 				37DC97FF1379D11E00934783 /* happiness_bar_container.png */,
@@ -1304,6 +1310,8 @@
 				37231B651394293A005CC2F3 /* connecting_alert.png in Resources */,
 				372C150A13944ECB004F029E /* title_screen.png in Resources */,
 				372C150B13944ED8004F029E /* Default@2x.png in Resources */,
+				37C1FF3B139824110014869C /* cowboy_hat.png in Resources */,
+				37C1FF79139837B10014869C /* fbAlert.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
