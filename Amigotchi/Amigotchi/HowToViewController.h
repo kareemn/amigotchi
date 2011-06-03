@@ -10,7 +10,7 @@
 
 
 @interface HowToViewController : UIViewController {
-    IBOutlet UILabel * words;
+    
 }
 
 @end

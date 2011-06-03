@@ -51,7 +51,7 @@
         NSLog(@"lon is %@", self.checkin.lon);
         NSLog(@"lat is %@", self.checkin.lat);
         
-        checkinTitle.text = [NSString stringWithFormat:@"Are you sure you would like to check in to %@?", self.checkin.title];
+        checkinTitle.text = [NSString stringWithFormat:@"Checking in helps your dragon grow! Are you sure you would like to check in to %@?", self.checkin.title];
         button.target = self;
         button.action = @selector(backHome);
     }

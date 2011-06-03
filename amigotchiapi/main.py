@@ -78,7 +78,7 @@ class UserLoginHandler(webapp.RequestHandler):
                         name=profile["name"], access_token=access_token,
                         profile_url=profile["link"],
                         pet_name=profile["first_name"], pet_type="dragon" , 
-                        bathroom=1, age=0, happiness=15, hunger=10, accessory="none",
+                        bathroom=1, age=0, happiness=30, hunger=10, accessory="none",
                         last_fed=datetime.datetime.now(), last_bathroom=datetime.datetime.now())
             if user.is_saved():
                pass
@@ -157,19 +157,24 @@ class PetLoadHandler(webapp.RequestHandler):
             current_user = User.get(user_key)
             pet = {}
             right_now = datetime.datetime.now()
-            difference_without_food = current_user.last_fed - right_now
+            difference_without_food = right_now - current_user.last_fed
             seconds_without_food = difference_without_food.seconds
 
             minutes_without_food = seconds_without_food / 60
             days_without_food = difference_without_food.days
             current_user.hunger = current_user.hunger + 1*minutes_without_food
 
-            difference_without_cleaning = current_user.last_bathroom - right_now
+            if current_user.hunger > 20:
+               current_user.hunger = 20
+
+            difference_without_cleaning = right_now - current_user.last_bathroom
             seconds_without_cleaning = difference_without_cleaning.seconds
 
             minutes_without_cleaning = seconds_without_cleaning / 60
             days_without_cleaning = difference_without_cleaning.days
-            current_user.bathroom = current_user.bathroom + 1*minutes_without_cleaning           
+            current_user.bathroom = current_user.bathroom + 1*minutes_without_cleaning
+            if current_user.bathroom > 10:
+               current_user.bathroom = 10        
 
             current_user.happiness = current_user.happiness - (current_user.bathroom/3) - current_user.hunger
  

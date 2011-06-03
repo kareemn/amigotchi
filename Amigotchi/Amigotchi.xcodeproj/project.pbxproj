@@ -62,6 +62,8 @@
 		C75167901382570500202CE9 /* AmigoCheckin.m in Sources */ = {isa = PBXBuildFile; fileRef = C751678F1382570500202CE9 /* AmigoCheckin.m */; };
 		C754BBC81353EB3D000BE450 /* app_icon_s.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC61353EB3D000BE450 /* app_icon_s.png */; };
 		C754BBC91353EB3D000BE450 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC71353EB3D000BE450 /* screen.png */; };
+		C76B97401398DF600049E7F7 /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C76B973F1398DF600049E7F7 /* theme.mp3 */; };
+		C76B97421398ECB00049E7F7 /* howtoscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C76B97411398ECB00049E7F7 /* howtoscreen.png */; };
 		C76F7EA51395509200DDEEFA /* PostCheckinRequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C76F7EA41395509200DDEEFA /* PostCheckinRequestResult.m */; };
 		C777275313528860007A44B9 /* LoginNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274B1352885F007A44B9 /* LoginNormal.png */; };
 		C777275413528860007A44B9 /* LoginNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274C1352885F007A44B9 /* LoginNormal@2x.png */; };
@@ -307,6 +309,8 @@
 		C751678F1382570500202CE9 /* AmigoCheckin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoCheckin.m; sourceTree = "<group>"; };
 		C754BBC61353EB3D000BE450 /* app_icon_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_s.png; path = Resources/app_icon_s.png; sourceTree = "<group>"; };
 		C754BBC71353EB3D000BE450 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screen.png; path = Resources/screen.png; sourceTree = "<group>"; };
+		C76B973F1398DF600049E7F7 /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme.mp3; path = Resources/theme.mp3; sourceTree = "<group>"; };
+		C76B97411398ECB00049E7F7 /* howtoscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howtoscreen.png; path = Amigotchi/Resources/howtoscreen.png; sourceTree = "<group>"; };
 		C76F7EA31395509200DDEEFA /* PostCheckinRequestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCheckinRequestResult.h; sourceTree = "<group>"; };
 		C76F7EA41395509200DDEEFA /* PostCheckinRequestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCheckinRequestResult.m; sourceTree = "<group>"; };
 		C777274B1352885F007A44B9 /* LoginNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginNormal.png; sourceTree = "<group>"; };
@@ -794,6 +798,7 @@
 				372C150713944BE7004F029E /* Default@2x.png */,
 				C744532A137A237E00E80EB1 /* CoreLocation.framework */,
 				378B7BC8135410060060242D /* app_icon.png */,
+				C76B97411398ECB00049E7F7 /* howtoscreen.png */,
 				C77E5B5113526B140051BD37 /* Amigotchi */,
 				C77E5B4013526B140051BD37 /* Frameworks */,
 				C77E5B3E13526B140051BD37 /* Products */,
@@ -854,6 +859,7 @@
 		C77E5B5213526B140051BD37 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C76B973F1398DF600049E7F7 /* theme.mp3 */,
 				37231B631394292C005CC2F3 /* Alert */,
 				3754D831138B55BF007C7A28 /* navbar_bg.png */,
 				372C150913944ECB004F029E /* title_screen.png */,
@@ -1337,6 +1343,8 @@
 				376ECC2D13985F0A0045DDA0 /* glasses.png in Resources */,
 				3738ECC61398D1D7006E02C8 /* HowToViewController.xib in Resources */,
 				3738ECC81398D50C006E02C8 /* howTo.png in Resources */,
+				C76B97401398DF600049E7F7 /* theme.mp3 in Resources */,
+				C76B97421398ECB00049E7F7 /* howtoscreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

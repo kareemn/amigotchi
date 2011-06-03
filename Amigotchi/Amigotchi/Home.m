@@ -229,7 +229,7 @@
 
 -(void)restoreState
 {
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    /*NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary * theState = [defaults objectForKey:@"gameState"];
     
     if(theState)
@@ -237,6 +237,9 @@
         [self.petlayer.pet restoreState:theState];
         [self.newsLayer newsWithString:@"Welcome back!"];
     }
+     */
+    
+    [self.api petLoad];
 }
 
 
