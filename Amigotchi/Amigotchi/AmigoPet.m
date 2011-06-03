@@ -118,7 +118,7 @@
     NSLog(@"AmigoPet::step: Updating!\n");
     
     [self updateBathroom:1];
-    [self updateHappiness:(0 - self.bathroom - 1)];
+    [self updateHappiness:(0 - (self.bathroom/3) - 1)];
     [self feed:-1];
 
 }
