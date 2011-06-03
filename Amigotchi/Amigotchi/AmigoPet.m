@@ -125,7 +125,6 @@
     [self updateHappiness:(0 - (self.bathroom/3) - 1)];
     [self feed:-1];
      */
-    
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     [delegate.api petLoad];
 
