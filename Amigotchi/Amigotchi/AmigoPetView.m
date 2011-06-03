@@ -121,7 +121,7 @@
     CGSize size = [[CCDirector sharedDirector] winSize];
     
     self.happinessBar = [CCSprite spriteWithFile:@"happiness_bar.png"];
-    self.happinessBar.position = ccp(0 - 300, size.height * 0.75);
+    self.happinessBar.position = ccp(0 - 300, size.height * 0.96);
     self.happinessBar.anchorPoint = ccp(0,1);
     self.happinessBarContainer = [CCSprite spriteWithFile:@"happiness_bar_container.png"];
     self.happinessBarContainer.position = ccp(0, self.happinessBar.position.y - self.happinessBar.contentSize.height/2);

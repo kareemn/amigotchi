@@ -89,10 +89,12 @@
     if([[notification object] isEqualToString:@"acc:cowboy hat"])
     {
         self.pet.accessory = @"cowboy hat";
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"Obtained Bellardo Hat!"]];
     }
     else if([[notification object] isEqualToString:@"acc:glasses"])
     {
         self.pet.accessory = @"glasses";
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"Obtained Bellardo Glasses!"]];
     }
     else if([[notification object] isEqualToString:@"acc:none"])
     {
