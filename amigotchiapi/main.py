@@ -80,7 +80,7 @@ class UserLoginHandler(webapp.RequestHandler):
                         pet_name=profile["first_name"], pet_type="dragon" , 
                         bathroom=1, age=0, happiness=30, hunger=10, accessory="none",
                         last_fed=datetime.datetime.now(), last_bathroom=datetime.datetime.now())
-            if user.is_saved():
+            if user.is_saved() == True:
                pass
             else:
                user.put()

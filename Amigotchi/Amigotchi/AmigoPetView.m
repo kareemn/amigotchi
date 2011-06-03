@@ -321,6 +321,10 @@
             NSLog(@"AmigoPetView::Clicked button to clean bathroom");
             [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"toilet"]];
             break;
+        case BUTTON_INFO:
+            NSLog(@"AmigoPetView::Clicked button to get info");
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVCONTROLLER object:@"info"]];
+            break;
         default:
             break;
             

@@ -10,6 +10,7 @@
 #import "AmigoConfig.h"
 #import "AmigoTableViewController.h"
 #import "MapViewController.h"
+#import "AmigoInfoController.h"
 
 @implementation AmigoNavigationController
 
@@ -41,8 +42,16 @@
     
     else if ( [theobj isEqualToString:@"map"] ){
         NSLog(@"app del got stuff");
-        [self pushViewController:[[MapViewController
-                                   alloc]init] animated:YES];
+        MapViewController *mapController = [[MapViewController alloc]init];
+        [self pushViewController:mapController animated:YES];
+        [mapController release];
+    }
+    
+    else if ( [theobj isEqualToString:@"info"] ){
+        NSLog(@"app del got stuff");
+        AmigoInfoController *infoController = [[AmigoInfoController alloc]init];
+        [self pushViewController:infoController animated:YES];
+        [infoController release];
     }
     
     else if( [theobj isEqualToString:@"showHowTo"] )

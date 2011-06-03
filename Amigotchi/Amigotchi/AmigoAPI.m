@@ -28,7 +28,7 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
 @synthesize mapViewController = mapViewController_;
 @synthesize postCheckinDelegate = postCheckinDelegate_;
 @synthesize pet = pet_;
-
+@synthesize facebookCheckinEnabled;
 
 
 - (id)init {
@@ -45,7 +45,7 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
         [self setFacebook: [ [[Facebook alloc] init] autorelease]];
         [self setNearbyDelegate:[[[NearbyPlacesRequestResult alloc] initializeWithDelegate:self] autorelease]];
         [self setPostCheckinDelegate:[[[PostCheckinRequestResult alloc] initializeWithDelegate:self] autorelease]];
-        
+        facebookCheckinEnabled = YES;
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(apiNotification:) name:AMIGOAPINOTIFICATION object:nil];
         
@@ -305,7 +305,9 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
     [[self queue] addOperation:request];
     [[self queue] go];
     
-    [self postCheckinToFacebook:c];
+    if ( facebookCheckinEnabled ){
+       [self postCheckinToFacebook:c];
+    }
     
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"checkedin"]];
 

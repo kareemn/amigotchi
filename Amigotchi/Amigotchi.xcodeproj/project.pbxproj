@@ -64,6 +64,8 @@
 		C754BBC91353EB3D000BE450 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = C754BBC71353EB3D000BE450 /* screen.png */; };
 		C76B97401398DF600049E7F7 /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C76B973F1398DF600049E7F7 /* theme.mp3 */; };
 		C76B97421398ECB00049E7F7 /* howtoscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = C76B97411398ECB00049E7F7 /* howtoscreen.png */; };
+		C76B97461398F34E0049E7F7 /* AmigoInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B97441398F34E0049E7F7 /* AmigoInfoController.m */; };
+		C76B97471398F34E0049E7F7 /* AmigoInfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76B97451398F34E0049E7F7 /* AmigoInfoController.xib */; };
 		C76F7EA51395509200DDEEFA /* PostCheckinRequestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C76F7EA41395509200DDEEFA /* PostCheckinRequestResult.m */; };
 		C777275313528860007A44B9 /* LoginNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274B1352885F007A44B9 /* LoginNormal.png */; };
 		C777275413528860007A44B9 /* LoginNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C777274C1352885F007A44B9 /* LoginNormal@2x.png */; };
@@ -311,6 +313,9 @@
 		C754BBC71353EB3D000BE450 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = screen.png; path = Resources/screen.png; sourceTree = "<group>"; };
 		C76B973F1398DF600049E7F7 /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = theme.mp3; path = Resources/theme.mp3; sourceTree = "<group>"; };
 		C76B97411398ECB00049E7F7 /* howtoscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howtoscreen.png; path = Amigotchi/Resources/howtoscreen.png; sourceTree = "<group>"; };
+		C76B97431398F34D0049E7F7 /* AmigoInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoInfoController.h; sourceTree = "<group>"; };
+		C76B97441398F34E0049E7F7 /* AmigoInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoInfoController.m; sourceTree = "<group>"; };
+		C76B97451398F34E0049E7F7 /* AmigoInfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmigoInfoController.xib; sourceTree = "<group>"; };
 		C76F7EA31395509200DDEEFA /* PostCheckinRequestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCheckinRequestResult.h; sourceTree = "<group>"; };
 		C76F7EA41395509200DDEEFA /* PostCheckinRequestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCheckinRequestResult.m; sourceTree = "<group>"; };
 		C777274B1352885F007A44B9 /* LoginNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginNormal.png; sourceTree = "<group>"; };
@@ -759,6 +764,9 @@
 				37A59BDD138236EB0080C338 /* HomeViewController.xib */,
 				C77E5C9F13526B160051BD37 /* RootViewController.h */,
 				C77E5CA013526B160051BD37 /* RootViewController.m */,
+				C76B97431398F34D0049E7F7 /* AmigoInfoController.h */,
+				C76B97441398F34E0049E7F7 /* AmigoInfoController.m */,
+				C76B97451398F34E0049E7F7 /* AmigoInfoController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1345,6 +1353,7 @@
 				3738ECC81398D50C006E02C8 /* howTo.png in Resources */,
 				C76B97401398DF600049E7F7 /* theme.mp3 in Resources */,
 				C76B97421398ECB00049E7F7 /* howtoscreen.png in Resources */,
+				C76B97471398F34E0049E7F7 /* AmigoInfoController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1500,6 +1509,7 @@
 				37ABF554138F48F5002084B3 /* AmigoAlertLayer.m in Sources */,
 				C76F7EA51395509200DDEEFA /* PostCheckinRequestResult.m in Sources */,
 				3738ECC51398D1D7006E02C8 /* HowToViewController.m in Sources */,
+				C76B97461398F34E0049E7F7 /* AmigoInfoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

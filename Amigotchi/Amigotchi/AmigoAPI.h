@@ -22,7 +22,7 @@
 #import "AmigoPet.h"
 
 @interface AmigoAPI : NSObject<NearbyPlacesRequestDelegate, PostCheckinRequestDelegate> {
-    
+
     
 }
 
@@ -36,6 +36,7 @@
 @property (nonatomic, retain)            PostCheckinRequestResult *postCheckinDelegate;
 @property (nonatomic, retain)            AmigoTableViewController  *checkintable;
 @property (nonatomic, retain)            MapViewController         *mapViewController;
+@property (nonatomic, assign)                BOOL facebookCheckinEnabled;
 
 
 -(void)login:(NSString*)access_token;

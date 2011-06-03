@@ -146,6 +146,16 @@
         NSLog(@"navigateNotification::loggedin");
         [self loggedInCallback];
     }
+    else if( [theobj isEqualToString:@"loggingout"] ){
+        NSLog(@"navigateNotification::loggingout");
+        [self showLoginScreen];
+        
+        [[CCScheduler sharedScheduler] unscheduleAllSelectorsForTarget:self.petlayer.pet];
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:LOGINVIEWCHANGE object:@"facebook_logout"]];
+        
+        [self.api.locdelegate.locManager stopUpdatingLocation];
+        
+    }
     else if( [theobj isEqualToString:@"saveState"] ){
         NSLog(@"navigateNotification::About to save state.\n");
         [self saveState];
