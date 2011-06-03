@@ -88,10 +88,10 @@
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"acc:none"]];
     }
     
-    BOOL shouldPostToFacebook = YES;
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    BOOL shouldPostToFacebook = delegate.api.facebookCheckinEnabled;
     if(shouldPostToFacebook)
     {
-        AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
         [delegate.api checkin:self.checkin];
     }
     [self.navigationController popToRootViewControllerAnimated:YES];

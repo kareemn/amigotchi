@@ -148,6 +148,7 @@
     }
     else if( [theobj isEqualToString:@"loggingout"] ){
         NSLog(@"navigateNotification::loggingout");
+        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
         [self showLoginScreen];
         
         [[CCScheduler sharedScheduler] unscheduleAllSelectorsForTarget:self.petlayer.pet];
@@ -212,6 +213,9 @@
     self.alertLayer = tempAlertLayer;
     [tempAlertLayer release];
     
+    //Music
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"theme.mp3" loop:YES];
+    
     
     [self addChild:self.petlayer z:PET_LAYER];
     [self addChild:self.envlayer];
@@ -256,7 +260,8 @@
 
 - (void) dealloc
 {
-	[petlayer_ release];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+    [petlayer_ release];
     [loginlayer_ release];
     [envlayer_ release];
     [newsLayer_ release];

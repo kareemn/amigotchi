@@ -128,10 +128,12 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] pause];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] resume];
+    [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {

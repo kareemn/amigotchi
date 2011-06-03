@@ -23,6 +23,7 @@
 #import "AmigoAPI.h"
 #import "AmigoAlertView.h"
 #import "AmigoAlertLayer.h"
+#import "SimpleAudioEngine.h"
 
 // HomeLayer
 @interface Home : CCScene
