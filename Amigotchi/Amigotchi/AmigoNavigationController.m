@@ -45,6 +45,13 @@
                                    alloc]init] animated:YES];
     }
     
+    else if( [theobj isEqualToString:@"showHowTo"] )
+    {
+        HowToViewController * hvc = [[HowToViewController alloc] init];
+        [self pushViewController:hvc animated:YES];
+        [hvc release];
+    }
+    
 }
 
 @end

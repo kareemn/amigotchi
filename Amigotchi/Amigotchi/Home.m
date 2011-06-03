@@ -22,6 +22,7 @@
 @synthesize alertLayer = alertLayer_;
 @synthesize api = api_;
 @synthesize loggedIn = loggedIn_;
+@synthesize howTo = howTo_;
 
 +(CCScene *) scene
 {
@@ -52,6 +53,12 @@
         CCSprite * titleScreen = [CCSprite spriteWithFile:@"title_screen.png"];
         titleScreen.position = ccp(160, 240);
         [self addChild:titleScreen];
+        
+        //How to
+        CCMenuItem * howToItem = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithFile:@"howTo.png"] selectedSprite:[CCSprite spriteWithFile:@"howTo.png"] target:self selector:@selector(showHowTo)];
+        self.howTo = [CCMenu menuWithItems:howToItem, nil];
+        self.howTo.position = ccp(290, 50);
+        [self addChild:self.howTo];
         //listen for notifications
         
         
@@ -172,7 +179,13 @@
     NSLog(@"Home::showFoodScreen");
 }
 
+- (void) showHowTo
+{
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVCONTROLLER object:@"showHowTo"]];
+}
+
 - (void) loggedInCallback {
+    [self removeChild:self.howTo cleanup:YES];
     PetLayer *temppetlayer = [[PetLayer alloc] init];
     self.petlayer = temppetlayer;
     [temppetlayer release];
@@ -236,6 +249,7 @@
     [newsLayer_ release];
     [alertLayer_ release];
     [api_ release];
+    [howTo_ release];
     
 	[super dealloc];
 }

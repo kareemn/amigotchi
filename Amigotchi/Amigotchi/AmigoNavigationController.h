@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AmigoAPI.h"
+#import "HowToViewController.h"
 
 @interface AmigoNavigationController : UINavigationController {
     
