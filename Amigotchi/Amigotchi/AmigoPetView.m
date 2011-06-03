@@ -137,55 +137,41 @@
 -(void) setButtons
 {
     CGSize size = [[CCDirector sharedDirector] winSize];
-    int numButtons = 4;
-    
-    float spacing = 2*((size.width) / numButtons); //The 2 is from the scaling in the layer.
-    float curX = (self.mySprite.position.x) - (spacing * (numButtons/2.0));
-    //NSLog(@"spacing: %f.\n", spacing);
     
     [self.cache addSpriteFramesWithFile:@"buttons.plist"];
     
     //Feed button
     CCMenuItem *feedButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"feed_button_pressed.png"] target:self selector:@selector(handleButton:)];
-    curX += feedButton.contentSize.width/2;
     
     feedButton.tag = BUTTON_FEED;
-    feedButton.position = ccp(curX, 0);
-    //NSLog(@"Placing feedButton at %f.\n", curX);
-    curX += spacing;
     
     //Checkin button
     CCMenuItem *checkinButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"checkin_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"checkin_button_pressed.png"] target:self selector:@selector(handleButton:)];
     
     checkinButton.tag = BUTTON_CHECKIN;
-    checkinButton.position = ccp(curX, 0);
-    //NSLog(@"Placing checkinButton at %f.\n", curX);
-    curX += spacing;
     
     //map button
     CCMenuItem *mapButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"map_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"map_button_pressed.png"] target:self selector:@selector(handleButton:)];
     
     mapButton.tag = BUTTON_MAP;
-    mapButton.position = ccp(curX, 0);
-    //NSLog(@"Placing mapButton at %f.\n", curX);
-    curX += spacing;
     
     //Toilet button
     CCMenuItem *toiletButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"toilet_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"toilet_button_pressed.png"] target:self selector:@selector(handleButton:)];
     
     toiletButton.tag = BUTTON_TOILET;
-    toiletButton.position = ccp(curX, 0);
-    //NSLog(@"Placing toiletButton at %f.\n", curX);
-    curX += spacing;
+    
+    //Info button
+    CCMenuItem * infoButton = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithSpriteFrameName:@"info_button.png"] selectedSprite:[CCSprite spriteWithSpriteFrameName:@"info_button_pressed.png"] target:self selector:@selector(handleButton:)];
+    infoButton.tag = BUTTON_INFO;
     
     //Make the menu
-    self.buttons = [CCMenu menuWithItems:feedButton, checkinButton, mapButton, toiletButton, nil];
+    self.buttons = [CCMenu menuWithItems:feedButton, checkinButton, mapButton, toiletButton, infoButton, nil];
     
     //NSLog(@"width: %f height: %f", size.width, size.height);
     
     //self.buttons.position = CGPointMake(-.4* size.width, -.9 * size.height);
-    self.buttons.position = CGPointMake(self.mySprite.position.x, -.8 * size.height);
-    [self.buttons alignItemsHorizontallyWithPadding:30];
+    self.buttons.position = CGPointMake(self.mySprite.position.x, -1 * size.height + toiletButton.contentSize.height/2 - 3);
+    [self.buttons alignItemsHorizontallyWithPadding:0];
 }
 
 -(void) refreshSpriteswithHappiness:(int)happiness andHunger:(int)hunger andBathroom:(int)bathroom andAge:(int)age andAccessory:(NSString *)acc

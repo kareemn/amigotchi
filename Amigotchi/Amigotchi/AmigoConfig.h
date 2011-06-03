@@ -24,6 +24,7 @@
 #define BUTTON_CHECKIN 2
 #define BUTTON_MAP 3
 #define BUTTON_TOILET 4
+#define BUTTON_INFO 5
 
 //facebook app id
 #define kAppId  @"196872950351792"
