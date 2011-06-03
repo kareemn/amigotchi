@@ -43,18 +43,19 @@
         [self.idleAnimation release];
         [self.pokeAnimation release];
         [self.poopAnimation release];
+
         
         [self setSprites];
         [self setButtons];
         
         //Set and go!
         self.mySprite = [CCSprite spriteWithSpriteFrameName:@"dragon_idle_1.png"];
-        /*self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
+        self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
         self.accessory.visible = NO;
         self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
                                       self.mySprite.position.y + self.mySprite.contentSize.height * .95);
         
-        [self.mySprite addChild:self.accessory];*/
+        [self.mySprite addChild:self.accessory];
         [self.mySprite runAction:self.idleAction];
         [self addChild:self.mySprite];
         [self addChild:self.buttons];
@@ -71,12 +72,6 @@
     if((self = [super init]))
     {
         [self init];
-        self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
-        self.accessory.visible = NO;
-        self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
-                                      self.mySprite.position.y + self.mySprite.contentSize.height * .95);
-        [self.mySprite addChild:self.accessory];
-        
         [self refreshSpriteswithHappiness:happiness andHunger:hunger andBathroom:bathroom andAge:age andAccessory:acc];
     }
     return self;
@@ -136,6 +131,7 @@
     self.hungerBar.anchorPoint = ccp(0,1);
     self.hungerBarContainer = [CCSprite spriteWithFile:@"hunger_bar_container.png"];
     self.hungerBarContainer.position = ccp(0, self.hungerBar.position.y - self.hungerBar.contentSize.height/2);
+
 }
 
 -(void) setButtons
@@ -229,14 +225,31 @@
     [self drawBarsHappiness:happiness Hunger:hunger];
     
     //Accessory
+    [self.mySprite removeChild:self.accessory cleanup:YES];
+    self.accessory = nil;
     if([acc isEqualToString:@"cowboy hat"])
     {
+        self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
+        self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
+                                      self.mySprite.position.y + self.mySprite.contentSize.height * .95);
+
+        self.accessory.visible = YES;
+        
+    }
+    else if([acc isEqualToString:@"glasses"])
+    {
+        self.accessory = [CCSprite spriteWithFile:@"glasses.png"];
+        self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
+                                      self.mySprite.position.y + self.mySprite.contentSize.height * .7);
         self.accessory.visible = YES;
     }
     else if([acc isEqualToString:@"none"])
     {
+        self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
         self.accessory.visible = NO;
+        
     }
+    [self.mySprite addChild:self.accessory];
     
     //scale it here.
     

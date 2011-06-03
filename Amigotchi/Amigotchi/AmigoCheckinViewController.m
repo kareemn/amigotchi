@@ -78,6 +78,10 @@
     {
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"acc:cowboy hat"]];   
     }
+    else if([self.checkin.title isEqualToString:@"Sierra Vista Regional Medical Center"])
+    {
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"acc:glasses"]];   
+    }
     else
     {
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"acc:none"]];

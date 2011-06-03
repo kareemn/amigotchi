@@ -90,6 +90,10 @@
     {
         self.pet.accessory = @"cowboy hat";
     }
+    else if([[notification object] isEqualToString:@"acc:glasses"])
+    {
+        self.pet.accessory = @"glasses";
+    }
     else if([[notification object] isEqualToString:@"acc:none"])
     {
         self.pet.accessory = @"none";
