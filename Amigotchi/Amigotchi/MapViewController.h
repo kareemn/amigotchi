@@ -10,7 +10,8 @@
 #import <MapKit/MKMapView.h>
 #import <MapKit/MKUserLocation.h>
 
-@interface MapViewController : UIViewController {
+
+@interface MapViewController : UIViewController<MKMapViewDelegate> {
     IBOutlet MKMapView * mView;
 }
 

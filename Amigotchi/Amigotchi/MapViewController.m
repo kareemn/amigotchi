@@ -67,6 +67,15 @@
 
 }
 
+- (MKAnnotationView *) mapView:(MKMapView *) mapView viewForAnnotation:(id ) annotation {
+	MKAnnotationView *customPinView = [[[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil] autorelease];
+    UIImage *littledragon = [UIImage imageNamed:@"mapmarker.gif"];
+    customPinView.image = littledragon;
+	customPinView.canShowCallout = YES;
+    
+	return customPinView;
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -79,6 +88,8 @@
     CLLocation *location = delegate.api.locdelegate.currLoc;
     NSString *lat = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
     NSString *lon = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
+    
+    mView.delegate = self;
     
     [delegate.api getNearbyCheckinsForLat:lat andLon:lon];
     
