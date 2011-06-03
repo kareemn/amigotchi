@@ -304,8 +304,6 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
 - (void)checkinRequestDone:(ASIHTTPRequest *)request
 {
     NSString *response = [request responseString];
-    //id parsedJson = [self parseJsonResponse:response];
-    
     NSLog(@"checkinRequestDone %@", response);
     
 }
@@ -339,14 +337,14 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
     [[self queue] go];
     
     
-    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"checkedin"]];
-    
 }
 
 - (void)nearbyRequestDone:(ASIHTTPRequest *)request
 {
     NSString *response = [request responseString];
-    //id parsedJson = [self parseJsonResponse:response];
+    NSArray *parsedJson = [self parseJsonResponse:response];
+    
+    [self.mapViewController drawCheckins:parsedJson];
     
     NSLog(@"nearbyRequestDone %@", response);
     

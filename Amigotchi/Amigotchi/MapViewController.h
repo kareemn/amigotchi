@@ -14,9 +14,7 @@
     IBOutlet MKMapView * mView;
 }
 
-@property (nonatomic, retain) NSArray *checkins;
-
 - (void) centerOnUserLocation;
-- (void) drawCheckins;
+- (void) drawCheckins:(NSArray *)checkins;
 
 @end

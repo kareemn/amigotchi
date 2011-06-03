@@ -10,20 +10,21 @@
 #import "AppDelegate.h"
 
 @implementation MapViewController
-@synthesize checkins = checkins_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+        delegate.api.mapViewController = self;
+        
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [checkins_ release];
     [super dealloc];
 }
 
@@ -35,15 +36,29 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
--(void) setCheckins:(NSArray *)checkins{
-    [checkins_ release];
-    
-    checkins_ = [checkins retain];
-    
-    [self drawCheckins];
-}
 
-- (void) drawCheckins{
+- (void) drawCheckins:(NSArray *)checkins{
+    NSLog(@"drawing checkins");
+    for(NSDictionary *c in checkins){
+        NSLog(@"drawing checkin: %@\n", [c description]);
+        NSString *latstring = [c objectForKey:@"lat"];
+        NSString *lonstring = [c objectForKey:@"lon"];
+        
+        float lat = [latstring floatValue];
+        float lon = [lonstring floatValue];
+        
+        CLLocationCoordinate2D thisloc;
+        thisloc.latitude = lat;
+        thisloc.longitude = lon;
+        AmigoCheckin *thisMark = [[AmigoCheckin alloc] initWithCoordinate:thisloc];
+        
+        thisMark.title = [c objectForKey:@"title"];
+        thisMark.subtitle = [c objectForKey:@"owner"];
+        
+        [mView addAnnotation:thisMark];
+        
+        [thisMark release];
+    }
 
 }
 
@@ -73,7 +88,9 @@
     
     region.span=span;
     region.center= mView.userLocation.location.coordinate;
-    
+    if (mView.userLocation.location.verticalAccuracy) {
+        
+    }
     [mView setRegion:region animated:TRUE];
     [mView regionThatFits:region];
 }
