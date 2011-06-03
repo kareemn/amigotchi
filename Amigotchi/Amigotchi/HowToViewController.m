@@ -40,7 +40,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"How To Play";
-    words.text = @"Your Amigo has wants and needs just like any pet.  Displayed at the top of the screen is your Amigo's happiness and food.  To make your pet happy, pet him.  To feed him, click the food button.\nYour Amigo will also occasionally go to the bathroom, which can cause their happiness to decrease more quickly.  Click the toilet button to clean it.\nTo check in, click the check button.  By checking in to places, you have a chance to find rare accessories for your Amigo!";
+    words.text = @"Your Amigo has wants and needs just like any pet.  Displayed at the top of the screen is your Amigo's happiness and food.  To make your pet happy, pet them.  To feed them, click the food button.\nYour Amigo will also occasionally go to the bathroom, which can cause their happiness to decrease more quickly.  Click the toilet button to clean it.\nTo check in, click the check button.  By checking in to places, you have a chance to find rare accessories for your Amigo!";
 }
 
 - (void)viewDidUnload
