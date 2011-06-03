@@ -27,6 +27,7 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
 @synthesize checkintable = checkintable_;
 @synthesize mapViewController = mapViewController_;
 @synthesize postCheckinDelegate = postCheckinDelegate_;
+@synthesize pet = pet_;
 
 
 
@@ -178,8 +179,18 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
 {
     NSLog(@"petLoadDone");
     NSString *response = [request responseString];
-    NSLog(@"response:: %@", response);
+    NSDictionary *parsedJson = [self parseJsonResponse:response];
+    NSLog(@"response:: %@", [parsedJson description]);
     
+    
+    [ self performSelectorOnMainThread:@selector(petLoadState:) withObject:parsedJson waitUntilDone:NO] ;
+    
+}
+
+- (void)petLoadState:(NSDictionary *)state{
+    [state retain];
+   [self.pet restoreState:state];
+    [state release];
 }
 
 - (void)petLoadWentWrong:(ASIHTTPRequest *)request
@@ -398,6 +409,7 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
     [checkintable_ release];
     [mapViewController_ release];
     [postCheckinDelegate_ release];
+    [pet_ release];
     
     [super dealloc];
 }

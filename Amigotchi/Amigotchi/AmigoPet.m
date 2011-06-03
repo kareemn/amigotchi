@@ -7,6 +7,7 @@
 //
 
 #import "AmigoPet.h"
+#import "AppDelegate.h"
 
 @implementation AmigoPet
 @synthesize name = name_, type = type_, age = age_, hunger = hunger_, happiness = happiness_, bathroom = bathroom_;
@@ -20,6 +21,9 @@
         self.name = @"Issa";
         self.happiness = MAX_HAPPINESS;
         self.accessory = @"none";
+        
+        AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+        delegate.api.pet = self;
     }
     return (self);
 }
@@ -116,10 +120,14 @@
 -(void) step:(ccTime *)dt
 {
     NSLog(@"AmigoPet::step: Updating!\n");
-    
+    /*
     [self updateBathroom:1];
     [self updateHappiness:(0 - (self.bathroom/3) - 1)];
     [self feed:-1];
+     */
+    
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate.api petLoad];
 
 }
 
@@ -143,11 +151,46 @@
 {
     self.type = [dict objectForKey:@"type"];
     self.name = [dict objectForKey:@"name"];
-    self.age = [[dict objectForKey:@"age"]intValue];
-    self.hunger = [[dict objectForKey:@"hunger"]intValue];
-    self.happiness = [[dict objectForKey:@"happiness"]intValue];
-    self.bathroom = [[dict objectForKey:@"bathroom"]intValue];
-    self.accessory = [dict objectForKey:@"accessory"];
+    
+    if ([[dict objectForKey:@"age"] isKindOfClass:[NSNull class]] || [dict objectForKey:@"age"]==nil) {
+        self.age = 0;
+    }
+    else {
+       self.age = [[dict objectForKey:@"age"]intValue];
+    }
+    
+    if ([[dict objectForKey:@"hunger"] isKindOfClass:[NSNull class]] || [dict objectForKey:@"hunger"]==nil ) {
+        self.hunger = 0;
+    }
+    else {
+        self.hunger = [[dict objectForKey:@"hunger"]intValue];
+    }
+    
+    
+    if ([[dict objectForKey:@"happiness"] isKindOfClass:[NSNull class]] || [dict objectForKey:@"happiness"]==nil) {
+        self.happiness = 0;
+    }
+    else {
+        self.happiness = [[dict objectForKey:@"happiness"]intValue];
+    }
+    
+    if ([[dict objectForKey:@"bathroom"] isKindOfClass:[NSNull class]] || [dict objectForKey:@"bathroom"]==nil) {
+        self.bathroom = 0;
+    }
+    else {
+        self.bathroom = [[dict objectForKey:@"bathroom"]intValue];
+    }
+    
+    
+    if ([dict objectForKey:@"accessory"]==nil || [[dict objectForKey:@"accessory"] isKindOfClass:[NSNull class]] || 
+        ![[dict objectForKey:@"accessory"] isKindOfClass:[NSString class]] ) {
+        self.accessory = @"none";
+    }
+    else {
+        
+        self.accessory = [dict objectForKey:@"accessory"];
+    }
+    
 }
 
 @end

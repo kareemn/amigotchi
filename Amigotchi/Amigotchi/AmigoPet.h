@@ -22,7 +22,7 @@
 @property (readwrite, assign) int age;
 @property (readwrite, assign) int bathroom;
 @property (readwrite, assign) int happiness;
-@property (nonatomic, assign) NSString * accessory;
+@property (nonatomic, retain) NSString * accessory;
 
 - (void)feed:(int)amount;
 - (void)updateHappiness:(int)amount;

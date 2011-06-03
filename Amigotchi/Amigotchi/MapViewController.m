@@ -39,7 +39,12 @@
 
 - (void) drawCheckins:(NSArray *)checkins{
     NSLog(@"drawing checkins");
-    for(NSDictionary *c in checkins){
+    for(id c in checkins){
+        
+        if (! [c isKindOfClass:[NSDictionary class]] ) {
+            continue;
+        }
+        
         NSLog(@"drawing checkin: %@\n", [c description]);
         NSString *latstring = [c objectForKey:@"lat"];
         NSString *lonstring = [c objectForKey:@"lon"];

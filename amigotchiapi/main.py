@@ -39,6 +39,8 @@ class User(db.Model):
     last_fed = db.DateTimeProperty()
     happiness = db.IntegerProperty()
     bathroom = db.IntegerProperty()
+    accessory = db.StringProperty()
+    age = db.IntegerProperty()
     last_bathroom = db.DateTimeProperty()
     pic = db.BlobProperty()
 
@@ -74,8 +76,13 @@ class UserLoginHandler(webapp.RequestHandler):
         else:
             user = User(key_name=str(profile["id"]), id=str(profile["id"]),
                         name=profile["name"], access_token=access_token,
-                        profile_url=profile["link"])
-            user.put()
+                        profile_url=profile["link"],
+                        pet_name=profile["first_name"], pet_type="dragon" , 
+                        bathroom=0, age=0, happiness=15, hunger=0, accessory="none")
+            if user.is_saved():
+               pass
+            else:
+               user.put()
             self.response.out.write(json.dumps(profile))
 
 
@@ -155,8 +162,9 @@ class PetLoadHandler(webapp.RequestHandler):
             pet["happiness"] = current_user.happiness
             pet["bathroom"] = current_user.bathroom
             pet["last_bathroom"] = current_user.last_bathroom
+            pet["accessory"] = current_user.accessory
 
-            pet["age"] = (datetime.datetime.today() - current_user.created).days
+            pet["age"] = current_user.age
             pet["type"] = current_user.pet_type
 
             self.response.out.write(json.dumps(pet))
@@ -188,6 +196,9 @@ class CheckinHandler(webapp.RequestHandler):
             user_key = db.Key.from_path('User', user_id)
 
             current_user = User.get(user_key)
+            current_user.age = current_user.age + 1
+            current_user.put()
+
             savethis = Checkin( title=checkin["title"], owner=current_user, place_id=checkin["place_id"], location=db.GeoPt(checkin["lat"], checkin["lon"]) )
             savethis.put()
 
@@ -217,7 +228,8 @@ class NearbyHandler(webapp.RequestHandler):
         else:
             nearby = []
             q = Checkin.all()
-            results = q.fetch(5)
+            q.order("checkindate")
+            results = q.fetch(100)
             for checkin in results:
                nearby.append(dict(lat=checkin.location.lat,lon=checkin.location.lon, title=checkin.title, owner=checkin.owner.name))
             self.response.out.write(json.dumps(nearby))

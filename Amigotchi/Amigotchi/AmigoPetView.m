@@ -211,32 +211,37 @@
     [self drawBarsHappiness:happiness Hunger:hunger];
     
     //Accessory
-    [self.mySprite removeChild:self.accessory cleanup:YES];
-    self.accessory = nil;
-    if([acc isEqualToString:@"cowboy hat"])
-    {
-        self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
-        self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
-                                      self.mySprite.position.y + self.mySprite.contentSize.height * .95);
-
-        self.accessory.visible = YES;
-        
-    }
-    else if([acc isEqualToString:@"glasses"])
-    {
-        self.accessory = [CCSprite spriteWithFile:@"glasses.png"];
-        self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
-                                      self.mySprite.position.y + self.mySprite.contentSize.height * .7);
-        self.accessory.visible = YES;
-    }
-    else if([acc isEqualToString:@"none"])
-    {
-        self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
-        self.accessory.visible = NO;
-        
-    }
-    [self.mySprite addChild:self.accessory];
     
+    if (acc != nil) {
+
+        [self.mySprite removeChild:self.accessory cleanup:YES];
+        self.accessory = nil;
+
+        if([acc isEqualToString:@"cowboy hat"])
+        {
+            self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
+            self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
+                                          self.mySprite.position.y + self.mySprite.contentSize.height * .95);
+
+            self.accessory.visible = YES;
+            
+        }
+        else if([acc isEqualToString:@"glasses"])
+        {
+            self.accessory = [CCSprite spriteWithFile:@"glasses.png"];
+            self.accessory.position = ccp(self.mySprite.position.x + self.mySprite.contentSize.width/2,
+                                          self.mySprite.position.y + self.mySprite.contentSize.height * .7);
+            self.accessory.visible = YES;
+        }
+        else
+        {
+            self.accessory = [CCSprite spriteWithFile:@"cowboy_hat.png"];
+            self.accessory.visible = NO;
+            
+        }
+        [self.mySprite addChild:self.accessory];
+    }
+     
     //scale it here.
     
     float newScale = 0.6 + (age/20.0);

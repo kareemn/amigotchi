@@ -28,6 +28,7 @@
 
 @property (nonatomic, readwrite, retain) ASINetworkQueue        *queue;
 @property (nonatomic, readwrite, retain) AmigoUser              *user;
+@property (nonatomic, retain)            AmigoPet               *pet;
 @property (nonatomic, retain)            AmigoLocationDelegate  *locdelegate;
 @property (nonatomic, retain)            Facebook               *facebook;
 @property (nonatomic, retain)            NearbyPlacesRequestResult *nearbyDelegate;
@@ -41,6 +42,7 @@
 
 -(void)petSave:(AmigoPet *)pet withAction:(NSString*)action;
 -(void)petLoad;
+- (void)petLoadState:(NSDictionary *)state;
 -(void) updateNearbyPlaces;
 -(void) checkin: (AmigoCheckin *)c;
 -(void) getNearbyCheckinsForLat: (NSString *)lat andLon:(NSString *)lon;
