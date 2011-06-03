@@ -84,7 +84,7 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
     NSString *response = [request responseString];
     id parsedJson = [self parseJsonResponse:response];
     
-    NSLog(@"%@", [parsedJson description]);
+    NSLog(@"%@", response);
     
     NSString *first_name = [parsedJson objectForKey:@"first_name"];
     NSString *profile_id = [parsedJson objectForKey:@"id"];
@@ -180,7 +180,7 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
     NSLog(@"petLoadDone");
     NSString *response = [request responseString];
     NSDictionary *parsedJson = [self parseJsonResponse:response];
-    NSLog(@"response:: %@", [parsedJson description]);
+    NSLog(@"response:: %@", response);
     
     
     [ self performSelectorOnMainThread:@selector(petLoadState:) withObject:parsedJson waitUntilDone:NO] ;

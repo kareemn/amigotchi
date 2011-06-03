@@ -78,7 +78,8 @@ class UserLoginHandler(webapp.RequestHandler):
                         name=profile["name"], access_token=access_token,
                         profile_url=profile["link"],
                         pet_name=profile["first_name"], pet_type="dragon" , 
-                        bathroom=0, age=0, happiness=15, hunger=0, accessory="none")
+                        bathroom=1, age=0, happiness=15, hunger=10, accessory="none",
+                        last_fed=datetime.datetime.now(), last_bathroom=datetime.datetime.now())
             if user.is_saved():
                pass
             else:
@@ -94,7 +95,7 @@ class PetSaveHandler(webapp.RequestHandler):
     def post(self):
 
         access_token = self.request.get("access_token")
-		
+        
         action = self.request.get("action")
 
         pet_name = self.request.get("name")
@@ -155,13 +156,27 @@ class PetLoadHandler(webapp.RequestHandler):
 
             current_user = User.get(user_key)
             pet = {}
+            right_now = datetime.datetime.now()
+            difference_without_food = current_user.last_fed - right_now
+            seconds_without_food = difference_without_food.seconds
 
+            minutes_without_food = seconds_without_food / 60
+            days_without_food = difference_without_food.days
+            current_user.hunger = current_user.hunger + 1*minutes_without_food
+
+            difference_without_cleaning = current_user.last_bathroom - right_now
+            seconds_without_cleaning = difference_without_cleaning.seconds
+
+            minutes_without_cleaning = seconds_without_cleaning / 60
+            days_without_cleaning = difference_without_cleaning.days
+            current_user.bathroom = current_user.bathroom + 1*minutes_without_cleaning           
+
+            current_user.happiness = current_user.happiness - (current_user.bathroom/3) - current_user.hunger
+ 
             pet["name"] = current_user.pet_name
             pet["hunger"] = current_user.hunger
-            pet["last_fed"] = current_user.last_fed
             pet["happiness"] = current_user.happiness
             pet["bathroom"] = current_user.bathroom
-            pet["last_bathroom"] = current_user.last_bathroom
             pet["accessory"] = current_user.accessory
 
             pet["age"] = current_user.age
