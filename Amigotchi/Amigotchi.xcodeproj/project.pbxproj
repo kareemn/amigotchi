@@ -14,6 +14,9 @@
 		372C150B13944ED8004F029E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 372C150713944BE7004F029E /* Default@2x.png */; };
 		3731B20D138F2D58006F9CA4 /* AmigoAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3731B20C138F2D58006F9CA4 /* AmigoAlertView.m */; };
 		3731B20F138F2FAB006F9CA4 /* amigoAlertBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 3731B20E138F2FAB006F9CA4 /* amigoAlertBox.png */; };
+		3738ECC51398D1D7006E02C8 /* HowToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3738ECC31398D1D7006E02C8 /* HowToViewController.m */; };
+		3738ECC61398D1D7006E02C8 /* HowToViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3738ECC41398D1D7006E02C8 /* HowToViewController.xib */; };
+		3738ECC81398D50C006E02C8 /* howTo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3738ECC71398D50C006E02C8 /* howTo.png */; };
 		3744A5D51390ABED00D0EA62 /* foodAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 3744A5D41390ABED00D0EA62 /* foodAlert.png */; };
 		374A62CF135E40E200FE23E3 /* background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 374A62CD135E40E200FE23E3 /* background.plist */; };
 		374A62D0135E40E200FE23E3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 374A62CE135E40E200FE23E3 /* background.png */; };
@@ -235,6 +238,10 @@
 		3731B20B138F2D58006F9CA4 /* AmigoAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmigoAlertView.h; sourceTree = "<group>"; };
 		3731B20C138F2D58006F9CA4 /* AmigoAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmigoAlertView.m; sourceTree = "<group>"; };
 		3731B20E138F2FAB006F9CA4 /* amigoAlertBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amigoAlertBox.png; path = Resources/amigoAlertBox.png; sourceTree = "<group>"; };
+		3738ECC21398D1D7006E02C8 /* HowToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToViewController.h; sourceTree = "<group>"; };
+		3738ECC31398D1D7006E02C8 /* HowToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowToViewController.m; sourceTree = "<group>"; };
+		3738ECC41398D1D7006E02C8 /* HowToViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HowToViewController.xib; sourceTree = "<group>"; };
+		3738ECC71398D50C006E02C8 /* howTo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = howTo.png; path = Resources/howTo.png; sourceTree = "<group>"; };
 		3744A5D41390ABED00D0EA62 /* foodAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foodAlert.png; path = Resources/foodAlert.png; sourceTree = "<group>"; };
 		374A62CD135E40E200FE23E3 /* background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = background.plist; path = Resources/background.plist; sourceTree = "<group>"; };
 		374A62CE135E40E200FE23E3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
@@ -729,6 +736,9 @@
 		C751678313824F8900202CE9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3738ECC21398D1D7006E02C8 /* HowToViewController.h */,
+				3738ECC31398D1D7006E02C8 /* HowToViewController.m */,
+				3738ECC41398D1D7006E02C8 /* HowToViewController.xib */,
 				C751678013824A7700202CE9 /* AmigoNavigationController.h */,
 				C751678113824A7700202CE9 /* AmigoNavigationController.m */,
 				C751678413824FB900202CE9 /* AmigoTableViewController.h */,
@@ -854,6 +864,7 @@
 				37DC97FD1379CC5700934783 /* hunger_bar.png */,
 				37DC97FB1379C75000934783 /* happiness_bar.png */,
 				C79A96571371DADC002C5062 /* particleTexture.png */,
+				3738ECC71398D50C006E02C8 /* howTo.png */,
 				C79A96581371DADC002C5062 /* ringoffire.plist */,
 				C70A7B611354C520007A82CB /* app_icon.png */,
 				375FD379136CE8BC004DAC1F /* buttons.plist */,
@@ -1324,6 +1335,8 @@
 				37C1FF3B139824110014869C /* cowboy_hat.png in Resources */,
 				37C1FF79139837B10014869C /* fbAlert.png in Resources */,
 				376ECC2D13985F0A0045DDA0 /* glasses.png in Resources */,
+				3738ECC61398D1D7006E02C8 /* HowToViewController.xib in Resources */,
+				3738ECC81398D50C006E02C8 /* howTo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1478,6 +1491,7 @@
 				3731B20D138F2D58006F9CA4 /* AmigoAlertView.m in Sources */,
 				37ABF554138F48F5002084B3 /* AmigoAlertLayer.m in Sources */,
 				C76F7EA51395509200DDEEFA /* PostCheckinRequestResult.m in Sources */,
+				3738ECC51398D1D7006E02C8 /* HowToViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

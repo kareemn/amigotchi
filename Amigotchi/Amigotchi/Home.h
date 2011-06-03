@@ -36,6 +36,7 @@
 @property (nonatomic, retain) NewsLayer             *newsLayer;
 @property (nonatomic, retain) AmigoAlertLayer       *alertLayer;
 @property (nonatomic, retain) AmigoAPI              *api;
+@property (nonatomic, retain) CCMenu                *howTo;
 @property BOOL loggedIn;
 
 // returns a CCScene that contains the HomeLayer as the only child
@@ -50,6 +51,7 @@
 - (void) showLoginScreen;
 - (void) showPetScreen;
 - (void) showFoodScreen;
+- (void) showHowTo;
 
 - (void)saveState;
 - (void)restoreState;
