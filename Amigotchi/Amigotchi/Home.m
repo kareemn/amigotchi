@@ -123,17 +123,34 @@
     else if( [theobj isEqualToString:@"toilet"] ) {
         //NSLog(@"navigateNotification::toilet clicked");
         [self.petlayer.pet updateBathroom:-1];
+        
+        NSDictionary *petInfo = [notification userInfo];
+        NSString *message = [petInfo objectForKey:@"message"];
+        
+        [self.api.pet restoreState:petInfo];
+        [self.newsLayer newsWithString:message];
     }
     else if( [theobj isEqualToString:@"PetLayer"] ) {
         //NSLog(@"navigateNotification::petlayer clicked");
         [self showPetScreen];
     }
+    else if ( [theobj isEqualToString:@"happy"] ){
+        
+        NSDictionary *petInfo = [notification userInfo];
+        NSString *message = [petInfo objectForKey:@"message"];
+        
+        [self.api.pet restoreState:petInfo];
+        [self.newsLayer newsWithString:message];
+    }
     else if( [theobj isEqualToString:@"feed"] ) {
         //NSLog(@"navigateNotification::feed clicked");
-        [self.petlayer.pet feed:1];
-        [self.alertLayer displayAlertWithString:@"Feeding..." andPicture:@"foodAlert.png"];
+        //[self.alertLayer displayAlertWithString:@"Feeding..." andPicture:@"foodAlert.png"];
         
-        //[self.api petLoad];
+        NSDictionary *petInfo = [notification userInfo];
+        NSString *message = [petInfo objectForKey:@"message"];
+        
+        [self.api.pet restoreState:petInfo];
+        [self.newsLayer newsWithString:message];
         
     }
     else if( [theobj isEqualToString:@"loggedin"] ){

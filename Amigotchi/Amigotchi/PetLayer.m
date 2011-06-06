@@ -83,7 +83,7 @@
     //NSLog(@"inputFromView:: received %@.\n", [notification object]);
     if([[notification object] isEqualToString:@"poke"])
     {
-        [self.pet updateHappiness:2];
+        //[self.pet updateHappiness:2];
     }
     
     if([[notification object] isEqualToString:@"acc:cowboy hat"])

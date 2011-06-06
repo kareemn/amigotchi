@@ -7,6 +7,8 @@
 //
 
 #import "AmigoPetView.h"
+#import "AppDelegate.h"
+
 @interface AmigoPetView()
 
 @property (nonatomic, retain) CCAnimation * poopAnimation;
@@ -302,10 +304,14 @@
      @"checkinButtonCallback"
      @"mapButtonCallback"
     */
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+    
     switch(clickedButton.tag){
         case BUTTON_FEED:
             NSLog(@"AmigoPetView::Clicked button to feed pet");
-            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"feed"]];
+            //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"feed"]];
+            [delegate.api petFeed];
             break;
         case BUTTON_CHECKIN:
             NSLog(@"AmigoPetView::Clicked button to checkin");
@@ -319,7 +325,9 @@
             break;
         case BUTTON_TOILET:
             NSLog(@"AmigoPetView::Clicked button to clean bathroom");
-            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"toilet"]];
+            //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"toilet"]];
+            
+            [delegate.api petClean];
             break;
         case BUTTON_INFO:
             NSLog(@"AmigoPetView::Clicked button to get info");
@@ -368,7 +376,10 @@
     
     //NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"hey", @"ho", nil];
     
-    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"poke"]];
+    //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"poke"]];
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+
+    [delegate.api petHappy];
 }
 
 -(void)onEnter

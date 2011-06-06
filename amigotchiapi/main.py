@@ -76,7 +76,6 @@ class UserLoginHandler(webapp.RequestHandler):
         self.response.out.write("doesn't work here buddy")
 
     def post(self):
-    
         access_token = self.request.get("access_token")
 
         # Download the user profile and cache a local instance of the
@@ -86,19 +85,25 @@ class UserLoginHandler(webapp.RequestHandler):
             urllib.urlencode(dict(access_token=access_token))))
 
         if profile.get("error"):
-           self.response.out.write(json.dumps(profile))
+           self.error(500)
         else:
-            user = User(key_name=str(profile["id"]), id=str(profile["id"]),
+           user_id = profile["id"]
+
+           user_key = db.Key.from_path('User', user_id)
+           current_user = User.get(user_key)
+            
+           if current_user == None:
+               user = User(key_name=str(profile["id"]), id=str(profile["id"]),
                         name=profile["name"], access_token=access_token,
                         profile_url=profile["link"],
                         pet_name=profile["first_name"], pet_type="dragon" , 
                         bathroom=1, age=0, happiness=30, hunger=10, accessory="none",
                         last_fed=datetime.datetime.now(), last_bathroom=datetime.datetime.now())
-            if user.is_saved() == True:
-               pass
-            else:
                user.put()
-            self.response.out.write(json.dumps(profile))
+           else:
+               current_user.access_token = access_token
+               current_user.put()
+        self.response.out.write(json.dumps(profile))
 
 ###
 class PetCleanHandler(webapp.RequestHandler):
@@ -116,15 +121,15 @@ class PetCleanHandler(webapp.RequestHandler):
             urllib.urlencode(dict(access_token=access_token))))
 
         if profile.get("error"):
-           self.response.out.write(json.dumps(profile))
+           self.error(500)
         else:
             user_id = profile["id"]
 
             user_key = db.Key.from_path('User', user_id)
             current_user = User.get(user_key)
-            current_user.bathroom = current_user.bathroom - 1
-            if current_user.bathroom < 0:
-                current_user.bathroom = 0;
+            current_user.bathroom = 0
+
+            current_user.last_bathroom = datetime.datetime.now()
             current_user.put()
 
             self.response.out.write(json.dumps(petToDict(current_user, msg="cleaned up!") ))
@@ -145,22 +150,52 @@ class PetFeedHandler(webapp.RequestHandler):
             urllib.urlencode(dict(access_token=access_token))))
 
         if profile.get("error"):
-           self.response.out.write(json.dumps(profile))
+           self.error(500)
         else:
             user_id = profile["id"]
 
             user_key = db.Key.from_path('User', user_id)
             current_user = User.get(user_key)
 
-            current_user.hunger = current_user.hunger + 1
+            current_user.hunger = current_user.hunger - 1
 
-            if current_user.hunger > 30:
-                current_user.hunger = 30;
+            if current_user.hunger < 0:
+                current_user.hunger = 0
+            current_user.last_fed = datetime.datetime.now()
             current_user.put()
 
             self.response.out.write(json.dumps(petToDict(current_user, msg="Yummy!")))
 ###
+class PetHappyHandler(webapp.RequestHandler):
+    def get(self):
+        self.response.out.write("doesn't work here buddy")
 
+    def post(self):
+
+        access_token = self.request.get("access_token")
+
+        # Download the user profile and cache a local instance of the
+        # basic profile info
+        profile = json.load(urllib.urlopen(
+            "https://graph.facebook.com/me?" +
+            urllib.urlencode(dict(access_token=access_token))))
+
+        if profile.get("error"):
+           self.error(500)
+        else:
+            user_id = profile["id"]
+
+            user_key = db.Key.from_path('User', user_id)
+            current_user = User.get(user_key)
+
+            current_user.happiness = current_user.happiness + 1
+
+            if current_user.happiness > 30:
+                current_user.happiness = 30
+            current_user.put()
+
+            self.response.out.write(json.dumps(petToDict(current_user, msg="Thanks for petting me!")))
+###
 class PetLoadHandler(webapp.RequestHandler):
     def get(self):
         self.response.out.write("doesn't work here buddy")
@@ -176,7 +211,7 @@ class PetLoadHandler(webapp.RequestHandler):
             urllib.urlencode(dict(access_token=access_token))))
 
         if profile.get("error"):
-           self.response.out.write(json.dumps(profile))
+           self.error(500)
         else:
             user_id = profile["id"]
             user_key = db.Key.from_path('User', user_id)
@@ -228,7 +263,7 @@ class CheckinHandler(webapp.RequestHandler):
             urllib.urlencode(dict(access_token=access_token))))
 
         if profile.get("error"):
-           self.response.out.write(json.dumps(profile))
+           self.error(500)
         else:
             user_id = profile["id"]
             user_key = db.Key.from_path('User', user_id)
@@ -277,7 +312,7 @@ class NearbyHandler(webapp.RequestHandler):
             urllib.urlencode(dict(access_token=access_token))))
 
         if profile.get("error"):
-           self.response.out.write(json.dumps(profile))
+           self.error(500)
         else:
             nearby = []
             q = Checkin.all()
@@ -293,6 +328,7 @@ def main():
                                           ('/user/login', UserLoginHandler),
                                           ('/pet/load', PetLoadHandler),
                                           ('/pet/feed', PetFeedHandler),
+                                          ('/pet/happy', PetHappyHandler),
                                           ('/pet/clean', PetCleanHandler),
                                           ('/checkin', CheckinHandler),
                                           ('/nearby', NearbyHandler)],

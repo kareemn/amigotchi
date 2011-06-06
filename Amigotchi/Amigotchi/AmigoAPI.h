@@ -41,12 +41,15 @@
 
 -(void)login:(NSString*)access_token;
 
--(void)petSave:(AmigoPet *)pet withAction:(NSString*)action;
--(void)petLoad;
-- (void)petLoadState:(NSDictionary *)state;
--(void) updateNearbyPlaces;
--(void) checkin: (AmigoCheckin *)c;
--(void) getNearbyCheckinsForLat: (NSString *)lat andLon:(NSString *)lon;
+- (void) petLoad;
+- (void) petHappy;
+- (void) petFeed;
+- (void) petClean;
+
+- (void) petLoadState:(NSDictionary *)state;
+- (void) updateNearbyPlaces;
+- (void) checkin: (AmigoCheckin *)c;
+- (void) getNearbyCheckinsForLat: (NSString *)lat andLon:(NSString *)lon;
 
 - (void) nearbyPlacesRequestCompletedWithPlaces:(NSArray *)placesArray;
 - (void) nearbyPlacesRequestFailed;

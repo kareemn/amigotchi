@@ -16,7 +16,9 @@ static NSString* CHECKIN_ENDPOINT = @"/checkin";
 static NSString* NEARBY_ENDPOINT = @"/nearby";
 static NSString* PETLOAD_ENDPOINT = @"/pet/load";
 static NSString* PETSAVE_ENDPOINT = @"/pet/save";
-
+static NSString* PETFEED_ENDPOINT = @"/pet/feed";
+static NSString* PETCLEAN_ENDPOINT = @"/pet/clean";
+static NSString* PETHAPPY_ENDPOINT = @"/pet/happy";
 
 
 
@@ -108,48 +110,6 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
 }
 
 
--(void)petSave:(AmigoPet *)pet withAction:(NSString*)action{
-    [[self user] setAccess_token:self.user.access_token];
-    
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", API_ROOT, PETSAVE_ENDPOINT] ];
-    
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-    [request setDelegate:self];
-    
-    [request setDidFinishSelector:@selector(petSaveDone:)];
-    [request setDidFailSelector:@selector(petSaveWentWrong:)];
-    
-    [request setPostValue:self.user.access_token forKey:@"access_token"];
-    [request setPostValue:action forKey:@"action"];
-    [request setPostValue:[NSNumber numberWithInt:pet.hunger] forKey:@"hunger"];
-    [request setPostValue:[NSNumber numberWithInt:pet.bathroom] forKey:@"bathroom"];
-    [request setPostValue:[NSNumber numberWithInt:pet.bathroom] forKey:@""];
-    
-    
-    NSLog(@"adding to queue");
-    [[self queue] addOperation:request];
-    [[self queue] go];
-    
-    //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"loggedin"]];
-    
-}
-
-- (void)petSaveDone:(ASIHTTPRequest *)request
-{
-    NSLog(@"petSaveDone");
-    NSString *response = [request responseString];
-    NSLog(@"response:: %@", response);
-    
-}
-
-- (void)petSaveWentWrong:(ASIHTTPRequest *)request
-{
-    
-    NSString *response = [request responseString];
-    NSLog(@"petSaveWentWrong");
-    
-    NSLog(@"%@", response);
-}
 
 
 -(void)petLoad {
@@ -201,6 +161,137 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
     
     NSLog(@"%@", response);
 }
+
+
+-(void)petFeed {
+    
+    [[self user] setAccess_token:self.user.access_token];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", API_ROOT, PETFEED_ENDPOINT] ];
+    
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    [request setDidFinishSelector:@selector(petFeedDone:)];
+    [request setDidFailSelector:@selector(petFeedWentWrong:)];
+    
+    [request setPostValue:self.user.access_token forKey:@"access_token"];
+    
+    
+    NSLog(@"adding to queue");
+    [[self queue] addOperation:request];
+    [[self queue] go];
+    
+    //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"loggedin"]];
+    
+}
+
+- (void)petFeedDone:(ASIHTTPRequest *)request
+{
+    NSLog(@"petFeedDone");
+    NSString *response = [request responseString];
+    NSDictionary *parsedJson = [self parseJsonResponse:response];
+    NSLog(@"response:: %@", response);
+    
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"feed" userInfo:parsedJson]];
+    
+}
+
+- (void)petFeedWentWrong:(ASIHTTPRequest *)request
+{
+    
+    NSString *response = [request responseString];
+    NSLog(@"petFeedWentWrong");
+    
+    NSLog(@"%@", response);
+}
+
+-(void)petClean {
+    
+    [[self user] setAccess_token:self.user.access_token];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", API_ROOT, PETCLEAN_ENDPOINT] ];
+    
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    [request setDidFinishSelector:@selector(petCleanDone:)];
+    [request setDidFailSelector:@selector(petCleanWentWrong:)];
+    
+    [request setPostValue:self.user.access_token forKey:@"access_token"];
+    
+    
+    NSLog(@"adding to queue");
+    [[self queue] addOperation:request];
+    [[self queue] go];
+    
+    //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"loggedin"]];
+    
+}
+
+- (void)petCleanDone:(ASIHTTPRequest *)request
+{
+    NSLog(@"petCleanDone");
+    NSString *response = [request responseString];
+    NSDictionary *parsedJson = [self parseJsonResponse:response];
+    NSLog(@"response:: %@", response);
+    
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"toilet" userInfo:parsedJson]];
+    
+}
+
+- (void)petCleanWentWrong:(ASIHTTPRequest *)request
+{
+    
+    NSString *response = [request responseString];
+    NSLog(@"petCleanWentWrong");
+    
+    NSLog(@"%@", response);
+}
+
+-(void)petHappy {
+    
+    [[self user] setAccess_token:self.user.access_token];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", API_ROOT, PETHAPPY_ENDPOINT] ];
+    
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setDelegate:self];
+    
+    [request setDidFinishSelector:@selector(petHappyDone:)];
+    [request setDidFailSelector:@selector(petHappyWentWrong:)];
+    
+    [request setPostValue:self.user.access_token forKey:@"access_token"];
+    
+    
+    NSLog(@"adding to queue");
+    [[self queue] addOperation:request];
+    [[self queue] go];
+    
+    //[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"loggedin"]];
+    
+}
+
+- (void)petHappyDone:(ASIHTTPRequest *)request
+{
+    NSLog(@"petHappyDone");
+    NSString *response = [request responseString];
+    NSDictionary *parsedJson = [self parseJsonResponse:response];
+    NSLog(@"response:: %@", response);
+    
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"happy" userInfo:parsedJson]];
+    
+}
+
+- (void)petHappyWentWrong:(ASIHTTPRequest *)request
+{
+    
+    NSString *response = [request responseString];
+    NSLog(@"petHappyWentWrong");
+    
+    NSLog(@"%@", response);
+}
+
 
 -(void)updateNearbyPlaces{
     //&center=lat,long&distance=1000

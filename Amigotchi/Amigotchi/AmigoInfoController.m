@@ -72,9 +72,9 @@
 
 - (IBAction) logoutPressed:(id)sender{
     NSLog(@"logging out");
+    [self.navigationController popToRootViewControllerAnimated:YES];
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"loggingout"]];
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
