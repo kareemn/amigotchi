@@ -129,7 +129,6 @@
 
 -(void)fbDidLogout{
     NSLog(@"Logout successful");
-    
     [self.view facebookLoggedOut];
     
 }

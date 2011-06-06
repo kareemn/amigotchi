@@ -161,6 +161,7 @@
         NSLog(@"navigateNotification::loggingout");
         [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
         [self showLoginScreen];
+        [self removeChild:self.petlayer cleanup:YES];
         
         [[CCScheduler sharedScheduler] unscheduleAllSelectorsForTarget:self.petlayer.pet];
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:LOGINVIEWCHANGE object:@"facebook_logout"]];
