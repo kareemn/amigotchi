@@ -17,6 +17,7 @@
 }
 @property (nonatomic, retain) CCMenuItem    *facebookLoginButton;
 @property (nonatomic, retain) CCMenuItem    *facebookLogoutButton;
+@property (nonatomic, retain) CCMenuItem    *howToButton;
 
 -(void)initFacebookButtons;
 
@@ -26,4 +27,5 @@
 -(void)facebookLoggedIn;
 -(void)facebookLoggedOut;
 
+-(void)showHowTo;
 @end

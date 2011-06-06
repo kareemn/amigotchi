@@ -13,6 +13,7 @@
 
 @implementation LoginView
 @synthesize facebookLoginButton = _facebookLoginButton, facebookLogoutButton = _facebookLogoutButton;
+@synthesize howToButton = howToButton_;
 
 
 -(id)init
@@ -21,6 +22,11 @@
     {
         
         [self initFacebookButtons];
+        
+        CCMenuItem * howToItem = [CCMenuItemImage itemFromNormalSprite:[CCSprite spriteWithFile:@"howTo.png"] selectedSprite:[CCSprite spriteWithFile:@"howTo.png"] target:self selector:@selector(showHowTo)];
+        self.howToButton = [CCMenu menuWithItems:howToItem, nil];
+        self.howToButton.position = ccp(285, 50);
+        [self addChild:self.howToButton];
     }
     return self;
 }
@@ -28,6 +34,7 @@
 -(void)dealloc{
     [_facebookLoginButton release];
     [_facebookLogoutButton release];
+    [howToButton_ release];
     
     [super dealloc];
 }
@@ -68,11 +75,18 @@
     
     [self.facebookLoginButton setVisible:NO];
     [self.facebookLogoutButton setVisible:YES];
+    [self.howToButton setVisible:NO];
     
 }
 -(void)facebookLoggedOut{
     [self.facebookLoginButton setVisible:YES];
     [self.facebookLogoutButton setVisible:NO];
+    [self.howToButton setVisible:YES];
+}
+
+-(void) showHowTo
+{
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVCONTROLLER object:@"showHowTo"]];
 }
 
 @end
