@@ -162,7 +162,12 @@
         [self saveState];
     }
     else if( [theobj isEqualToString:@"checkedin"] ){
-        [self.alertLayer displayAlertWithString:@"Checking in..." andPicture:@"fbAlert.png"];
+        //[self.alertLayer displayAlertWithString:@"Checking in..." andPicture:@"fbAlert.png"];
+        NSDictionary *petInfo = [notification userInfo];
+        NSString *message = [petInfo objectForKey:@"message"];
+        
+        [self.api.pet restoreState:petInfo];
+        [self.newsLayer newsWithString:message];
     }
     else 
     {

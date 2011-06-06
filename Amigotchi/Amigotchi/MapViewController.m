@@ -18,7 +18,6 @@
         // Custom initialization
         AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
         delegate.api.mapViewController = self;
-        
     }
     return self;
 }
@@ -84,7 +83,10 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"Map";
     
+    
+    
     AppDelegate *delegate = [[UIApplication sharedApplication]delegate];
+    
     CLLocation *location = delegate.api.locdelegate.currLoc;
     NSString *lat = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
     NSString *lon = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
@@ -95,20 +97,39 @@
     
 }
 
-- (void) centerOnUserLocation{
+- (void) centerOnUserLocation:(CLLocationCoordinate2D)userCoord{
     MKCoordinateRegion region;
     MKCoordinateSpan span;
     
-    span.latitudeDelta=0.6;
-    span.longitudeDelta=0.6;
+    span.latitudeDelta=10;
+    span.longitudeDelta=10;
     
     region.span=span;
-    region.center= mView.userLocation.location.coordinate;
-    if (mView.userLocation.location.verticalAccuracy) {
-        
-    }
+    
+    region.center= userCoord;
+
     [mView setRegion:region animated:TRUE];
     [mView regionThatFits:region];
+    
+    centered = YES;
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+    if (!centered) {
+        [self centerOnUserLocation:userLocation.coordinate];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        [defaults setValue:[NSDictionary dictionaryWithObjectsAndKeys:
+                            [NSNumber numberWithFloat:userLocation.coordinate.latitude],@"lat",
+                            [NSNumber numberWithFloat:userLocation.coordinate.longitude], @"lon",
+                            nil] 
+                    forKey:@"userlocation"];
+        
+        [defaults synchronize];
+        
+        
+    }
 }
 
 - (void)viewDidUnload
@@ -124,7 +145,17 @@
     MKCoordinateSpan span = {latitudeDelta: 1, longitudeDelta: 1};
     MKCoordinateRegion region = {coord, span};
     [mView setRegion:region];*/
-        [self centerOnUserLocation];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    NSDictionary *loc = [defaults valueForKey:@"userlocation"];
+    if (loc != nil) {
+        CLLocationCoordinate2D coordinate;
+        coordinate.latitude= [[loc valueForKey:@"lat"] floatValue];
+        coordinate.longitude= [[loc valueForKey:@"lon"] floatValue];
+        [self centerOnUserLocation:coordinate];       
+    }
+     
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

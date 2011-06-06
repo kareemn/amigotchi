@@ -53,6 +53,20 @@ class Checkin(db.Model):
     location = db.GeoPtProperty(required=True)
 
 
+def petToDict(pet, msg=""):
+    retpet = {}
+
+    retpet["name"] = pet.pet_name
+    retpet["age"] = pet.age
+    retpet["type"] = pet.pet_type
+    retpet["hunger"] = pet.hunger
+    retpet["happiness"] = pet.happiness
+    retpet["bathroom"] = pet.bathroom
+    retpet["accessory"] = pet.accessory
+    retpet["message"] = msg
+
+    return retpet
+
 class MainHandler(webapp.RequestHandler):
     def get(self):
         self.response.out.write('Hello world!')
@@ -86,22 +100,14 @@ class UserLoginHandler(webapp.RequestHandler):
                user.put()
             self.response.out.write(json.dumps(profile))
 
-
 ###
-class PetSaveHandler(webapp.RequestHandler):
+class PetCleanHandler(webapp.RequestHandler):
     def get(self):
         self.response.out.write("doesn't work here buddy")
 
     def post(self):
 
         access_token = self.request.get("access_token")
-        
-        action = self.request.get("action")
-
-        pet_name = self.request.get("name")
-        hunger = self.request.get("hunger")
-        happiness = self.request.get("happiness")
-        bathroom = self.request.get("bathroom")
 
         # Download the user profile and cache a local instance of the
         # basic profile info
@@ -113,27 +119,48 @@ class PetSaveHandler(webapp.RequestHandler):
            self.response.out.write(json.dumps(profile))
         else:
             user_id = profile["id"]
-            if action == "feed":
-               pet = User( key_name=str(profile["id"]), id=str(profile["id"]), hunger=hunger, bathroom=bathroom, happiness=happiness, last_fed=datetime.datetime.now())
-            elif action == "bathroom":
-               pet = User( key_name=str(profile["id"]), id=str(profile["id"]), hunger=hunger, bathroom=bathroom, happiness=happiness, last_bathroom=datetime.datetime.now())
-            else:
-               pet = User( key_name=str(profile["id"]), id=str(profile["id"]), hunger=hunger, bathroom=bathroom, happiness=happiness)
-            pet.put()
 
             user_key = db.Key.from_path('User', user_id)
             current_user = User.get(user_key)
-            retpet = {}
+            current_user.bathroom = current_user.bathroom - 1
+            if current_user.bathroom < 0:
+                current_user.bathroom = 0;
+            current_user.put()
 
-            retpet["name"] = current_user.pet_name
-            retpet["hunger"] = current_user.hunger
-            retpet["last_fed"] = current_user.last_fed
-            retpet["happiness"] = current_user.happiness
-            retpet["bathroom"] = current_user.bathroom
-            retpet["last_bathroom"] = current_user.last_bathroom
-
-            self.response.out.write(json.dumps(retpet))
+            self.response.out.write(json.dumps(petToDict(current_user, msg="cleaned up!") ))
+##
 ###
+class PetFeedHandler(webapp.RequestHandler):
+    def get(self):
+        self.response.out.write("doesn't work here buddy")
+
+    def post(self):
+
+        access_token = self.request.get("access_token")
+
+        # Download the user profile and cache a local instance of the
+        # basic profile info
+        profile = json.load(urllib.urlopen(
+            "https://graph.facebook.com/me?" +
+            urllib.urlencode(dict(access_token=access_token))))
+
+        if profile.get("error"):
+           self.response.out.write(json.dumps(profile))
+        else:
+            user_id = profile["id"]
+
+            user_key = db.Key.from_path('User', user_id)
+            current_user = User.get(user_key)
+
+            current_user.hunger = current_user.hunger + 1
+
+            if current_user.hunger > 30:
+                current_user.hunger = 30;
+            current_user.put()
+
+            self.response.out.write(json.dumps(petToDict(current_user, msg="Yummy!")))
+###
+
 class PetLoadHandler(webapp.RequestHandler):
     def get(self):
         self.response.out.write("doesn't work here buddy")
@@ -177,17 +204,8 @@ class PetLoadHandler(webapp.RequestHandler):
                current_user.bathroom = 10        
 
             current_user.happiness = current_user.happiness - (current_user.bathroom/3) - current_user.hunger
- 
-            pet["name"] = current_user.pet_name
-            pet["hunger"] = current_user.hunger
-            pet["happiness"] = current_user.happiness
-            pet["bathroom"] = current_user.bathroom
-            pet["accessory"] = current_user.accessory
 
-            pet["age"] = current_user.age
-            pet["type"] = current_user.pet_type
-
-            self.response.out.write(json.dumps(pet))
+            self.response.out.write(json.dumps(petToDict(current_user, "I love you!")))
 ###
 class CheckinHandler(webapp.RequestHandler):
     def get(self):
@@ -217,12 +235,27 @@ class CheckinHandler(webapp.RequestHandler):
 
             current_user = User.get(user_key)
             current_user.age = current_user.age + 1
-            current_user.put()
 
             savethis = Checkin( title=checkin["title"], owner=current_user, place_id=checkin["place_id"], location=db.GeoPt(checkin["lat"], checkin["lon"]) )
             savethis.put()
 
-            self.response.out.write(json.dumps(checkin))
+            checkin_msg = "Checked into %s." % checkin["title"]
+            prize_msg =  ""
+
+            if current_user.age == 1:
+               checkin_msg = "First Checkin!"
+               current_user.accessory = "cowboy hat"
+               prize_msg = " You've unlocked the Bellardo Hat!"
+            elif current_user.age == 2:
+               checkin_msg = "Nice you found glasses!"
+               current_user.accessory = "glasses"
+               prize_msg = " You're on a roll! "
+
+            msg = checkin_msg + prize_msg
+            
+            current_user.put()
+
+            self.response.out.write(json.dumps(petToDict(current_user, msg)))
 
 ##
 ###
@@ -254,11 +287,13 @@ class NearbyHandler(webapp.RequestHandler):
                nearby.append(dict(lat=checkin.location.lat,lon=checkin.location.lon, title=checkin.title, owner=checkin.owner.name))
             self.response.out.write(json.dumps(nearby))
 
+
 def main():
     application = webapp.WSGIApplication([('/', MainHandler),
                                           ('/user/login', UserLoginHandler),
-                                          ('/pet/save', PetSaveHandler),
                                           ('/pet/load', PetLoadHandler),
+                                          ('/pet/feed', PetFeedHandler),
+                                          ('/pet/clean', PetCleanHandler),
                                           ('/checkin', CheckinHandler),
                                           ('/nearby', NearbyHandler)],
                                          debug=True)

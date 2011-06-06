@@ -89,11 +89,8 @@
     }
     
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    BOOL shouldPostToFacebook = delegate.api.facebookCheckinEnabled;
-    if(shouldPostToFacebook)
-    {
-        [delegate.api checkin:self.checkin];
-    }
+    
+    [delegate.api checkin:self.checkin];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

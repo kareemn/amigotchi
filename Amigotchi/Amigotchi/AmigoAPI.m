@@ -309,7 +309,6 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
        [self postCheckinToFacebook:c];
     }
     
-    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"checkedin"]];
 
 }
 
@@ -318,6 +317,10 @@ static NSString* PETSAVE_ENDPOINT = @"/pet/save";
 {
     NSString *response = [request responseString];
     NSLog(@"checkinRequestDone %@", response);
+    
+    NSDictionary *parsedJson = [self parseJsonResponse:response];
+    
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:AMIGONAVNOTIFICATION object:@"checkedin" userInfo:parsedJson]];
     
 }
 

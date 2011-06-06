@@ -13,9 +13,9 @@
 
 @interface MapViewController : UIViewController<MKMapViewDelegate> {
     IBOutlet MKMapView * mView;
+    BOOL centered;
 }
-
-- (void) centerOnUserLocation;
+- (void) centerOnUserLocation:(CLLocationCoordinate2D)userCoord;
 - (void) drawCheckins:(NSArray *)checkins;
 
 @end
