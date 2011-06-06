@@ -74,6 +74,7 @@
 
 -(void)backHome
 {
+    /*
     if([self.checkin.title isEqualToString:@"California Polytechnic State University San Luis Obispo Campus"])
     {
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"acc:cowboy hat"]];   
@@ -87,6 +88,7 @@
     {
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:PETVIEWCHANGE object:@"acc:none"]];
     }
+     */
     
     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     

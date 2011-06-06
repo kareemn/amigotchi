@@ -49,7 +49,7 @@
 {
     //Handle children
     [self removeChild:self.label cleanup:YES];
-    self.label = [CCLabelTTF labelWithString:self.myString fontName:@"Helvetica" fontSize:20];
+    self.label = [CCLabelTTF labelWithString:self.myString fontName:@"Helvetica" fontSize:16];
     self.label.position = ccp(self.newsStand.position.x,
                               self.newsStand.position.y - self.newsStand.contentSize.height/2 + self.label.contentSize.height);
     [self addChild:self.label];
