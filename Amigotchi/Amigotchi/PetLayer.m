@@ -69,7 +69,7 @@
         //listen for notifications
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputFromView:) name:PETVIEWCHANGE object:nil];
         
-        [[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.pet interval:10.0f paused:NO];
+        [[CCScheduler sharedScheduler] scheduleSelector:@selector(step:) forTarget:self.pet interval:60.0f paused:NO];
         
         
 	}
