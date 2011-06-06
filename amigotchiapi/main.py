@@ -17,6 +17,7 @@
 
 import urllib
 import datetime
+import random
 
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
@@ -37,6 +38,7 @@ class User(db.Model):
     hunger = db.IntegerProperty()
     pet_type = db.StringProperty()
     last_fed = db.DateTimeProperty()
+    last_checkin = db.DateTimeProperty()
     happiness = db.IntegerProperty()
     bathroom = db.IntegerProperty()
     accessory = db.StringProperty()
@@ -51,7 +53,6 @@ class Checkin(db.Model):
     owner = db.ReferenceProperty(User)
     place_id = db.StringProperty(required=True)
     location = db.GeoPtProperty(required=True)
-
 
 def petToDict(pet, msg=""):
     retpet = {}
@@ -98,7 +99,7 @@ class UserLoginHandler(webapp.RequestHandler):
                         profile_url=profile["link"],
                         pet_name=profile["first_name"], pet_type="dragon" , 
                         bathroom=1, age=0, happiness=30, hunger=10, accessory="none",
-                        last_fed=datetime.datetime.now(), last_bathroom=datetime.datetime.now())
+                        last_fed=datetime.datetime.now(), last_bathroom=datetime.datetime.now(), last_checkin=datetime.datetime.now())
                user.put()
            else:
                current_user.access_token = access_token
@@ -152,19 +153,27 @@ class PetFeedHandler(webapp.RequestHandler):
         if profile.get("error"):
            self.error(500)
         else:
-            user_id = profile["id"]
+           user_id = profile["id"]
 
-            user_key = db.Key.from_path('User', user_id)
-            current_user = User.get(user_key)
+           user_key = db.Key.from_path('User', user_id)
+           current_user = User.get(user_key)
 
-            current_user.hunger = current_user.hunger - 1
+           right_now = datetime.datetime.now()
+           difference_without_checkin = right_now - current_user.last_checkin
+           seconds_without_checkin = difference_without_checkin.seconds
 
-            if current_user.hunger < 0:
-                current_user.hunger = 0
-            current_user.last_fed = datetime.datetime.now()
-            current_user.put()
+           minutes_without_checkin = seconds_without_checkin / 60
+           days_without_checkin = difference_without_checkin.days
 
-            self.response.out.write(json.dumps(petToDict(current_user, msg="Yummy!")))
+           if current_user.age == 0 or days_without_checkin > 0 or minutes_without_checkin > 30:
+	          self.response.out.write(json.dumps(petToDict(current_user, msg="Hey checkin and get me some food!")))
+           else:
+              current_user.hunger = current_user.hunger - 1
+              if current_user.hunger < 0:
+                 current_user.hunger = 0
+              current_user.last_fed = datetime.datetime.now()
+              current_user.put()
+              self.response.out.write(json.dumps(petToDict(current_user, msg="Yummy!")))
 ###
 class PetHappyHandler(webapp.RequestHandler):
     def get(self):
@@ -193,8 +202,13 @@ class PetHappyHandler(webapp.RequestHandler):
             if current_user.happiness > 30:
                 current_user.happiness = 30
             current_user.put()
+            random_pet_sayings = ["Thanks for petting me!", 
+                                  "One day I'll be a big dragon!", 
+                                  "You're the best!", 
+                                  "Will I be in this phone forever?"
+                                  ]
 
-            self.response.out.write(json.dumps(petToDict(current_user, msg="Thanks for petting me!")))
+            self.response.out.write(json.dumps(petToDict(current_user, msg=random.choice(random_pet_sayings))))
 ###
 class PetLoadHandler(webapp.RequestHandler):
     def get(self):
@@ -288,6 +302,7 @@ class CheckinHandler(webapp.RequestHandler):
 
             msg = checkin_msg + prize_msg
             
+            current_user.last_checkin = datetime.datetime.now()
             current_user.put()
 
             self.response.out.write(json.dumps(petToDict(current_user, msg)))
