@@ -159,7 +159,10 @@ class PetFeedHandler(webapp.RequestHandler):
            current_user = User.get(user_key)
 
            right_now = datetime.datetime.now()
-           difference_without_checkin = right_now - current_user.last_checkin
+           if current_user.age > 0:
+              difference_without_checkin = right_now - current_user.last_checkin
+           else:
+	          difference_without_checkin = right_now - right_now
            seconds_without_checkin = difference_without_checkin.seconds
 
            minutes_without_checkin = seconds_without_checkin / 60
