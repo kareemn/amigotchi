@@ -98,7 +98,7 @@ class UserLoginHandler(webapp.RequestHandler):
                         name=profile["name"], access_token=access_token,
                         profile_url=profile["link"],
                         pet_name=profile["first_name"], pet_type="dragon" , 
-                        bathroom=1, age=0, happiness=30, hunger=10, accessory="none",
+                        bathroom=1, age=0, happiness=20, hunger=10, accessory="none",
                         last_fed=datetime.datetime.now(), last_bathroom=datetime.datetime.now(), last_checkin=datetime.datetime.now())
                user.put()
            else:
@@ -109,7 +109,7 @@ class UserLoginHandler(webapp.RequestHandler):
 ###
 class PetCleanHandler(webapp.RequestHandler):
     def get(self):
-        self.response.out.write("doesn't work here buddy")
+        self.response.out.write("Doesn't work here, buddy.")
 
     def post(self):
 
@@ -133,12 +133,12 @@ class PetCleanHandler(webapp.RequestHandler):
             current_user.last_bathroom = datetime.datetime.now()
             current_user.put()
 
-            self.response.out.write(json.dumps(petToDict(current_user, msg="cleaned up!") ))
+            self.response.out.write(json.dumps(petToDict(current_user, msg="All cleaned up!") ))
 ##
 ###
 class PetFeedHandler(webapp.RequestHandler):
     def get(self):
-        self.response.out.write("doesn't work here buddy")
+        self.response.out.write("Doesn't work here, buddy.")
 
     def post(self):
 
@@ -169,7 +169,7 @@ class PetFeedHandler(webapp.RequestHandler):
            days_without_checkin = difference_without_checkin.days
 
            if current_user.age == 0 or days_without_checkin > 0 or minutes_without_checkin > 30:
-	          self.response.out.write(json.dumps(petToDict(current_user, msg="Hey checkin and get me some food!")))
+	          self.response.out.write(json.dumps(petToDict(current_user, msg="Hey, checkin and get me some food!")))
            else:
               current_user.hunger = current_user.hunger - 1
               if current_user.hunger < 0:
@@ -202,8 +202,8 @@ class PetHappyHandler(webapp.RequestHandler):
 
             current_user.happiness = current_user.happiness + 1
 
-            if current_user.happiness > 30:
-                current_user.happiness = 30
+            if current_user.happiness > 20:
+                current_user.happiness = 20
             current_user.put()
             random_pet_sayings = ["Thanks for petting me!", 
                                   "One day I'll be a big dragon!", 
@@ -215,7 +215,7 @@ class PetHappyHandler(webapp.RequestHandler):
 ###
 class PetLoadHandler(webapp.RequestHandler):
     def get(self):
-        self.response.out.write("doesn't work here buddy")
+        self.response.out.write("Doesn't work here, buddy.")
 
     def post(self):
 
@@ -261,7 +261,7 @@ class PetLoadHandler(webapp.RequestHandler):
 ###
 class CheckinHandler(webapp.RequestHandler):
     def get(self):
-        self.response.out.write("doesn't work here buddy")
+        self.response.out.write("Doesn't work here, buddy.")
 
     def post(self):
 
@@ -297,9 +297,9 @@ class CheckinHandler(webapp.RequestHandler):
             if current_user.age == 1:
                checkin_msg = "First Checkin!"
                current_user.accessory = "cowboy hat"
-               prize_msg = " You've unlocked the Bellardo Hat!"
+               prize_msg = " Bellardo Hat unlocked!"
             elif current_user.age == 2:
-               checkin_msg = "Nice you found glasses!"
+               checkin_msg = "Nice, you found glasses!"
                current_user.accessory = "glasses"
                prize_msg = " You're on a roll! "
 
@@ -314,7 +314,7 @@ class CheckinHandler(webapp.RequestHandler):
 ###
 class NearbyHandler(webapp.RequestHandler):
     def get(self):
-        self.response.out.write("doesn't work here buddy")
+        self.response.out.write("Doesn't work here, buddy")
 
     def post(self):
 
