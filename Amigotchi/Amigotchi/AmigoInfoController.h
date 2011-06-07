@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface AmigoInfoController : UIViewController {
+@interface AmigoInfoController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     IBOutlet UISwitch *toggleCheckins;
     IBOutlet UIButton *logoutButton;
+    IBOutlet UITableView * table;
 }
 
 - (IBAction) facebookCheckinToggled:(id)sender;
